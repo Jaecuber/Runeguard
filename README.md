@@ -1,34 +1,37 @@
 # Runeguard
 
-A [libGDX](https://libgdx.com/) project generated with [gdx-liftoff](https://github.com/libgdx/gdx-liftoff).
+**Developers:** [Your Name] and [Partner's Name]
+**Date:** [Month, Year]
+**Course:** AP Computer Science A 
 
-This project was generated with a template including simple application launchers and a main class extending `Game` that sets the first screen.
+---
 
-## Platforms
+## 🎮 Game Description
+[Write a 2-3 sentence pitch for your game. What is the goal? What is the core mechanic? E.g., "Space Defender is a 2D top-down shooter where the player must protect their home planet from endless waves of incoming asteroids. Survive as long as you can to get the high score!"]
 
-- `core`: Main module with the application logic shared by all platforms.
-- `lwjgl3`: Primary desktop platform using LWJGL3; was called 'desktop' in older docs.
+## 🕹️ Controls
+* **[W, A, S, D]** or **[Arrow Keys]**: Move the player.
+* **[Spacebar]** or **[Left Mouse Click]**: Shoot / Jump / Interact.
+* **[P]**: Pause the game.
+* **[Escape]**: Quit.
 
-## Gradle
+---
 
-This project uses [Gradle](https://gradle.org/) to manage dependencies.
-The Gradle wrapper was included, so you can run Gradle tasks using `gradlew.bat` or `./gradlew` commands.
-Useful Gradle tasks and flags:
+## 🧠 AP CSA Developer Notes
+*This section shows how we aligned to the AP CSA standards.*
 
-- `--continue`: when using this flag, errors will not stop the tasks from running.
-- `--daemon`: thanks to this flag, Gradle daemon will be used to run chosen tasks.
-- `--offline`: when using this flag, cached dependency archives will be used.
-- `--refresh-dependencies`: this flag forces validation of all dependencies. Useful for snapshot versions.
-- `build`: builds sources and archives of every project.
-- `cleanEclipse`: removes Eclipse project data.
-- `cleanIdea`: removes IntelliJ project data.
-- `clean`: removes `build` folders, which store compiled classes and built archives.
-- `eclipse`: generates Eclipse project data.
-- `idea`: generates IntelliJ project data.
-- `lwjgl3:jar`: builds application's runnable jar, which can be found at `lwjgl3/build/libs`.
-- `lwjgl3:run`: starts the application.
-- `test`: runs unit tests (if any).
+* **Encapsulation & Architecture:** All classes use `private` instance variables with `public` getters and setters. We created a class hierarchy where `[Subclass 1]`, `[Subclass 2]`, and `[Subclass 3]` all extend our base `GameObject` class.
+* **Polymorphism:** In our main `render()` loop, we call the `.move()` and `.draw()` methods on a list of `GameObject` references, but the specific overridden methods in our subclasses execute at runtime.
+* **ArrayList Traversal:** We manage our game entities using an `ArrayList<GameObject>`. We successfully implemented a backwards traversal loop in the `[Insert Method Name]` method to safely remove objects without causing an `IndexOutOfBoundsException`.
+* **Standard Arrays & Sorting:** We used a standard 1D array to manage `[Insert Mechanic, e.g., the top 5 high scores]`. We used `[Selection Sort / Insertion Sort]` to order these scores before displaying them on the Game Over screen.
+* **File I/O & String Parsing:** Our game saves data persistently to `[filename.txt]`. When the game loads, it reads the file using a `Scanner` and uses String methods like `[substring() / indexOf()]` to parse the saved names and scores.
 
-Note that most tasks that are not specific to a single project can be run with `name:` prefix, where the `name` should be replaced with the ID of a specific project.
-For example, `core:clean` removes `build` folder only from the `core` project.
-# Runeguard
+---
+
+## 🛠️ How to Run Locally
+
+If you want to pull this repository and play the game yourself, follow these steps:
+
+1. **Clone the repository:** `git clone [Insert your GitHub Repo URL here]`
+2. **Open the project** in your IDE (VS Code, IntelliJ IDEA, or Eclipse).
+3. **Run the Desktop Launcher:** Navigate to `src/Launcher.java` and run the `main` method. 
