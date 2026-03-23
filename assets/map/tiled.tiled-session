@@ -1,0 +1,25 @@
+{
+    "activeFile": "",
+    "expandedProjectPaths": [
+    ],
+    "file.lastUsedOpenFilter": "All Files (*)",
+    "fileStates": {
+        "Player.tsx": {
+            "dynamicWrapping": true
+        },
+        "Rocks.tsx": {
+            "dynamicWrapping": false
+        },
+        "Shadows.tsx": {
+            "dynamicWrapping": true
+        },
+        "Vegetation.tsx": {
+            "dynamicWrapping": false
+        }
+    },
+    "openFiles": [
+    ],
+    "project": "tiled.tiled-project",
+    "recentFiles": [
+    ]
+}
