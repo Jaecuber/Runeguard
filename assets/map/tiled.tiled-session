@@ -4,6 +4,9 @@
     ],
     "file.lastUsedOpenFilter": "All Files (*)",
     "fileStates": {
+        "MainTileset.tsx": {
+            "dynamicWrapping": false
+        },
         "Player.tsx": {
             "dynamicWrapping": true
         },
@@ -11,6 +14,9 @@
             "dynamicWrapping": false
         },
         "Shadows.tsx": {
+            "dynamicWrapping": true
+        },
+        "Trees.tsx": {
             "dynamicWrapping": true
         },
         "Vegetation.tsx": {
