@@ -1,33 +1,62 @@
 {
-    "activeFile": "",
+    "activeFile": "starterArea.tmx",
     "expandedProjectPaths": [
+        "."
     ],
     "file.lastUsedOpenFilter": "All Files (*)",
     "fileStates": {
+        "Buildings.tsx": {
+            "scaleInDock": 1
+        },
+        "Farmset.tsx": {
+            "scaleInDock": 1
+        },
+        "Furniture.tsx": {
+            "scaleInDock": 1
+        },
         "MainTileset.tsx": {
             "dynamicWrapping": false,
+            "scaleInDock": 2,
             "scaleInEditor": 1.5
         },
         "Player.tsx": {
-            "dynamicWrapping": true
+            "dynamicWrapping": true,
+            "scaleInDock": 1
         },
         "Rocks.tsx": {
-            "dynamicWrapping": false
+            "dynamicWrapping": false,
+            "scaleInDock": 1
         },
         "Shadows.tsx": {
-            "dynamicWrapping": true
+            "dynamicWrapping": true,
+            "scaleInDock": 1
         },
         "Trees.tsx": {
-            "dynamicWrapping": true
+            "dynamicWrapping": true,
+            "scaleInDock": 1
         },
         "Vegetation.tsx": {
-            "dynamicWrapping": false
+            "dynamicWrapping": false,
+            "scaleInDock": 1
+        },
+        "starterArea.tmx": {
+            "expandedGroupLayers": [
+                7
+            ],
+            "scale": 1,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 1018.5,
+                "y": 781
+            }
         }
     },
     "openFiles": [
+        "starterArea.tmx"
     ],
     "project": "tiled.tiled-project",
     "recentFiles": [
+        "starterArea.tmx",
         "MainTileset.tsx"
     ]
 }
