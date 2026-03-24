@@ -9,7 +9,7 @@ import com.badlogic.gdx.utils.Disposable;
 import com.badlogic.gdx.utils.viewport.Viewport;
 import com.github.Jaecuber.Runeguard.asset.AssetService;
 import com.github.Jaecuber.Runeguard.asset.MapAsset;
-import com.github.Jaecuber.Runeguard.system.RenderSystem;
+import com.github.Jaecuber.Runeguard.systems.RenderSystem;
 
 /** First screen of the application. Displayed after the application is created. */
 public class GameScreen extends ScreenAdapter {
