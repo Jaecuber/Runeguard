@@ -1,4 +1,4 @@
-package com.github.Jaecuber.Runeguard.system;
+package com.github.Jaecuber.Runeguard.systems;
 
 import java.util.Comparator;
 
