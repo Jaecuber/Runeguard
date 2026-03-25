@@ -18,11 +18,13 @@ import com.badlogic.gdx.utils.GdxRuntimeException;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
 import com.github.Jaecuber.Runeguard.asset.AssetService;
+import com.github.Jaecuber.Runeguard.screen.GameScreen;
+import com.github.Jaecuber.Runeguard.screen.LoadingScreen;
 
 /** {@link com.badlogic.gdx.ApplicationListener} implementation shared by all platforms. */
 public class Launcher extends Game {
-    public static final float WORLD_WIDTH = 16;
-    public static final float WORLD_HEIGHT = 9;
+    public static final float WORLD_WIDTH = 100f;
+    public static final float WORLD_HEIGHT = 100f;
     public static final float UNIT_SCALE = 1f/16f;
 
     private Batch batch;
@@ -46,8 +48,8 @@ public class Launcher extends Game {
         this.glProfiler.enable();
         this.fpsLogger = new FPSLogger();
 
-        addScreen(new GameScreen(this));
-        setScreen(GameScreen.class);
+        addScreen(new LoadingScreen(this, assetService));
+        setScreen(LoadingScreen.class);
     }
 
     @Override
@@ -58,6 +60,10 @@ public class Launcher extends Game {
 
     public void addScreen(Screen screen){
         screenCache.put(screen.getClass(), screen);
+    }
+
+    public void removeScreen(Screen screen){
+        screenCache.remove(screen.getClass());
     }
 
     public void setScreen(Class<? extends Screen> screenClass){

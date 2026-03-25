@@ -1,0 +1,236 @@
+
+objects.png
+size: 512, 512
+format: RGBA8888
+filter: Nearest, Nearest
+repeat: none
+player/player
+  rotate: false
+  xy: 394, 198
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+trees/bareTree1_big
+  rotate: false
+  xy: 2, 334
+  size: 112, 160
+  orig: 112, 160
+  offset: 0, 0
+  index: -1
+trees/bareTree1_med
+  rotate: false
+  xy: 350, 366
+  size: 80, 128
+  orig: 80, 128
+  offset: 0, 0
+  index: -1
+trees/bareTree2_big
+  rotate: false
+  xy: 2, 170
+  size: 112, 160
+  orig: 112, 160
+  offset: 0, 0
+  index: -1
+trees/bareTree2_med
+  rotate: false
+  xy: 234, 38
+  size: 80, 128
+  orig: 80, 128
+  offset: 0, 0
+  index: -1
+trees/bareTree2_tall
+  rotate: false
+  xy: 434, 398
+  size: 48, 96
+  orig: 48, 96
+  offset: 0, 0
+  index: -1
+trees/bareTree_tall
+  rotate: false
+  xy: 434, 298
+  size: 48, 96
+  orig: 48, 96
+  offset: 0, 0
+  index: -1
+trees/greenTree_big
+  rotate: false
+  xy: 118, 334
+  size: 112, 160
+  orig: 112, 160
+  offset: 0, 0
+  index: -1
+trees/greenTree_med
+  rotate: false
+  xy: 350, 234
+  size: 80, 128
+  orig: 80, 128
+  offset: 0, 0
+  index: -1
+trees/greenTree_tall
+  rotate: false
+  xy: 434, 198
+  size: 48, 96
+  orig: 48, 96
+  offset: 0, 0
+  index: -1
+trees/greenishTree_big
+  rotate: false
+  xy: 2, 6
+  size: 112, 160
+  orig: 112, 160
+  offset: 0, 0
+  index: -1
+trees/greenishTree_med
+  rotate: false
+  xy: 318, 38
+  size: 80, 128
+  orig: 80, 128
+  offset: 0, 0
+  index: -1
+trees/iceTree1_big
+  rotate: false
+  xy: 118, 170
+  size: 112, 160
+  orig: 112, 160
+  offset: 0, 0
+  index: -1
+trees/iceTree1_med
+  rotate: false
+  xy: 402, 66
+  size: 80, 128
+  orig: 80, 128
+  offset: 0, 0
+  index: -1
+trees/iceTree2_big
+  rotate: false
+  xy: 234, 334
+  size: 112, 160
+  orig: 112, 160
+  offset: 0, 0
+  index: -1
+trees/iceTrunk_med
+  rotate: false
+  xy: 350, 198
+  size: 40, 32
+  orig: 40, 32
+  offset: 0, 0
+  index: -1
+trees/iceTrunk_tall
+  rotate: false
+  xy: 486, 462
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+trees/mossyTrunk_med
+  rotate: false
+  xy: 234, 2
+  size: 40, 32
+  orig: 40, 32
+  offset: 0, 0
+  index: -1
+trees/orangeTree_big
+  rotate: false
+  xy: 118, 6
+  size: 112, 160
+  orig: 112, 160
+  offset: 0, 0
+  index: -1
+trees/trunk1_med
+  rotate: false
+  xy: 278, 2
+  size: 40, 32
+  orig: 40, 32
+  offset: 0, 0
+  index: -1
+trees/trunk1_tall
+  rotate: false
+  xy: 366, 2
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+trees/trunk2_med
+  rotate: false
+  xy: 322, 2
+  size: 40, 32
+  orig: 40, 32
+  offset: 0, 0
+  index: -1
+trees/trunk2_tall
+  rotate: false
+  xy: 486, 426
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+trees/yellowTree_big
+  rotate: false
+  xy: 234, 170
+  size: 112, 160
+  orig: 112, 160
+  offset: 0, 0
+  index: -1
+
+objects2.png
+size: 512, 256
+format: RGBA8888
+filter: Nearest, Nearest
+repeat: none
+trees/greenishTree_tall
+  rotate: false
+  xy: 2, 2
+  size: 48, 96
+  orig: 48, 96
+  offset: 0, 0
+  index: -1
+trees/iceTree2_med
+  rotate: false
+  xy: 2, 102
+  size: 80, 128
+  orig: 80, 128
+  offset: 0, 0
+  index: -1
+trees/iceTree2_tall
+  rotate: false
+  xy: 254, 134
+  size: 48, 96
+  orig: 48, 96
+  offset: 0, 0
+  index: -1
+trees/iceTree_tall
+  rotate: false
+  xy: 54, 2
+  size: 48, 96
+  orig: 48, 96
+  offset: 0, 0
+  index: -1
+trees/orangeTree_med
+  rotate: false
+  xy: 86, 102
+  size: 80, 128
+  orig: 80, 128
+  offset: 0, 0
+  index: -1
+trees/orangeTree_tall
+  rotate: false
+  xy: 306, 134
+  size: 48, 96
+  orig: 48, 96
+  offset: 0, 0
+  index: -1
+trees/yellowTree_med
+  rotate: false
+  xy: 170, 102
+  size: 80, 128
+  orig: 80, 128
+  offset: 0, 0
+  index: -1
+trees/yellowTree_tall
+  rotate: false
+  xy: 106, 2
+  size: 48, 96
+  orig: 48, 96
+  offset: 0, 0
+  index: -1

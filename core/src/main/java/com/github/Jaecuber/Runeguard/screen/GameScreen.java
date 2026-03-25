@@ -1,15 +1,21 @@
-package com.github.Jaecuber.Runeguard;
+package com.github.Jaecuber.Runeguard.screen;
+
+import java.util.function.Consumer;
 
 import com.badlogic.ashley.core.Engine;
 import com.badlogic.ashley.core.EntitySystem;
 import com.badlogic.gdx.ScreenAdapter;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.Batch;
+import com.badlogic.gdx.maps.tiled.TiledMap;
 import com.badlogic.gdx.utils.Disposable;
 import com.badlogic.gdx.utils.viewport.Viewport;
+import com.github.Jaecuber.Runeguard.Launcher;
 import com.github.Jaecuber.Runeguard.asset.AssetService;
 import com.github.Jaecuber.Runeguard.asset.MapAsset;
 import com.github.Jaecuber.Runeguard.systems.RenderSystem;
+import com.github.Jaecuber.Runeguard.tiled.TiledAshleyConfig;
+import com.github.Jaecuber.Runeguard.tiled.TiledService;
 
 /** First screen of the application. Displayed after the application is created. */
 public class GameScreen extends ScreenAdapter {
@@ -19,8 +25,8 @@ public class GameScreen extends ScreenAdapter {
     private final Viewport viewport;
     private final OrthographicCamera camera;
     private final Engine engine;
-
-    
+    private final TiledService tiledService;
+    private final TiledAshleyConfig tiledAshleyConfig;
 
     public GameScreen(Launcher game) {
         this.game = game;
@@ -28,15 +34,21 @@ public class GameScreen extends ScreenAdapter {
         this.viewport = game.getViewport();
         this.camera = game.getCamera();
         this.batch = game.getBatch();
+        this.tiledService = new TiledService(this.assetService);
         this.engine = new Engine();
+        this.tiledAshleyConfig = new TiledAshleyConfig(this.engine, this.assetService);
 
-        this.engine.addSystem(new RenderSystem(this.batch, this.viewport));
+        this.engine.addSystem(new RenderSystem(this.batch, this.viewport, this.camera));
     }
 
     @Override
     public void show(){
+        Consumer<TiledMap> renderConsumer = this.engine.getSystem(RenderSystem.class)::setMap;
+        this.tiledService.setMapChangeConsumer(renderConsumer);
+        this.tiledService.setLoadObjectConsumer(this.tiledAshleyConfig::onLoadObject);
 
-        this.engine.getSystem(RenderSystem.class).setMap(this.assetService.get(MapAsset.MAIN));
+        TiledMap tiledMap = this.tiledService.loadMap(MapAsset.MAIN);
+        this.tiledService.setMap(tiledMap);
     }
 
     @Override

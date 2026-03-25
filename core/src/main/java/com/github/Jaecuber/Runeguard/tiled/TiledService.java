@@ -62,4 +62,11 @@ public class TiledService {
             }
         }
     }
+    public void setMapChangeConsumer(Consumer<TiledMap> mapChangeConsumer){
+        this.mapChangeConsumer = mapChangeConsumer;
+    }
+
+    public void setLoadObjectConsumer(Consumer<TiledMapTileMapObject> loadObjectConsumer){
+        this.loadObjectConsumer = loadObjectConsumer;
+    }
 }
