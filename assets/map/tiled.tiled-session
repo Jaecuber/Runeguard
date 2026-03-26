@@ -1,12 +1,12 @@
 {
-    "activeFile": "MainTileset.tsx",
+    "activeFile": "Hitbox.tsx",
     "expandedProjectPaths": [
         "."
     ],
     "file.lastUsedOpenFilter": "All Files (*)",
     "fileStates": {
         "Buildings.tsx": {
-            "scaleInDock": 1,
+            "scaleInDock": 2,
             "scaleInEditor": 8
         },
         "Farmset.tsx": {
@@ -15,15 +15,17 @@
             "scaleInEditor": 2
         },
         "Furniture.tsx": {
-            "scaleInDock": 1,
+            "scaleInDock": 1.5,
             "scaleInEditor": 4
         },
         "Hitbox.tsx": {
-            "dynamicWrapping": false
+            "dynamicWrapping": false,
+            "scaleInDock": 11,
+            "scaleInEditor": 23
         },
         "MainTileset.tsx": {
             "dynamicWrapping": false,
-            "scaleInDock": 2,
+            "scaleInDock": 3,
             "scaleInEditor": 1
         },
         "Player.tsx": {
@@ -48,15 +50,15 @@
         },
         "Vegetation.tsx": {
             "dynamicWrapping": false,
-            "scaleInDock": 1,
+            "scaleInDock": 2,
             "scaleInEditor": 1
         },
         "starterArea.tmx": {
-            "scale": 0.75,
-            "selectedLayer": 1,
+            "scale": 3,
+            "selectedLayer": 4,
             "viewCenter": {
-                "x": 799.3333333333333,
-                "y": 720
+                "x": 643.1666666666666,
+                "y": 978
             }
         }
     },
@@ -71,7 +73,8 @@
         "Shadows.tsx",
         "Trees.tsx",
         "Vegetation.tsx",
-        "starterArea.tmx"
+        "starterArea.tmx",
+        "Hitbox.tsx"
     ],
     "project": "tiled.tiled-project",
     "property.type": "float",
@@ -79,13 +82,14 @@
         "Farmset.tsx",
         "Buildings.tsx",
         "Furniture.tsx",
-        "starterArea.tmx",
-        "Vegetation.tsx",
-        "Trees.tsx",
-        "Shadows.tsx",
-        "Rocks.tsx",
+        "MainTileset.tsx",
         "Player.tsx",
-        "MainTileset.tsx"
+        "Rocks.tsx",
+        "Shadows.tsx",
+        "Trees.tsx",
+        "Vegetation.tsx",
+        "starterArea.tmx",
+        "Hitbox.tsx"
     ],
     "tileset.lastUsedFormat": "tsx",
     "tileset.tileSize": {
