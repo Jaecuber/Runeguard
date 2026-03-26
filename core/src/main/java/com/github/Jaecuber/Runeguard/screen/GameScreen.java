@@ -5,44 +5,43 @@ import java.util.function.Consumer;
 import com.badlogic.ashley.core.Engine;
 import com.badlogic.ashley.core.EntitySystem;
 import com.badlogic.gdx.ScreenAdapter;
-import com.badlogic.gdx.graphics.OrthographicCamera;
-import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.maps.tiled.TiledMap;
 import com.badlogic.gdx.utils.Disposable;
-import com.badlogic.gdx.utils.viewport.Viewport;
 import com.github.Jaecuber.Runeguard.Launcher;
-import com.github.Jaecuber.Runeguard.asset.AssetService;
 import com.github.Jaecuber.Runeguard.asset.MapAsset;
+import com.github.Jaecuber.Runeguard.input.GameControllerState;
+import com.github.Jaecuber.Runeguard.input.KeyboardController;
+import com.github.Jaecuber.Runeguard.systems.ControllerSystem;
+import com.github.Jaecuber.Runeguard.systems.MoveSystem;
 import com.github.Jaecuber.Runeguard.systems.RenderSystem;
 import com.github.Jaecuber.Runeguard.tiled.TiledAshleyConfig;
 import com.github.Jaecuber.Runeguard.tiled.TiledService;
 
 /** First screen of the application. Displayed after the application is created. */
 public class GameScreen extends ScreenAdapter {
-    private final Launcher game;
-    private final Batch batch;
-    private final AssetService assetService;
-    private final Viewport viewport;
-    private final OrthographicCamera camera;
     private final Engine engine;
     private final TiledService tiledService;
     private final TiledAshleyConfig tiledAshleyConfig;
+    private final KeyboardController keyboardController;
+    private final Launcher game;
 
     public GameScreen(Launcher game) {
         this.game = game;
-        this.assetService = game.getAssetService();
-        this.viewport = game.getViewport();
-        this.camera = game.getCamera();
-        this.batch = game.getBatch();
-        this.tiledService = new TiledService(this.assetService);
+        this.tiledService = new TiledService(game.getAssetService());
         this.engine = new Engine();
-        this.tiledAshleyConfig = new TiledAshleyConfig(this.engine, this.assetService);
+        this.tiledAshleyConfig = new TiledAshleyConfig(this.engine, game.getAssetService());
+        this.keyboardController = new KeyboardController(GameControllerState.class, engine);
 
-        this.engine.addSystem(new RenderSystem(this.batch, this.viewport, this.camera));
+        this.engine.addSystem(new ControllerSystem());
+        this.engine.addSystem(new MoveSystem());
+        this.engine.addSystem(new RenderSystem(game.getBatch(), game.getViewport(), game.getCamera()));
     }
 
     @Override
     public void show(){
+        game.setInputProcessor(keyboardController);
+        keyboardController.setActiveState(GameControllerState.class);
+
         Consumer<TiledMap> renderConsumer = this.engine.getSystem(RenderSystem.class)::setMap;
         this.tiledService.setMapChangeConsumer(renderConsumer);
         this.tiledService.setLoadObjectConsumer(this.tiledAshleyConfig::onLoadObject);

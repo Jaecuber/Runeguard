@@ -70,6 +70,7 @@
         "starterArea.tmx"
     ],
     "project": "tiled.tiled-project",
+    "property.type": "float",
     "recentFiles": [
         "Farmset.tsx",
         "Buildings.tsx",

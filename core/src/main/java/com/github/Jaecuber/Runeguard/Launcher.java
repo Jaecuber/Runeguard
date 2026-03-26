@@ -6,6 +6,8 @@ import java.util.Map;
 import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.InputMultiplexer;
+import com.badlogic.gdx.InputProcessor;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.assets.loaders.resolvers.InternalFileHandleResolver;
 import com.badlogic.gdx.graphics.FPSLogger;
@@ -33,12 +35,15 @@ public class Launcher extends Game {
     private AssetService assetService;
     private GLProfiler glProfiler;
     private FPSLogger fpsLogger;
+    private InputMultiplexer inputMultiplexer;
 
     private final Map<Class<? extends Screen>, Screen> screenCache = new HashMap<>();
 
     @Override
     public void create() {
         Gdx.app.setLogLevel(Application.LOG_DEBUG);
+        this.inputMultiplexer = new InputMultiplexer();
+        Gdx.input.setInputProcessor(inputMultiplexer);
 
         this.batch = new SpriteBatch();
         this.camera = new OrthographicCamera();
@@ -111,5 +116,14 @@ public class Launcher extends Game {
 
     public OrthographicCamera getCamera(){
         return camera;
+    }
+
+    public void setInputProcessor(InputProcessor... processors){
+        inputMultiplexer.clear();
+        if(processors == null) return;
+        
+        for(InputProcessor processor : processors){
+            inputMultiplexer.addProcessor(processor);
+        }
     }
 }

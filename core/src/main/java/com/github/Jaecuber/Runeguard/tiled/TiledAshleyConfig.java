@@ -14,7 +14,9 @@ import com.badlogic.gdx.math.Vector2;
 import com.github.Jaecuber.Runeguard.Launcher;
 import com.github.Jaecuber.Runeguard.asset.AssetService;
 import com.github.Jaecuber.Runeguard.asset.AtlasAsset;
+import com.github.Jaecuber.Runeguard.component.Controller;
 import com.github.Jaecuber.Runeguard.component.Graphic;
+import com.github.Jaecuber.Runeguard.component.Move;
 import com.github.Jaecuber.Runeguard.component.Transform;
 
 public class TiledAshleyConfig {
@@ -39,8 +41,24 @@ public class TiledAshleyConfig {
             tileMapObject.getScaleX(), tileMapObject.getScaleY(), 
             entity
         );
+        addEntityController(tileMapObject, entity);
+        addEntityMove(tile, entity);
 
         this.engine.addEntity(entity);
+    }
+
+    private void addEntityMove(TiledMapTile tile, Entity entity) {
+        float speed = tile.getProperties().get("speed", 0f, Float.class);
+        if(speed == 0f) return;
+
+        entity.add(new Move(speed));
+    }
+
+    private void addEntityController(TiledMapTileMapObject tileMapObject, Entity entity) {
+        boolean controller = tileMapObject.getProperties().get("controller", false, Boolean.class);
+        if(!controller) return;
+
+        entity.add(new Controller());
     }
 
     private void addEntityTransform(

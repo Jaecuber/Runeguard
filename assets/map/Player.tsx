@@ -4,6 +4,7 @@
  <tile id="0">
   <properties>
    <property name="atlasAsset" value="OBJECTS"/>
+   <property name="speed" type="float" value="4"/>
   </properties>
   <image source="Objects/player.png" width="32" height="32"/>
  </tile>
