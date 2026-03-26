@@ -20,7 +20,6 @@ import com.badlogic.gdx.utils.GdxRuntimeException;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
 import com.github.Jaecuber.Runeguard.asset.AssetService;
-import com.github.Jaecuber.Runeguard.screen.GameScreen;
 import com.github.Jaecuber.Runeguard.screen.LoadingScreen;
 
 /** {@link com.badlogic.gdx.ApplicationListener} implementation shared by all platforms. */

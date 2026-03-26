@@ -18,6 +18,9 @@
             "scaleInDock": 1,
             "scaleInEditor": 4
         },
+        "Hitbox.tsx": {
+            "dynamicWrapping": false
+        },
         "MainTileset.tsx": {
             "dynamicWrapping": false,
             "scaleInDock": 2,
@@ -57,6 +60,7 @@
             }
         }
     },
+    "last.imagePath": "C:/Users/1918458/Desktop/WorkspaceCSA/Runeguard/assets/map/Spritesheets",
     "openFiles": [
         "Farmset.tsx",
         "Buildings.tsx",
@@ -82,5 +86,10 @@
         "Rocks.tsx",
         "Player.tsx",
         "MainTileset.tsx"
-    ]
+    ],
+    "tileset.lastUsedFormat": "tsx",
+    "tileset.tileSize": {
+        "height": 16,
+        "width": 16
+    }
 }
