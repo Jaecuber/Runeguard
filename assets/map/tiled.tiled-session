@@ -1,12 +1,12 @@
 {
-    "activeFile": "Hitbox.tsx",
+    "activeFile": "MainTileset.tsx",
     "expandedProjectPaths": [
         "."
     ],
     "file.lastUsedOpenFilter": "All Files (*)",
     "fileStates": {
         "Buildings.tsx": {
-            "scaleInDock": 2,
+            "scaleInDock": 1,
             "scaleInEditor": 8
         },
         "Farmset.tsx": {
@@ -15,23 +15,24 @@
             "scaleInEditor": 2
         },
         "Furniture.tsx": {
-            "scaleInDock": 1.5,
+            "scaleInDock": 1,
             "scaleInEditor": 4
         },
         "Hitbox.tsx": {
-            "dynamicWrapping": false,
-            "scaleInDock": 11,
-            "scaleInEditor": 23
+            "dynamicWrapping": false
         },
         "MainTileset.tsx": {
             "dynamicWrapping": false,
-            "scaleInDock": 3,
+            "scaleInDock": 2,
             "scaleInEditor": 1
         },
         "Player.tsx": {
             "dynamicWrapping": true,
             "scaleInDock": 1,
             "scaleInEditor": 1
+        },
+        "Red Fire.tsx": {
+            "dynamicWrapping": false
         },
         "Rocks.tsx": {
             "dynamicWrapping": false,
@@ -50,19 +51,19 @@
         },
         "Vegetation.tsx": {
             "dynamicWrapping": false,
-            "scaleInDock": 2,
+            "scaleInDock": 1,
             "scaleInEditor": 1
         },
         "starterArea.tmx": {
-            "scale": 3,
-            "selectedLayer": 4,
+            "scale": 0.75,
+            "selectedLayer": 1,
             "viewCenter": {
-                "x": 643.1666666666666,
-                "y": 978
+                "x": 799.3333333333333,
+                "y": 720
             }
         }
     },
-    "last.imagePath": "C:/Users/1918458/Desktop/WorkspaceCSA/Runeguard/assets/map/Spritesheets",
+    "last.imagePath": "D:/Projects/Runeguard/assets/map/Spritesheets",
     "openFiles": [
         "Farmset.tsx",
         "Buildings.tsx",
@@ -73,8 +74,7 @@
         "Shadows.tsx",
         "Trees.tsx",
         "Vegetation.tsx",
-        "starterArea.tmx",
-        "Hitbox.tsx"
+        "starterArea.tmx"
     ],
     "project": "tiled.tiled-project",
     "property.type": "float",
@@ -82,18 +82,17 @@
         "Farmset.tsx",
         "Buildings.tsx",
         "Furniture.tsx",
-        "MainTileset.tsx",
-        "Player.tsx",
-        "Rocks.tsx",
-        "Shadows.tsx",
-        "Trees.tsx",
-        "Vegetation.tsx",
         "starterArea.tmx",
-        "Hitbox.tsx"
+        "Vegetation.tsx",
+        "Trees.tsx",
+        "Shadows.tsx",
+        "Rocks.tsx",
+        "Player.tsx",
+        "MainTileset.tsx"
     ],
     "tileset.lastUsedFormat": "tsx",
     "tileset.tileSize": {
-        "height": 16,
-        "width": 16
+        "height": 32,
+        "width": 32
     }
 }

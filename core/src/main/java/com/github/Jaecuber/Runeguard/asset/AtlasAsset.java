@@ -2,7 +2,6 @@ package com.github.Jaecuber.Runeguard.asset;
 
 import com.badlogic.gdx.assets.AssetDescriptor;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.badlogic.gdx.maps.ImageResolver.TextureAtlasImageResolver;
 
 public enum AtlasAsset implements Asset<TextureAtlas>{
     OBJECTS("objects.atlas");

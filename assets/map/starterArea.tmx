@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="100" height="100" tilewidth="16" tileheight="16" infinite="0" nextlayerid="18" nextobjectid="59">
+<map version="1.10" tiledversion="1.12.0" orientation="orthogonal" renderorder="right-down" width="100" height="100" tilewidth="16" tileheight="16" infinite="0" nextlayerid="18" nextobjectid="59">
  <tileset firstgid="1" source="MainTileset.tsx"/>
  <tileset firstgid="4051" source="Trees.tsx"/>
  <tileset firstgid="4082" source="Shadows.tsx"/>
@@ -10,6 +10,7 @@
  <tileset firstgid="13042" source="Rocks.tsx"/>
  <tileset firstgid="13289" source="Vegetation.tsx"/>
  <tileset firstgid="13964" source="Hitbox.tsx"/>
+ <tileset firstgid="13965" source="Red Fire.tsx"/>
  <layer id="1" name="ground" width="100" height="100">
   <data encoding="base64" compression="zlib">
    eJzt3DFOAkEAhWFiYoUJXs3CwhsZTmONHE5LmAzZlQTeM3zFVzFslvdPze5ps9k9kNdy6X300KNZeh899GiW3kcPPZql99FDj2bpffTQo1l6Hz30aJbeRw89mqX30UOPZul99NCjWXofPfRolt5HDz2apffRQ49m6X300KNZeh899GiW3kcPPZql99FDj2bpffTQo1l6Hz30aJbeRw89mqX30QMAAAAAAAAAAG7r6zn/DgAAAAAAAAAAAGmf2/w73FP6/56WHH57fJ8Y++wXPh/tV5xdc2bpe9d8/z94ezk39jluzz9/n/z+/YXzp2cvnVm6D6c+tsvvO/v+NR1T92r8fUsOk2fMdhrPjl3XPH+05hmz+zJ7v9Z79dces2es3foeZj1n79d+rx5Z470CAAC4tR+1nTul
@@ -68,12 +69,12 @@
   </layer>
   <layer id="12" name="detail2" width="100" height="100">
    <data encoding="base64" compression="zlib">
-   eJzt2kENACEABLH9gADwbwTM8cLBXSCkVTACJgEAAAAAAAAAAAAAAIDvjJbMdrqCrfSk9tMVAAAAAAAAAAAA/Mm7dxfvHgAAAAAAAAAAAAAAAAAAALxhAa4yA5U=
+   eJzt2ksOgjAQANDZ6JrAFbwD1+NcejlXbkwUBNqOzXsXYDKZT0saAQAAAAAAAABAj25z6wj6UjqfwxxL2S/AubbU7FrfDObUV+Z4f/bW/Hst6B3OtrWmzCXIT59+Zn/Wdx8jHmPrKHi5TBHXqXUUAECPnLXrceeDffTO7+QsP/u3PDkGAIDynLtz83+gHrk+xizJT41Dfd7u5eLt3jr7HAAAAAAAAAAAAAAAAAAAgH/wBGOGDM8=
   </data>
   </layer>
  </group>
  <objectgroup id="4" name="objects">
-  <object id="11" gid="10341" x="653.667" y="585.667" width="32" height="32">
+  <object id="11" gid="10341" x="40.667" y="1574.67" width="32" height="32">
    <properties>
     <property name="controller" type="bool" value="true"/>
    </properties>

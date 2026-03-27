@@ -24,8 +24,8 @@ import com.github.Jaecuber.Runeguard.screen.LoadingScreen;
 
 /** {@link com.badlogic.gdx.ApplicationListener} implementation shared by all platforms. */
 public class Launcher extends Game {
-    public static final float WORLD_WIDTH = 100f;
-    public static final float WORLD_HEIGHT = 100f;
+    public static final float WORLD_WIDTH = 16f;
+    public static final float WORLD_HEIGHT = 9f;
     public static final float UNIT_SCALE = 1f/16f;
 
     private Batch batch;
@@ -120,7 +120,7 @@ public class Launcher extends Game {
     public void setInputProcessor(InputProcessor... processors){
         inputMultiplexer.clear();
         if(processors == null) return;
-        
+
         for(InputProcessor processor : processors){
             inputMultiplexer.addProcessor(processor);
         }
