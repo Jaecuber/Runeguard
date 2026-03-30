@@ -79,7 +79,7 @@
  </group>
  <objectgroup id="4" name="objects">
   <object id="53" gid="4060" x="370" y="1010" width="80" height="128"/>
-  <object id="62" gid="10342" x="305.333" y="1136.67" width="96" height="80">
+  <object id="62" gid="10342" x="340.083" y="1118.42" width="22" height="34">
    <properties>
     <property name="camFollow" type="bool" value="true"/>
     <property name="controller" type="bool" value="true"/>
