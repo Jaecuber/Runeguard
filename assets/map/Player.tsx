@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.10" tiledversion="1.10.2" name="Player" tilewidth="96" tileheight="80" tilecount="2" columns="0">
+<tileset version="1.10" tiledversion="1.12.0" name="Player" tilewidth="96" tileheight="80" tilecount="1" columns="0">
  <grid orientation="orthogonal" width="1" height="1"/>
- <tile id="0">
+ <tile id="1" type="GameObject">
   <properties>
+   <property name="animation" value="IDLE"/>
+   <property name="animationSpeed" type="float" value="1"/>
    <property name="atlasAsset" value="OBJECTS"/>
-   <property name="speed" type="float" value="4"/>
+   <property name="speed" type="float" value="8"/>
   </properties>
-  <image width="32" height="32" source="Objects/player.png"/>
- </tile>
- <tile id="1">
-  <properties>
-   <property name="atlasAsset" value="OBJECTS"/>
-   <property name="speed" type="float" value="4"/>
-  </properties>
-  <image width="96" height="80" source="Objects/newPlayer.png"/>
+  <image source="Objects/player.png" width="96" height="80"/>
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="47" y="54" width="0.25">
+    <ellipse/>
+   </object>
+   <object id="2" x="39.6364" y="51.5909" width="17.0909" height="7.45455">
+    <ellipse/>
+   </object>
+  </objectgroup>
  </tile>
 </tileset>

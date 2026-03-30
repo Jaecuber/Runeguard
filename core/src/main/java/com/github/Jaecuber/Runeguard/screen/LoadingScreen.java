@@ -5,6 +5,7 @@ import com.badlogic.gdx.ScreenAdapter;
 import com.github.Jaecuber.Runeguard.Launcher;
 import com.github.Jaecuber.Runeguard.asset.AssetService;
 import com.github.Jaecuber.Runeguard.asset.AtlasAsset;
+import com.github.Jaecuber.Runeguard.asset.SoundAsset;
 
 public class LoadingScreen extends ScreenAdapter{
     private final Launcher game;
@@ -19,6 +20,9 @@ public class LoadingScreen extends ScreenAdapter{
     public void show(){
         for(AtlasAsset atlas : AtlasAsset.values()){
             assetService.queue(atlas);
+        }
+        for(SoundAsset sound : SoundAsset.values()){
+            assetService.queue(sound);
         }
     }
 

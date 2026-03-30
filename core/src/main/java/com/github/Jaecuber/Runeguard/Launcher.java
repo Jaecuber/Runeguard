@@ -20,12 +20,13 @@ import com.badlogic.gdx.utils.GdxRuntimeException;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
 import com.github.Jaecuber.Runeguard.asset.AssetService;
+import com.github.Jaecuber.Runeguard.audio.AudioService;
 import com.github.Jaecuber.Runeguard.screen.LoadingScreen;
 
 /** {@link com.badlogic.gdx.ApplicationListener} implementation shared by all platforms. */
 public class Launcher extends Game {
-    public static final float WORLD_WIDTH = 16f;
-    public static final float WORLD_HEIGHT = 9f;
+    public static final float WORLD_WIDTH = 20f;
+    public static final float WORLD_HEIGHT = 12f;
     public static final float UNIT_SCALE = 1f/16f;
 
     private Batch batch;
@@ -35,6 +36,7 @@ public class Launcher extends Game {
     private GLProfiler glProfiler;
     private FPSLogger fpsLogger;
     private InputMultiplexer inputMultiplexer;
+    private AudioService audioService;
 
     private final Map<Class<? extends Screen>, Screen> screenCache = new HashMap<>();
 
@@ -51,6 +53,7 @@ public class Launcher extends Game {
         this.glProfiler = new GLProfiler(Gdx.graphics);
         this.glProfiler.enable();
         this.fpsLogger = new FPSLogger();
+        this.audioService = new AudioService(this.assetService);
 
         addScreen(new LoadingScreen(this, assetService));
         setScreen(LoadingScreen.class);
@@ -115,6 +118,10 @@ public class Launcher extends Game {
 
     public OrthographicCamera getCamera(){
         return camera;
+    }
+
+    public AudioService getAudioService(){
+        return audioService;
     }
 
     public void setInputProcessor(InputProcessor... processors){

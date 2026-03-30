@@ -1,12 +1,12 @@
 {
-    "activeFile": "Hitbox.tsx",
+    "activeFile": "starterArea.tmx",
     "expandedProjectPaths": [
         "."
     ],
     "file.lastUsedOpenFilter": "All Files (*)",
     "fileStates": {
         "Buildings.tsx": {
-            "scaleInDock": 2,
+            "scaleInDock": 1,
             "scaleInEditor": 8
         },
         "Farmset.tsx": {
@@ -15,17 +15,17 @@
             "scaleInEditor": 2
         },
         "Furniture.tsx": {
-            "scaleInDock": 1.5,
+            "scaleInDock": 1,
             "scaleInEditor": 4
         },
         "Hitbox.tsx": {
             "dynamicWrapping": false,
-            "scaleInDock": 11,
-            "scaleInEditor": 23
+            "scaleInDock": 1,
+            "scaleInEditor": 1
         },
         "MainTileset.tsx": {
             "dynamicWrapping": false,
-            "scaleInDock": 3,
+            "scaleInDock": 2,
             "scaleInEditor": 1
         },
         "Player.tsx": {
@@ -34,10 +34,13 @@
             "scaleInEditor": 1
         },
         "RawCliffs.tsx": {
-            "dynamicWrapping": false
+            "dynamicWrapping": false,
+            "scaleInDock": 1
         },
         "Red Fire.tsx": {
-            "dynamicWrapping": false
+            "dynamicWrapping": false,
+            "scaleInDock": 1,
+            "scaleInEditor": 1
         },
         "Rocks.tsx": {
             "dynamicWrapping": false,
@@ -56,15 +59,18 @@
         },
         "Vegetation.tsx": {
             "dynamicWrapping": false,
-            "scaleInDock": 2,
+            "scaleInDock": 1,
             "scaleInEditor": 1
         },
         "starterArea.tmx": {
-            "scale": 1,
-            "selectedLayer": 4,
+            "expandedGroupLayers": [
+                7
+            ],
+            "scale": 3,
+            "selectedLayer": 13,
             "viewCenter": {
-                "x": 1162.5,
-                "y": 674
+                "x": 163.99999999999997,
+                "y": 1494.3333333333333
             }
         }
     },
@@ -80,12 +86,12 @@
         "Trees.tsx",
         "Vegetation.tsx",
         "starterArea.tmx",
-        "Hitbox.tsx"
+        "Hitbox.tsx",
+        "Red Fire.tsx"
     ],
     "project": "tiled.tiled-project",
-    "property.type": "bool",
+    "property.type": "string",
     "recentFiles": [
-        "starterArea.tmx",
         "Farmset.tsx",
         "Buildings.tsx",
         "Furniture.tsx",
@@ -95,7 +101,9 @@
         "Shadows.tsx",
         "Trees.tsx",
         "Vegetation.tsx",
-        "Hitbox.tsx"
+        "Red Fire.tsx",
+        "Hitbox.tsx",
+        "starterArea.tmx"
     ],
     "tileset.lastUsedFormat": "tsx",
     "tileset.tileSize": {
