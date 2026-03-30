@@ -1,5 +1,5 @@
 {
-    "activeFile": "starterArea.tmx",
+    "activeFile": "Player.tsx",
     "expandedProjectPaths": [
         "."
     ],
@@ -7,7 +7,7 @@
     "fileStates": {
         "Buildings.tsx": {
             "scaleInDock": 1,
-            "scaleInEditor": 8
+            "scaleInEditor": 2
         },
         "Farmset.tsx": {
             "dynamicWrapping": false,
@@ -16,22 +16,22 @@
         },
         "Furniture.tsx": {
             "scaleInDock": 1,
-            "scaleInEditor": 4
+            "scaleInEditor": 2
         },
         "Hitbox.tsx": {
             "dynamicWrapping": false,
             "scaleInDock": 1,
-            "scaleInEditor": 1
+            "scaleInEditor": 2
         },
         "MainTileset.tsx": {
             "dynamicWrapping": false,
             "scaleInDock": 2,
-            "scaleInEditor": 1
+            "scaleInEditor": 2
         },
         "Player.tsx": {
             "dynamicWrapping": true,
             "scaleInDock": 1,
-            "scaleInEditor": 1
+            "scaleInEditor": 2
         },
         "RawCliffs.tsx": {
             "dynamicWrapping": false,
@@ -40,17 +40,17 @@
         "Red Fire.tsx": {
             "dynamicWrapping": false,
             "scaleInDock": 1,
-            "scaleInEditor": 1
+            "scaleInEditor": 2
         },
         "Rocks.tsx": {
             "dynamicWrapping": false,
             "scaleInDock": 1,
-            "scaleInEditor": 1
+            "scaleInEditor": 2
         },
         "Shadows.tsx": {
             "dynamicWrapping": true,
             "scaleInDock": 1,
-            "scaleInEditor": 1
+            "scaleInEditor": 2
         },
         "Trees.tsx": {
             "dynamicWrapping": true,
@@ -60,22 +60,23 @@
         "Vegetation.tsx": {
             "dynamicWrapping": false,
             "scaleInDock": 1,
-            "scaleInEditor": 1
+            "scaleInEditor": 2
         },
         "starterArea.tmx": {
             "expandedGroupLayers": [
                 7
             ],
-            "scale": 3,
+            "scale": 4,
             "selectedLayer": 13,
             "viewCenter": {
-                "x": 163.99999999999997,
-                "y": 1494.3333333333333
+                "x": 369.5,
+                "y": 1119
             }
         }
     },
     "last.imagePath": "C:/Users/1918458/Desktop/WorkspaceCSA/Runeguard/assets/map/rawTiles",
     "openFiles": [
+        "starterArea.tmx",
         "Farmset.tsx",
         "Buildings.tsx",
         "Furniture.tsx",
@@ -85,25 +86,24 @@
         "Shadows.tsx",
         "Trees.tsx",
         "Vegetation.tsx",
-        "starterArea.tmx",
         "Hitbox.tsx",
         "Red Fire.tsx"
     ],
     "project": "tiled.tiled-project",
     "property.type": "string",
     "recentFiles": [
+        "starterArea.tmx",
         "Farmset.tsx",
         "Buildings.tsx",
         "Furniture.tsx",
         "MainTileset.tsx",
-        "Player.tsx",
-        "Rocks.tsx",
-        "Shadows.tsx",
-        "Trees.tsx",
-        "Vegetation.tsx",
         "Red Fire.tsx",
         "Hitbox.tsx",
-        "starterArea.tmx"
+        "Vegetation.tsx",
+        "Trees.tsx",
+        "Shadows.tsx",
+        "Rocks.tsx",
+        "Player.tsx"
     ],
     "tileset.lastUsedFormat": "tsx",
     "tileset.tileSize": {
