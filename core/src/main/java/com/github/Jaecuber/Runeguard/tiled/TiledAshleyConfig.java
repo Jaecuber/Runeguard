@@ -21,6 +21,7 @@ import com.badlogic.gdx.physics.box2d.World;
 import com.github.Jaecuber.Runeguard.Launcher;
 import com.github.Jaecuber.Runeguard.asset.AssetService;
 import com.github.Jaecuber.Runeguard.asset.AtlasAsset;
+import com.github.Jaecuber.Runeguard.asset.SoundAsset;
 import com.github.Jaecuber.Runeguard.component.Animation2D;
 import com.github.Jaecuber.Runeguard.component.CameraFollow;
 import com.github.Jaecuber.Runeguard.component.Controller;
@@ -31,6 +32,7 @@ import com.github.Jaecuber.Runeguard.component.Move;
 import com.github.Jaecuber.Runeguard.component.Physics;
 import com.github.Jaecuber.Runeguard.component.Transform;
 import com.github.Jaecuber.Runeguard.component.Animation2D.AnimationType;
+import com.github.Jaecuber.Runeguard.component.Attack;
 
 public class TiledAshleyConfig {
     private static final Vector2 DEFAULT_PHYSICS_SCALING = new Vector2(1f, 1f);
@@ -91,12 +93,26 @@ public class TiledAshleyConfig {
         BodyDef.BodyType bodyType = getObjectBodyType(tile);
         addEntityPhysics(tile.getObjects(), bodyType, Vector2.Zero, entity);
         addEntityCameraFollow(tileMapObject, entity);
+        addEntityAttack(tile, entity);
         entity.add(new Facing(Facing.FacingDirection.DOWN));
         entity.add(new Fsm(entity));
 
         this.engine.addEntity(entity);
     }
 
+    private void addEntityAttack(TiledMapTile tile, Entity entity) {
+        float damage = tile.getProperties().get("damage", 0f, Float.class);
+        if(damage==0f)return;
+
+        float damageDelay = tile.getProperties().get("damageDelay",0f,Float.class);
+        String soundAssetStr = tile.getProperties().get("attackSound", "", String.class);
+        SoundAsset soundAsset = null;
+        if(!soundAssetStr.isBlank()){
+            soundAsset = SoundAsset.valueOf(soundAssetStr);
+        }
+
+        entity.add(new Attack(damage, damageDelay, soundAsset));
+    }
     private void addEntityCameraFollow(TiledMapTileMapObject mapObject, Entity entity) {
         boolean camFollow = mapObject.getProperties().get("camFollow", false, Boolean.class);
         if(!camFollow) return;

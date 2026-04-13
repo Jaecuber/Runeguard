@@ -31,8 +31,8 @@
  <tile id="9" type="Prop">
   <image source="Objects/Trees/type1/_med/greenTree_med.png" width="80" height="128"/>
   <objectgroup draworder="index" id="2">
-   <object id="1" x="24" y="123">
-    <polygon points="0,0 14.75,4 28.5,1.75 26.5,-8.5 23.25,-9.5 22.5,-21.5 9,-21 6.25,-18 8.25,-13.5 8.25,-9.75 3.25,-6"/>
+   <object id="2" x="23.125" y="116.375" width="29.875" height="12.25">
+    <ellipse/>
    </object>
   </objectgroup>
  </tile>

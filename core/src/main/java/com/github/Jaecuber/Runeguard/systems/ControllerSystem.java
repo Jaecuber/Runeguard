@@ -3,19 +3,14 @@ package com.github.Jaecuber.Runeguard.systems;
 import com.badlogic.ashley.core.Entity;
 import com.badlogic.ashley.core.Family;
 import com.badlogic.ashley.systems.IteratingSystem;
-import com.github.Jaecuber.Runeguard.asset.SoundAsset;
-import com.github.Jaecuber.Runeguard.audio.AudioService;
+import com.github.Jaecuber.Runeguard.component.Attack;
 import com.github.Jaecuber.Runeguard.component.Controller;
 import com.github.Jaecuber.Runeguard.component.Move;
 import com.github.Jaecuber.Runeguard.input.Command;
 
 public class ControllerSystem extends IteratingSystem{
-
-    private final AudioService audioService;
-
-    public ControllerSystem(AudioService audioService){
+    public ControllerSystem(){
         super(Family.all(Controller.class).get());
-        this.audioService = audioService; 
     }
 
     @Override
@@ -46,7 +41,10 @@ public class ControllerSystem extends IteratingSystem{
     }
 
     private void startEntityAttack(Entity entity) {
-        audioService.playSound(SoundAsset.SWORD_HIT);
+        Attack attack = Attack.MAPPER.get(entity);
+        if(attack != null && attack.canAttack()){
+            attack.startAttack();
+        }
     }
 
     private void moveEntity(Entity entity, float directionX, float directionY){

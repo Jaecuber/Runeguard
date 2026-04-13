@@ -53,7 +53,7 @@ public class PhysicsSystem extends IteratingSystem implements EntityListener{
         this.accumulator += deltaTime;
 
         while (this.accumulator >= this.interval) {
-            this.accumulator  -= this.accumulator;
+            this.accumulator -= this.interval;
             super.update(deltaTime);
             this.world.step(interval, 6, 2);
         }

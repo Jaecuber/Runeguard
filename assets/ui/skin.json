@@ -1,0 +1,153 @@
+{
+com.badlogic.gdx.graphics.g2d.BitmapFont: {
+	alagard: {
+		file: alagard.fnt
+		scaledSize: -1
+		markupEnabled: false
+		flip: false
+	}
+	alagard_huge: {
+		file: alagard(3).fnt
+		scaledSize: -1
+		markupEnabled: false
+		flip: false
+	}
+	alagard_large: {
+		file: alagard(1).fnt
+		scaledSize: -1
+		markupEnabled: false
+		flip: false
+	}
+	alagard_semiLarge: {
+		file: alagard(4).fnt
+		scaledSize: -1
+		markupEnabled: false
+		flip: false
+	}
+	alaguard_medium: {
+		file: alagard(2).fnt
+		scaledSize: -1
+		markupEnabled: false
+		flip: false
+	}
+}
+com.badlogic.gdx.graphics.Color: {
+	Black: {
+		r: 0
+		g: 0
+		b: 0
+		a: 1
+	}
+	White: {
+		r: 1
+		g: 1
+		b: 1
+		a: 1
+	}
+}
+com.badlogic.gdx.scenes.scene2d.utils.NinePatchDrawable: {
+	bar: {
+		patch: bar
+		minWidth: 62
+		minHeight: 15
+		leftWidth: 3
+		rightWidth: 2
+		topHeight: 1
+		bottomHeight: 1
+	}
+	fill: {
+		patch: fill
+		minWidth: 0
+		minHeight: 13
+		leftWidth: 0
+		rightWidth: 0
+		topHeight: 0
+		bottomHeight: 0
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.Button$ButtonStyle: {
+	default: {
+		up: buttonUp
+		down: buttonDown
+	}
+	exitButton: {
+		up: XIcon
+		down: XIcon
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.Label$LabelStyle: {
+	default: {
+		font: alagard
+		fontColor: White
+	}
+	mediumLabel: {
+		font: alaguard_medium
+		fontColor: White
+	}
+	titleLabel: {
+		font: alagard_large
+		fontColor: White
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.Slider$SliderStyle: {
+	default-horizontal: {
+		background: bar
+		knobBefore: fill
+	}
+	default-vertical: {
+		background: bar
+		knobBefore: fill
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.TextButton$TextButtonStyle: {
+	default: {
+		font: alagard_large
+		up: buttonUp
+		down: buttonDown
+		over: buttonOver
+	}
+	medTextButton: {
+		font: alaguard_medium
+		fontColor: White
+		up: buttonUp
+		down: buttonDown
+		over: buttonOver
+	}
+	mainTextButton: {
+		font: alagard_semiLarge
+		up: buttonUp
+		down: buttonDown
+		over: buttonOver
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.TextField$TextFieldStyle: {
+	default: {
+		font: alaguard_medium
+		fontColor: White
+		background: banner
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.TextTooltip$TextTooltipStyle: {
+	default: {
+		label: default
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.Window$WindowStyle: {
+	default: {
+		background: window
+		titleFont: alagard
+	}
+	banner: {
+		background: banner
+		titleFont: alagard
+	}
+	leftPage: {
+		background: leftPage
+		titleFont: alagard
+	}
+	rightPage: {
+		background: rightPage
+		titleFont: alagard
+	}
+}
+}

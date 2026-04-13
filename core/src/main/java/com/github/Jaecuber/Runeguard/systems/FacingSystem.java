@@ -17,7 +17,7 @@ public class FacingSystem extends IteratingSystem{
     protected void processEntity(Entity entity, float deltaTime){
         Move move = Move.MAPPER.get(entity);
         Vector2 moveDirection = move.getDirection();
-        if(moveDirection.isZero()){
+        if(moveDirection.isZero() || move.isRooted()){
             return;
         }
         Facing facing = Facing.MAPPER.get(entity);

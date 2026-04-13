@@ -1,0 +1,140 @@
+
+skin.png
+size: 2048, 2048
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+alagard(1)
+  rotate: false
+  xy: 1, 94
+  size: 506, 182
+  orig: 506, 182
+  offset: 0, 0
+  index: -1
+alagard(2)
+  rotate: false
+  xy: 1, 1
+  size: 506, 91
+  orig: 506, 91
+  offset: 0, 0
+  index: -1
+RuneguardLogo
+  rotate: false
+  xy: 1, 278
+  size: 1760, 640
+  orig: 1760, 640
+  offset: 0, 0
+  index: -1
+tempBkg
+  rotate: false
+  xy: 1, 920
+  size: 1920, 1080
+  orig: 1920, 1080
+  offset: 0, 0
+  index: -1
+
+skin2.png
+size: 1024, 1024
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+alagard
+  rotate: false
+  xy: 508, 980
+  size: 504, 30
+  orig: 504, 30
+  offset: 0, 0
+  index: -1
+alagard(3)
+  rotate: false
+  xy: 1, 578
+  size: 505, 432
+  orig: 505, 432
+  offset: 0, 0
+  index: -1
+alagard(4)
+  rotate: false
+  xy: 1, 319
+  size: 505, 257
+  orig: 505, 257
+  offset: 0, 0
+  index: -1
+XIcon
+  rotate: false
+  xy: 107, 107
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+banner
+  rotate: false
+  xy: 508, 946
+  size: 224, 32
+  split: 12, 12, 12, 3
+  orig: 224, 32
+  offset: 0, 0
+  index: -1
+bar
+  rotate: false
+  xy: 508, 940
+  size: 62, 4
+  split: 3, 2, 1, 1
+  orig: 62, 4
+  offset: 0, 0
+  index: -1
+buttonDown
+  rotate: false
+  xy: 333, 286
+  size: 30, 31
+  split: 2, 2, 6, 1
+  orig: 30, 31
+  offset: 0, 0
+  index: -1
+buttonOver
+  rotate: false
+  xy: 508, 907
+  size: 30, 31
+  split: 2, 2, 2, 5
+  orig: 30, 31
+  offset: 0, 0
+  index: -1
+buttonUp
+  rotate: false
+  xy: 734, 947
+  size: 30, 31
+  split: 2, 2, 4, 3
+  orig: 30, 31
+  offset: 0, 0
+  index: -1
+fill
+  rotate: false
+  xy: 1, 4
+  size: 30, 2
+  split: 0, 0, 0, 0
+  orig: 30, 2
+  offset: 0, 0
+  index: -1
+leftPage
+  rotate: false
+  xy: 1, 8
+  size: 104, 147
+  split: 50, 51, 4, 7
+  orig: 104, 147
+  offset: 0, 0
+  index: -1
+rightPage
+  rotate: false
+  xy: 227, 170
+  size: 104, 147
+  split: 50, 44, 69, 53
+  orig: 104, 147
+  offset: 0, 0
+  index: -1
+window
+  rotate: false
+  xy: 1, 157
+  size: 224, 160
+  split: 12, 12, 46, 52
+  orig: 224, 160
+  offset: 0, 0
+  index: -1
