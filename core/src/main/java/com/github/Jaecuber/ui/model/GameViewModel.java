@@ -18,8 +18,8 @@ public class GameViewModel extends ViewModel{
     }
 
     public void playerDamage(int amount, float x, float y){
-        float randomNumX = MathUtils.random(-1.0f, 1.0f);
-        float randomNumY = MathUtils.random(-1.0f, 1.0f);
+        float randomNumX = MathUtils.random(0.0f, 2.0f);
+        float randomNumY = MathUtils.random(0.0f, 2.0f);
         Vector2 position = new Vector2(x + randomNumX,y + randomNumY);
         this.playerDamage = Map.entry(position, amount);
         this.propertyChangeSupport.firePropertyChange(PLAYER_DAMAGE, null, this.playerDamage);
