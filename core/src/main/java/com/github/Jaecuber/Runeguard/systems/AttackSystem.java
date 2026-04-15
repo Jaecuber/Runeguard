@@ -13,6 +13,7 @@ import com.badlogic.gdx.physics.box2d.World;
 import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.GdxRuntimeException;
 import com.github.Jaecuber.Runeguard.audio.AudioService;
+import com.github.Jaecuber.Runeguard.component.Animation2D;
 import com.github.Jaecuber.Runeguard.component.Attack;
 import com.github.Jaecuber.Runeguard.component.Facing;
 import com.github.Jaecuber.Runeguard.component.Move;
@@ -41,12 +42,15 @@ public class AttackSystem extends IteratingSystem{
     @Override
     protected void processEntity(Entity entity, float deltaTime) {
         Attack attack = Attack.MAPPER.get(entity);
+        Animation2D animation = Animation2D.MAPPER.get(entity);
+        float animSpeed = (1.0f + attack.getDamageDelay()/attack.getDefaultAnimSpeed());
 
         if(attack.canAttack()) return;
 
         if(attack.hasAttackStarted() && attack.getSfx() != null){
             audioService.playSound(attack.getSfx());
             Move move = Move.MAPPER.get(entity);
+            animation.setSpeed(animSpeed);
             if(move != null){
                 move.setRooted(true);
             }
@@ -68,6 +72,7 @@ public class AttackSystem extends IteratingSystem{
 
             world.QueryAABB(this::attackCallback, attackAABB.x, attackAABB.y, attackAABB.width, attackAABB.height);
 
+            animation.setSpeed(1.0f);
             Move move = Move.MAPPER.get(entity);
             if(move != null){
                 move.setRooted(false);

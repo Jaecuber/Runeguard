@@ -7,6 +7,7 @@ import com.github.Jaecuber.Runeguard.asset.SoundAsset;
 
 public class Attack implements Component{
     public static final ComponentMapper<Attack> MAPPER = ComponentMapper.getFor(Attack.class);
+    private final float DEFAULT_ANIM_SPEED = 8/12f;
 
     private float damage;
     private float damageDelay;
@@ -52,6 +53,14 @@ public class Attack implements Component{
 
     public float getDamage(){
         return damage;
+    }
+
+    public float getDamageDelay(){
+        return damageDelay;
+    }
+
+    public float getDefaultAnimSpeed(){
+        return DEFAULT_ANIM_SPEED;
     }
 
     public SoundAsset getSfx(){

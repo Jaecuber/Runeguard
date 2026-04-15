@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.10" tiledversion="1.12.0" name="Player" tilewidth="96" tileheight="80" tilecount="1" columns="0">
+<tileset version="1.10" tiledversion="1.10.2" name="Player" tilewidth="96" tileheight="80" tilecount="1" columns="0">
  <grid orientation="orthogonal" width="1" height="1"/>
  <tile id="8" type="GameObject">
   <properties>
@@ -13,7 +13,7 @@
    <property name="regen" type="float" value="0.25"/>
    <property name="speed" type="float" value="6"/>
   </properties>
-  <image source="Objects/player.png" width="96" height="80"/>
+  <image width="96" height="80" source="Objects/player.png"/>
   <objectgroup draworder="index" id="2">
    <object id="1" x="39.25" y="52.75" width="17" height="6.125">
     <ellipse/>
