@@ -43,7 +43,7 @@ public class AttackSystem extends IteratingSystem{
     protected void processEntity(Entity entity, float deltaTime) {
         Attack attack = Attack.MAPPER.get(entity);
         Animation2D animation = Animation2D.MAPPER.get(entity);
-        float animSpeed = (1.0f + attack.getDamageDelay()/attack.getDefaultAnimSpeed());
+        float animSpeed = (attack.getDefaultAnimSpeed()/attack.getDamageDelay()) + 0.025f;
 
         if(attack.canAttack()) return;
 
