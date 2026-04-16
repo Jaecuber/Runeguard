@@ -97,7 +97,7 @@ public class AttackSystem extends IteratingSystem{
 
         //life
         //damage
-
+        
         gameViewModel.playerDamage(10, body.getPosition().x, body.getPosition().y);
         return false;
     }
