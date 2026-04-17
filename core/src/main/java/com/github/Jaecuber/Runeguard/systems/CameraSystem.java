@@ -23,7 +23,7 @@ public class CameraSystem extends IteratingSystem{
         super(Family.all(CameraFollow.class, Transform.class).get());
         this.camera = camera;
         this.targetPosition = new Vector2();
-        this.smoothingFactor = 4f;
+        this.smoothingFactor = 6f;
     }
 
     @Override

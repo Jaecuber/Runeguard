@@ -15,6 +15,7 @@ import com.badlogic.gdx.utils.GdxRuntimeException;
 import com.github.Jaecuber.Runeguard.audio.AudioService;
 import com.github.Jaecuber.Runeguard.component.Animation2D;
 import com.github.Jaecuber.Runeguard.component.Attack;
+import com.github.Jaecuber.Runeguard.component.DamageListener;
 import com.github.Jaecuber.Runeguard.component.Facing;
 import com.github.Jaecuber.Runeguard.component.Move;
 import com.github.Jaecuber.Runeguard.component.Physics;
@@ -29,6 +30,7 @@ public class AttackSystem extends IteratingSystem{
     private final Vector2 tempVertex;
     private Body attackerBody;
     private GameViewModel gameViewModel;
+    private float attackDamage;
 
     public AttackSystem(World world, AudioService audioService, GameViewModel viewModel){
         super(Family.all(Attack.class, Facing.class, Physics.class).get());
@@ -37,6 +39,7 @@ public class AttackSystem extends IteratingSystem{
         this.tempVertex = new Vector2();
         this.attackerBody = null;
         this.gameViewModel = viewModel;
+        this.attackDamage = 0f;
     }
 
     @Override
@@ -70,6 +73,7 @@ public class AttackSystem extends IteratingSystem{
             PolygonShape attackShape = getAttackFixture(attackerBody, facingDirection);
             updateAttackAABB(attackerBody.getPosition(), attackShape);
 
+            this.attackDamage = attack.getDamage();
             world.QueryAABB(this::attackCallback, attackAABB.x, attackAABB.y, attackAABB.width, attackAABB.height);
 
             animation.setSpeed(1.0f);
@@ -98,8 +102,13 @@ public class AttackSystem extends IteratingSystem{
         //life
         //damage
         
-        gameViewModel.playerDamage(10, body.getPosition().x, body.getPosition().y);
-        return false;
+        DamageListener damage = DamageListener.MAPPER.get(entity);
+        if (damage == null) {
+            entity.add(new DamageListener(this.attackDamage));
+        } else {
+            damage.addDamage(this.attackDamage);
+        }
+        return true;
     }
 
     private PolygonShape getAttackFixture(Body body, FacingDirection facingDirection) {

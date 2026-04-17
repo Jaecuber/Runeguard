@@ -91,7 +91,7 @@ public class Animation2D implements Component{
     }
 
     public enum AnimationType{
-        IDLE, WALK, ATTACK1, ATTACK2;
+        IDLE, WALK, ATTACK1, ATTACK2, RUN, HURT, DIE, ENEMY_ATTACK;
 
         private final String atlasKey;
 

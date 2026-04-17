@@ -10,6 +10,9 @@
             "scaleInDock": 1,
             "scaleInEditor": 2
         },
+        "Enemies.tsx": {
+            "dynamicWrapping": true
+        },
         "Farmset.tsx": {
             "dynamicWrapping": false,
             "scaleInDock": 1.5,
@@ -75,7 +78,7 @@
             }
         }
     },
-    "last.imagePath": "D:/Downloads/attack2_up",
+    "last.imagePath": "D:/Downloads",
     "openFiles": [
         "starterArea.tmx",
         "Farmset.tsx",
@@ -93,6 +96,7 @@
     "project": "tiled.tiled-project",
     "property.type": "float",
     "recentFiles": [
+        "Shadows.tsx",
         "starterArea.tmx",
         "Farmset.tsx",
         "Buildings.tsx",
@@ -102,7 +106,6 @@
         "Hitbox.tsx",
         "Vegetation.tsx",
         "Trees.tsx",
-        "Shadows.tsx",
         "Rocks.tsx",
         "Player.tsx"
     ],
@@ -110,5 +113,6 @@
     "tileset.tileSize": {
         "height": 16,
         "width": 16
-    }
+    },
+    "tileset.type": 1
 }
