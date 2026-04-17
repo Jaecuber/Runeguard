@@ -65,17 +65,17 @@ public class AttackSystem extends IteratingSystem{
         }
 
         attack.decAttackTimer(deltaTime);
-        
 
-        if(attack.canAttack()){
+        if(attack.canDamage()){
             FacingDirection facingDirection = Facing.MAPPER.get(entity).getDirection();
             attackerBody = Physics.MAPPER.get(entity).getBody();
             PolygonShape attackShape = getAttackFixture(attackerBody, facingDirection);
             updateAttackAABB(attackerBody.getPosition(), attackShape);
-
             this.attackDamage = attack.getDamage();
             world.QueryAABB(this::attackCallback, attackAABB.x, attackAABB.y, attackAABB.width, attackAABB.height);
-
+        }
+        
+        if(attack.canAttack()){
             animation.setSpeed(1.0f);
             Move move = Move.MAPPER.get(entity);
             if(move != null){

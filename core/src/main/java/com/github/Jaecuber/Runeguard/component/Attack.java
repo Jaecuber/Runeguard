@@ -27,6 +27,10 @@ public class Attack implements Component{
         return this.attackTimer <= 0;
     }
 
+    public boolean canDamage(){
+        return MathUtils.isEqual(this.attackTimer, this.damageDelay-0.05f, 0.0105f);
+    }
+
     public boolean isAttacking(){
         return this.attackTimer > 0;
     }
