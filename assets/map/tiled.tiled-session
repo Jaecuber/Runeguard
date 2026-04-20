@@ -19,6 +19,7 @@
             "scaleInEditor": 2
         },
         "Furniture.tsx": {
+            "dynamicWrapping": false,
             "scaleInDock": 1,
             "scaleInEditor": 2
         },
@@ -94,7 +95,7 @@
         "Red Fire.tsx"
     ],
     "project": "tiled.tiled-project",
-    "property.type": "float",
+    "property.type": "string",
     "recentFiles": [
         "Shadows.tsx",
         "starterArea.tmx",

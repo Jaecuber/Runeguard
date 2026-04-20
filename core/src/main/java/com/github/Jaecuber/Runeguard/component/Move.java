@@ -24,6 +24,10 @@ public class Move implements Component{
         return direction;
     }
 
+    public void setDirection(float x, float y) {
+        this.direction.set(x, y);
+    }
+
     public void setRooted(boolean rooted){
         this.isRooted = rooted;
     }

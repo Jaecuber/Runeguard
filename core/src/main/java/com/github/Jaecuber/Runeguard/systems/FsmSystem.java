@@ -12,6 +12,12 @@ public class FsmSystem extends IteratingSystem{
 
     @Override
     protected void processEntity(Entity entity, float deltaTime){
-        Fsm.MAPPER.get(entity).getAnimationFsm().update();
+        Fsm fsm = Fsm.MAPPER.get(entity);
+        if(fsm.getAnimationFsm() != null){
+            fsm.getAnimationFsm().update();
+        }
+        if(fsm.getEnemyFsm() != null){
+            fsm.getEnemyFsm().update();
+        }
     }
 }

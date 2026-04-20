@@ -5,6 +5,7 @@ import com.badlogic.gdx.ai.fsm.State;
 import com.badlogic.gdx.ai.msg.Telegram;
 import com.github.Jaecuber.Runeguard.component.Animation2D;
 import com.github.Jaecuber.Runeguard.component.Attack;
+import com.github.Jaecuber.Runeguard.component.Enemy;
 import com.github.Jaecuber.Runeguard.component.Fsm;
 import com.github.Jaecuber.Runeguard.component.Move;
 import com.github.Jaecuber.Runeguard.component.Animation2D.AnimationType;
@@ -32,6 +33,10 @@ public enum AnimationState implements State<Entity>{
                 }
                 return;
            }
+           Enemy enemy = Enemy.MAPPER.get(entity);
+            if(enemy != null && enemy.isStaggered()){
+                Fsm.MAPPER.get(entity).getAnimationFsm().changeState(HURT);
+            }
         }
 
         @Override
@@ -58,6 +63,10 @@ public enum AnimationState implements State<Entity>{
             if(move == null || move.getDirection().isZero() || move.isRooted()){
                 Fsm.MAPPER.get(entity).getAnimationFsm().changeState(IDLE);
             }
+            Enemy enemy = Enemy.MAPPER.get(entity);
+            if(enemy != null && enemy.isStaggered()){
+                Fsm.MAPPER.get(entity).getAnimationFsm().changeState(HURT);
+            }
         }
 
         @Override
@@ -83,6 +92,10 @@ public enum AnimationState implements State<Entity>{
             if(attack.canAttack()){
                 Fsm.MAPPER.get(entity).getAnimationFsm().changeState(IDLE);
             }
+            Enemy enemy = Enemy.MAPPER.get(entity);
+            if(enemy != null && enemy.isStaggered()){
+                Fsm.MAPPER.get(entity).getAnimationFsm().changeState(HURT);
+            }
         }
 
         @Override
@@ -107,6 +120,10 @@ public enum AnimationState implements State<Entity>{
             if(attack.canAttack()){
                 Fsm.MAPPER.get(entity).getAnimationFsm().changeState(IDLE);
             }
+            Enemy enemy = Enemy.MAPPER.get(entity);
+            if(enemy != null && enemy.isStaggered()){
+                Fsm.MAPPER.get(entity).getAnimationFsm().changeState(HURT);
+            }
         }
 
         @Override
@@ -118,5 +135,57 @@ public enum AnimationState implements State<Entity>{
         public boolean onMessage(Entity entity, Telegram telegram) {
             return false;
         }
+    },
+    HURT{
+        @Override
+        public void enter(Entity entity) {
+            Animation2D.MAPPER.get(entity).setType(AnimationType.HURT);
+        }
+
+        @Override
+        public void update(Entity entity) {
+            Enemy enemy = Enemy.MAPPER.get(entity);
+            if (enemy != null && !enemy.isStaggered()) {
+                Move move = Move.MAPPER.get(entity);
+                if (move != null && !move.getDirection().isZero() && !move.isRooted()) {
+                    Fsm.MAPPER.get(entity).getAnimationFsm().changeState(WALK);
+                } else {
+                    Fsm.MAPPER.get(entity).getAnimationFsm().changeState(IDLE);
+                }
+            }
+        }
+
+        @Override
+        public void exit(Entity entity) {
+          
+        }
+
+        @Override
+        public boolean onMessage(Entity entity, Telegram telegram) {
+            return false;
+        }
+    },
+    DEATH{
+        @Override
+        public void enter(Entity entity) {
+            
+        }
+
+        @Override
+        public void update(Entity entity) {
+            
+        }
+
+        @Override
+        public void exit(Entity entity) {
+            
+        }
+
+        @Override
+        public boolean onMessage(Entity entity, Telegram telegram) {
+            return false;
+        }
+        
     }
 }
+

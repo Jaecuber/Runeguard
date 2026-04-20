@@ -22,16 +22,21 @@ import com.github.Jaecuber.Runeguard.Launcher;
 import com.github.Jaecuber.Runeguard.asset.AssetService;
 import com.github.Jaecuber.Runeguard.asset.AtlasAsset;
 import com.github.Jaecuber.Runeguard.asset.SoundAsset;
+import com.github.Jaecuber.Runeguard.combat.SlimeMoveset;
 import com.github.Jaecuber.Runeguard.component.Animation2D;
 import com.github.Jaecuber.Runeguard.component.CameraFollow;
 import com.github.Jaecuber.Runeguard.component.Controller;
+import com.github.Jaecuber.Runeguard.component.Enemy;
 import com.github.Jaecuber.Runeguard.component.Facing;
 import com.github.Jaecuber.Runeguard.component.Fsm;
 import com.github.Jaecuber.Runeguard.component.Graphic;
+import com.github.Jaecuber.Runeguard.component.Health;
 import com.github.Jaecuber.Runeguard.component.Move;
 import com.github.Jaecuber.Runeguard.component.Physics;
+import com.github.Jaecuber.Runeguard.component.Player;
 import com.github.Jaecuber.Runeguard.component.Transform;
 import com.github.Jaecuber.Runeguard.component.Animation2D.AnimationType;
+import com.github.Jaecuber.Runeguard.component.Enemy.EnemyAIState;
 import com.github.Jaecuber.Runeguard.component.Attack;
 
 public class TiledAshleyConfig {
@@ -93,13 +98,45 @@ public class TiledAshleyConfig {
         BodyDef.BodyType bodyType = getObjectBodyType(tile);
         addEntityPhysics(tile.getObjects(), bodyType, Vector2.Zero, entity);
         addEntityCameraFollow(tileMapObject, entity);
+        addEntityHealth(tile, entity);
+        addEntityPlayer(tileMapObject, entity);
         addEntityAttack(tile, entity);
         entity.add(new Facing(Facing.FacingDirection.DOWN));
-        entity.add(new Fsm(entity));
+
+        Fsm fsm = new Fsm(entity);
+        entity.add(fsm);
+        addEntityEnemy(tile, entity, fsm);
 
         this.engine.addEntity(entity);
     }
 
+    private void addEntityHealth(TiledMapTile tile, Entity entity) {
+        float health = tile.getProperties().get("health", 0.0f, Float.class);
+        if(health == 0.0f) return;
+
+        float regen = tile.getProperties().get("regen", 0.0f, Float.class);
+        entity.add(new Health(health, regen));
+    }
+    private void addEntityEnemy(TiledMapTile tile, Entity entity, Fsm fsm) {
+        boolean enemy = tile.getProperties().get("enemy", false, Boolean.class);
+        if(!enemy) return;
+
+        String stateStr = tile.getProperties().get("state", null, String.class);
+        EnemyAIState state = EnemyAIState.valueOf(stateStr);
+        float speed = tile.getProperties().get("speed", 0f, Float.class);
+        float cooldown = tile.getProperties().get("cooldown", 0f, Float.class);
+
+        String type = tile.getProperties().get("type", null, String.class);
+
+        Enemy enemyComponent = new Enemy(state, speed, cooldown);
+        
+        switch (type) {
+            case "slime" -> enemyComponent.setMoveset(new SlimeMoveset());
+        }
+
+        fsm.initEnemyFsm(entity);
+        entity.add(enemyComponent);
+    }
     private void addEntityAttack(TiledMapTile tile, Entity entity) {
         float damage = tile.getProperties().get("damage", 0f, Float.class);
         if(damage==0f)return;
@@ -113,6 +150,13 @@ public class TiledAshleyConfig {
 
         entity.add(new Attack(damage, damageDelay, soundAsset));
     }
+
+    private void addEntityPlayer(TiledMapTileMapObject tileMapObject, Entity entity) {
+        if ("Player".equals(tileMapObject.getName())) {
+            entity.add(new Player());
+        }
+    }
+
     private void addEntityCameraFollow(TiledMapTileMapObject mapObject, Entity entity) {
         boolean camFollow = mapObject.getProperties().get("camFollow", false, Boolean.class);
         if(!camFollow) return;

@@ -6,11 +6,17 @@ import com.badlogic.ashley.core.EntityListener;
 import com.badlogic.ashley.core.Family;
 import com.badlogic.ashley.systems.IteratingSystem;
 import com.badlogic.gdx.math.MathUtils;
+import com.badlogic.gdx.physics.box2d.Contact;
+import com.badlogic.gdx.physics.box2d.ContactImpulse;
+import com.badlogic.gdx.physics.box2d.ContactListener;
+import com.badlogic.gdx.physics.box2d.Fixture;
+import com.badlogic.gdx.physics.box2d.Manifold;
 import com.badlogic.gdx.physics.box2d.World;
+import com.github.Jaecuber.Runeguard.component.Enemy;
 import com.github.Jaecuber.Runeguard.component.Physics;
 import com.github.Jaecuber.Runeguard.component.Transform;
 
-public class PhysicsSystem extends IteratingSystem implements EntityListener{
+public class PhysicsSystem extends IteratingSystem implements EntityListener, ContactListener{
 
     private final World world;
     private final float interval;
@@ -21,6 +27,7 @@ public class PhysicsSystem extends IteratingSystem implements EntityListener{
         this.world = world;
         this.interval = interval;
         this.accumulator = 0f;
+        world.setContactListener(this);
     }
 
     @Override
@@ -80,5 +87,47 @@ public class PhysicsSystem extends IteratingSystem implements EntityListener{
             MathUtils.lerp(physics.getPrevPosition().y, physics.getBody().getPosition().y, alpha)
        );
     }
+
+    //Contact Listener
+
+    @Override
+    public void beginContact(Contact contact) {
+        Fixture a = contact.getFixtureA();
+        Fixture b = contact.getFixtureB();
+        enemyDetection(a,b,true);
+        enemyDetection(b,a,true);
+    }
+
+    @Override
+    public void endContact(Contact contact) {
+        Fixture a = contact.getFixtureA();
+        Fixture b = contact.getFixtureB();
+        enemyDetection(a,b,false);
+        enemyDetection(b,a,false);
+    }
+
+    private void enemyDetection(Fixture sensor, Fixture object, boolean entering){
+        if("detectionRadius".equals(sensor.getUserData())){
+            Entity entity = (Entity) sensor.getBody().getUserData();
+            Enemy enemy = Enemy.MAPPER.get(entity);
+            if(enemy == null) return;
+
+            if("player".equals(object.getUserData())){
+                enemy.setAggro(entering);
+            }
+        };
+        if("attackRadius".equals(sensor.getUserData())){
+            Entity entity = (Entity) sensor.getBody().getUserData();
+            Enemy enemy = Enemy.MAPPER.get(entity);
+            if(enemy == null) return;
+            if("player".equals(object.getUserData()) && entering){
+                enemy.applyAttack();
+            }
+        }
+    }
+
+    //method stubs
+    @Override public void preSolve(Contact contact, Manifold oldManifold) {}
+    @Override public void postSolve(Contact contact, ContactImpulse impulse) {}
    
 }

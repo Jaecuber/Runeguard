@@ -3,8 +3,12 @@ package com.github.Jaecuber.Runeguard.ai;
 import com.badlogic.ashley.core.Entity;
 import com.badlogic.gdx.ai.fsm.State;
 import com.badlogic.gdx.ai.msg.Telegram;
+import com.badlogic.gdx.math.MathUtils;
 import com.github.Jaecuber.Runeguard.component.Animation2D;
 import com.github.Jaecuber.Runeguard.component.Enemy;
+import com.github.Jaecuber.Runeguard.component.Fsm;
+import com.github.Jaecuber.Runeguard.component.Health;
+import com.github.Jaecuber.Runeguard.component.Move;
 import com.github.Jaecuber.Runeguard.component.Animation2D.AnimationType;
 import com.github.Jaecuber.Runeguard.component.Enemy.EnemyAIState;
 
@@ -14,11 +18,29 @@ public enum EnemyState implements State<Entity>{
         public void enter(Entity entity) {
             Enemy.MAPPER.get(entity).setState(EnemyAIState.IDLE);
             Animation2D.MAPPER.get(entity).setType(AnimationType.IDLE);
+            Enemy.MAPPER.get(entity).setStateTimer(MathUtils.random(7f, 14f));
+            Move.MAPPER.get(entity).setDirection(0, 0);
         }
 
         @Override
         public void update(Entity entity) {
-            
+            Health health = Health.MAPPER.get(entity);
+            if(health.died()){
+                Fsm.MAPPER.get(entity).getEnemyFsm().changeState(DEATH);
+                return;
+            }
+            /*if(Enemy.MAPPER.get(entity).isAttacking()){
+                Fsm.MAPPER.get(entity).getEnemyFsm().changeState(ATTACKING);
+                return;
+            }*/
+            if(Enemy.MAPPER.get(entity).isAggro()){
+                Fsm.MAPPER.get(entity).getEnemyFsm().changeState(PURSUING);
+                return;
+            } else if(Enemy.MAPPER.get(entity).isStateTimerDone()){
+                Enemy.MAPPER.get(entity).setStateTimer(Float.MAX_VALUE);
+                Fsm.MAPPER.get(entity).getEnemyFsm().changeState(WANDERING);
+                return;
+            }
         }
 
         @Override
@@ -34,12 +56,33 @@ public enum EnemyState implements State<Entity>{
     WANDERING{
         @Override
         public void enter(Entity entity) {
-            Enemy.MAPPER.get(entity).setState(EnemyAIState.WANDERING);
+            Enemy enemy = Enemy.MAPPER.get(entity);
+            enemy.setState(EnemyAIState.WANDERING);
+            enemy.setStateTimer(MathUtils.random(7f, 14f));
+            enemy.setWandering(false);
+            enemy.setWanderTimer(0f);
+            Move.MAPPER.get(entity).setDirection(0, 0);
         }
 
         @Override
         public void update(Entity entity) {
-            
+            Health health = Health.MAPPER.get(entity);
+            if(health.died()){
+                Fsm.MAPPER.get(entity).getEnemyFsm().changeState(DEATH);
+                return;
+            }
+            /*if(Enemy.MAPPER.get(entity).isAttacking()){
+                Fsm.MAPPER.get(entity).getEnemyFsm().changeState(ATTACKING);
+                return;
+            }*/
+            if(Enemy.MAPPER.get(entity).isAggro()){
+                Fsm.MAPPER.get(entity).getEnemyFsm().changeState(PURSUING);
+                return;
+            }else if(Enemy.MAPPER.get(entity).isStateTimerDone()){
+                Enemy.MAPPER.get(entity).setStateTimer(Float.MAX_VALUE);
+                Fsm.MAPPER.get(entity).getEnemyFsm().changeState(IDLE);
+                return;
+            }
         }
 
         @Override
@@ -60,7 +103,19 @@ public enum EnemyState implements State<Entity>{
 
         @Override
         public void update(Entity entity) {
-            
+            Health health = Health.MAPPER.get(entity);
+            if(health.died()){
+                Fsm.MAPPER.get(entity).getEnemyFsm().changeState(DEATH);
+                return;
+            }
+            /*if(Enemy.MAPPER.get(entity).isAttacking()){
+                Fsm.MAPPER.get(entity).getEnemyFsm().changeState(ATTACKING);
+                return;
+            }*/
+            if(!Enemy.MAPPER.get(entity).isAggro()){
+                Fsm.MAPPER.get(entity).getEnemyFsm().changeState(IDLE);
+                return;
+            }
         }
 
         @Override
@@ -81,7 +136,45 @@ public enum EnemyState implements State<Entity>{
 
         @Override
         public void update(Entity entity) {
+            Health health = Health.MAPPER.get(entity);
+            if(health.died()){
+                Fsm.MAPPER.get(entity).getEnemyFsm().changeState(DEATH);
+                return;
+            }
+            if(!Enemy.MAPPER.get(entity).isAttacking()){
+                if(Enemy.MAPPER.get(entity).isAggro()){
+                    Enemy.MAPPER.get(entity).applyAttack();
+                }else{
+                    Fsm.MAPPER.get(entity).getEnemyFsm().changeState(PURSUING);
+                }
+            }
+        }
+
+        @Override
+        public void exit(Entity entity) {
             
+        }
+
+        @Override
+        public boolean onMessage(Entity entity, Telegram telegram) {
+            return false;
+        }
+    },
+    DEATH{
+        @Override
+        public void enter(Entity entity) {
+            Enemy.MAPPER.get(entity).setState(EnemyAIState.DEATH);
+            Animation2D.MAPPER.get(entity).setType(AnimationType.DEATH);
+            Fsm.MAPPER.get(entity).getAnimationFsm().changeState(AnimationState.DEATH);
+            Move.MAPPER.get(entity).setRooted(true);
+        }
+
+        @Override
+        public void update(Entity entity) {
+            Animation2D animation = Animation2D.MAPPER.get(entity);
+            if(animation.isFinished()){
+                Enemy.MAPPER.get(entity).setDead(true);
+            }
         }
 
         @Override

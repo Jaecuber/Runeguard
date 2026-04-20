@@ -90,7 +90,7 @@ public class Launcher extends Game {
 
         super.render();
 
-        Gdx.graphics.setTitle("Runeguard - Draw Calls:" + glProfiler.getDrawCalls());
+        //Gdx.graphics.setTitle("Runeguard - Draw Calls:" + glProfiler.getDrawCalls());
         fpsLogger.log();
     }
 
@@ -100,7 +100,7 @@ public class Launcher extends Game {
         screenCache.clear();
 
         this.batch.dispose();
-        this.assetService.debugDiagnostics();
+        //this.assetService.debugDiagnostics();
         this.assetService.dispose();
     }
 

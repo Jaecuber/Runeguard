@@ -1,11 +1,11 @@
 package com.github.Jaecuber.Runeguard.systems;
 
-import java.util.concurrent.TransferQueue;
-
 import com.badlogic.ashley.core.Entity;
 import com.badlogic.ashley.core.Family;
 import com.badlogic.ashley.systems.IteratingSystem;
 import com.github.Jaecuber.Runeguard.component.DamageListener;
+import com.github.Jaecuber.Runeguard.component.Health;
+import com.github.Jaecuber.Runeguard.component.Player;
 import com.github.Jaecuber.Runeguard.component.Transform;
 import com.github.Jaecuber.ui.model.GameViewModel;
 
@@ -22,8 +22,14 @@ public class DamageSystem extends IteratingSystem{
         DamageListener damage = DamageListener.MAPPER.get(entity);
         entity.remove(DamageListener.class);
 
+        Health health = Health.MAPPER.get(entity);
+        if(health != null){
+            health.addHealth(-damage.getDamage());
+        }
+
         Transform transform = Transform.MAPPER.get(entity);
-        if(transform != null){
+        Player player = Player.MAPPER.get(entity);
+        if(transform != null && player == null){
             float x = transform.getPosition().x + transform.getSize().x * 0.5f;
             float y = transform.getPosition().y;
             viewModel.playerDamage((int) damage.getDamage(), x, y);

@@ -2,18 +2,152 @@ package com.github.Jaecuber.Runeguard.component;
 
 import com.badlogic.ashley.core.Component;
 import com.badlogic.ashley.core.ComponentMapper;
+import com.github.Jaecuber.Runeguard.combat.EnemyMoveset;
 
 public class Enemy implements Component{
     public static final ComponentMapper<Enemy> MAPPER = ComponentMapper.getFor(Enemy.class);
 
     private EnemyAIState state;
+    private EnemyMoveset moveset;
 
-    public Enemy(EnemyAIState state){
+    private boolean dead;
+    private boolean isAggro;
+    private boolean isIdle;
+    private boolean isWandering;
+    private boolean isStaggered;
+    private boolean attacking;
+    private float speed;
+    private float stateTimer;
+    private float wanderTimer;
+    private float knockbackTimer;
+    private float cooldownTimer;
+    private float attackCooldown;
+
+    public Enemy(EnemyAIState state, float speed, float cooldown){
         this.state = state;
+        this.speed = speed;
+        this.attackCooldown = cooldown;
+        this.isAggro = false;
+        this.isIdle = true;
+        this.dead = false;
+    }
+
+    public void applyKnockback(float duration){
+        this.isStaggered = true;
+        this.knockbackTimer = duration;
+    }
+
+    public void applyAttack(){
+        this.attacking = true;
+        this.cooldownTimer = attackCooldown;
+    }
+
+    public void tickAttackTimer(float deltaTime){
+        if(!attacking) return;
+        cooldownTimer -= deltaTime;
+        if(cooldownTimer <= 0f){
+            attacking = false;
+        }
+    }
+
+    public void tickKnockbackTimer(float deltaTime) {
+        if (!isStaggered) return;
+        knockbackTimer -= deltaTime;
+        if (knockbackTimer <= 0f) {
+            isStaggered = false;
+        }
+    }
+
+    public boolean isAttacking() {
+        return attacking;
+    }
+    
+    public boolean isStaggered(){ 
+        return isStaggered; 
+    }
+
+    public void setStateTimer(float stateTimer) { 
+        this.stateTimer = stateTimer; 
+    }
+
+    public void setWanderTimer(float time){
+        this.wanderTimer = time;
+    }
+
+    public void tickStateTimer(float deltaTime) { 
+        this.stateTimer -= deltaTime; 
+    }
+
+    public void setCooldown(float time){
+        this.cooldownTimer = time;
+    }
+
+    public void tickWanderTimer(float deltaTime){
+        this.wanderTimer -= deltaTime;
+    }
+
+    public boolean isWanderTimerDone(){ 
+        return this.wanderTimer <= 0f; 
+    }
+
+    public boolean isStateTimerDone(){ 
+        return this.stateTimer <= 0f; 
+    }
+
+    public boolean isWandering(){
+        return isWandering; 
+    }
+
+    public void setWandering(boolean wandering){ 
+        this.isWandering = wandering; 
+    }
+
+    public float getSpeed() {
+        return speed;
+    }
+
+    public float getCooldown(){
+        return attackCooldown;
+    }
+
+    public void setSpeed(float speed) {
+        this.speed = speed;
+    }
+
+    public void setAggro(boolean aggro){
+        this.isAggro = aggro;
+    }
+
+    public boolean isAggro(){
+        return this.isAggro;
+    }
+
+    public boolean isDead() {
+        return dead;
+    }
+
+    public void setDead(boolean dead) {
+        this.dead = dead;
+    }
+
+    public boolean isIdle() {
+        return isIdle;
+    }
+
+    public void setIdle(boolean isIdle) {
+        this.isIdle = isIdle;
     }
 
     public void setState(EnemyAIState state){
         this.state = state;
+    }
+
+    public EnemyMoveset getMoveset() {
+        return moveset;
+    }
+
+    public void setMoveset(EnemyMoveset moveset) {
+        this.moveset = moveset;
     }
 
     public EnemyAIState getState(){
@@ -21,6 +155,10 @@ public class Enemy implements Component{
     }
 
     public enum EnemyAIState{
-        IDLE, WANDERING, PURSUING, ATTACKING
+        IDLE, WANDERING, PURSUING, ATTACKING, DEATH
+    }
+
+    public float getStateTimer() {
+       return stateTimer;
     }
 }

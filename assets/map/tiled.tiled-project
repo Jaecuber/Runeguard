@@ -13,14 +13,70 @@
         {
             "color": "#ffa0a0a4",
             "drawFill": true,
-            "id": 1,
+            "id": 4,
             "members": [
+                {
+                    "name": "animation",
+                    "type": "string",
+                    "value": ""
+                },
+                {
+                    "name": "animationSpeed",
+                    "type": "float",
+                    "value": 0
+                },
+                {
+                    "name": "atlasAsset",
+                    "type": "string",
+                    "value": ""
+                },
+                {
+                    "name": "cooldown",
+                    "type": "float",
+                    "value": 0
+                },
+                {
+                    "name": "enemy",
+                    "type": "bool",
+                    "value": true
+                },
+                {
+                    "name": "health",
+                    "type": "float",
+                    "value": 0
+                },
+                {
+                    "name": "regen",
+                    "type": "float",
+                    "value": 0
+                },
+                {
+                    "name": "speed",
+                    "type": "float",
+                    "value": 0
+                },
+                {
+                    "name": "state",
+                    "type": "string",
+                    "value": ""
+                },
+                {
+                    "name": "type",
+                    "type": "string",
+                    "value": ""
+                }
             ],
-            "name": "Prop",
+            "name": "Enemy",
             "type": "class",
             "useAs": [
                 "property",
+                "map",
+                "layer",
+                "object",
                 "tile",
+                "tileset",
+                "wangcolor",
+                "wangset",
                 "project"
             ]
         },
@@ -51,6 +107,20 @@
                 }
             ],
             "name": "GameObject",
+            "type": "class",
+            "useAs": [
+                "property",
+                "tile",
+                "project"
+            ]
+        },
+        {
+            "color": "#ffa0a0a4",
+            "drawFill": true,
+            "id": 1,
+            "members": [
+            ],
+            "name": "Prop",
             "type": "class",
             "useAs": [
                 "property",

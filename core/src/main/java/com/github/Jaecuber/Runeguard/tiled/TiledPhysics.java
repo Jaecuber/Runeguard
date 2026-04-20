@@ -126,6 +126,8 @@ public class TiledPhysics {
         fixtureDef.restitution = mapObject.getProperties().get("restitution", 0f, Float.class);
         fixtureDef.density = mapObject.getProperties().get("density", 0f, Float.class);
         fixtureDef.isSensor = mapObject.getProperties().get("sensor", false, Boolean.class);
+        fixtureDef.filter.categoryBits = mapObject.getProperties().get("categoryBits", 1, Integer.class).shortValue();
+        fixtureDef.filter.maskBits = mapObject.getProperties().get("maskBits", -1, Integer.class).shortValue();
         return fixtureDef;
     }
 }
