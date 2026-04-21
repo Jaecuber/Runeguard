@@ -39,6 +39,7 @@ public class EnemyAiSystem extends IteratingSystem{
         }
         Enemy enemy = Enemy.MAPPER.get(entity);
         Physics physics = Physics.MAPPER.get(entity);
+        Move move = Move.MAPPER.get(entity);
         Body body = physics.getBody();
         enemy.tickStateTimer(deltaTime);
         enemy.tickKnockbackTimer(deltaTime);
@@ -50,6 +51,11 @@ public class EnemyAiSystem extends IteratingSystem{
             body.setLinearDamping(0f);
             Animation2D animation2d = Animation2D.MAPPER.get(entity);
             animation2d.setSpeed(1.0f);
+        }
+        if(move.isDoingAction() && body != null){
+            body.setLinearDamping(10f);
+        }else if (!move.isDoingAction() && body != null){
+            body.setLinearDamping(0f);
         }
         switch (enemy.getState()) {
             case IDLE -> enterIdle(entity);
@@ -81,6 +87,7 @@ public class EnemyAiSystem extends IteratingSystem{
     private void enterIdle(Entity entity){
         Move move = Move.MAPPER.get(entity);
         move.setRooted(true);
+        move.setDoingAction(false);
     }
 
     private void attack(Entity entity, float deltaTime){
@@ -88,10 +95,7 @@ public class EnemyAiSystem extends IteratingSystem{
         Enemy enemy = Enemy.MAPPER.get(entity);
         enemy.tickAttackTimer(deltaTime);
         if(enemy.getMoveset() != null && !enemy.isAttacking()){
-            Physics.MAPPER.get(entity).getBody().setLinearDamping(10f);
             enemy.getMoveset().attack(entity, playerEntity);
-        }else{
-            Physics.MAPPER.get(entity).getBody().setLinearDamping(0.0f);
         }
     }
 
@@ -100,6 +104,7 @@ public class EnemyAiSystem extends IteratingSystem{
         Body body = Physics.MAPPER.get(entity).getBody();
         Body playerBody = Physics.MAPPER.get(playerEntity).getBody();
         Move move = Move.MAPPER.get(entity);
+        move.setDoingAction(false);
         move.setRooted(false);
         Vector2 diff = new Vector2(
             playerBody.getPosition().x - body.getPosition().x,
@@ -120,7 +125,7 @@ public class EnemyAiSystem extends IteratingSystem{
     private void wander(Entity entity, float deltaTime){
         Enemy enemy = Enemy.MAPPER.get(entity);
         Move move = Move.MAPPER.get(entity);
-
+        move.setDoingAction(false);
         move.setRooted(false);
 
         enemy.tickWanderTimer(deltaTime);

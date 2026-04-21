@@ -16,14 +16,12 @@ public class SlimeMoveset implements EnemyMoveset{
         if(body == null || playerBody == null) return;
 
         enemy.applyAttack();
-
-        Move.MAPPER.get(entity).setRooted(true);
+        Move.MAPPER.get(entity).setDoingAction(true);
 
         Vector2 attackVector = new Vector2(
             playerBody.getPosition().x - body.getPosition().x,
             playerBody.getPosition().y - body.getPosition().y
-        ).nor().scl(50f);
-         body.applyLinearImpulse(attackVector, body.getWorldCenter(), true);
+        ).nor().scl(30f);
+        body.applyLinearImpulse(attackVector, body.getWorldCenter(), true);
     }
-
 }

@@ -23,8 +23,8 @@ public class PhysicsMoveSystem extends IteratingSystem{
         Enemy enemy = Enemy.MAPPER.get(entity);
 
         if(enemy != null && enemy.isStaggered()) return;
-        
-        if(move.isRooted() || move.getDirection().isZero()){
+        if(move.isDoingAction()) return;
+        if((move.isRooted() || move.getDirection().isZero())){
             body.setLinearVelocity(0f,0f);
             return;
         }

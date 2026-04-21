@@ -36,6 +36,11 @@
                     "value": 0
                 },
                 {
+                    "name": "damage",
+                    "type": "float",
+                    "value": 0
+                },
+                {
                     "name": "enemy",
                     "type": "bool",
                     "value": true

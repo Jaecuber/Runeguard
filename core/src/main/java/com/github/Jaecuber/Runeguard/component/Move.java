@@ -10,6 +10,7 @@ public class Move implements Component{
     private float maxSpeed;
     private final Vector2 direction;
     private boolean isRooted;
+    private boolean doingAction;
 
     public Move(float maxSpeed){
         this.maxSpeed = maxSpeed;
@@ -34,5 +35,13 @@ public class Move implements Component{
 
     public boolean isRooted(){
         return isRooted;
+    }
+
+    public boolean isDoingAction() {
+        return doingAction;
+    }
+
+    public void setDoingAction(boolean doingAction) {
+        this.doingAction = doingAction;
     }
 }

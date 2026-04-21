@@ -95,7 +95,7 @@
         "Red Fire.tsx"
     ],
     "project": "tiled.tiled-project",
-    "property.type": "string",
+    "property.type": "float",
     "recentFiles": [
         "Shadows.tsx",
         "starterArea.tmx",

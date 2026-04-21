@@ -143,6 +143,7 @@ public enum EnemyState implements State<Entity>{
             }
             if(!Enemy.MAPPER.get(entity).canAttack()){
                 Fsm.MAPPER.get(entity).getEnemyFsm().changeState(PURSUING);
+                return;
             }
         }
 
