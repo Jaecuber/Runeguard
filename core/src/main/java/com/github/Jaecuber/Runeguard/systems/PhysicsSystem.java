@@ -1,5 +1,7 @@
 package com.github.Jaecuber.Runeguard.systems;
 
+import javax.swing.border.EmptyBorder;
+
 import com.badlogic.ashley.core.Engine;
 import com.badlogic.ashley.core.Entity;
 import com.badlogic.ashley.core.EntityListener;
@@ -13,6 +15,7 @@ import com.badlogic.gdx.physics.box2d.Fixture;
 import com.badlogic.gdx.physics.box2d.Manifold;
 import com.badlogic.gdx.physics.box2d.World;
 import com.github.Jaecuber.Runeguard.component.Enemy;
+import com.github.Jaecuber.Runeguard.component.Health;
 import com.github.Jaecuber.Runeguard.component.Physics;
 import com.github.Jaecuber.Runeguard.component.Transform;
 
@@ -122,6 +125,16 @@ public class PhysicsSystem extends IteratingSystem implements EntityListener, Co
             if(enemy == null) return;
             if("player".equals(object.getUserData())){
                 enemy.setAttackStatus(entering);
+            }
+        }
+        if("hitbox".equals(sensor.getUserData()) && "hitbox".equals(object)){
+            Entity playerEntity = (Entity) sensor.getBody().getUserData();
+            Entity enemyEntity = (Entity) sensor.getBody().getUserData();
+            Enemy enemy = Enemy.MAPPER.get(enemyEntity);
+            Health playerHealth = Health.MAPPER.get(playerEntity);
+
+            if(entering){
+                //playerHealth.addHealth()
             }
         }
     }
