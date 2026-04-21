@@ -29,11 +29,11 @@ public enum EnemyState implements State<Entity>{
                 Fsm.MAPPER.get(entity).getEnemyFsm().changeState(DEATH);
                 return;
             }
-            /*if(Enemy.MAPPER.get(entity).isAttacking()){
+            if(Enemy.MAPPER.get(entity).canAttack()){
                 Fsm.MAPPER.get(entity).getEnemyFsm().changeState(ATTACKING);
                 return;
-            }*/
-            if(Enemy.MAPPER.get(entity).isAggro()){
+            }
+            if(Enemy.MAPPER.get(entity).isAggro() && !Enemy.MAPPER.get(entity).canAttack()){
                 Fsm.MAPPER.get(entity).getEnemyFsm().changeState(PURSUING);
                 return;
             } else if(Enemy.MAPPER.get(entity).isStateTimerDone()){
@@ -71,11 +71,11 @@ public enum EnemyState implements State<Entity>{
                 Fsm.MAPPER.get(entity).getEnemyFsm().changeState(DEATH);
                 return;
             }
-            /*if(Enemy.MAPPER.get(entity).isAttacking()){
+            if(Enemy.MAPPER.get(entity).canAttack()){
                 Fsm.MAPPER.get(entity).getEnemyFsm().changeState(ATTACKING);
                 return;
-            }*/
-            if(Enemy.MAPPER.get(entity).isAggro()){
+            }
+            if(Enemy.MAPPER.get(entity).isAggro() && !Enemy.MAPPER.get(entity).canAttack()){
                 Fsm.MAPPER.get(entity).getEnemyFsm().changeState(PURSUING);
                 return;
             }else if(Enemy.MAPPER.get(entity).isStateTimerDone()){
@@ -108,10 +108,10 @@ public enum EnemyState implements State<Entity>{
                 Fsm.MAPPER.get(entity).getEnemyFsm().changeState(DEATH);
                 return;
             }
-            /*if(Enemy.MAPPER.get(entity).isAttacking()){
+            if(Enemy.MAPPER.get(entity).canAttack()){
                 Fsm.MAPPER.get(entity).getEnemyFsm().changeState(ATTACKING);
                 return;
-            }*/
+            }
             if(!Enemy.MAPPER.get(entity).isAggro()){
                 Fsm.MAPPER.get(entity).getEnemyFsm().changeState(IDLE);
                 return;
@@ -141,12 +141,8 @@ public enum EnemyState implements State<Entity>{
                 Fsm.MAPPER.get(entity).getEnemyFsm().changeState(DEATH);
                 return;
             }
-            if(!Enemy.MAPPER.get(entity).isAttacking()){
-                if(Enemy.MAPPER.get(entity).isAggro()){
-                    Enemy.MAPPER.get(entity).applyAttack();
-                }else{
-                    Fsm.MAPPER.get(entity).getEnemyFsm().changeState(PURSUING);
-                }
+            if(!Enemy.MAPPER.get(entity).canAttack()){
+                Fsm.MAPPER.get(entity).getEnemyFsm().changeState(PURSUING);
             }
         }
 

@@ -16,6 +16,7 @@ public class Enemy implements Component{
     private boolean isWandering;
     private boolean isStaggered;
     private boolean attacking;
+    private boolean canAttack;
     private float speed;
     private float stateTimer;
     private float wanderTimer;
@@ -60,6 +61,14 @@ public class Enemy implements Component{
 
     public boolean isAttacking() {
         return attacking;
+    }
+
+    public boolean canAttack() {
+        return canAttack;
+    }
+
+    public void setAttackStatus(boolean canAttack) {
+        this.canAttack = canAttack;
     }
     
     public boolean isStaggered(){ 

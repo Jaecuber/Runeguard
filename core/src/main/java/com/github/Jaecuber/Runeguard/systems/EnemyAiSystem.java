@@ -51,11 +51,6 @@ public class EnemyAiSystem extends IteratingSystem{
             Animation2D animation2d = Animation2D.MAPPER.get(entity);
             animation2d.setSpeed(1.0f);
         }
-        if(enemy.isAttacking() && body != null){
-            body.setLinearDamping(10f);
-        }else if(!enemy.isAttacking() && body != null){
-            body.setLinearDamping(0f);
-        }
         switch (enemy.getState()) {
             case IDLE -> enterIdle(entity);
             case ATTACKING -> attack(entity, deltaTime);
@@ -91,11 +86,12 @@ public class EnemyAiSystem extends IteratingSystem{
     private void attack(Entity entity, float deltaTime){
         if(playerEntity == null) return;
         Enemy enemy = Enemy.MAPPER.get(entity);
-        Move move = Move.MAPPER.get(entity);
-        move.setDirection(0, 0);
         enemy.tickAttackTimer(deltaTime);
-        if(enemy.getMoveset() != null && enemy.isAttacking()){
+        if(enemy.getMoveset() != null && !enemy.isAttacking()){
+            Physics.MAPPER.get(entity).getBody().setLinearDamping(10f);
             enemy.getMoveset().attack(entity, playerEntity);
+        }else{
+            Physics.MAPPER.get(entity).getBody().setLinearDamping(0.0f);
         }
     }
 
