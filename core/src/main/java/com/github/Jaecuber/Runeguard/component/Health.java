@@ -30,7 +30,7 @@ public class Health implements Component{
     }
 
     public void addHealth(float val){
-        this.health = MathUtils.clamp(health += val, 0f, maxHealth);
+        this.health = MathUtils.clamp(health += val, -1.0f, maxHealth);
     }
 
     public float getRegen(){

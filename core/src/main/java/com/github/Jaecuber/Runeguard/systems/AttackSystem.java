@@ -46,11 +46,12 @@ public class AttackSystem extends IteratingSystem{
     protected void processEntity(Entity entity, float deltaTime) {
         Attack attack = Attack.MAPPER.get(entity);
         Animation2D animation = Animation2D.MAPPER.get(entity);
+        Stamina stamina = Stamina.MAPPER.get(entity);
         float animSpeed = (attack.getDefaultAnimSpeed()/attack.getDamageDelay()) + 0.025f;
 
         if(attack.canAttack()) return;
 
-        if(attack.hasAttackStarted() && attack.getSfx() != null){
+        if(attack.hasAttackStarted() && attack.getSfx() != null && stamina.getStamina() > stamina.getStamToAttack()){
             audioService.playSound(attack.getSfx());
             Move move = Move.MAPPER.get(entity);
             animation.setSpeed(animSpeed);
@@ -66,12 +67,16 @@ public class AttackSystem extends IteratingSystem{
 
         attack.decAttackTimer(deltaTime);
 
-        if(attack.canDamage()){
+        if(attack.canDamage() && stamina.getStamina() > stamina.getStamToAttack()){
             FacingDirection facingDirection = Facing.MAPPER.get(entity).getDirection();
             attackerBody = Physics.MAPPER.get(entity).getBody();
             PolygonShape attackShape = getAttackFixture(attackerBody, facingDirection);
             updateAttackAABB(attackerBody.getPosition(), attackShape);
             this.attackDamage = attack.getDamage();
+            //stamina
+            if(stamina != null){
+                stamina.addStamina(-stamina.getStamToAttack());
+            }
             world.QueryAABB(this::attackCallback, attackAABB.x, attackAABB.y, attackAABB.width, attackAABB.height);
         }
         
@@ -121,11 +126,6 @@ public class AttackSystem extends IteratingSystem{
             entity.add(new DamageListener(this.attackDamage));
         } else {
             damage.addDamage(this.attackDamage);
-        }
-        //stamina
-        Stamina stamina = Stamina.MAPPER.get(entity);
-        if(stamina != null){
-            stamina.addStamina(-20.0f);
         }
         return true;
     }

@@ -117,7 +117,8 @@ public class TiledAshleyConfig {
         if(stamina == 0.0f) return;
 
         float staminaRegen = tile.getProperties().get("staminaRegen", 0.0f, Float.class);
-        entity.add(new Stamina(stamina, staminaRegen));
+        float stamToAttack = tile.getProperties().get("staminaToAttack", 0.0f, Float.class);
+        entity.add(new Stamina(stamina, staminaRegen, stamToAttack));
     }
     private void addEntityHealth(TiledMapTile tile, Entity entity) {
         float health = tile.getProperties().get("health", 0.0f, Float.class);

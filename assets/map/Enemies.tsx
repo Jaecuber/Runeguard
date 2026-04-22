@@ -7,7 +7,7 @@
    <property name="animationSpeed" type="float" value="1"/>
    <property name="atlasAsset" value="OBJECTS"/>
    <property name="cooldown" type="float" value="2"/>
-   <property name="damage" type="float" value="2"/>
+   <property name="damage" type="float" value="5"/>
    <property name="health" type="float" value="6"/>
    <property name="speed" type="float" value="3"/>
    <property name="state" value="IDLE"/>

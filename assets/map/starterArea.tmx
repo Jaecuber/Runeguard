@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="100" height="100" tilewidth="16" tileheight="16" infinite="0" nextlayerid="18" nextobjectid="1142">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="100" height="100" tilewidth="16" tileheight="16" infinite="0" nextlayerid="18" nextobjectid="1214">
  <properties>
   <property name="music" value="TOWN"/>
  </properties>
@@ -96,6 +96,33 @@
   <object id="1139" gid="14918" x="421.121" y="1062.76" width="64" height="64"/>
   <object id="1140" gid="14918" x="442.621" y="1075.76" width="64" height="64"/>
   <object id="1141" gid="14918" x="411.121" y="1032.26" width="64" height="64"/>
+  <object id="1160" gid="14918" x="527.375" y="1050.63" width="64" height="64"/>
+  <object id="1161" gid="14918" x="534.375" y="1003.38" width="64" height="64"/>
+  <object id="1162" gid="14918" x="561.625" y="1027.38" width="64" height="64"/>
+  <object id="1163" gid="14918" x="533.125" y="1025.63" width="64" height="64"/>
+  <object id="1164" gid="14918" x="508.625" y="1000.88" width="64" height="64"/>
+  <object id="1165" gid="14918" x="491.625" y="1046.88" width="64" height="64"/>
+  <object id="1166" gid="14918" x="489.375" y="1021.88" width="64" height="64"/>
+  <object id="1167" gid="14918" x="510.875" y="1034.88" width="64" height="64"/>
+  <object id="1168" gid="14918" x="479.375" y="991.375" width="64" height="64"/>
+  <object id="1187" gid="14918" x="384.875" y="1138.63" width="64" height="64"/>
+  <object id="1188" gid="14918" x="391.875" y="1091.38" width="64" height="64"/>
+  <object id="1189" gid="14918" x="419.125" y="1115.38" width="64" height="64"/>
+  <object id="1190" gid="14918" x="390.625" y="1113.63" width="64" height="64"/>
+  <object id="1191" gid="14918" x="366.125" y="1088.88" width="64" height="64"/>
+  <object id="1192" gid="14918" x="349.125" y="1134.88" width="64" height="64"/>
+  <object id="1193" gid="14918" x="346.875" y="1109.88" width="64" height="64"/>
+  <object id="1194" gid="14918" x="368.375" y="1122.88" width="64" height="64"/>
+  <object id="1195" gid="14918" x="336.875" y="1079.38" width="64" height="64"/>
+  <object id="1205" gid="14918" x="297.875" y="1122.13" width="64" height="64"/>
+  <object id="1206" gid="14918" x="304.875" y="1074.88" width="64" height="64"/>
+  <object id="1207" gid="14918" x="332.125" y="1098.88" width="64" height="64"/>
+  <object id="1208" gid="14918" x="303.625" y="1097.13" width="64" height="64"/>
+  <object id="1209" gid="14918" x="279.125" y="1072.38" width="64" height="64"/>
+  <object id="1210" gid="14918" x="262.125" y="1118.38" width="64" height="64"/>
+  <object id="1211" gid="14918" x="259.875" y="1093.38" width="64" height="64"/>
+  <object id="1212" gid="14918" x="281.375" y="1106.38" width="64" height="64"/>
+  <object id="1213" gid="14918" x="249.875" y="1062.88" width="64" height="64"/>
  </objectgroup>
  <layer id="3" name="foreground" width="100" height="100">
   <data encoding="base64" compression="zlib">

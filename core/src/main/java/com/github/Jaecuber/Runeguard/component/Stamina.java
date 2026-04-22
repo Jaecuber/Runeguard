@@ -10,11 +10,13 @@ public class Stamina implements Component{
     public float maxStamina;
     public float stamina;
     public float staminaRegen;
+    public float stamToAttack;
 
-    public Stamina(float maxStamina, float staminaRegen){
+    public Stamina(float maxStamina, float staminaRegen, float stamToAttack){
         this.maxStamina = maxStamina;
         this.stamina = maxStamina;
         this.staminaRegen = staminaRegen;
+        this.stamToAttack = stamToAttack;
     }
     public boolean exhausted(){
         return stamina <= 0;
@@ -42,5 +44,12 @@ public class Stamina implements Component{
 
     public void setStaminaRegen(float staminaRegen) {
         this.staminaRegen = staminaRegen;
+    }
+
+    public float getStamToAttack() {
+        return stamToAttack;
+    }
+    public void setStamToAttack(float stamToAttack) {
+        this.stamToAttack = stamToAttack;
     }
 }
