@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.10" tiledversion="1.10.2" name="Player" tilewidth="96" tileheight="80" tilecount="1" columns="0">
+<tileset version="1.10" tiledversion="1.12.0" name="Player" tilewidth="96" tileheight="80" tilecount="1" columns="0">
  <grid orientation="orthogonal" width="1" height="1"/>
  <tile id="8" type="GameObject">
   <properties>
@@ -9,11 +9,13 @@
    <property name="attackSound" value="SWING"/>
    <property name="damage" type="float" value="2"/>
    <property name="damageDelay" type="float" value="0.5"/>
-   <property name="health" type="float" value="15"/>
+   <property name="health" type="float" value="100"/>
    <property name="regen" type="float" value="0.25"/>
    <property name="speed" type="float" value="5"/>
+   <property name="stamina" type="float" value="100"/>
+   <property name="staminaRegen" type="float" value="5"/>
   </properties>
-  <image width="96" height="80" source="Objects/player.png"/>
+  <image source="Objects/player.png" width="96" height="80"/>
   <objectgroup draworder="index" id="2">
    <object id="1" name="player" x="39.25" y="52.75" width="17" height="6.125">
     <properties>
@@ -42,7 +44,7 @@
      <property name="sensor" type="bool" value="true"/>
     </properties>
    </object>
-   <object id="8" name="hitbox" x="45.5" y="30.375">
+   <object id="8" name="playerHitbox" x="45.5" y="30.375">
     <properties>
      <property name="sensor" type="bool" value="true"/>
     </properties>

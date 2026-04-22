@@ -1,7 +1,5 @@
 package com.github.Jaecuber.Runeguard.systems;
 
-import javax.swing.border.EmptyBorder;
-
 import com.badlogic.ashley.core.Engine;
 import com.badlogic.ashley.core.Entity;
 import com.badlogic.ashley.core.EntityListener;
@@ -14,6 +12,7 @@ import com.badlogic.gdx.physics.box2d.ContactListener;
 import com.badlogic.gdx.physics.box2d.Fixture;
 import com.badlogic.gdx.physics.box2d.Manifold;
 import com.badlogic.gdx.physics.box2d.World;
+import com.github.Jaecuber.Runeguard.component.DamageListener;
 import com.github.Jaecuber.Runeguard.component.Enemy;
 import com.github.Jaecuber.Runeguard.component.Health;
 import com.github.Jaecuber.Runeguard.component.Physics;
@@ -127,14 +126,21 @@ public class PhysicsSystem extends IteratingSystem implements EntityListener, Co
                 enemy.setAttackStatus(entering);
             }
         }
-        if("hitbox".equals(sensor.getUserData()) && "hitbox".equals(object)){
-            Entity playerEntity = (Entity) sensor.getBody().getUserData();
+        if("hitbox".equals(sensor.getUserData()) && "playerHitbox".equals(object.getUserData())){
+            Entity playerEntity = (Entity) object.getBody().getUserData();
             Entity enemyEntity = (Entity) sensor.getBody().getUserData();
             Enemy enemy = Enemy.MAPPER.get(enemyEntity);
-            Health playerHealth = Health.MAPPER.get(playerEntity);
 
-            if(entering){
-                //playerHealth.addHealth()
+            if(enemy == null) return;
+            
+            if(entering && enemy.isAttacking() && !enemy.hasDamaged()){
+                enemy.setHasDamaged(true);
+                DamageListener damage = DamageListener.MAPPER.get(playerEntity);
+                if (damage == null) {
+                    playerEntity.add(new DamageListener(enemy.getDamage()));
+                } else {
+                    damage.addDamage(enemy.getDamage());
+                }
             }
         }
     }

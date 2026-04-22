@@ -21,6 +21,7 @@ import com.github.Jaecuber.Runeguard.component.Enemy;
 import com.github.Jaecuber.Runeguard.component.Facing;
 import com.github.Jaecuber.Runeguard.component.Move;
 import com.github.Jaecuber.Runeguard.component.Physics;
+import com.github.Jaecuber.Runeguard.component.Stamina;
 import com.github.Jaecuber.Runeguard.component.Facing.FacingDirection;
 
 public class AttackSystem extends IteratingSystem{
@@ -120,6 +121,11 @@ public class AttackSystem extends IteratingSystem{
             entity.add(new DamageListener(this.attackDamage));
         } else {
             damage.addDamage(this.attackDamage);
+        }
+        //stamina
+        Stamina stamina = Stamina.MAPPER.get(entity);
+        if(stamina != null){
+            stamina.addStamina(-20.0f);
         }
         return true;
     }

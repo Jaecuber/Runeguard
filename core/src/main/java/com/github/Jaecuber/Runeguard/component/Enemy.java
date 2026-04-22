@@ -17,17 +17,20 @@ public class Enemy implements Component{
     private boolean isStaggered;
     private boolean attacking;
     private boolean canAttack;
+    private boolean hasDamaged;
     private float speed;
     private float stateTimer;
     private float wanderTimer;
     private float knockbackTimer;
     private float cooldownTimer;
     private float attackCooldown;
+    private float damage;
 
-    public Enemy(EnemyAIState state, float speed, float cooldown){
+    public Enemy(EnemyAIState state, float speed, float cooldown, float damage){
         this.state = state;
         this.speed = speed;
         this.attackCooldown = cooldown;
+        this.damage = damage;
         this.isAggro = false;
         this.isIdle = true;
         this.dead = false;
@@ -40,6 +43,7 @@ public class Enemy implements Component{
 
     public void applyAttack(){
         this.attacking = true;
+        this.hasDamaged = false;
         this.cooldownTimer = attackCooldown;
     }
 
@@ -161,6 +165,22 @@ public class Enemy implements Component{
 
     public EnemyAIState getState(){
         return state;
+    }
+
+    public float getDamage() {
+        return damage;
+    }
+
+    public boolean hasDamaged() {
+        return hasDamaged;
+    }
+
+    public void setHasDamaged(boolean hasDamaged) {
+        this.hasDamaged = hasDamaged;
+    }
+
+    public void setDamage(float damage) {
+        this.damage = damage;
     }
 
     public enum EnemyAIState{

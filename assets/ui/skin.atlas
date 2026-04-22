@@ -40,35 +40,35 @@ filter: Linear, Linear
 repeat: none
 alagard
   rotate: false
-  xy: 508, 980
+  xy: 508, 984
   size: 504, 30
   orig: 504, 30
   offset: 0, 0
   index: -1
 alagard(3)
   rotate: false
-  xy: 1, 578
+  xy: 1, 582
   size: 505, 432
   orig: 505, 432
   offset: 0, 0
   index: -1
 alagard(4)
   rotate: false
-  xy: 1, 319
+  xy: 1, 323
   size: 505, 257
   orig: 505, 257
   offset: 0, 0
   index: -1
 XIcon
   rotate: false
-  xy: 107, 107
+  xy: 259, 111
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
 banner
   rotate: false
-  xy: 508, 946
+  xy: 508, 950
   size: 224, 32
   split: 12, 12, 12, 3
   orig: 224, 32
@@ -76,7 +76,23 @@ banner
   index: -1
 bar
   rotate: false
-  xy: 508, 940
+  xy: 1, 59
+  size: 62, 4
+  split: 3, 2, 1, 1
+  orig: 62, 4
+  offset: 0, 0
+  index: -1
+largeBar
+  rotate: false
+  xy: 1, 59
+  size: 62, 4
+  split: 3, 2, 1, 1
+  orig: 62, 4
+  offset: 0, 0
+  index: -1
+progressBar
+  rotate: false
+  xy: 1, 59
   size: 62, 4
   split: 3, 2, 1, 1
   orig: 62, 4
@@ -84,7 +100,7 @@ bar
   index: -1
 buttonDown
   rotate: false
-  xy: 333, 286
+  xy: 622, 917
   size: 30, 31
   split: 2, 2, 6, 1
   orig: 30, 31
@@ -92,7 +108,7 @@ buttonDown
   index: -1
 buttonOver
   rotate: false
-  xy: 508, 907
+  xy: 1, 26
   size: 30, 31
   split: 2, 2, 2, 5
   orig: 30, 31
@@ -100,7 +116,7 @@ buttonOver
   index: -1
 buttonUp
   rotate: false
-  xy: 734, 947
+  xy: 734, 951
   size: 30, 31
   split: 2, 2, 4, 3
   orig: 30, 31
@@ -108,7 +124,15 @@ buttonUp
   index: -1
 fill
   rotate: false
-  xy: 1, 4
+  xy: 508, 566
+  size: 30, 2
+  split: 0, 0, 0, 0
+  orig: 30, 2
+  offset: 0, 0
+  index: -1
+healthFill
+  rotate: false
+  xy: 65, 61
   size: 30, 2
   split: 0, 0, 0, 0
   orig: 30, 2
@@ -116,23 +140,55 @@ fill
   index: -1
 leftPage
   rotate: false
-  xy: 1, 8
+  xy: 508, 719
   size: 104, 147
   split: 50, 51, 4, 7
   orig: 104, 147
   offset: 0, 0
   index: -1
+playerIcon
+  rotate: false
+  xy: 1, 65
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
 rightPage
   rotate: false
-  xy: 227, 170
+  xy: 508, 570
   size: 104, 147
   split: 50, 44, 69, 53
   orig: 104, 147
   offset: 0, 0
   index: -1
+smallBar
+  rotate: false
+  xy: 1014, 1012
+  size: 2, 2
+  split: 0, 0, 0, 0
+  orig: 2, 2
+  offset: 0, 0
+  index: -1
+smallWindow
+  rotate: false
+  xy: 508, 868
+  size: 112, 80
+  split: 6, 6, 5, 6
+  pad: 6, 6, 23, 26
+  orig: 112, 80
+  offset: 0, 0
+  index: -1
+staminaFill
+  rotate: false
+  xy: 259, 107
+  size: 30, 2
+  split: 0, 0, 0, 0
+  orig: 30, 2
+  offset: 0, 0
+  index: -1
 window
   rotate: false
-  xy: 1, 157
+  xy: 259, 161
   size: 224, 160
   split: 12, 12, 46, 52
   orig: 224, 160

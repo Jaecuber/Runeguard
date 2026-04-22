@@ -64,6 +64,42 @@ com.badlogic.gdx.scenes.scene2d.utils.NinePatchDrawable: {
 		topHeight: 0
 		bottomHeight: 0
 	}
+	healthFill: {
+		patch: healthFill
+		minWidth: 0
+		minHeight: 21
+		leftWidth: 0
+		rightWidth: 0
+		topHeight: 0
+		bottomHeight: 0
+	}
+	staminaFill: {
+		patch: staminaFill
+		minWidth: 0
+		minHeight: 21
+		leftWidth: 0
+		rightWidth: 0
+		topHeight: 0
+		bottomHeight: 0
+	}
+	smallBar: {
+		patch: smallBar
+		minWidth: 0
+		minHeight: 23
+		leftWidth: 0
+		rightWidth: 0
+		topHeight: 0
+		bottomHeight: 0
+	}
+	largeBar: {
+		patch: largeBar
+		minWidth: 62
+		minHeight: 25
+		leftWidth: 3
+		rightWidth: 2
+		topHeight: 1
+		bottomHeight: 1
+	}
 }
 com.badlogic.gdx.scenes.scene2d.ui.Button$ButtonStyle: {
 	default: {
@@ -72,7 +108,6 @@ com.badlogic.gdx.scenes.scene2d.ui.Button$ButtonStyle: {
 	}
 	exitButton: {
 		up: XIcon
-		down: XIcon
 	}
 }
 com.badlogic.gdx.scenes.scene2d.ui.Label$LabelStyle: {
@@ -87,6 +122,24 @@ com.badlogic.gdx.scenes.scene2d.ui.Label$LabelStyle: {
 	titleLabel: {
 		font: alagard_large
 		fontColor: White
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.ProgressBar$ProgressBarStyle: {
+	default-horizontal: {
+		background: bar
+		knobBefore: fill
+	}
+	default-vertical: {
+		background: bar
+		knobBefore: fill
+	}
+	healthBar: {
+		background: largeBar
+		knobBefore: healthFill
+	}
+	staminaBar: {
+		background: largeBar
+		knobBefore: staminaFill
 	}
 }
 com.badlogic.gdx.scenes.scene2d.ui.Slider$SliderStyle: {
@@ -111,7 +164,6 @@ com.badlogic.gdx.scenes.scene2d.ui.TextButton$TextButtonStyle: {
 		fontColor: White
 		up: buttonUp
 		down: buttonDown
-		over: buttonOver
 	}
 	mainTextButton: {
 		font: alagard_semiLarge
@@ -134,7 +186,6 @@ com.badlogic.gdx.scenes.scene2d.ui.TextTooltip$TextTooltipStyle: {
 }
 com.badlogic.gdx.scenes.scene2d.ui.Window$WindowStyle: {
 	default: {
-		background: window
 		titleFont: alagard
 	}
 	banner: {

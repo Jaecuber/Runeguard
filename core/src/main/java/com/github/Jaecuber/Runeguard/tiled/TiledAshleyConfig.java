@@ -34,6 +34,7 @@ import com.github.Jaecuber.Runeguard.component.Health;
 import com.github.Jaecuber.Runeguard.component.Move;
 import com.github.Jaecuber.Runeguard.component.Physics;
 import com.github.Jaecuber.Runeguard.component.Player;
+import com.github.Jaecuber.Runeguard.component.Stamina;
 import com.github.Jaecuber.Runeguard.component.Transform;
 import com.github.Jaecuber.Runeguard.component.Animation2D.AnimationType;
 import com.github.Jaecuber.Runeguard.component.Enemy.EnemyAIState;
@@ -99,6 +100,7 @@ public class TiledAshleyConfig {
         addEntityPhysics(tile.getObjects(), bodyType, Vector2.Zero, entity);
         addEntityCameraFollow(tileMapObject, entity);
         addEntityHealth(tile, entity);
+        addEntityStamina(tile, entity);
         addEntityPlayer(tileMapObject, entity);
         addEntityAttack(tile, entity);
         entity.add(new Facing(Facing.FacingDirection.DOWN));
@@ -110,6 +112,13 @@ public class TiledAshleyConfig {
         this.engine.addEntity(entity);
     }
 
+    private void addEntityStamina(TiledMapTile tile, Entity entity) {
+        float stamina = tile.getProperties().get("stamina", 0.0f, Float.class);
+        if(stamina == 0.0f) return;
+
+        float staminaRegen = tile.getProperties().get("staminaRegen", 0.0f, Float.class);
+        entity.add(new Stamina(stamina, staminaRegen));
+    }
     private void addEntityHealth(TiledMapTile tile, Entity entity) {
         float health = tile.getProperties().get("health", 0.0f, Float.class);
         if(health == 0.0f) return;
@@ -125,10 +134,11 @@ public class TiledAshleyConfig {
         EnemyAIState state = EnemyAIState.valueOf(stateStr);
         float speed = tile.getProperties().get("speed", 0f, Float.class);
         float cooldown = tile.getProperties().get("cooldown", 0f, Float.class);
+        float damage = tile.getProperties().get("damage", 0.0f, Float.class);
 
         String type = tile.getProperties().get("type", null, String.class);
 
-        Enemy enemyComponent = new Enemy(state, speed, cooldown);
+        Enemy enemyComponent = new Enemy(state, speed, cooldown, damage);
         
         switch (type) {
             case "slime" -> enemyComponent.setMoveset(new SlimeMoveset());
