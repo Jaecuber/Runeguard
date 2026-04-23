@@ -2,22 +2,33 @@ package com.github.Jaecuber.ui.view;
 
 import java.util.Map;
 
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.math.Vector2;
+import com.badlogic.gdx.scenes.scene2d.Actor;
+import com.badlogic.gdx.scenes.scene2d.InputEvent;
+import com.badlogic.gdx.scenes.scene2d.InputListener;
 import com.badlogic.gdx.scenes.scene2d.Stage;
+import com.badlogic.gdx.scenes.scene2d.Touchable;
 import com.badlogic.gdx.scenes.scene2d.actions.Actions;
 import com.badlogic.gdx.scenes.scene2d.ui.Container;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
+import com.badlogic.gdx.scenes.scene2d.ui.Label;
 import com.badlogic.gdx.scenes.scene2d.ui.ProgressBar;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
+import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
+import com.badlogic.gdx.scenes.scene2d.ui.VerticalGroup;
+import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.utils.Align;
 import com.badlogic.gdx.utils.Scaling;
+import com.github.Jaecuber.Runeguard.asset.SoundAsset;
 import com.github.Jaecuber.ui.model.GameViewModel;
 import com.github.tommyettinger.textra.TypingLabel;
 
 public class GameView extends View<GameViewModel>{
     private ProgressBar healthBar;
     private ProgressBar staminaBar;
+    private Table gameOverTable;
 
     public GameView(Stage stage, Skin skin, GameViewModel viewModel){
         super(stage, skin, viewModel);
@@ -56,7 +67,7 @@ public class GameView extends View<GameViewModel>{
         table1.add(progressTable).align(Align.top).prefWidth(400.0f);
         table.add(table1).align(Align.topLeft);
         stage.addActor(table);
-        
+        setupGameOver();
     }
 
     @Override
@@ -66,13 +77,14 @@ public class GameView extends View<GameViewModel>{
         viewModel.onPropertyChange(GameViewModel.MAX_HEALTH, Integer.class, this::updateMaxHealth);
         viewModel.onPropertyChange(GameViewModel.STAMINA, Integer.class, this::updateStamina);
         viewModel.onPropertyChange(GameViewModel.MAX_STAMINA, Integer.class, this::updateMaxStamina);
+        viewModel.onPropertyChange(GameViewModel.GAME_OVER, Boolean.class, this::gameOverScreen);
     }
 
     private void showDamage(Map.Entry<Vector2, Integer> damAndPos){
         final Vector2 position = damAndPos.getKey();
         Integer damage = damAndPos.getValue();
 
-        TypingLabel typingLabel = new TypingLabel("[%20]{SHAKE=1.0;0.8}{JUMP=0.5;0.5;0.9;0.5}{GRADIENT=ff0000ff;984848ff;1.0;5.0}{ENDGRADIENT}{SIZE=150%}" + damage, skin, "titleLabel");
+        TypingLabel typingLabel = new TypingLabel("[%20]{SHAKE=1.0;0.8}{JUMP=0.5;0.5;0.9;0.5}{GRADIENT=ff0000ff;984848ff;1.0;5.0}{ENDGRADIENT}{SIZE=125%}" + damage, skin, "titleLabel");
         stage.addActor(typingLabel);
 
         typingLabel.addAction(
@@ -85,6 +97,74 @@ public class GameView extends View<GameViewModel>{
                 }))
             )
         );
+    }
+
+    public void setupGameOver(){
+        gameOverTable = new Table();
+        gameOverTable.setTouchable(Touchable.disabled);
+        gameOverTable.setBackground(skin.getDrawable("gameOverBkg"));
+        gameOverTable.setFillParent(true);
+
+        Label label = new Label("Game Over", skin, "LargeTitle");
+        label.setAlignment(Align.center);
+        gameOverTable.add(label).grow();
+
+        gameOverTable.row();
+        VerticalGroup verticalGroup = new VerticalGroup();
+        verticalGroup.space(10.0f);
+
+        TextButton continueButton = new TextButton(" Continue ", skin, "mainTextButton");
+        verticalGroup.addActor(continueButton);
+        continueButton.addListener(new ClickListener(){
+            @Override
+            public void clicked(InputEvent event, float x, float y){
+                viewModel.continueGame();
+            }
+        });
+        continueButton.addListener(new InputListener(){
+            long lastEnterTime = 0;
+            @Override
+            public void enter(InputEvent event, float x, float y, int pointer, Actor fromActor){
+                long currentTime = System.currentTimeMillis();
+                if(currentTime - lastEnterTime > 50){
+                    viewModel.playSound(SoundAsset.HOVER);
+                    lastEnterTime = currentTime;
+                }
+            }
+        });
+
+        TextButton quitButton = new TextButton(" Quit ", skin, "mainTextButton");
+        verticalGroup.addActor(quitButton);
+        quitButton.addListener(new ClickListener(){
+            @Override
+            public void clicked(InputEvent event, float x, float y){
+                viewModel.quitGame();
+            }
+        });
+        quitButton.addListener(new InputListener(){
+            long lastEnterTime = 0;
+            @Override
+            public void enter(InputEvent event, float x, float y, int pointer, Actor fromActor){
+                long currentTime = System.currentTimeMillis();
+                if(currentTime - lastEnterTime > 50){
+                    viewModel.playSound(SoundAsset.HOVER);
+                    lastEnterTime = currentTime;
+                }
+            }
+        });
+        gameOverTable.add(verticalGroup).grow();
+        gameOverTable.setVisible(false);
+        gameOverTable.getColor().a = 0f;
+        stage.addActor(gameOverTable);
+    }
+
+    private void gameOverScreen(boolean bool){
+        gameOverTable.setVisible(bool);
+        gameOverTable.setTouchable(Touchable.enabled);
+        gameOverTable.addAction(Actions.sequence(
+            Actions.delay(1.0f),
+            Actions.fadeIn(1.0f)
+        ));
     }
 
     private void updateHealth(int health){

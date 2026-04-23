@@ -5,17 +5,20 @@ import com.badlogic.ashley.core.Entity;
 import com.badlogic.ashley.core.EntityListener;
 import com.badlogic.ashley.core.Family;
 import com.badlogic.ashley.systems.IteratingSystem;
-import com.badlogic.gdx.Gdx;
 import com.github.Jaecuber.Runeguard.component.Health;
 import com.github.Jaecuber.Runeguard.component.Player;
+import com.github.Jaecuber.Runeguard.input.IdleControllerState;
+import com.github.Jaecuber.Runeguard.input.KeyboardController;
 import com.github.Jaecuber.ui.model.GameViewModel;
 
 public class HealthSystem extends IteratingSystem implements EntityListener{
     private final GameViewModel viewModel;
+    private final KeyboardController keyboardController;
 
-    public HealthSystem(GameViewModel viewModel){
+    public HealthSystem(GameViewModel viewModel, KeyboardController keyboardController){
         super(Family.all(Health.class).get());
         this.viewModel = viewModel;
+        this.keyboardController = keyboardController;
     }
 
     @Override
@@ -34,7 +37,8 @@ public class HealthSystem extends IteratingSystem implements EntityListener{
     }
 
     private void die(Entity entity){
-        Gdx.app.exit();
+       keyboardController.setActiveState(IdleControllerState.class);
+       viewModel.showGameOver();
     }
 
     @Override

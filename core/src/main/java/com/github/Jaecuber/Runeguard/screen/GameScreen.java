@@ -62,7 +62,7 @@ public class GameScreen extends ScreenAdapter {
         this.tiledAshleyConfig = new TiledAshleyConfig(this.engine, game.getAssetService(), physicsWorld);
         this.keyboardController = new KeyboardController(GameControllerState.class, engine);
         this.audioService = game.getAudioService();
-        this.uiViewport = new FitViewport(1920f, 1080f);//320 180
+        this.uiViewport = new FitViewport(1500f, 900f);//320 180
         this.stage = new Stage(uiViewport, game.getBatch());
         this.viewModel = new GameViewModel(game);
         this.skin = game.getAssetService().get(SkinAsset.DEFAULT);
@@ -73,7 +73,7 @@ public class GameScreen extends ScreenAdapter {
         this.engine.addSystem(new FacingSystem());
         this.engine.addSystem(new PhysicsSystem(physicsWorld, 1/60f));
         this.engine.addSystem(new DamageSystem(viewModel));
-        this.engine.addSystem(new HealthSystem(viewModel));
+        this.engine.addSystem(new HealthSystem(viewModel, keyboardController));
         this.engine.addSystem(new StaminaSystem(viewModel));
         this.engine.addSystem(new AttackSystem(physicsWorld, game.getAudioService()));
         this.engine.addSystem(new AnimationSystem(game.getAssetService()));

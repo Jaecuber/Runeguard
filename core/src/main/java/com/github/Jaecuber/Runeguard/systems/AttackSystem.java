@@ -51,7 +51,7 @@ public class AttackSystem extends IteratingSystem{
 
         if(attack.canAttack()) return;
 
-        if(attack.hasAttackStarted() && attack.getSfx() != null && stamina.getStamina() > stamina.getStamToAttack()){
+        if(attack.hasAttackStarted() && attack.getSfx() != null){
             audioService.playSound(attack.getSfx());
             Move move = Move.MAPPER.get(entity);
             animation.setSpeed(animSpeed);
@@ -67,7 +67,7 @@ public class AttackSystem extends IteratingSystem{
 
         attack.decAttackTimer(deltaTime);
 
-        if(attack.canDamage() && stamina.getStamina() > stamina.getStamToAttack()){
+        if(attack.canDamage()){
             FacingDirection facingDirection = Facing.MAPPER.get(entity).getDirection();
             attackerBody = Physics.MAPPER.get(entity).getBody();
             PolygonShape attackShape = getAttackFixture(attackerBody, facingDirection);

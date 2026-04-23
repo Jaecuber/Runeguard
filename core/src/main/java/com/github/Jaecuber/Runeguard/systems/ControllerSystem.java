@@ -5,7 +5,9 @@ import com.badlogic.ashley.core.Family;
 import com.badlogic.ashley.systems.IteratingSystem;
 import com.github.Jaecuber.Runeguard.component.Attack;
 import com.github.Jaecuber.Runeguard.component.Controller;
+import com.github.Jaecuber.Runeguard.component.Health;
 import com.github.Jaecuber.Runeguard.component.Move;
+import com.github.Jaecuber.Runeguard.component.Stamina;
 import com.github.Jaecuber.Runeguard.input.Command;
 
 public class ControllerSystem extends IteratingSystem{
@@ -42,7 +44,8 @@ public class ControllerSystem extends IteratingSystem{
 
     private void startEntityAttack(Entity entity) {
         Attack attack = Attack.MAPPER.get(entity);
-        if(attack != null && attack.canAttack()){
+        Stamina stamina = Stamina.MAPPER.get(entity);
+        if(attack != null && attack.canAttack() && stamina.getStamina() > stamina.getStamToAttack()){
             attack.startAttack();
         }
     }

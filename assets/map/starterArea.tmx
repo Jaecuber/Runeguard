@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="100" height="100" tilewidth="16" tileheight="16" infinite="0" nextlayerid="18" nextobjectid="1214">
+<map version="1.10" tiledversion="1.12.0" orientation="orthogonal" renderorder="right-down" width="100" height="100" tilewidth="16" tileheight="16" infinite="0" nextlayerid="18" nextobjectid="1253">
  <properties>
   <property name="music" value="TOWN"/>
  </properties>
@@ -87,7 +87,46 @@
     <property name="damage" type="float" value="3"/>
    </properties>
   </object>
-  <object id="649" gid="14918" x="479.121" y="1060.01" width="64" height="64"/>
+  <object id="649" gid="14918" x="486.621" y="1064.01" width="64" height="64"/>
+  <object id="1232" gid="14918" x="580.621" y="1059.51" width="64" height="64"/>
+  <object id="1242" gid="14918" x="427.121" y="1134.51" width="64" height="64"/>
+  <object id="1252" gid="14918" x="395.121" y="1072.01" width="64" height="64"/>
+  <object id="1214" gid="14918" x="516.871" y="1045.26" width="64" height="64"/>
+  <object id="1231" gid="14918" x="610.871" y="1040.76" width="64" height="64"/>
+  <object id="1241" gid="14918" x="457.371" y="1115.76" width="64" height="64"/>
+  <object id="1251" gid="14918" x="425.371" y="1053.26" width="64" height="64"/>
+  <object id="1215" gid="14918" x="507.121" y="1075.01" width="64" height="64"/>
+  <object id="1230" gid="14918" x="601.121" y="1070.51" width="64" height="64"/>
+  <object id="1240" gid="14918" x="447.621" y="1145.51" width="64" height="64"/>
+  <object id="1250" gid="14918" x="415.621" y="1083.01" width="64" height="64"/>
+  <object id="1216" gid="14918" x="491.121" y="1036.76" width="64" height="64"/>
+  <object id="1229" gid="14918" x="585.121" y="1032.26" width="64" height="64"/>
+  <object id="1239" gid="14918" x="431.621" y="1107.26" width="64" height="64"/>
+  <object id="1249" gid="14918" x="399.621" y="1044.76" width="64" height="64"/>
+  <object id="1217" gid="14918" x="462.121" y="1048.01" width="64" height="64"/>
+  <object id="1228" gid="14918" x="556.121" y="1043.51" width="64" height="64"/>
+  <object id="1238" gid="14918" x="402.621" y="1118.51" width="64" height="64"/>
+  <object id="1248" gid="14918" x="370.621" y="1056.01" width="64" height="64"/>
+  <object id="1218" gid="14918" x="464.871" y="1075.26" width="64" height="64"/>
+  <object id="1227" gid="14918" x="558.871" y="1070.76" width="64" height="64"/>
+  <object id="1237" gid="14918" x="405.371" y="1145.76" width="64" height="64"/>
+  <object id="1247" gid="14918" x="373.371" y="1083.26" width="64" height="64"/>
+  <object id="1219" gid="14918" x="487.371" y="1091.01" width="64" height="64"/>
+  <object id="1226" gid="14918" x="581.371" y="1086.51" width="64" height="64"/>
+  <object id="1236" gid="14918" x="427.871" y="1161.51" width="64" height="64"/>
+  <object id="1246" gid="14918" x="395.871" y="1099.01" width="64" height="64"/>
+  <object id="1220" gid="14918" x="460.121" y="1097.51" width="64" height="64"/>
+  <object id="1225" gid="14918" x="554.121" y="1093.01" width="64" height="64"/>
+  <object id="1235" gid="14918" x="400.621" y="1168.01" width="64" height="64"/>
+  <object id="1245" gid="14918" x="368.621" y="1105.51" width="64" height="64"/>
+  <object id="1221" gid="14918" x="441.121" y="1064.76" width="64" height="64"/>
+  <object id="1224" gid="14918" x="535.121" y="1060.26" width="64" height="64"/>
+  <object id="1234" gid="14918" x="381.621" y="1135.26" width="64" height="64"/>
+  <object id="1244" gid="14918" x="349.621" y="1072.76" width="64" height="64"/>
+  <object id="1222" gid="14918" x="438.871" y="1084.51" width="64" height="64"/>
+  <object id="1223" gid="14918" x="532.871" y="1080.01" width="64" height="64"/>
+  <object id="1233" gid="14918" x="379.371" y="1155.01" width="64" height="64"/>
+  <object id="1243" gid="14918" x="347.371" y="1092.51" width="64" height="64"/>
  </objectgroup>
  <layer id="3" name="foreground" width="100" height="100">
   <data encoding="base64" compression="zlib">
