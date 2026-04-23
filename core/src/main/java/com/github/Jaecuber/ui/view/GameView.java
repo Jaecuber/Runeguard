@@ -3,7 +3,9 @@ package com.github.Jaecuber.ui.view;
 import java.util.Map;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.math.Interpolation;
 import com.badlogic.gdx.math.Vector2;
+import com.badlogic.gdx.scenes.scene2d.Action;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.InputListener;
@@ -29,6 +31,7 @@ public class GameView extends View<GameViewModel>{
     private ProgressBar healthBar;
     private ProgressBar staminaBar;
     private Table gameOverTable;
+    private Label gameOverLabel;
 
     public GameView(Stage stage, Skin skin, GameViewModel viewModel){
         super(stage, skin, viewModel);
@@ -105,9 +108,10 @@ public class GameView extends View<GameViewModel>{
         gameOverTable.setBackground(skin.getDrawable("gameOverBkg"));
         gameOverTable.setFillParent(true);
 
-        Label label = new Label("Game Over", skin, "LargeTitle");
-        label.setAlignment(Align.center);
-        gameOverTable.add(label).grow();
+        gameOverLabel = new Label("Game Over", skin, "LargeTitle");
+        gameOverLabel.setAlignment(Align.center);
+        gameOverLabel.getColor().a = 0.0f;
+        gameOverTable.add(gameOverLabel).grow();
 
         gameOverTable.row();
         VerticalGroup verticalGroup = new VerticalGroup();
@@ -165,6 +169,11 @@ public class GameView extends View<GameViewModel>{
             Actions.delay(1.0f),
             Actions.fadeIn(1.0f)
         ));
+        gameOverLabel.addAction(Actions.sequence(
+            Actions.delay(1.5f),
+            Actions.fadeIn(0.25f)
+        ));
+
     }
 
     private void updateHealth(int health){

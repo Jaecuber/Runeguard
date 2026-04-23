@@ -14,8 +14,12 @@ public class KeyboardController extends InputAdapter{
         Map.entry(Input.Keys.S, Command.DOWN),
         Map.entry(Input.Keys.A, Command.LEFT),
         Map.entry(Input.Keys.D, Command.RIGHT),
-        Map.entry(Input.Keys.SPACE, Command.SELECT),
+        Map.entry(Input.Keys.SPACE, Command.DODGE),
         Map.entry(Input.Keys.ESCAPE, Command.CANCEL)
+    );
+
+    private static final Map<Integer, Command> INPUT_MAPPING = Map.ofEntries(
+        Map.entry(Input.Buttons.LEFT, Command.SELECT)
     );
 
     private final boolean[] commandState;
@@ -68,4 +72,39 @@ public class KeyboardController extends InputAdapter{
         this.activeState.keyUp(command);
         return true;
     }
+
+    @Override
+    public boolean touchCancelled(int screenX, int screenY, int pointer, int button) {
+        return super.touchCancelled(screenX, screenY, pointer, button);
+    }
+
+    @Override
+    public boolean touchDown(int screenX, int screenY, int pointer, int button) {
+        Command command = INPUT_MAPPING.get(button);
+        if(command == null) return false;
+
+        this.commandState[command.ordinal()] = true;
+        this.activeState.keyDown(command);
+        return true;
+    }
+
+    @Override
+    public boolean touchUp(int screenX, int screenY, int pointer, int button) {
+        Command command = INPUT_MAPPING.get(button);
+        if(command == null) return false;
+        if(!this.commandState[command.ordinal()]) return false;
+
+        this.commandState[command.ordinal()] = false;
+        this.activeState.keyUp(command);
+        return true;
+    }
+
+    @Override
+    public boolean touchDragged(int screenX, int screenY, int pointer) {
+        return super.touchDragged(screenX, screenY, pointer);
+    }
+
+    
+
+    
 }

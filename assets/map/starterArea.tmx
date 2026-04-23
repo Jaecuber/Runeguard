@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.12.0" orientation="orthogonal" renderorder="right-down" width="100" height="100" tilewidth="16" tileheight="16" infinite="0" nextlayerid="18" nextobjectid="1253">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="100" height="100" tilewidth="16" tileheight="16" infinite="0" nextlayerid="18" nextobjectid="1333">
  <properties>
   <property name="music" value="TOWN"/>
  </properties>
@@ -127,6 +127,46 @@
   <object id="1223" gid="14918" x="532.871" y="1080.01" width="64" height="64"/>
   <object id="1233" gid="14918" x="379.371" y="1155.01" width="64" height="64"/>
   <object id="1243" gid="14918" x="347.371" y="1092.51" width="64" height="64"/>
+  <object id="1253" gid="14918" x="498.5" y="1029.38" width="64" height="64"/>
+  <object id="1254" gid="14918" x="592.5" y="1024.88" width="64" height="64"/>
+  <object id="1255" gid="14918" x="439" y="1099.88" width="64" height="64"/>
+  <object id="1256" gid="14918" x="407" y="1037.38" width="64" height="64"/>
+  <object id="1257" gid="14918" x="528.75" y="1010.63" width="64" height="64"/>
+  <object id="1258" gid="14918" x="622.75" y="1006.13" width="64" height="64"/>
+  <object id="1259" gid="14918" x="469.25" y="1081.13" width="64" height="64"/>
+  <object id="1260" gid="14918" x="437.25" y="1018.63" width="64" height="64"/>
+  <object id="1261" gid="14918" x="519" y="1040.38" width="64" height="64"/>
+  <object id="1262" gid="14918" x="613" y="1035.88" width="64" height="64"/>
+  <object id="1263" gid="14918" x="459.5" y="1110.88" width="64" height="64"/>
+  <object id="1264" gid="14918" x="427.5" y="1048.38" width="64" height="64"/>
+  <object id="1265" gid="14918" x="503" y="1002.13" width="64" height="64"/>
+  <object id="1266" gid="14918" x="597" y="997.625" width="64" height="64"/>
+  <object id="1267" gid="14918" x="443.5" y="1072.63" width="64" height="64"/>
+  <object id="1268" gid="14918" x="411.5" y="1010.13" width="64" height="64"/>
+  <object id="1269" gid="14918" x="474" y="1013.38" width="64" height="64"/>
+  <object id="1270" gid="14918" x="568" y="1008.88" width="64" height="64"/>
+  <object id="1271" gid="14918" x="414.5" y="1083.88" width="64" height="64"/>
+  <object id="1272" gid="14918" x="382.5" y="1021.38" width="64" height="64"/>
+  <object id="1273" gid="14918" x="476.75" y="1040.63" width="64" height="64"/>
+  <object id="1274" gid="14918" x="570.75" y="1036.13" width="64" height="64"/>
+  <object id="1275" gid="14918" x="417.25" y="1111.13" width="64" height="64"/>
+  <object id="1276" gid="14918" x="385.25" y="1048.63" width="64" height="64"/>
+  <object id="1277" gid="14918" x="499.25" y="1056.38" width="64" height="64"/>
+  <object id="1278" gid="14918" x="593.25" y="1051.88" width="64" height="64"/>
+  <object id="1279" gid="14918" x="439.75" y="1126.88" width="64" height="64"/>
+  <object id="1280" gid="14918" x="407.75" y="1064.38" width="64" height="64"/>
+  <object id="1281" gid="14918" x="472" y="1062.88" width="64" height="64"/>
+  <object id="1282" gid="14918" x="566" y="1058.38" width="64" height="64"/>
+  <object id="1283" gid="14918" x="412.5" y="1133.38" width="64" height="64"/>
+  <object id="1284" gid="14918" x="380.5" y="1070.88" width="64" height="64"/>
+  <object id="1285" gid="14918" x="453" y="1030.13" width="64" height="64"/>
+  <object id="1286" gid="14918" x="547" y="1025.63" width="64" height="64"/>
+  <object id="1287" gid="14918" x="393.5" y="1100.63" width="64" height="64"/>
+  <object id="1288" gid="14918" x="361.5" y="1038.13" width="64" height="64"/>
+  <object id="1289" gid="14918" x="450.75" y="1049.88" width="64" height="64"/>
+  <object id="1290" gid="14918" x="544.75" y="1045.38" width="64" height="64"/>
+  <object id="1291" gid="14918" x="391.25" y="1120.38" width="64" height="64"/>
+  <object id="1292" gid="14918" x="359.25" y="1057.88" width="64" height="64"/>
  </objectgroup>
  <layer id="3" name="foreground" width="100" height="100">
   <data encoding="base64" compression="zlib">
