@@ -13,7 +13,7 @@ public class Move implements Component{
     private boolean doingAction;
 
     public Move(float maxSpeed){
-        this.maxSpeed = maxSpeed;
+        this.maxSpeed = maxSpeed;;
         this.direction = new Vector2();
     }
 

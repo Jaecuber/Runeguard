@@ -25,6 +25,7 @@ import com.github.Jaecuber.Runeguard.systems.AttackSystem;
 import com.github.Jaecuber.Runeguard.systems.CameraSystem;
 import com.github.Jaecuber.Runeguard.systems.ControllerSystem;
 import com.github.Jaecuber.Runeguard.systems.DamageSystem;
+import com.github.Jaecuber.Runeguard.systems.DodgeSystem;
 import com.github.Jaecuber.Runeguard.systems.EnemyAiSystem;
 import com.github.Jaecuber.Runeguard.systems.FacingSystem;
 import com.github.Jaecuber.Runeguard.systems.FsmSystem;
@@ -76,6 +77,7 @@ public class GameScreen extends ScreenAdapter {
         this.engine.addSystem(new HealthSystem(viewModel, keyboardController));
         this.engine.addSystem(new StaminaSystem(viewModel));
         this.engine.addSystem(new AttackSystem(physicsWorld, game.getAudioService()));
+        this.engine.addSystem(new DodgeSystem());
         this.engine.addSystem(new AnimationSystem(game.getAssetService()));
         this.engine.addSystem(new EnemyAiSystem());
         this.engine.addSystem(new CameraSystem(game.getCamera()));

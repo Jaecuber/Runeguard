@@ -26,6 +26,7 @@ import com.github.Jaecuber.Runeguard.combat.SlimeMoveset;
 import com.github.Jaecuber.Runeguard.component.Animation2D;
 import com.github.Jaecuber.Runeguard.component.CameraFollow;
 import com.github.Jaecuber.Runeguard.component.Controller;
+import com.github.Jaecuber.Runeguard.component.Dodge;
 import com.github.Jaecuber.Runeguard.component.Enemy;
 import com.github.Jaecuber.Runeguard.component.Facing;
 import com.github.Jaecuber.Runeguard.component.Fsm;
@@ -101,6 +102,7 @@ public class TiledAshleyConfig {
         addEntityCameraFollow(tileMapObject, entity);
         addEntityHealth(tile, entity);
         addEntityStamina(tile, entity);
+        addEntityDodge(tile, entity);
         addEntityPlayer(tileMapObject, entity);
         addEntityAttack(tile, entity);
         entity.add(new Facing(Facing.FacingDirection.DOWN));
@@ -112,6 +114,15 @@ public class TiledAshleyConfig {
         this.engine.addEntity(entity);
     }
 
+    private void addEntityDodge(TiledMapTile tile, Entity entity) {
+        float dodgePower = tile.getProperties().get("dodgePower", 0.0f, Float.class);
+        if(dodgePower == 0.0f) return;
+
+        float dodgeCooldown = tile.getProperties().get("dodgeCooldown", 0.0f, Float.class);
+        float staminaToDodge = tile.getProperties().get("staminaToDodge", 0.0f, Float.class);
+        entity.add(new Dodge(dodgePower, dodgeCooldown, staminaToDodge));
+    }
+
     private void addEntityStamina(TiledMapTile tile, Entity entity) {
         float stamina = tile.getProperties().get("stamina", 0.0f, Float.class);
         if(stamina == 0.0f) return;
@@ -120,6 +131,7 @@ public class TiledAshleyConfig {
         float stamToAttack = tile.getProperties().get("staminaToAttack", 0.0f, Float.class);
         entity.add(new Stamina(stamina, staminaRegen, stamToAttack));
     }
+
     private void addEntityHealth(TiledMapTile tile, Entity entity) {
         float health = tile.getProperties().get("health", 0.0f, Float.class);
         if(health == 0.0f) return;
@@ -127,6 +139,7 @@ public class TiledAshleyConfig {
         float regen = tile.getProperties().get("regen", 0.0f, Float.class);
         entity.add(new Health(health, regen));
     }
+
     private void addEntityEnemy(TiledMapTile tile, Entity entity, Fsm fsm) {
         boolean enemy = tile.getProperties().get("enemy", false, Boolean.class);
         if(!enemy) return;
@@ -206,8 +219,6 @@ public class TiledAshleyConfig {
     private void addEntityMove(TiledMapTile tile, Entity entity) {
         float speed = tile.getProperties().get("speed", 0f, Float.class);
         if(speed == 0f) return;
-
-        System.out.println(speed);
 
         entity.add(new Move(speed));
     }

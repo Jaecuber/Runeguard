@@ -3,7 +3,6 @@ package com.github.Jaecuber.Runeguard.systems;
 import com.badlogic.ashley.core.Entity;
 import com.badlogic.ashley.core.Family;
 import com.badlogic.ashley.systems.IteratingSystem;
-import com.badlogic.gdx.ai.fsm.StackStateMachine;
 import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Body;

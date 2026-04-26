@@ -41,6 +41,14 @@ public class EnemyAiSystem extends IteratingSystem{
         Physics physics = Physics.MAPPER.get(entity);
         Move move = Move.MAPPER.get(entity);
         Body body = physics.getBody();
+
+        if(!body.isBullet()){
+            body.setBullet(true);
+        }
+        if(!body.isSleepingAllowed()){
+            body.setSleepingAllowed(false);
+            body.setAwake(true);
+        }
         enemy.tickStateTimer(deltaTime);
         enemy.tickKnockbackTimer(deltaTime);
 

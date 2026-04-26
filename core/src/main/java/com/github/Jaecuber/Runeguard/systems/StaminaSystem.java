@@ -6,7 +6,7 @@ import com.badlogic.ashley.core.EntityListener;
 import com.badlogic.ashley.core.Family;
 import com.badlogic.ashley.systems.IteratingSystem;
 import com.github.Jaecuber.Runeguard.component.Attack;
-import com.github.Jaecuber.Runeguard.component.Health;
+import com.github.Jaecuber.Runeguard.component.Dodge;
 import com.github.Jaecuber.Runeguard.component.Player;
 import com.github.Jaecuber.Runeguard.component.Stamina;
 import com.github.Jaecuber.ui.model.GameViewModel;
@@ -23,9 +23,10 @@ public class StaminaSystem extends IteratingSystem implements EntityListener{
     protected void processEntity(Entity entity, float deltaTime) {
         Stamina stamina = Stamina.MAPPER.get(entity);
         Attack attack = Attack.MAPPER.get(entity);
+        Dodge dodge = Dodge.MAPPER.get(entity);
         if(attack == null) return;
         if(stamina.getStamina() == stamina.getMaxStamina()) return;
-        if(attack.canAttack()){
+        if(attack.canAttack() && dodge.canDodge()){
             stamina.addStamina(stamina.getStaminaRegen() * deltaTime);
         }
         

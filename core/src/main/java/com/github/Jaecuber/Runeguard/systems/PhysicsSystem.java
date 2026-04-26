@@ -13,8 +13,8 @@ import com.badlogic.gdx.physics.box2d.Fixture;
 import com.badlogic.gdx.physics.box2d.Manifold;
 import com.badlogic.gdx.physics.box2d.World;
 import com.github.Jaecuber.Runeguard.component.DamageListener;
+import com.github.Jaecuber.Runeguard.component.Dodge;
 import com.github.Jaecuber.Runeguard.component.Enemy;
-import com.github.Jaecuber.Runeguard.component.Health;
 import com.github.Jaecuber.Runeguard.component.Physics;
 import com.github.Jaecuber.Runeguard.component.Transform;
 
@@ -130,10 +130,12 @@ public class PhysicsSystem extends IteratingSystem implements EntityListener, Co
             Entity playerEntity = (Entity) object.getBody().getUserData();
             Entity enemyEntity = (Entity) sensor.getBody().getUserData();
             Enemy enemy = Enemy.MAPPER.get(enemyEntity);
+            Dodge dodge = Dodge.MAPPER.get(playerEntity);
 
             if(enemy == null) return;
+            if(dodge == null) return;
             
-            if(entering && enemy.isAttacking() && !enemy.hasDamaged()){
+            if(entering && enemy.isAttacking() && !enemy.hasDamaged() && !dodge.immune()){
                 enemy.setHasDamaged(true);
                 DamageListener damage = DamageListener.MAPPER.get(playerEntity);
                 if (damage == null) {
