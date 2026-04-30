@@ -126,7 +126,7 @@ public class PhysicsSystem extends IteratingSystem implements EntityListener, Co
                 enemy.setAttackStatus(entering);
             }
         }
-        if("hitbox".equals(sensor.getUserData()) && "playerHitbox".equals(object.getUserData())){
+        if("attackHitbox".equals(sensor.getUserData()) && "playerHitbox".equals(object.getUserData())){
             Entity playerEntity = (Entity) object.getBody().getUserData();
             Entity enemyEntity = (Entity) sensor.getBody().getUserData();
             Enemy enemy = Enemy.MAPPER.get(enemyEntity);

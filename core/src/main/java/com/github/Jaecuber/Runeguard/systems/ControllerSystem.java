@@ -5,6 +5,7 @@ import com.badlogic.ashley.core.Family;
 import com.badlogic.ashley.systems.IteratingSystem;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Body;
+import com.github.Jaecuber.Runeguard.component.Animation2D;
 import com.github.Jaecuber.Runeguard.component.Attack;
 import com.github.Jaecuber.Runeguard.component.Controller;
 import com.github.Jaecuber.Runeguard.component.Dodge;
@@ -25,7 +26,6 @@ public class ControllerSystem extends IteratingSystem{
         Controller controller = Controller.MAPPER.get(entity);
         Move move = Move.MAPPER.get(entity);
         Body body = Physics.MAPPER.get(entity).getBody();
-        Dodge dodge = Dodge.MAPPER.get(entity);
         if(controller.getPressedCommands().isEmpty() && controller.getReleasedCommands().isEmpty() && move == null){
             return;
         }

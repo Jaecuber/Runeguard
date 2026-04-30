@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.10" tiledversion="1.12.1" name="Player" tilewidth="96" tileheight="80" tilecount="1" columns="0">
+<tileset version="1.10" tiledversion="1.12.0" name="Player" tilewidth="96" tileheight="80" tilecount="1" columns="0">
  <grid orientation="orthogonal" width="1" height="1"/>
  <tile id="8" type="GameObject">
   <properties>
@@ -17,7 +17,7 @@
    <property name="stamina" type="float" value="100"/>
    <property name="staminaRegen" type="float" value="30"/>
    <property name="staminaToAttack" type="float" value="10"/>
-   <property name="staminaToDodge" type="float" value="0"/>
+   <property name="staminaToDodge" type="float" value="20"/>
   </properties>
   <image source="Objects/player.png" width="96" height="80"/>
   <objectgroup draworder="index" id="2">

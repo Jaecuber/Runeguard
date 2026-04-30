@@ -11,7 +11,8 @@
             "scaleInEditor": 2
         },
         "Enemies.tsx": {
-            "dynamicWrapping": true
+            "dynamicWrapping": true,
+            "scaleInDock": 1
         },
         "Farmset.tsx": {
             "dynamicWrapping": false,
@@ -71,11 +72,11 @@
             "expandedGroupLayers": [
                 7
             ],
-            "scale": 4,
+            "scale": 5.5,
             "selectedLayer": 13,
             "viewCenter": {
-                "x": 369.5,
-                "y": 1119
+                "x": 337.6363636363636,
+                "y": 1133.6363636363635
             }
         }
     },
@@ -97,7 +98,6 @@
     "project": "tiled.tiled-project",
     "property.type": "float",
     "recentFiles": [
-        "Shadows.tsx",
         "starterArea.tmx",
         "Farmset.tsx",
         "Buildings.tsx",
@@ -107,6 +107,7 @@
         "Hitbox.tsx",
         "Vegetation.tsx",
         "Trees.tsx",
+        "Shadows.tsx",
         "Rocks.tsx",
         "Player.tsx"
     ],

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.10" tiledversion="1.10.2" name="Enemies" tilewidth="64" tileheight="64" tilecount="1" columns="0">
+<tileset version="1.10" tiledversion="1.12.0" name="Enemies" tilewidth="64" tileheight="64" tilecount="1" columns="0">
  <grid orientation="orthogonal" width="1" height="1"/>
  <tile id="0" type="Enemy">
   <properties>
@@ -13,7 +13,7 @@
    <property name="state" value="IDLE"/>
    <property name="type" value="slime"/>
   </properties>
-  <image width="64" height="64" source="Objects/greenSlime.png"/>
+  <image source="Objects/greenSlime.png" width="64" height="64"/>
   <objectgroup draworder="index" id="2">
    <object id="8" name="detectionRadius" x="-41.5" y="-43.5" width="150" height="150">
     <properties>
@@ -27,7 +27,13 @@
     </properties>
     <ellipse/>
    </object>
-   <object id="12" name="hitbox" x="28.5" y="28.875" width="7.79167" height="7.79167">
+   <object id="12" name="hitbox" x="27.75" y="28.875" width="7.79167" height="7.79167">
+    <properties>
+     <property name="sensor" type="bool" value="true"/>
+    </properties>
+    <ellipse/>
+   </object>
+   <object id="14" name="attackHitbox" x="26.5" y="27.125" width="10.2917" height="10.7917">
     <properties>
      <property name="sensor" type="bool" value="true"/>
     </properties>

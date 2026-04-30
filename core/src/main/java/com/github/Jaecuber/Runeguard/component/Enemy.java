@@ -18,6 +18,7 @@ public class Enemy implements Component{
     private boolean attacking;
     private boolean canAttack;
     private boolean hasDamaged;
+    private boolean animated;
     private float speed;
     private float stateTimer;
     private float wanderTimer;
@@ -52,6 +53,7 @@ public class Enemy implements Component{
         cooldownTimer -= deltaTime;
         if(cooldownTimer <= 0f){
             attacking = false;
+            animated = false;
         }
     }
 
@@ -181,6 +183,14 @@ public class Enemy implements Component{
 
     public void setDamage(float damage) {
         this.damage = damage;
+    }
+
+    public boolean isAnimated(){
+        return animated;
+    }
+
+    public void setAnimated(boolean animated){
+        this.animated = animated;
     }
 
     public enum EnemyAIState{

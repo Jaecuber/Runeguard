@@ -6,6 +6,7 @@ import com.badlogic.gdx.ai.msg.Telegram;
 import com.badlogic.gdx.graphics.g2d.Animation.PlayMode;
 import com.github.Jaecuber.Runeguard.component.Animation2D;
 import com.github.Jaecuber.Runeguard.component.Attack;
+import com.github.Jaecuber.Runeguard.component.Dodge;
 import com.github.Jaecuber.Runeguard.component.Enemy;
 import com.github.Jaecuber.Runeguard.component.Fsm;
 import com.github.Jaecuber.Runeguard.component.Health;
@@ -25,6 +26,7 @@ public enum AnimationState implements State<Entity>{
         public void update(Entity entity) {
             Move move = Move.MAPPER.get(entity);
             Attack attack = Attack.MAPPER.get(entity);
+            Dodge dodge = Dodge.MAPPER.get(entity);
             if(move != null && !move.isRooted() && !move.getDirection().isZero()){
                 Fsm.MAPPER.get(entity).getAnimationFsm().changeState(WALK);
                 return;
@@ -37,9 +39,16 @@ public enum AnimationState implements State<Entity>{
                 }
                 return;
             }
+            if(dodge != null && !dodge.canDodge()){
+                Fsm.MAPPER.get(entity).getAnimationFsm().changeState(DODGE);
+                return;
+            }
             Enemy enemy = Enemy.MAPPER.get(entity);
             if(enemy != null && enemy.isStaggered()){
-                Fsm.MAPPER.get(entity).getAnimationFsm().changeState(HURT);
+                Fsm.MAPPER.get(entity).getAnimationFsm().changeState(HURT);return;
+            }
+            if(enemy != null && enemy.isAttacking() && !enemy.isAnimated()){
+                Fsm.MAPPER.get(entity).getAnimationFsm().changeState(ENEMY_ATTACK);return;
             }
             Health health = Health.MAPPER.get(entity);
             if(health != null && health.died() && Player.MAPPER.get(entity) != null){
@@ -59,7 +68,6 @@ public enum AnimationState implements State<Entity>{
 
     },
     WALK{
-
         @Override
         public void enter(Entity entity) {
             Animation2D.MAPPER.get(entity).setType(AnimationType.WALK);
@@ -74,7 +82,15 @@ public enum AnimationState implements State<Entity>{
             }
             Enemy enemy = Enemy.MAPPER.get(entity);
             if(enemy != null && enemy.isStaggered()){
-                Fsm.MAPPER.get(entity).getAnimationFsm().changeState(HURT);
+                Fsm.MAPPER.get(entity).getAnimationFsm().changeState(HURT);return;
+            }
+            if(enemy != null && enemy.isAttacking() && !enemy.isAnimated()){
+                Fsm.MAPPER.get(entity).getAnimationFsm().changeState(ENEMY_ATTACK);return;
+            }
+            Dodge dodge = Dodge.MAPPER.get(entity);
+            if(dodge != null && !dodge.canDodge()){
+                Fsm.MAPPER.get(entity).getAnimationFsm().changeState(DODGE);
+                return;
             }
             Health health = Health.MAPPER.get(entity);
             if(health != null && health.died() && Player.MAPPER.get(entity) != null){
@@ -209,7 +225,57 @@ public enum AnimationState implements State<Entity>{
         public boolean onMessage(Entity entity, Telegram telegram) {
             return false;
         }
-        
+    },
+    DODGE{
+        @Override
+        public void enter(Entity entity) {
+            Animation2D.MAPPER.get(entity).setType(AnimationType.DODGE);
+            Animation2D.MAPPER.get(entity).setPlayMode(PlayMode.NORMAL);
+        }
+
+        @Override
+        public void update(Entity entity) {
+            Dodge dodge = Dodge.MAPPER.get(entity);
+            if(dodge != null && dodge.canDodge()){
+                Fsm.MAPPER.get(entity).getAnimationFsm().changeState(IDLE);
+            }
+        }
+
+        @Override
+        public void exit(Entity entity) {
+            
+        }
+
+        @Override
+        public boolean onMessage(Entity entity, Telegram telegram) {
+            return false;
+        }
+    },
+    ENEMY_ATTACK{
+        @Override
+        public void enter(Entity entity) {
+            Animation2D.MAPPER.get(entity).setType(AnimationType.ENEMY_ATTACK);
+            Animation2D.MAPPER.get(entity).setPlayMode(PlayMode.NORMAL);
+            Enemy.MAPPER.get(entity).setAnimated(true);
+        }
+
+        @Override
+        public void update(Entity entity) {
+            Animation2D animation = Animation2D.MAPPER.get(entity);
+
+            if(animation != null && animation.isFinished()){
+                Fsm.MAPPER.get(entity).getAnimationFsm().changeState(IDLE);
+            }
+        }
+
+        @Override
+        public void exit(Entity entity) {
+        }
+
+        @Override
+        public boolean onMessage(Entity entity, Telegram telegram) {
+            return false;
+        }
     }
 }
 

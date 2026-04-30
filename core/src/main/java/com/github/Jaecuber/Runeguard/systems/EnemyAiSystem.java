@@ -51,6 +51,7 @@ public class EnemyAiSystem extends IteratingSystem{
         }
         enemy.tickStateTimer(deltaTime);
         enemy.tickKnockbackTimer(deltaTime);
+        enemy.tickAttackTimer(deltaTime);
 
         if(enemy.isStaggered() && body != null){
             body.setLinearDamping(10f);
@@ -101,7 +102,7 @@ public class EnemyAiSystem extends IteratingSystem{
     private void attack(Entity entity, float deltaTime){
         if(playerEntity == null) return;
         Enemy enemy = Enemy.MAPPER.get(entity);
-        enemy.tickAttackTimer(deltaTime);
+        
         if(enemy.getMoveset() != null && !enemy.isAttacking()){
             enemy.getMoveset().attack(entity, playerEntity);
         }

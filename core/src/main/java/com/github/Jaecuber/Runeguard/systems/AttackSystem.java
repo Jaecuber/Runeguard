@@ -16,6 +16,7 @@ import com.github.Jaecuber.Runeguard.audio.AudioService;
 import com.github.Jaecuber.Runeguard.component.Animation2D;
 import com.github.Jaecuber.Runeguard.component.Attack;
 import com.github.Jaecuber.Runeguard.component.DamageListener;
+import com.github.Jaecuber.Runeguard.component.Dodge;
 import com.github.Jaecuber.Runeguard.component.Enemy;
 import com.github.Jaecuber.Runeguard.component.Facing;
 import com.github.Jaecuber.Runeguard.component.Move;
@@ -46,6 +47,7 @@ public class AttackSystem extends IteratingSystem{
         Attack attack = Attack.MAPPER.get(entity);
         Animation2D animation = Animation2D.MAPPER.get(entity);
         Stamina stamina = Stamina.MAPPER.get(entity);
+        Dodge dodge = Dodge.MAPPER.get(entity);
         float animSpeed = (attack.getDefaultAnimSpeed()/attack.getDamageDelay()) + 0.025f;
 
         if(attack.canAttack()) return;
@@ -80,7 +82,9 @@ public class AttackSystem extends IteratingSystem{
         }
         
         if(attack.canAttack()){
-            animation.setSpeed(1.0f);
+            if(dodge.canDodge()){
+                animation.setSpeed(1.0f);
+            }
             Move move = Move.MAPPER.get(entity);
             if(move != null){
                 move.setRooted(false);
