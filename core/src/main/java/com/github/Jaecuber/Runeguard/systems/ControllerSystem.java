@@ -31,7 +31,7 @@ public class ControllerSystem extends IteratingSystem{
         }
         if(body == null) return;
         if(move.isDoingAction() && body != null){
-            body.setLinearDamping(10f);
+            body.setLinearDamping(3f);
         }else if (!move.isDoingAction() && body != null){
             body.setLinearDamping(0f);
         }
