@@ -19,6 +19,7 @@ import com.github.Jaecuber.Runeguard.component.DamageListener;
 import com.github.Jaecuber.Runeguard.component.Dodge;
 import com.github.Jaecuber.Runeguard.component.Enemy;
 import com.github.Jaecuber.Runeguard.component.Facing;
+import com.github.Jaecuber.Runeguard.component.Health;
 import com.github.Jaecuber.Runeguard.component.Move;
 import com.github.Jaecuber.Runeguard.component.Physics;
 import com.github.Jaecuber.Runeguard.component.Stamina;
@@ -110,7 +111,8 @@ public class AttackSystem extends IteratingSystem{
         if(!fixture.getUserData().equals("hitbox"))return true;
         //knockback
         Enemy enemy = Enemy.MAPPER.get(entity);
-        if(!enemy.isDead()){
+        Health health = Health.MAPPER.get(entity);
+        if(!enemy.isDead() && !health.died()){
             enemy.applyKnockback(0.3f);
 
             Vector2 knockbackDirection = new Vector2(

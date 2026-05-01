@@ -22,6 +22,7 @@ import com.github.Jaecuber.Runeguard.Launcher;
 import com.github.Jaecuber.Runeguard.asset.AssetService;
 import com.github.Jaecuber.Runeguard.asset.AtlasAsset;
 import com.github.Jaecuber.Runeguard.asset.SoundAsset;
+import com.github.Jaecuber.Runeguard.combat.AoeSlimeMoveset;
 import com.github.Jaecuber.Runeguard.combat.SlimeMoveset;
 import com.github.Jaecuber.Runeguard.component.Animation2D;
 import com.github.Jaecuber.Runeguard.component.CameraFollow;
@@ -156,6 +157,7 @@ public class TiledAshleyConfig {
         
         switch (type) {
             case "slime" -> enemyComponent.setMoveset(new SlimeMoveset());
+            case "aoeSlime" -> enemyComponent.setMoveset(new AoeSlimeMoveset());
         }
 
         fsm.initEnemyFsm(entity);

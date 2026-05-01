@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.12.1" orientation="orthogonal" renderorder="right-down" width="100" height="100" tilewidth="16" tileheight="16" infinite="0" nextlayerid="18" nextobjectid="1357">
+<map version="1.10" tiledversion="1.12.0" orientation="orthogonal" renderorder="right-down" width="100" height="100" tilewidth="16" tileheight="16" infinite="0" nextlayerid="18" nextobjectid="1372">
  <properties>
   <property name="music" value="TOWN"/>
  </properties>
@@ -87,24 +87,30 @@
     <property name="damage" type="float" value="3"/>
    </properties>
   </object>
-  <object id="649" gid="14918" x="433.621" y="1095.01" width="64" height="64"/>
-  <object id="1350" gid="14918" x="617.621" y="1045.51" width="64" height="64"/>
-  <object id="1356" gid="14918" x="616.121" y="973.01" width="64" height="64"/>
-  <object id="1333" gid="14918" x="659.621" y="1015.51" width="64" height="64"/>
-  <object id="1349" gid="14918" x="599.121" y="1064.01" width="64" height="64"/>
-  <object id="1355" gid="14918" x="597.621" y="991.51" width="64" height="64"/>
-  <object id="1334" gid="14918" x="644.121" y="989.01" width="64" height="64"/>
-  <object id="1348" gid="14918" x="583.621" y="1037.51" width="64" height="64"/>
-  <object id="1354" gid="14918" x="582.121" y="965.01" width="64" height="64"/>
-  <object id="1335" gid="14918" x="693.621" y="1023.01" width="64" height="64"/>
-  <object id="1347" gid="14918" x="633.121" y="1071.51" width="64" height="64"/>
-  <object id="1353" gid="14918" x="631.621" y="999.01" width="64" height="64"/>
-  <object id="1336" gid="14918" x="662.121" y="1039.01" width="64" height="64"/>
-  <object id="1346" gid="14918" x="601.621" y="1087.51" width="64" height="64"/>
-  <object id="1352" gid="14918" x="600.121" y="1015.01" width="64" height="64"/>
-  <object id="1337" gid="14918" x="622.621" y="1018.51" width="64" height="64"/>
-  <object id="1345" gid="14918" x="560.121" y="1062.01" width="64" height="64"/>
-  <object id="1351" gid="14918" x="560.621" y="994.51" width="64" height="64"/>
+  <object id="649" gid="14918" x="559.121" y="1025.51" width="64" height="64"/>
+  <object id="1350" gid="14918" x="624.621" y="1045.51" width="64" height="64"/>
+  <object id="1356" gid="14918" x="623.121" y="973.01" width="64" height="64"/>
+  <object id="1333" gid="14918" x="666.621" y="1015.51" width="64" height="64"/>
+  <object id="1349" gid="14918" x="606.121" y="1064.01" width="64" height="64"/>
+  <object id="1355" gid="14918" x="604.621" y="991.51" width="64" height="64"/>
+  <object id="1334" gid="14918" x="651.121" y="989.01" width="64" height="64"/>
+  <object id="1348" gid="14918" x="590.621" y="1037.51" width="64" height="64"/>
+  <object id="1354" gid="14918" x="589.121" y="965.01" width="64" height="64"/>
+  <object id="1357" gid="14919" x="504" y="1057.5" width="64" height="64"/>
+  <object id="1358" gid="14919" x="496" y="1028" width="64" height="64"/>
+  <object id="1359" gid="14919" x="523" y="1000.5" width="64" height="64"/>
+  <object id="1360" gid="14919" x="557" y="1063.5" width="64" height="64"/>
+  <object id="1361" gid="14919" x="535.5" y="1037.5" width="64" height="64"/>
+  <object id="1362" gid="14919" x="526" y="1091.5" width="64" height="64"/>
+  <object id="1363" gid="14919" x="566.5" y="1001.5" width="64" height="64"/>
+  <object id="1364" gid="14921" x="475.5" y="1080" width="64" height="64"/>
+  <object id="1365" gid="14921" x="466.5" y="1044.5" width="64" height="64"/>
+  <object id="1366" gid="14921" x="429.5" y="1031" width="64" height="64"/>
+  <object id="1367" gid="14921" x="433" y="1072" width="64" height="64"/>
+  <object id="1368" gid="14921" x="464.5" y="1009" width="64" height="64"/>
+  <object id="1369" gid="14921" x="457.5" y="1110.5" width="64" height="64"/>
+  <object id="1370" gid="14921" x="493" y="1117" width="64" height="64"/>
+  <object id="1371" gid="14921" x="499.5" y="995" width="64" height="64"/>
  </objectgroup>
  <layer id="3" name="foreground" width="100" height="100">
   <data encoding="base64" compression="zlib">

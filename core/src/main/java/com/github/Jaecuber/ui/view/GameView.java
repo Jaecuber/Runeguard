@@ -23,6 +23,7 @@ import com.badlogic.gdx.scenes.scene2d.ui.VerticalGroup;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.utils.Align;
 import com.badlogic.gdx.utils.Scaling;
+import com.github.Jaecuber.Runeguard.asset.MapAsset;
 import com.github.Jaecuber.Runeguard.asset.SoundAsset;
 import com.github.Jaecuber.ui.model.GameViewModel;
 import com.github.tommyettinger.textra.TypingLabel;

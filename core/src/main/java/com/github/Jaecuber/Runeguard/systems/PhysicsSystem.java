@@ -134,16 +134,8 @@ public class PhysicsSystem extends IteratingSystem implements EntityListener, Co
 
             if(enemy == null) return;
             if(dodge == null) return;
-            
-            if(entering && enemy.isAttacking() && !enemy.hasDamaged() && !dodge.immune()){
-                enemy.setHasDamaged(true);
-                DamageListener damage = DamageListener.MAPPER.get(playerEntity);
-                if (damage == null) {
-                    playerEntity.add(new DamageListener(enemy.getDamage()));
-                } else {
-                    damage.addDamage(enemy.getDamage());
-                }
-            }
+
+            enemy.setPlayerEntity(entering ? playerEntity : null);
         }
     }
 

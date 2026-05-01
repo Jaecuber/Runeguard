@@ -9,7 +9,10 @@ import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.GdxRuntimeException;
+import com.github.Jaecuber.Runeguard.combat.AoeSlimeMoveset;
 import com.github.Jaecuber.Runeguard.component.Animation2D;
+import com.github.Jaecuber.Runeguard.component.DamageListener;
+import com.github.Jaecuber.Runeguard.component.Dodge;
 import com.github.Jaecuber.Runeguard.component.Enemy;
 import com.github.Jaecuber.Runeguard.component.Fsm;
 import com.github.Jaecuber.Runeguard.component.Move;
@@ -53,6 +56,21 @@ public class EnemyAiSystem extends IteratingSystem{
         enemy.tickKnockbackTimer(deltaTime);
         enemy.tickAttackTimer(deltaTime);
 
+        Entity playerEntity = enemy.getPlayerEntity();
+
+        if(playerEntity != null && enemy.isAttacking() && !enemy.hasDamaged()){
+            Dodge dodge = Dodge.MAPPER.get(playerEntity);
+            if(dodge != null  && !dodge.immune()){
+                enemy.setHasDamaged(true);
+                DamageListener damage = DamageListener.MAPPER.get(playerEntity);
+                if (damage == null) {
+                    playerEntity.add(new DamageListener(enemy.getDamage()));
+                } else {
+                    damage.addDamage(enemy.getDamage());
+                }
+            }
+        }
+        
         if(enemy.isStaggered() && body != null){
             body.setLinearDamping(10f);
             return;
@@ -115,12 +133,15 @@ public class EnemyAiSystem extends IteratingSystem{
         Move move = Move.MAPPER.get(entity);
         move.setDoingAction(false);
         move.setRooted(false);
+
+        Vector2 playerCenter = playerBody.getWorldCenter();
+        Vector2 enemyCenter = body.getWorldCenter();
         Vector2 diff = new Vector2(
-            playerBody.getPosition().x - body.getPosition().x,
-            playerBody.getPosition().y - body.getPosition().y
+            playerCenter.x - enemyCenter.x,
+            playerCenter.y - enemyCenter.y
         );
 
-        if (diff.len() < 0.5f) {
+        if(diff.len() < 0.1f) {
             move.setDirection(0, 0);
             return;
         }
@@ -140,8 +161,7 @@ public class EnemyAiSystem extends IteratingSystem{
         enemy.tickWanderTimer(deltaTime);
 
         if(enemy.isWanderTimerDone()){
-            if(enemy.isWandering()){
-                
+            if(enemy.isWandering()){     
                 move.setDirection(0,0);
                 enemy.setWandering(false);
                 enemy.setWanderTimer(MathUtils.random(1.f,2.0f));

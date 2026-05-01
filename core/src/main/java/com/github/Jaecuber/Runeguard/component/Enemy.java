@@ -2,6 +2,7 @@ package com.github.Jaecuber.Runeguard.component;
 
 import com.badlogic.ashley.core.Component;
 import com.badlogic.ashley.core.ComponentMapper;
+import com.badlogic.ashley.core.Entity;
 import com.github.Jaecuber.Runeguard.combat.EnemyMoveset;
 
 public class Enemy implements Component{
@@ -9,6 +10,7 @@ public class Enemy implements Component{
 
     private EnemyAIState state;
     private EnemyMoveset moveset;
+    private Entity playerEntity;
 
     private boolean dead;
     private boolean isAggro;
@@ -191,6 +193,14 @@ public class Enemy implements Component{
 
     public void setAnimated(boolean animated){
         this.animated = animated;
+    }
+
+    public Entity getPlayerEntity() {
+        return playerEntity;
+    }
+
+    public void setPlayerEntity(Entity playerEntity) {
+        this.playerEntity = playerEntity;
     }
 
     public enum EnemyAIState{

@@ -65,7 +65,7 @@ public class GameScreen extends ScreenAdapter {
         this.audioService = game.getAudioService();
         this.uiViewport = new FitViewport(1500f, 900f);//320 180
         this.stage = new Stage(uiViewport, game.getBatch());
-        this.viewModel = new GameViewModel(game);
+        this.viewModel = new GameViewModel(game, this.tiledService);
         this.skin = game.getAssetService().get(SkinAsset.DEFAULT);
         
         this.engine.addSystem(new ControllerSystem());

@@ -69,18 +69,30 @@
             "scaleInEditor": 2
         },
         "starterArea.tmx": {
-            "expandedGroupLayers": [
-                7
-            ],
-            "scale": 5.5,
+            "scale": 0.75,
             "selectedLayer": 13,
             "viewCenter": {
-                "x": 337.6363636363636,
-                "y": 1133.6363636363635
+                "x": 590.6666666666667,
+                "y": 1045.3333333333333
+            }
+        },
+        "testMap.tmx": {
+            "expandedObjectLayers": [
+                2
+            ],
+            "scale": 2.1849999999999996,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 239.81693363844397,
+                "y": 160.1830663615561
             }
         }
     },
-    "last.imagePath": "D:/Downloads",
+    "last.imagePath": "D:/Projects/Runeguard/assets_raw/objects/magmaSlime",
+    "map.lastUsedFormat": "tmx",
+    "map.layerDataFormat": "3",
+    "map.tileHeight": 16,
+    "map.tileWidth": 16,
     "openFiles": [
         "starterArea.tmx",
         "Farmset.tsx",
@@ -96,7 +108,7 @@
         "Red Fire.tsx"
     ],
     "project": "tiled.tiled-project",
-    "property.type": "float",
+    "property.type": "string",
     "recentFiles": [
         "starterArea.tmx",
         "Farmset.tsx",

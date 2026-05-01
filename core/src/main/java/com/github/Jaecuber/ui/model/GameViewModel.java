@@ -3,11 +3,14 @@ package com.github.Jaecuber.ui.model;
 import java.util.Map;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.maps.tiled.TiledMap;
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Vector2;
 import com.github.Jaecuber.Runeguard.Launcher;
+import com.github.Jaecuber.Runeguard.asset.MapAsset;
 import com.github.Jaecuber.Runeguard.asset.SoundAsset;
 import com.github.Jaecuber.Runeguard.screen.GameScreen;
+import com.github.Jaecuber.Runeguard.tiled.TiledService;
 
 public class GameViewModel extends ViewModel{
     public static final String PLAYER_DAMAGE = "playerDamage";
@@ -23,10 +26,12 @@ public class GameViewModel extends ViewModel{
     private int stamina;
     private int maxStamina;
     private final Vector2 tempVec2;
+    private TiledService tiledService;
 
-    public GameViewModel(Launcher game){
+    public GameViewModel(Launcher game, TiledService tiledService){
         super(game);
         this.tempVec2 = new Vector2();
+        this.tiledService = tiledService;
     }
 
     public void updateHealthInfo(float maxHealth, float health){
@@ -45,6 +50,11 @@ public class GameViewModel extends ViewModel{
         game.setScreen(new GameScreen(game));
         updateHealthInfo(maxHealth, health);
         updateStaminaInfo(maxStamina, maxStamina);
+    }
+
+    public void changeMap(MapAsset mapAsset){
+        TiledMap tiledMap = this.tiledService.loadMap(mapAsset);
+        this.tiledService.setMap(tiledMap);
     }
 
     public void setMaxHP(int maxHP) {
