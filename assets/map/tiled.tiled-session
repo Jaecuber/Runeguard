@@ -69,22 +69,25 @@
             "scaleInEditor": 2
         },
         "starterArea.tmx": {
-            "scale": 0.75,
-            "selectedLayer": 13,
+            "expandedObjectLayers": [
+                4
+            ],
+            "scale": 3,
+            "selectedLayer": 0,
             "viewCenter": {
-                "x": 590.6666666666667,
-                "y": 1045.3333333333333
+                "x": 427.66666666666663,
+                "y": 1088.3333333333333
             }
         },
         "testMap.tmx": {
             "expandedObjectLayers": [
                 2
             ],
-            "scale": 2.1849999999999996,
-            "selectedLayer": 1,
+            "scale": 1.5,
+            "selectedLayer": 0,
             "viewCenter": {
-                "x": 239.81693363844397,
-                "y": 160.1830663615561
+                "x": 262,
+                "y": 160.66666666666669
             }
         }
     },

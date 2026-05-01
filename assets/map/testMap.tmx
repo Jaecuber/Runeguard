@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.12.0" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="0" nextlayerid="3" nextobjectid="9">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="0" nextlayerid="4" nextobjectid="9">
  <properties>
   <property name="music" value="TOWN"/>
  </properties>
  <tileset firstgid="1" source="MainTileset.tsx"/>
  <tileset firstgid="4051" source="Player.tsx"/>
  <tileset firstgid="4060" source="Enemies.tsx"/>
- <layer id="1" name="Tile Layer 1" width="30" height="20">
+ <layer id="3" name="Tile Layer 1" width="30" height="20">
   <data encoding="base64" compression="zlib">
-   eJwL52ZgCB/Fo3gUj+JRPIpH8SgexVTDAKMi5bE=
+   eJztwTEBAAAAwqD1T20JT6AAAHgaCWAAAQ==
   </data>
  </layer>
  <objectgroup id="2" name="objects">
@@ -18,11 +18,15 @@
     <property name="controller" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="2" gid="4063" x="256.787" y="77.3089" width="64" height="64"/>
+  <object id="2" gid="4063" x="257.046" y="88.3631" width="64" height="64"/>
   <object id="3" gid="4063" x="401.867" y="197.675" width="64" height="64"/>
-  <object id="4" gid="4060" x="6.44394" y="185.318" width="64" height="64"/>
+  <object id="4" gid="4060" x="26.5812" y="262.664" width="64" height="64">
+   <properties>
+    <property name="enemy" type="bool" value="true"/>
+   </properties>
+  </object>
   <object id="5" gid="4060" x="184.476" y="323.076" width="64" height="64"/>
-  <object id="6" gid="4061" x="56.7872" y="80.0549" width="64" height="64"/>
+  <object id="6" gid="4061" x="99.3501" y="167.469" width="64" height="64"/>
   <object id="7" gid="4061" x="335.963" y="297.446" width="64" height="64"/>
  </objectgroup>
 </map>

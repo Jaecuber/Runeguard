@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.10" tiledversion="1.12.0" name="Enemies" tilewidth="64" tileheight="64" tilecount="3" columns="0">
+<tileset version="1.10" tiledversion="1.10.2" name="Enemies" tilewidth="64" tileheight="64" tilecount="3" columns="0">
  <grid orientation="orthogonal" width="1" height="1"/>
  <tile id="0" type="Enemy">
   <properties>
@@ -13,7 +13,7 @@
    <property name="state" value="IDLE"/>
    <property name="type" value="slime"/>
   </properties>
-  <image source="Objects/greenSlime.png" width="64" height="64"/>
+  <image width="64" height="64" source="Objects/greenSlime.png"/>
   <objectgroup draworder="index" id="2">
    <object id="8" name="detectionRadius" x="-41.5" y="-43.5" width="150" height="150">
     <properties>
@@ -53,14 +53,14 @@
    <property name="animation" value="IDLE"/>
    <property name="animationSpeed" type="float" value="1"/>
    <property name="atlasAsset" value="OBJECTS"/>
-   <property name="cooldown" type="float" value="2"/>
+   <property name="cooldown" type="float" value="2.5"/>
    <property name="damage" type="float" value="10"/>
-   <property name="health" type="float" value="12"/>
-   <property name="speed" type="float" value="5"/>
+   <property name="health" type="float" value="8"/>
+   <property name="speed" type="float" value="6"/>
    <property name="state" value="IDLE"/>
    <property name="type" value="aoeSlime"/>
   </properties>
-  <image source="Objects/undeadSlime.png" width="64" height="64"/>
+  <image width="64" height="64" source="Objects/undeadSlime.png"/>
   <objectgroup draworder="index" id="2">
    <object id="1" name="detectionRadius" x="-68" y="-72" width="203" height="206">
     <properties>
@@ -87,7 +87,7 @@
     </properties>
     <ellipse/>
    </object>
-   <object id="6" name="attackHitbox" x="16.8655" y="15.4203" width="31.769" height="30.6593">
+   <object id="6" name="attackHitbox" x="16.7615" y="15.8362" width="31.769" height="30.6593">
     <properties>
      <property name="sensor" type="bool" value="true"/>
     </properties>
@@ -101,13 +101,13 @@
    <property name="animationSpeed" type="float" value="1"/>
    <property name="atlasAsset" value="OBJECTS"/>
    <property name="cooldown" type="float" value="3"/>
-   <property name="damage" type="float" value="20"/>
+   <property name="damage" type="float" value="25"/>
    <property name="health" type="float" value="20"/>
-   <property name="speed" type="float" value="3"/>
+   <property name="speed" type="float" value="2.5"/>
    <property name="state" value="IDLE"/>
    <property name="type" value="aoeSlime"/>
   </properties>
-  <image source="Objects/magmaSlime.png" width="64" height="64"/>
+  <image width="64" height="64" source="Objects/magmaSlime.png"/>
   <objectgroup draworder="index" id="2">
    <object id="1" name="detectionRadius" x="-68.125" y="-71.875" width="203" height="206">
     <properties>
