@@ -4,179 +4,207 @@ size: 512, 512
 format: RGBA8888
 filter: Nearest, Nearest
 repeat: none
-greenSlime/death_down
-  rotate: false
-  xy: 434, 434
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 0
-magmaSlime/death_down
-  rotate: false
-  xy: 434, 366
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 0
-player/attack1_down 
-  rotate: false
-  xy: 2, 254
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 0
-player/attack1_down 
-  rotate: false
-  xy: 2, 170
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 1
-player/attack1_down 
-  rotate: false
-  xy: 2, 86
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 2
 player/attack1_down 
   rotate: false
   xy: 2, 2
   size: 96, 80
   orig: 96, 80
   offset: 0, 0
+  index: 0
+player/attack1_down 
+  rotate: false
+  xy: 102, 2
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 1
+player/attack1_down 
+  rotate: false
+  xy: 202, 2
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 2
+player/attack1_down 
+  rotate: false
+  xy: 302, 2
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
   index: 3
+player/attack1_down 
+  rotate: false
+  xy: 402, 426
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 4
+player/attack1_down 
+  rotate: false
+  xy: 402, 342
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 5
+player/attack1_down 
+  rotate: false
+  xy: 402, 258
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 6
+player/attack1_down 
+  rotate: false
+  xy: 402, 174
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 7
+player/attack1_left
+  rotate: false
+  xy: 402, 90
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 0
+player/attack1_left
+  rotate: false
+  xy: 402, 6
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 1
 trees/bareTree1_big
   rotate: false
-  xy: 2, 338
+  xy: 2, 86
   size: 112, 160
   orig: 112, 160
   offset: 0, 0
   index: -1
 trees/bareTree1_med
   rotate: false
-  xy: 350, 370
+  xy: 262, 378
   size: 80, 128
   orig: 80, 128
   offset: 0, 0
   index: -1
 trees/bareTree2_big
   rotate: false
-  xy: 102, 174
+  xy: 118, 86
   size: 112, 160
   orig: 112, 160
   offset: 0, 0
   index: -1
-trees/bareTree2_med
-  rotate: false
-  xy: 334, 42
-  size: 80, 128
-  orig: 80, 128
-  offset: 0, 0
-  index: -1
 trees/bareTree2_tall
   rotate: false
-  xy: 450, 266
+  xy: 350, 410
+  size: 48, 96
+  orig: 48, 96
+  offset: 0, 0
+  index: -1
+trees/bareTree_tall
+  rotate: false
+  xy: 350, 310
   size: 48, 96
   orig: 48, 96
   offset: 0, 0
   index: -1
 trees/greenTree_big
   rotate: false
-  xy: 118, 338
+  xy: 234, 86
   size: 112, 160
   orig: 112, 160
   offset: 0, 0
   index: -1
-trees/greenTree_med
+trees/greenTree_tall
   rotate: false
-  xy: 418, 42
-  size: 80, 128
-  orig: 80, 128
+  xy: 350, 210
+  size: 48, 96
+  orig: 48, 96
   offset: 0, 0
   index: -1
-trees/greenishTree_big
+trees/greenishTree_tall
   rotate: false
-  xy: 218, 174
-  size: 112, 160
-  orig: 112, 160
-  offset: 0, 0
-  index: -1
-trees/iceTree1_big
-  rotate: false
-  xy: 234, 338
-  size: 112, 160
-  orig: 112, 160
-  offset: 0, 0
-  index: -1
-trees/iceTree2_big
-  rotate: false
-  xy: 218, 10
-  size: 112, 160
-  orig: 112, 160
+  xy: 350, 110
+  size: 48, 96
+  orig: 48, 96
   offset: 0, 0
   index: -1
 trees/iceTrunk_med
   rotate: false
-  xy: 418, 6
+  xy: 262, 270
   size: 40, 32
   orig: 40, 32
   offset: 0, 0
   index: -1
 trees/iceTrunk_tall
   rotate: false
-  xy: 378, 6
+  xy: 330, 342
   size: 16, 32
   orig: 16, 32
   offset: 0, 0
   index: -1
 trees/mossyTrunk_med
   rotate: false
-  xy: 334, 6
-  size: 40, 32
-  orig: 40, 32
-  offset: 0, 0
-  index: -1
-trees/orangeTree_big
-  rotate: false
-  xy: 102, 10
-  size: 112, 160
-  orig: 112, 160
-  offset: 0, 0
-  index: -1
-trees/trunk1_med
-  rotate: false
-  xy: 450, 230
+  xy: 306, 270
   size: 40, 32
   orig: 40, 32
   offset: 0, 0
   index: -1
 trees/trunk1_tall
   rotate: false
-  xy: 398, 6
+  xy: 330, 306
   size: 16, 32
   orig: 16, 32
   offset: 0, 0
   index: -1
-trees/trunk2_med
+undeadLandAssets/Bonesshadow12
   rotate: false
-  xy: 450, 194
-  size: 40, 32
-  orig: 40, 32
+  xy: 350, 90
+  size: 16, 16
+  orig: 16, 16
   offset: 0, 0
   index: -1
-trees/trunk2_tall
+undeadLandAssets/Bonesshadow16
   rotate: false
-  xy: 494, 194
-  size: 16, 32
-  orig: 16, 32
+  xy: 262, 310
+  size: 64, 64
+  orig: 64, 64
   offset: 0, 0
   index: -1
-trees/yellowTree_big
+undeadLandAssets/Bonesshadow22
   rotate: false
-  xy: 334, 174
-  size: 112, 160
-  orig: 112, 160
+  xy: 370, 90
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Bonesshadow32
+  rotate: false
+  xy: 306, 250
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Brokentreeshadow17
+  rotate: false
+  xy: 262, 250
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Brokentreeshadow27
+  rotate: false
+  xy: 282, 250
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Lichshadow1
+  rotate: false
+  xy: 2, 250
+  size: 256, 256
+  orig: 256, 256
   offset: 0, 0
   index: -1
 
@@ -185,2571 +213,2543 @@ size: 512, 512
 format: RGBA8888
 filter: Nearest, Nearest
 repeat: none
-greenSlime/death_down
-  rotate: false
-  xy: 170, 6
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 1
-magmaSlime/death_down
-  rotate: false
-  xy: 438, 18
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 1
-player/attack1_down 
-  rotate: false
-  xy: 2, 26
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 4
-player/attack1_down 
-  rotate: false
-  xy: 86, 158
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 5
-player/attack1_down 
-  rotate: false
-  xy: 102, 74
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 6
-player/attack1_down 
-  rotate: false
-  xy: 170, 422
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 7
 player/attack1_left
-  rotate: false
-  xy: 170, 338
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 0
-player/attack1_left
-  rotate: false
-  xy: 170, 254
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 1
-player/attack1_left
-  rotate: false
-  xy: 186, 170
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 2
-player/attack1_left
-  rotate: false
-  xy: 202, 86
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 3
-player/attack1_left
-  rotate: false
-  xy: 238, 2
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 4
-player/attack1_left
-  rotate: false
-  xy: 270, 422
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 5
-player/attack1_left
-  rotate: false
-  xy: 270, 338
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 6
-player/attack1_left
-  rotate: false
-  xy: 270, 254
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 7
-player/attack1_right
-  rotate: false
-  xy: 286, 170
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 0
-player/attack1_right
-  rotate: false
-  xy: 302, 86
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 1
-player/attack1_right
-  rotate: false
-  xy: 338, 2
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 2
-player/attack1_right
-  rotate: false
-  xy: 370, 422
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 3
-player/attack1_right
-  rotate: false
-  xy: 370, 338
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 4
-player/attack1_right
-  rotate: false
-  xy: 370, 254
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 5
-player/attack1_right
-  rotate: false
-  xy: 386, 170
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 6
-player/attack1_right
-  rotate: false
-  xy: 402, 86
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 7
-trees/greenishTree_med
-  rotate: false
-  xy: 2, 374
-  size: 80, 128
-  orig: 80, 128
-  offset: 0, 0
-  index: -1
-trees/iceTree1_med
-  rotate: false
-  xy: 2, 242
-  size: 80, 128
-  orig: 80, 128
-  offset: 0, 0
-  index: -1
-trees/iceTree2_med
-  rotate: false
-  xy: 2, 110
-  size: 80, 128
-  orig: 80, 128
-  offset: 0, 0
-  index: -1
-trees/orangeTree_med
-  rotate: false
-  xy: 86, 374
-  size: 80, 128
-  orig: 80, 128
-  offset: 0, 0
-  index: -1
-trees/yellowTree_med
-  rotate: false
-  xy: 86, 242
-  size: 80, 128
-  orig: 80, 128
-  offset: 0, 0
-  index: -1
-undeadSlime/death_down
-  rotate: false
-  xy: 102, 6
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 0
-
-objects3.png
-size: 512, 512
-format: RGBA8888
-filter: Nearest, Nearest
-repeat: none
-player/attack1_up
-  rotate: false
-  xy: 2, 422
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 0
-player/attack1_up
-  rotate: false
-  xy: 2, 338
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 1
-player/attack1_up
-  rotate: false
-  xy: 102, 422
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 2
-player/attack1_up
-  rotate: false
-  xy: 2, 254
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 3
-player/attack1_up
-  rotate: false
-  xy: 102, 338
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 4
-player/attack1_up
-  rotate: false
-  xy: 202, 422
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 5
-player/attack1_up
-  rotate: false
-  xy: 2, 170
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 6
-player/attack1_up
-  rotate: false
-  xy: 102, 254
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 7
-player/attack2_down
-  rotate: false
-  xy: 202, 338
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 0
-player/attack2_down
-  rotate: false
-  xy: 302, 422
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 1
-player/attack2_down
-  rotate: false
-  xy: 2, 86
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 2
-player/attack2_down
-  rotate: false
-  xy: 102, 170
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 3
-player/attack2_down
-  rotate: false
-  xy: 202, 254
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 4
-player/attack2_down
-  rotate: false
-  xy: 302, 338
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 5
-player/attack2_down
-  rotate: false
-  xy: 402, 422
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 6
-player/attack2_down
   rotate: false
   xy: 2, 2
   size: 96, 80
   orig: 96, 80
   offset: 0, 0
-  index: 7
-player/attack2_left
-  rotate: false
-  xy: 102, 86
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 0
-player/attack2_left
-  rotate: false
-  xy: 202, 170
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 1
-player/attack2_left
-  rotate: false
-  xy: 302, 254
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
   index: 2
-player/attack2_left
-  rotate: false
-  xy: 402, 338
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 3
-player/attack2_left
+player/attack1_left
   rotate: false
   xy: 102, 2
   size: 96, 80
   orig: 96, 80
   offset: 0, 0
-  index: 4
-player/attack2_left
-  rotate: false
-  xy: 202, 86
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 5
-player/attack2_left
-  rotate: false
-  xy: 302, 170
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 6
-player/attack2_left
-  rotate: false
-  xy: 402, 254
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 7
-player/attack2_right
+  index: 3
+player/attack1_left
   rotate: false
   xy: 202, 2
   size: 96, 80
   orig: 96, 80
   offset: 0, 0
-  index: 0
-player/attack2_right
-  rotate: false
-  xy: 302, 86
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 1
-player/attack2_right
-  rotate: false
-  xy: 402, 170
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 2
-player/attack2_right
-  rotate: false
-  xy: 302, 2
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 3
-player/attack2_right
-  rotate: false
-  xy: 402, 86
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
   index: 4
-player/attack2_right
-  rotate: false
-  xy: 402, 2
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 5
-
-objects4.png
-size: 512, 512
-format: RGBA8888
-filter: Nearest, Nearest
-repeat: none
-player/attack2_right
-  rotate: false
-  xy: 2, 422
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 6
-player/attack2_right
-  rotate: false
-  xy: 2, 338
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 7
-player/attack2_up
-  rotate: false
-  xy: 102, 422
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 0
-player/attack2_up
-  rotate: false
-  xy: 2, 254
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 1
-player/attack2_up
-  rotate: false
-  xy: 102, 338
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 2
-player/attack2_up
-  rotate: false
-  xy: 202, 422
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 3
-player/attack2_up
-  rotate: false
-  xy: 2, 170
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 4
-player/attack2_up
-  rotate: false
-  xy: 102, 254
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 5
-player/attack2_up
-  rotate: false
-  xy: 202, 338
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 6
-player/attack2_up
-  rotate: false
-  xy: 302, 422
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 7
-player/death_down
-  rotate: false
-  xy: 2, 86
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 0
-player/death_down
-  rotate: false
-  xy: 102, 170
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 1
-player/death_down
-  rotate: false
-  xy: 202, 254
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 2
-player/death_down
-  rotate: false
-  xy: 302, 338
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 3
-player/death_down
-  rotate: false
-  xy: 402, 422
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 4
-player/death_down
-  rotate: false
-  xy: 2, 2
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 5
-player/death_down
-  rotate: false
-  xy: 102, 86
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 6
-player/death_down
-  rotate: false
-  xy: 202, 170
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 7
-player/death_down
-  rotate: false
-  xy: 302, 254
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 8
-player/death_left
-  rotate: false
-  xy: 402, 338
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 0
-player/death_left
-  rotate: false
-  xy: 102, 2
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 1
-player/death_left
-  rotate: false
-  xy: 202, 86
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 2
-player/death_left
-  rotate: false
-  xy: 302, 170
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 3
-player/death_left
-  rotate: false
-  xy: 402, 254
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 4
-player/death_left
-  rotate: false
-  xy: 202, 2
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 5
-player/death_left
-  rotate: false
-  xy: 302, 86
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 6
-player/death_left
-  rotate: false
-  xy: 402, 170
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 7
-player/death_left
-  rotate: false
-  xy: 302, 2
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 8
-player/death_right
-  rotate: false
-  xy: 402, 86
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 0
-player/death_right
-  rotate: false
-  xy: 402, 2
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 1
-
-objects5.png
-size: 512, 512
-format: RGBA8888
-filter: Nearest, Nearest
-repeat: none
-player/death_right
-  rotate: false
-  xy: 2, 422
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 2
-player/death_right
-  rotate: false
-  xy: 2, 338
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 3
-player/death_right
-  rotate: false
-  xy: 102, 422
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 4
-player/death_right
-  rotate: false
-  xy: 2, 254
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 5
-player/death_right
-  rotate: false
-  xy: 102, 338
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 6
-player/death_right
-  rotate: false
-  xy: 202, 422
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 7
-player/death_right
-  rotate: false
-  xy: 2, 170
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 8
-player/death_up
-  rotate: false
-  xy: 102, 254
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 0
-player/death_up
-  rotate: false
-  xy: 202, 338
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 1
-player/death_up
-  rotate: false
-  xy: 302, 422
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 2
-player/death_up
-  rotate: false
-  xy: 2, 86
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 3
-player/death_up
-  rotate: false
-  xy: 102, 170
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 4
-player/death_up
-  rotate: false
-  xy: 202, 254
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 5
-player/death_up
-  rotate: false
-  xy: 302, 338
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 6
-player/death_up
-  rotate: false
-  xy: 402, 422
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 7
-player/death_up
-  rotate: false
-  xy: 2, 2
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 8
-player/dodge_down
-  rotate: false
-  xy: 102, 86
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 0
-player/dodge_down
-  rotate: false
-  xy: 202, 170
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 1
-player/dodge_down
-  rotate: false
-  xy: 302, 254
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 2
-player/dodge_down
-  rotate: false
-  xy: 402, 338
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 3
-player/dodge_down
-  rotate: false
-  xy: 102, 2
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 4
-player/dodge_down
-  rotate: false
-  xy: 202, 86
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 5
-player/dodge_down
-  rotate: false
-  xy: 302, 170
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 6
-player/dodge_left
-  rotate: false
-  xy: 402, 254
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 0
-player/dodge_left
-  rotate: false
-  xy: 202, 2
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 1
-player/dodge_left
-  rotate: false
-  xy: 302, 86
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 2
-player/dodge_left
-  rotate: false
-  xy: 402, 170
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 3
-player/dodge_left
-  rotate: false
-  xy: 302, 2
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 4
-player/dodge_left
-  rotate: false
-  xy: 402, 86
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 5
-player/dodge_left
-  rotate: false
-  xy: 402, 2
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 6
-
-objects6.png
-size: 512, 512
-format: RGBA8888
-filter: Nearest, Nearest
-repeat: none
-player/dodge_right
-  rotate: false
-  xy: 2, 422
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 0
-player/dodge_right
-  rotate: false
-  xy: 2, 338
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 1
-player/dodge_right
-  rotate: false
-  xy: 102, 422
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 2
-player/dodge_right
-  rotate: false
-  xy: 2, 254
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 3
-player/dodge_right
-  rotate: false
-  xy: 102, 338
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 4
-player/dodge_right
-  rotate: false
-  xy: 202, 422
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 5
-player/dodge_right
-  rotate: false
-  xy: 2, 170
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 6
-player/dodge_up
-  rotate: false
-  xy: 102, 254
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 0
-player/dodge_up
-  rotate: false
-  xy: 202, 338
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 1
-player/dodge_up
-  rotate: false
-  xy: 302, 422
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 2
-player/dodge_up
-  rotate: false
-  xy: 2, 86
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 3
-player/dodge_up
-  rotate: false
-  xy: 102, 170
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 4
-player/dodge_up
-  rotate: false
-  xy: 202, 254
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 5
-player/dodge_up
-  rotate: false
-  xy: 302, 338
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 6
-player/idle_down
-  rotate: false
-  xy: 402, 422
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 0
-player/idle_down
-  rotate: false
-  xy: 2, 2
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 1
-player/idle_down
-  rotate: false
-  xy: 102, 86
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 2
-player/idle_down
-  rotate: false
-  xy: 202, 170
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 3
-player/idle_down
-  rotate: false
-  xy: 302, 254
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 4
-player/idle_down
-  rotate: false
-  xy: 402, 338
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 5
-player/idle_down
-  rotate: false
-  xy: 102, 2
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 6
-player/idle_down
-  rotate: false
-  xy: 202, 86
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 7
-player/idle_left
-  rotate: false
-  xy: 302, 170
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 0
-player/idle_left
-  rotate: false
-  xy: 402, 254
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 1
-player/idle_left
-  rotate: false
-  xy: 202, 2
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 2
-player/idle_left
-  rotate: false
-  xy: 302, 86
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 3
-player/idle_left
-  rotate: false
-  xy: 402, 170
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 4
-player/idle_left
+player/attack1_left
   rotate: false
   xy: 302, 2
   size: 96, 80
   orig: 96, 80
   offset: 0, 0
   index: 5
-player/idle_left
+player/attack1_left
   rotate: false
-  xy: 402, 86
+  xy: 402, 426
   size: 96, 80
   orig: 96, 80
   offset: 0, 0
   index: 6
-player/idle_left
+player/attack1_left
   rotate: false
-  xy: 402, 2
+  xy: 402, 342
   size: 96, 80
   orig: 96, 80
   offset: 0, 0
   index: 7
-
-objects7.png
-size: 512, 512
-format: RGBA8888
-filter: Nearest, Nearest
-repeat: none
-player/idle_right
+player/attack1_right
   rotate: false
-  xy: 2, 422
+  xy: 402, 258
   size: 96, 80
   orig: 96, 80
   offset: 0, 0
   index: 0
-player/idle_right
+player/attack1_right
   rotate: false
-  xy: 2, 338
+  xy: 402, 174
   size: 96, 80
   orig: 96, 80
   offset: 0, 0
   index: 1
-player/idle_right
+player/attack1_right
   rotate: false
-  xy: 102, 422
+  xy: 402, 90
   size: 96, 80
   orig: 96, 80
   offset: 0, 0
   index: 2
-player/idle_right
+player/attack1_right
   rotate: false
-  xy: 2, 254
+  xy: 402, 6
   size: 96, 80
   orig: 96, 80
   offset: 0, 0
   index: 3
-player/idle_right
+trees/bareTree2_med
   rotate: false
-  xy: 102, 338
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 4
-player/idle_right
-  rotate: false
-  xy: 202, 422
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 5
-player/idle_right
-  rotate: false
-  xy: 2, 170
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 6
-player/idle_right
-  rotate: false
-  xy: 102, 254
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 7
-player/idle_up
-  rotate: false
-  xy: 202, 338
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 0
-player/idle_up
-  rotate: false
-  xy: 302, 422
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 1
-player/idle_up
-  rotate: false
-  xy: 2, 86
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 2
-player/idle_up
-  rotate: false
-  xy: 102, 170
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 3
-player/idle_up
-  rotate: false
-  xy: 202, 254
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 4
-player/idle_up
-  rotate: false
-  xy: 302, 338
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 5
-player/idle_up
-  rotate: false
-  xy: 402, 422
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 6
-player/idle_up
-  rotate: false
-  xy: 2, 2
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 7
-player/walk_down
-  rotate: false
-  xy: 102, 86
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 0
-player/walk_down
-  rotate: false
-  xy: 202, 170
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 1
-player/walk_down
-  rotate: false
-  xy: 302, 254
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 2
-player/walk_down
-  rotate: false
-  xy: 402, 338
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 3
-player/walk_down
-  rotate: false
-  xy: 102, 2
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 4
-player/walk_down
-  rotate: false
-  xy: 202, 86
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 5
-player/walk_down
-  rotate: false
-  xy: 302, 170
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 6
-player/walk_down
-  rotate: false
-  xy: 402, 254
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 7
-player/walk_left
-  rotate: false
-  xy: 202, 2
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 0
-player/walk_left
-  rotate: false
-  xy: 302, 86
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 1
-player/walk_left
-  rotate: false
-  xy: 402, 170
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 2
-player/walk_left
-  rotate: false
-  xy: 302, 2
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 3
-player/walk_left
-  rotate: false
-  xy: 402, 86
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 4
-player/walk_left
-  rotate: false
-  xy: 402, 2
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 5
-
-objects8.png
-size: 512, 512
-format: RGBA8888
-filter: Nearest, Nearest
-repeat: none
-greenSlime/death_down
-  rotate: false
-  xy: 202, 102
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 2
-greenSlime/death_down
-  rotate: false
-  xy: 270, 102
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 3
-greenSlime/death_down
-  rotate: false
-  xy: 406, 118
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 4
-greenSlime/death_down
-  rotate: false
-  xy: 338, 2
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 5
-magmaSlime/death_down
-  rotate: false
-  xy: 402, 354
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 2
-magmaSlime/death_down
-  rotate: false
-  xy: 238, 34
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 3
-magmaSlime/death_down
-  rotate: false
-  xy: 338, 70
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 4
-player/walk_left
-  rotate: false
-  xy: 2, 422
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 6
-player/walk_left
-  rotate: false
-  xy: 2, 338
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 7
-player/walk_right
-  rotate: false
-  xy: 102, 422
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 0
-player/walk_right
-  rotate: false
-  xy: 2, 254
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 1
-player/walk_right
-  rotate: false
-  xy: 102, 338
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 2
-player/walk_right
-  rotate: false
-  xy: 202, 422
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 3
-player/walk_right
-  rotate: false
-  xy: 2, 170
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 4
-player/walk_right
-  rotate: false
-  xy: 102, 254
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 5
-player/walk_right
-  rotate: false
-  xy: 202, 338
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 6
-player/walk_right
-  rotate: false
-  xy: 302, 422
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 7
-player/walk_up
-  rotate: false
-  xy: 2, 86
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 0
-player/walk_up
-  rotate: false
-  xy: 102, 170
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 1
-player/walk_up
-  rotate: false
-  xy: 202, 254
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 2
-player/walk_up
-  rotate: false
-  xy: 302, 338
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 3
-player/walk_up
-  rotate: false
-  xy: 402, 422
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 4
-player/walk_up
-  rotate: false
-  xy: 2, 2
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 5
-player/walk_up
-  rotate: false
-  xy: 102, 86
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 6
-player/walk_up
-  rotate: false
-  xy: 202, 170
-  size: 96, 80
-  orig: 96, 80
-  offset: 0, 0
-  index: 7
-trees/bareTree_tall
-  rotate: false
-  xy: 302, 238
-  size: 48, 96
-  orig: 48, 96
+  xy: 262, 378
+  size: 80, 128
+  orig: 80, 128
   offset: 0, 0
   index: -1
-trees/greenTree_tall
+trees/greenishTree_big
   rotate: false
-  xy: 354, 238
-  size: 48, 96
-  orig: 48, 96
+  xy: 2, 86
+  size: 112, 160
+  orig: 112, 160
   offset: 0, 0
   index: -1
-trees/greenishTree_tall
+trees/iceTree1_big
   rotate: false
-  xy: 406, 254
-  size: 48, 96
-  orig: 48, 96
+  xy: 118, 86
+  size: 112, 160
+  orig: 112, 160
+  offset: 0, 0
+  index: -1
+trees/iceTree2_big
+  rotate: false
+  xy: 234, 86
+  size: 112, 160
+  orig: 112, 160
   offset: 0, 0
   index: -1
 trees/iceTree2_tall
   rotate: false
-  xy: 458, 254
+  xy: 350, 410
   size: 48, 96
   orig: 48, 96
   offset: 0, 0
   index: -1
 trees/iceTree_tall
   rotate: false
-  xy: 354, 138
+  xy: 350, 310
   size: 48, 96
   orig: 48, 96
   offset: 0, 0
   index: -1
-undeadSlime/death_down
+trees/orangeTree_tall
   rotate: false
-  xy: 102, 18
+  xy: 350, 210
+  size: 48, 96
+  orig: 48, 96
+  offset: 0, 0
+  index: -1
+trees/trunk1_med
+  rotate: false
+  xy: 262, 266
+  size: 40, 32
+  orig: 40, 32
+  offset: 0, 0
+  index: -1
+trees/trunk2_med
+  rotate: false
+  xy: 306, 266
+  size: 40, 32
+  orig: 40, 32
+  offset: 0, 0
+  index: -1
+trees/trunk2_tall
+  rotate: false
+  xy: 330, 342
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+trees/yellowTree_tall
+  rotate: false
+  xy: 350, 110
+  size: 48, 96
+  orig: 48, 96
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Bonesshadow17
+  rotate: false
+  xy: 262, 310
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 1
-undeadSlime/death_down
+  index: -1
+undeadLandAssets/Brokentreeshadow37
   rotate: false
-  xy: 170, 18
-  size: 64, 64
-  orig: 64, 64
+  xy: 350, 90
+  size: 16, 16
+  orig: 16, 16
   offset: 0, 0
-  index: 2
-undeadSlime/death_down
+  index: -1
+undeadLandAssets/Crystalshadow14
   rotate: false
-  xy: 406, 186
-  size: 64, 64
-  orig: 64, 64
+  xy: 370, 90
+  size: 16, 16
+  orig: 16, 16
   offset: 0, 0
-  index: 3
-undeadSlime/death_down
+  index: -1
+undeadLandAssets/Crystalshadow24
   rotate: false
-  xy: 406, 50
-  size: 64, 64
-  orig: 64, 64
+  xy: 330, 322
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Crystalshadow34
+  rotate: false
+  xy: 330, 302
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Lichshadow2
+  rotate: false
+  xy: 2, 250
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+
+objects3.png
+size: 512, 512
+format: RGBA8888
+filter: Nearest, Nearest
+repeat: none
+player/attack1_right
+  rotate: false
+  xy: 382, 2
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 4
+player/attack1_right
+  rotate: false
+  xy: 2, 6
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 5
+player/attack1_right
+  rotate: false
+  xy: 102, 2
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 6
+player/attack1_right
+  rotate: false
+  xy: 202, 2
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 7
+trees/greenTree_med
+  rotate: false
+  xy: 394, 250
+  size: 80, 128
+  orig: 80, 128
+  offset: 0, 0
+  index: -1
+trees/orangeTree_big
+  rotate: false
+  xy: 2, 90
+  size: 112, 160
+  orig: 112, 160
+  offset: 0, 0
+  index: -1
+trees/yellowTree_big
+  rotate: false
+  xy: 262, 350
+  size: 112, 160
+  orig: 112, 160
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Bonesshadow11
+  rotate: false
+  xy: 478, 346
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Bonesshadow13
+  rotate: false
+  xy: 478, 310
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Bonesshadow14
+  rotate: false
+  xy: 478, 274
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Bonesshadow15
+  rotate: false
+  xy: 118, 86
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Bonesshadow18
+  rotate: false
+  xy: 302, 18
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Bonesshadow21
+  rotate: false
+  xy: 154, 86
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Bonesshadow23
+  rotate: false
+  xy: 190, 86
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Bonesshadow25
+  rotate: false
+  xy: 478, 238
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Brokentreeshadow11
+  rotate: false
+  xy: 118, 122
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Brokentreeshadow21
+  rotate: false
+  xy: 378, 382
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Brokentreeshadow21-1
+  rotate: false
+  xy: 250, 86
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Brokentreeshadow22-1
+  rotate: false
+  xy: 382, 86
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Brokentreeshadow31
+  rotate: false
+  xy: 262, 218
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Lichshadow3
+  rotate: false
+  xy: 2, 254
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Plantshadow15
+  rotate: false
+  xy: 226, 102
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Plantshadow25
+  rotate: false
+  xy: 394, 218
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Plantshadow35
+  rotate: false
+  xy: 414, 218
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Rockshadow15
+  rotate: false
+  xy: 434, 218
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Rockshadow25
+  rotate: false
+  xy: 454, 218
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Rockshadow35
+  rotate: false
+  xy: 474, 218
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+
+objects4.png
+size: 512, 512
+format: RGBA8888
+filter: Nearest, Nearest
+repeat: none
+player/attack1_up
+  rotate: false
+  xy: 2, 26
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 0
+player/attack1_up
+  rotate: false
+  xy: 102, 26
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 1
+player/attack1_up
+  rotate: false
+  xy: 134, 146
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 2
+player/attack1_up
+  rotate: false
+  xy: 234, 146
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 3
+player/attack1_up
+  rotate: false
+  xy: 334, 158
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 4
+trees/greenishTree_med
+  rotate: false
+  xy: 338, 26
+  size: 80, 128
+  orig: 80, 128
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Bonesshadow115
+  rotate: false
+  xy: 134, 110
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Bonesshadow116
+  rotate: false
+  xy: 170, 110
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Bonesshadow117
+  rotate: false
+  xy: 466, 326
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Bonesshadow118
+  rotate: false
+  xy: 466, 290
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Bonesshadow19
+  rotate: false
+  xy: 134, 438
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Bonesshadow215
+  rotate: false
+  xy: 466, 254
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Bonesshadow216
+  rotate: false
+  xy: 422, 2
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Bonesshadow217
+  rotate: false
+  xy: 458, 2
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Bonesshadow24
+  rotate: false
+  xy: 134, 370
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Bonesshadow26
+  rotate: false
+  xy: 266, 306
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Bonesshadow27
+  rotate: false
+  xy: 266, 238
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Bonesshadow28
+  rotate: false
+  xy: 434, 174
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Bonesshadow29
+  rotate: false
+  xy: 434, 106
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Bonesshadow31
+  rotate: false
+  xy: 466, 470
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Bonesshadow33
+  rotate: false
+  xy: 466, 434
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Bonesshadow34
+  rotate: false
+  xy: 466, 398
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Bonesshadow35
+  rotate: false
+  xy: 466, 362
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Bonesshadow36
+  rotate: false
+  xy: 422, 38
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Deadtreeshadow11
+  rotate: false
+  xy: 2, 374
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Deadtreeshadow12
+  rotate: false
+  xy: 2, 242
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Deadtreeshadow31
+  rotate: false
+  xy: 2, 110
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Deadtreeshadow32
+  rotate: false
+  xy: 202, 374
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Pilescullsshadow1
+  rotate: false
+  xy: 334, 374
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Pilescullsshadow2
+  rotate: false
+  xy: 134, 230
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Pilescullsshadow3
+  rotate: false
+  xy: 206, 14
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Plantshadow11
+  rotate: false
+  xy: 334, 242
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+
+objects5.png
+size: 512, 512
+format: RGBA8888
+filter: Nearest, Nearest
+repeat: none
+undeadLandAssets/Bonesshadow110
+  rotate: false
+  xy: 242, 206
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Bonesshadow111
+  rotate: false
+  xy: 310, 206
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Bonesshadow112
+  rotate: false
+  xy: 378, 206
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Bonesshadow113
+  rotate: false
+  xy: 446, 206
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Bonesshadow114
+  rotate: false
+  xy: 2, 138
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Bonesshadow210
+  rotate: false
+  xy: 70, 138
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Bonesshadow211
+  rotate: false
+  xy: 138, 138
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Bonesshadow212
+  rotate: false
+  xy: 206, 138
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Bonesshadow213
+  rotate: false
+  xy: 274, 138
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Bonesshadow218
+  rotate: false
+  xy: 342, 138
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Bonesshadow24-1
+  rotate: false
+  xy: 146, 454
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Bonesshadow310
+  rotate: false
+  xy: 410, 138
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Bonesshadow311
+  rotate: false
+  xy: 2, 70
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Bonesshadow312
+  rotate: false
+  xy: 70, 70
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Bonesshadow313
+  rotate: false
+  xy: 138, 70
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Bonesshadow314
+  rotate: false
+  xy: 206, 70
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Bonesshadow315
+  rotate: false
+  xy: 2, 454
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Bonesshadow316
+  rotate: false
+  xy: 38, 454
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Bonesshadow317
+  rotate: false
+  xy: 74, 454
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Bonesshadow318
+  rotate: false
+  xy: 110, 454
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Bonesshadow37
+  rotate: false
+  xy: 38, 206
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Bonesshadow38
+  rotate: false
+  xy: 106, 206
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Bonesshadow39
+  rotate: false
+  xy: 174, 206
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Brokentreeshadow12
+  rotate: false
+  xy: 182, 454
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Brokentreeshadow13
+  rotate: false
+  xy: 218, 454
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Brokentreeshadow14
+  rotate: false
+  xy: 274, 70
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Brokentreeshadow15
+  rotate: false
+  xy: 342, 70
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Brokentreeshadow16
+  rotate: false
+  xy: 254, 454
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Brokentreeshadow22
+  rotate: false
+  xy: 290, 454
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Brokentreeshadow23
+  rotate: false
+  xy: 326, 454
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Brokentreeshadow23-1
+  rotate: false
+  xy: 206, 2
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Brokentreeshadow24
+  rotate: false
+  xy: 410, 70
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Brokentreeshadow25
+  rotate: false
+  xy: 2, 2
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Brokentreeshadow26
+  rotate: false
+  xy: 362, 454
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Brokentreeshadow32
+  rotate: false
+  xy: 398, 454
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Brokentreeshadow33
+  rotate: false
+  xy: 434, 454
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Brokentreeshadow34
+  rotate: false
+  xy: 70, 2
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Brokentreeshadow35
+  rotate: false
+  xy: 138, 2
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Brokentreeshadow36
+  rotate: false
+  xy: 470, 454
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Crystalshadow11
+  rotate: false
+  xy: 274, 2
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Crystalshadow12
+  rotate: false
+  xy: 342, 2
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Crystalshadow13
+  rotate: false
+  xy: 2, 418
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Crystalshadow21
+  rotate: false
+  xy: 410, 2
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Crystalshadow23
+  rotate: false
+  xy: 38, 418
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Crystalshadow33
+  rotate: false
+  xy: 74, 418
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Graveshadow11
+  rotate: false
+  xy: 110, 418
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Graveshadow110
+  rotate: false
+  xy: 74, 346
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Graveshadow111
+  rotate: false
+  xy: 110, 346
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Graveshadow112
+  rotate: false
+  xy: 146, 346
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Graveshadow113
+  rotate: false
+  xy: 182, 346
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Graveshadow114
+  rotate: false
+  xy: 218, 346
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Graveshadow115
+  rotate: false
+  xy: 254, 346
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Graveshadow116
+  rotate: false
+  xy: 290, 346
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Graveshadow117
+  rotate: false
+  xy: 326, 346
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Graveshadow12
+  rotate: false
+  xy: 146, 418
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Graveshadow13
+  rotate: false
+  xy: 182, 418
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Graveshadow14
+  rotate: false
+  xy: 218, 418
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Graveshadow15
+  rotate: false
+  xy: 254, 418
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Graveshadow16
+  rotate: false
+  xy: 290, 418
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Graveshadow17
+  rotate: false
+  xy: 326, 418
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Graveshadow18
+  rotate: false
+  xy: 362, 418
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Graveshadow19
+  rotate: false
+  xy: 398, 418
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Graveshadow21
+  rotate: false
+  xy: 434, 418
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Graveshadow210
+  rotate: false
+  xy: 362, 346
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Graveshadow211
+  rotate: false
+  xy: 398, 346
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Graveshadow212
+  rotate: false
+  xy: 434, 346
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Graveshadow213
+  rotate: false
+  xy: 470, 346
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Graveshadow214
+  rotate: false
+  xy: 2, 310
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Graveshadow215
+  rotate: false
+  xy: 38, 310
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Graveshadow216
+  rotate: false
+  xy: 74, 310
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Graveshadow217
+  rotate: false
+  xy: 110, 310
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Graveshadow22
+  rotate: false
+  xy: 470, 418
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Graveshadow23
+  rotate: false
+  xy: 2, 382
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Graveshadow24
+  rotate: false
+  xy: 38, 382
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Graveshadow25
+  rotate: false
+  xy: 74, 382
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Graveshadow26
+  rotate: false
+  xy: 110, 382
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Graveshadow27
+  rotate: false
+  xy: 146, 382
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Graveshadow28
+  rotate: false
+  xy: 182, 382
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Graveshadow29
+  rotate: false
+  xy: 218, 382
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Graveshadow31
+  rotate: false
+  xy: 254, 382
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Graveshadow310
+  rotate: false
+  xy: 146, 310
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Graveshadow311
+  rotate: false
+  xy: 182, 310
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Graveshadow312
+  rotate: false
+  xy: 218, 310
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Graveshadow313
+  rotate: false
+  xy: 254, 310
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Graveshadow314
+  rotate: false
+  xy: 290, 310
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Graveshadow315
+  rotate: false
+  xy: 326, 310
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Graveshadow316
+  rotate: false
+  xy: 362, 310
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Graveshadow317
+  rotate: false
+  xy: 398, 310
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Graveshadow32
+  rotate: false
+  xy: 290, 382
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Graveshadow33
+  rotate: false
+  xy: 326, 382
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Graveshadow34
+  rotate: false
+  xy: 362, 382
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Graveshadow35
+  rotate: false
+  xy: 398, 382
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Graveshadow36
+  rotate: false
+  xy: 434, 382
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Graveshadow37
+  rotate: false
+  xy: 470, 382
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Graveshadow38
+  rotate: false
+  xy: 2, 346
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Graveshadow39
+  rotate: false
+  xy: 38, 346
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Plantshadow13
+  rotate: false
+  xy: 434, 310
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Plantshadow14
+  rotate: false
+  xy: 470, 310
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Plantshadow23
+  rotate: false
+  xy: 2, 274
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Plantshadow24
+  rotate: false
+  xy: 38, 274
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Plantshadow33
+  rotate: false
+  xy: 74, 274
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Plantshadow34
+  rotate: false
+  xy: 110, 274
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Rockshadow14
+  rotate: false
+  xy: 146, 274
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Rockshadow24
+  rotate: false
+  xy: 182, 274
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Ruinshadow15
+  rotate: false
+  xy: 218, 274
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Ruinshadow25
+  rotate: false
+  xy: 254, 274
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Ruinshadow35
+  rotate: false
+  xy: 290, 274
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Thornpalntshadow23
+  rotate: false
+  xy: 326, 274
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Thornpalntshadow26
+  rotate: false
+  xy: 362, 274
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Thornplantshadow13
+  rotate: false
+  xy: 398, 274
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Thornplantshadow16
+  rotate: false
+  xy: 434, 274
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Thornplantshadow33
+  rotate: false
+  xy: 470, 274
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Thornplantshadow36
+  rotate: false
+  xy: 2, 238
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+
+objects6.png
+size: 512, 512
+format: RGBA8888
+filter: Nearest, Nearest
+repeat: none
+player/attack1_up
+  rotate: false
+  xy: 2, 2
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 5
+player/attack1_up
+  rotate: false
+  xy: 102, 2
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 6
+player/attack1_up
+  rotate: false
+  xy: 202, 2
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 7
+player/attack2_down
+  rotate: false
+  xy: 302, 2
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 0
+player/attack2_down
+  rotate: false
+  xy: 402, 2
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 1
+trees/iceTree1_med
+  rotate: false
+  xy: 398, 350
+  size: 80, 128
+  orig: 80, 128
+  offset: 0, 0
+  index: -1
+trees/iceTree2_med
+  rotate: false
+  xy: 398, 218
+  size: 80, 128
+  orig: 80, 128
+  offset: 0, 0
+  index: -1
+trees/orangeTree_med
+  rotate: false
+  xy: 398, 86
+  size: 80, 128
+  orig: 80, 128
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Plantshadow21
+  rotate: false
+  xy: 2, 350
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Plantshadow32
+  rotate: false
+  xy: 2, 218
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Ruinshadow11
+  rotate: false
+  xy: 134, 350
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Ruinshadow12
+  rotate: false
+  xy: 2, 86
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Ruinshadow21
+  rotate: false
+  xy: 134, 218
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Ruinshadow22
+  rotate: false
+  xy: 266, 350
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Ruinshadow31
+  rotate: false
+  xy: 134, 86
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Ruinshadow32
+  rotate: false
+  xy: 266, 218
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Thornpalntshadow21
+  rotate: false
+  xy: 266, 86
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+
+objects7.png
+size: 512, 512
+format: RGBA8888
+filter: Nearest, Nearest
+repeat: none
+player/attack2_down
+  rotate: false
+  xy: 2, 22
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 2
+player/attack2_down
+  rotate: false
+  xy: 102, 22
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 3
+player/attack2_down
+  rotate: false
+  xy: 202, 22
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 4
+player/attack2_down
+  rotate: false
+  xy: 302, 22
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 5
+player/attack2_down
+  rotate: false
+  xy: 350, 154
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 6
+player/attack2_down
+  rotate: false
+  xy: 402, 70
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 7
+player/attack2_left
+  rotate: false
+  xy: 398, 418
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 0
+player/attack2_left
+  rotate: false
+  xy: 398, 334
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 1
+player/attack2_left
+  rotate: false
+  xy: 398, 250
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 2
+trees/yellowTree_med
+  rotate: false
+  xy: 266, 106
+  size: 80, 128
+  orig: 80, 128
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Crystalshadow22
+  rotate: false
+  xy: 402, 2
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Thornpalntshadow22
+  rotate: false
+  xy: 2, 370
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Thornplantshadow11
+  rotate: false
+  xy: 2, 238
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Thornplantshadow12
+  rotate: false
+  xy: 2, 106
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Thornplantshadow31
+  rotate: false
+  xy: 134, 370
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Thornplantshadow32
+  rotate: false
+  xy: 134, 238
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Treeshadow11
+  rotate: false
+  xy: 134, 106
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Treeshadow21
+  rotate: false
+  xy: 266, 370
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Treeshadow31
+  rotate: false
+  xy: 266, 238
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+
+objects8.png
+size: 512, 512
+format: RGBA8888
+filter: Nearest, Nearest
+repeat: none
+player/attack2_left
+  rotate: false
+  xy: 2, 422
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 3
+player/attack2_left
+  rotate: false
+  xy: 2, 338
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 4
+player/attack2_left
+  rotate: false
+  xy: 102, 422
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 5
+player/attack2_left
+  rotate: false
+  xy: 2, 254
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 6
+player/attack2_left
+  rotate: false
+  xy: 102, 338
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 7
+player/attack2_right
+  rotate: false
+  xy: 202, 422
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 0
+player/attack2_right
+  rotate: false
+  xy: 2, 170
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 1
+player/attack2_right
+  rotate: false
+  xy: 102, 254
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 2
+player/attack2_right
+  rotate: false
+  xy: 202, 338
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 3
+player/attack2_right
+  rotate: false
+  xy: 302, 422
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 4
+player/attack2_right
+  rotate: false
+  xy: 2, 86
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 5
+player/attack2_right
+  rotate: false
+  xy: 102, 170
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 6
+player/attack2_right
+  rotate: false
+  xy: 202, 254
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 7
+player/attack2_up
+  rotate: false
+  xy: 302, 338
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 0
+player/attack2_up
+  rotate: false
+  xy: 402, 422
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 1
+player/attack2_up
+  rotate: false
+  xy: 2, 2
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 2
+player/attack2_up
+  rotate: false
+  xy: 102, 86
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 3
+player/attack2_up
+  rotate: false
+  xy: 202, 170
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 4
+player/attack2_up
+  rotate: false
+  xy: 302, 254
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 5
+player/attack2_up
+  rotate: false
+  xy: 402, 338
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 6
+player/attack2_up
+  rotate: false
+  xy: 102, 2
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 7
+player/death_down
+  rotate: false
+  xy: 202, 86
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 0
+player/death_down
+  rotate: false
+  xy: 302, 170
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 1
+player/death_down
+  rotate: false
+  xy: 402, 254
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 2
+player/death_down
+  rotate: false
+  xy: 202, 2
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 3
+player/death_down
+  rotate: false
+  xy: 302, 86
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 4
+player/death_down
+  rotate: false
+  xy: 402, 170
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 5
+player/death_down
+  rotate: false
+  xy: 302, 2
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 6
+player/death_down
+  rotate: false
+  xy: 402, 86
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 7
+player/death_down
+  rotate: false
+  xy: 402, 2
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 8
 
 objects9.png
 size: 512, 512
 format: RGBA8888
 filter: Nearest, Nearest
 repeat: none
-greenSlime/death_down
+player/death_left
   rotate: false
-  xy: 106, 442
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 6
-greenSlime/death_down
-  rotate: false
-  xy: 2, 206
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 7
-greenSlime/death_down
-  rotate: false
-  xy: 174, 442
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 8
-greenSlime/death_down
-  rotate: false
-  xy: 206, 306
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 9
-greenSlime/death_left
-  rotate: false
-  xy: 206, 238
-  size: 64, 64
-  orig: 64, 64
+  xy: 2, 422
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 0
-greenSlime/death_left
+player/death_left
   rotate: false
-  xy: 70, 138
-  size: 64, 64
-  orig: 64, 64
+  xy: 2, 338
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 1
-greenSlime/death_left
+player/death_left
   rotate: false
-  xy: 274, 306
-  size: 64, 64
-  orig: 64, 64
+  xy: 102, 422
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 2
-greenSlime/death_left
+player/death_left
   rotate: false
-  xy: 274, 238
-  size: 64, 64
-  orig: 64, 64
+  xy: 2, 254
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 3
-greenSlime/death_left
+player/death_left
   rotate: false
-  xy: 378, 442
-  size: 64, 64
-  orig: 64, 64
+  xy: 102, 338
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 4
-greenSlime/death_left
+player/death_left
   rotate: false
-  xy: 342, 102
-  size: 64, 64
-  orig: 64, 64
+  xy: 202, 422
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 5
-greenSlime/death_left
+player/death_left
   rotate: false
-  xy: 274, 34
-  size: 64, 64
-  orig: 64, 64
+  xy: 2, 170
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 6
-greenSlime/death_left
+player/death_left
   rotate: false
-  xy: 2, 70
-  size: 64, 64
-  orig: 64, 64
+  xy: 102, 254
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 7
-greenSlime/death_left
+player/death_left
+  rotate: false
+  xy: 202, 338
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 8
+player/death_right
+  rotate: false
+  xy: 302, 422
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 0
+player/death_right
+  rotate: false
+  xy: 2, 86
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 1
+player/death_right
+  rotate: false
+  xy: 102, 170
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 2
+player/death_right
+  rotate: false
+  xy: 202, 254
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 3
+player/death_right
+  rotate: false
+  xy: 302, 338
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 4
+player/death_right
+  rotate: false
+  xy: 402, 422
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 5
+player/death_right
   rotate: false
   xy: 2, 2
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 8
-greenSlime/death_left
-  rotate: false
-  xy: 410, 306
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 9
-greenSlime/death_right
-  rotate: false
-  xy: 410, 238
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 0
-magmaSlime/death_down
-  rotate: false
-  xy: 2, 342
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 5
-magmaSlime/death_down
-  rotate: false
-  xy: 70, 274
-  size: 64, 64
-  orig: 64, 64
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 6
-magmaSlime/death_down
+player/death_right
   rotate: false
-  xy: 70, 206
-  size: 64, 64
-  orig: 64, 64
+  xy: 102, 86
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 7
-magmaSlime/death_down
+player/death_right
   rotate: false
-  xy: 174, 374
-  size: 64, 64
-  orig: 64, 64
+  xy: 202, 170
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 8
-magmaSlime/death_down
+player/death_up
   rotate: false
-  xy: 242, 442
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 9
-magmaSlime/death_left
-  rotate: false
-  xy: 206, 170
-  size: 64, 64
-  orig: 64, 64
+  xy: 302, 254
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 0
-magmaSlime/death_left
+player/death_up
   rotate: false
-  xy: 138, 138
-  size: 64, 64
-  orig: 64, 64
+  xy: 402, 338
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 1
-magmaSlime/death_left
+player/death_up
   rotate: false
-  xy: 310, 442
-  size: 64, 64
-  orig: 64, 64
+  xy: 102, 2
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 2
-magmaSlime/death_left
+player/death_up
   rotate: false
-  xy: 342, 238
-  size: 64, 64
-  orig: 64, 64
+  xy: 202, 86
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 3
-magmaSlime/death_left
+player/death_up
   rotate: false
-  xy: 378, 374
-  size: 64, 64
-  orig: 64, 64
+  xy: 302, 170
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 4
-magmaSlime/death_left
+player/death_up
   rotate: false
-  xy: 206, 102
-  size: 64, 64
-  orig: 64, 64
+  xy: 402, 254
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 5
-magmaSlime/death_left
+player/death_up
   rotate: false
-  xy: 342, 34
-  size: 64, 64
-  orig: 64, 64
+  xy: 202, 2
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 6
-magmaSlime/death_left
+player/death_up
   rotate: false
-  xy: 70, 70
-  size: 64, 64
-  orig: 64, 64
+  xy: 302, 86
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 7
-magmaSlime/death_left
+player/death_up
   rotate: false
-  xy: 138, 70
-  size: 64, 64
-  orig: 64, 64
+  xy: 402, 170
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 8
-magmaSlime/death_left
+player/dodge_down
   rotate: false
-  xy: 446, 442
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 9
-magmaSlime/death_right
-  rotate: false
-  xy: 410, 170
-  size: 64, 64
-  orig: 64, 64
+  xy: 302, 2
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 0
-trees/orangeTree_tall
+player/dodge_down
   rotate: false
-  xy: 2, 410
-  size: 48, 96
-  orig: 48, 96
-  offset: 0, 0
-  index: -1
-trees/yellowTree_tall
-  rotate: false
-  xy: 54, 410
-  size: 48, 96
-  orig: 48, 96
-  offset: 0, 0
-  index: -1
-undeadSlime/death_down
-  rotate: false
-  xy: 70, 342
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 5
-undeadSlime/death_down
-  rotate: false
-  xy: 2, 274
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 6
-undeadSlime/death_down
-  rotate: false
-  xy: 138, 206
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 7
-undeadSlime/death_down
-  rotate: false
-  xy: 138, 306
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 8
-undeadSlime/death_down
-  rotate: false
-  xy: 242, 374
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 9
-undeadSlime/death_left
-  rotate: false
-  xy: 2, 138
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 0
-undeadSlime/death_left
-  rotate: false
-  xy: 274, 170
-  size: 64, 64
-  orig: 64, 64
+  xy: 402, 86
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 1
-undeadSlime/death_left
+player/dodge_down
   rotate: false
-  xy: 310, 374
-  size: 64, 64
-  orig: 64, 64
+  xy: 402, 2
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 2
-undeadSlime/death_left
-  rotate: false
-  xy: 342, 306
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 3
-undeadSlime/death_left
-  rotate: false
-  xy: 342, 170
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 4
-undeadSlime/death_left
-  rotate: false
-  xy: 274, 102
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 5
-undeadSlime/death_left
-  rotate: false
-  xy: 410, 34
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 6
-undeadSlime/death_left
-  rotate: false
-  xy: 70, 2
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 7
-undeadSlime/death_left
-  rotate: false
-  xy: 138, 2
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 8
-undeadSlime/death_left
-  rotate: false
-  xy: 446, 374
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 9
-undeadSlime/death_right
-  rotate: false
-  xy: 410, 102
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 0
 
 objects10.png
 size: 512, 512
 format: RGBA8888
 filter: Nearest, Nearest
 repeat: none
-greenSlime/death_right
+player/dodge_down
   rotate: false
-  xy: 2, 410
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 1
-greenSlime/death_right
-  rotate: false
-  xy: 2, 274
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 2
-greenSlime/death_right
-  rotate: false
-  xy: 2, 206
-  size: 64, 64
-  orig: 64, 64
+  xy: 2, 422
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 3
-greenSlime/death_right
+player/dodge_down
   rotate: false
-  xy: 206, 410
-  size: 64, 64
-  orig: 64, 64
+  xy: 2, 338
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 4
-greenSlime/death_right
+player/dodge_down
   rotate: false
-  xy: 138, 274
-  size: 64, 64
-  orig: 64, 64
+  xy: 102, 422
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 5
-greenSlime/death_right
+player/dodge_down
   rotate: false
-  xy: 2, 70
-  size: 64, 64
-  orig: 64, 64
+  xy: 2, 254
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 6
-greenSlime/death_right
+player/dodge_left
   rotate: false
-  xy: 206, 274
-  size: 64, 64
-  orig: 64, 64
+  xy: 102, 338
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
-  index: 7
-greenSlime/death_right
+  index: 0
+player/dodge_left
+  rotate: false
+  xy: 202, 422
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 1
+player/dodge_left
+  rotate: false
+  xy: 2, 170
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 2
+player/dodge_left
+  rotate: false
+  xy: 102, 254
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 3
+player/dodge_left
+  rotate: false
+  xy: 202, 338
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 4
+player/dodge_left
+  rotate: false
+  xy: 302, 422
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 5
+player/dodge_left
+  rotate: false
+  xy: 2, 86
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 6
+player/dodge_right
+  rotate: false
+  xy: 102, 170
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 0
+player/dodge_right
+  rotate: false
+  xy: 202, 254
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 1
+player/dodge_right
+  rotate: false
+  xy: 302, 338
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 2
+player/dodge_right
+  rotate: false
+  xy: 402, 422
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 3
+player/dodge_right
   rotate: false
   xy: 2, 2
-  size: 64, 64
-  orig: 64, 64
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
-  index: 8
-greenSlime/death_right
+  index: 4
+player/dodge_right
   rotate: false
-  xy: 206, 206
-  size: 64, 64
-  orig: 64, 64
+  xy: 102, 86
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
-  index: 9
-greenSlime/death_up
+  index: 5
+player/dodge_right
   rotate: false
-  xy: 410, 410
-  size: 64, 64
-  orig: 64, 64
+  xy: 202, 170
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 6
+player/dodge_up
+  rotate: false
+  xy: 302, 254
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 0
-greenSlime/death_up
+player/dodge_up
   rotate: false
-  xy: 206, 138
-  size: 64, 64
-  orig: 64, 64
+  xy: 402, 338
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 1
-greenSlime/death_up
+player/dodge_up
   rotate: false
-  xy: 410, 342
-  size: 64, 64
-  orig: 64, 64
+  xy: 102, 2
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 2
-greenSlime/death_up
+player/dodge_up
   rotate: false
-  xy: 274, 138
-  size: 64, 64
-  orig: 64, 64
+  xy: 202, 86
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 3
-greenSlime/death_up
+player/dodge_up
   rotate: false
-  xy: 206, 2
-  size: 64, 64
-  orig: 64, 64
+  xy: 302, 170
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 4
-greenSlime/death_up
+player/dodge_up
   rotate: false
-  xy: 410, 206
-  size: 64, 64
-  orig: 64, 64
+  xy: 402, 254
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 5
-greenSlime/death_up
+player/dodge_up
   rotate: false
-  xy: 410, 138
-  size: 64, 64
-  orig: 64, 64
+  xy: 202, 2
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 6
-greenSlime/death_up
+player/idle_down
   rotate: false
-  xy: 410, 2
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 7
-magmaSlime/death_right
-  rotate: false
-  xy: 2, 342
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 1
-magmaSlime/death_right
-  rotate: false
-  xy: 70, 342
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 2
-magmaSlime/death_right
-  rotate: false
-  xy: 70, 274
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 3
-magmaSlime/death_right
-  rotate: false
-  xy: 2, 138
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 4
-magmaSlime/death_right
-  rotate: false
-  xy: 206, 342
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 5
-magmaSlime/death_right
-  rotate: false
-  xy: 70, 138
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 6
-magmaSlime/death_right
-  rotate: false
-  xy: 274, 342
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 7
-magmaSlime/death_right
-  rotate: false
-  xy: 70, 70
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 8
-magmaSlime/death_right
-  rotate: false
-  xy: 274, 274
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 9
-magmaSlime/death_up
-  rotate: false
-  xy: 70, 2
-  size: 64, 64
-  orig: 64, 64
+  xy: 302, 86
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 0
-magmaSlime/death_up
+player/idle_down
   rotate: false
-  xy: 274, 206
-  size: 64, 64
-  orig: 64, 64
+  xy: 402, 170
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 1
-magmaSlime/death_up
+player/idle_down
   rotate: false
-  xy: 138, 2
-  size: 64, 64
-  orig: 64, 64
+  xy: 302, 2
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 2
-magmaSlime/death_up
+player/idle_down
   rotate: false
-  xy: 342, 206
-  size: 64, 64
-  orig: 64, 64
+  xy: 402, 86
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 3
-magmaSlime/death_up
+player/idle_down
   rotate: false
-  xy: 274, 70
-  size: 64, 64
-  orig: 64, 64
+  xy: 402, 2
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 4
-magmaSlime/death_up
-  rotate: false
-  xy: 274, 2
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 5
-magmaSlime/death_up
-  rotate: false
-  xy: 342, 2
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 6
-undeadSlime/death_right
-  rotate: false
-  xy: 70, 410
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 1
-undeadSlime/death_right
-  rotate: false
-  xy: 138, 410
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 2
-undeadSlime/death_right
-  rotate: false
-  xy: 138, 342
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 3
-undeadSlime/death_right
-  rotate: false
-  xy: 70, 206
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 4
-undeadSlime/death_right
-  rotate: false
-  xy: 274, 410
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 5
-undeadSlime/death_right
-  rotate: false
-  xy: 138, 206
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 6
-undeadSlime/death_right
-  rotate: false
-  xy: 342, 410
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 7
-undeadSlime/death_right
-  rotate: false
-  xy: 138, 138
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 8
-undeadSlime/death_right
-  rotate: false
-  xy: 342, 342
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 9
-undeadSlime/death_up
-  rotate: false
-  xy: 138, 70
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 0
-undeadSlime/death_up
-  rotate: false
-  xy: 342, 274
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 1
-undeadSlime/death_up
-  rotate: false
-  xy: 206, 70
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 2
-undeadSlime/death_up
-  rotate: false
-  xy: 410, 274
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 3
-undeadSlime/death_up
-  rotate: false
-  xy: 342, 138
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 4
-undeadSlime/death_up
-  rotate: false
-  xy: 342, 70
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 5
-undeadSlime/death_up
-  rotate: false
-  xy: 410, 70
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 6
 
 objects11.png
 size: 512, 512
 format: RGBA8888
 filter: Nearest, Nearest
 repeat: none
-greenSlime/death_up
+player/idle_down
   rotate: false
-  xy: 70, 410
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 8
-greenSlime/death_up
-  rotate: false
-  xy: 138, 410
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 9
-greenSlime/enemy_attack_down
-  rotate: false
-  xy: 138, 342
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 0
-greenSlime/enemy_attack_down
-  rotate: false
-  xy: 70, 206
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 1
-greenSlime/enemy_attack_down
-  rotate: false
-  xy: 274, 410
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 2
-greenSlime/enemy_attack_down
-  rotate: false
-  xy: 138, 206
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 3
-greenSlime/enemy_attack_down
-  rotate: false
-  xy: 342, 410
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 4
-greenSlime/enemy_attack_down
-  rotate: false
-  xy: 138, 138
-  size: 64, 64
-  orig: 64, 64
+  xy: 2, 422
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 5
-greenSlime/enemy_attack_down
+player/idle_down
   rotate: false
-  xy: 342, 342
-  size: 64, 64
-  orig: 64, 64
+  xy: 2, 338
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 6
-greenSlime/enemy_attack_down
+player/idle_down
   rotate: false
-  xy: 138, 70
-  size: 64, 64
-  orig: 64, 64
+  xy: 102, 422
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 7
-greenSlime/enemy_attack_down
+player/idle_left
   rotate: false
-  xy: 342, 274
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 8
-greenSlime/enemy_attack_down
-  rotate: false
-  xy: 206, 70
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 9
-greenSlime/enemy_attack_left
-  rotate: false
-  xy: 410, 274
-  size: 64, 64
-  orig: 64, 64
+  xy: 2, 254
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 0
-greenSlime/enemy_attack_left
+player/idle_left
   rotate: false
-  xy: 342, 138
-  size: 64, 64
-  orig: 64, 64
+  xy: 102, 338
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 1
-greenSlime/enemy_attack_left
+player/idle_left
   rotate: false
-  xy: 342, 70
-  size: 64, 64
-  orig: 64, 64
+  xy: 202, 422
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 2
-greenSlime/enemy_attack_left
+player/idle_left
   rotate: false
-  xy: 410, 70
-  size: 64, 64
-  orig: 64, 64
+  xy: 2, 170
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 3
-magmaSlime/death_up
+player/idle_left
   rotate: false
-  xy: 2, 410
-  size: 64, 64
-  orig: 64, 64
+  xy: 102, 254
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 4
+player/idle_left
+  rotate: false
+  xy: 202, 338
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 5
+player/idle_left
+  rotate: false
+  xy: 302, 422
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 6
+player/idle_left
+  rotate: false
+  xy: 2, 86
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 7
-magmaSlime/death_up
+player/idle_right
   rotate: false
-  xy: 2, 274
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 8
-magmaSlime/death_up
-  rotate: false
-  xy: 2, 206
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 9
-magmaSlime/enemy_attack_down
-  rotate: false
-  xy: 206, 410
-  size: 64, 64
-  orig: 64, 64
+  xy: 102, 170
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 0
-magmaSlime/enemy_attack_down
+player/idle_right
   rotate: false
-  xy: 138, 274
-  size: 64, 64
-  orig: 64, 64
+  xy: 202, 254
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 1
-magmaSlime/enemy_attack_down
+player/idle_right
   rotate: false
-  xy: 2, 70
-  size: 64, 64
-  orig: 64, 64
+  xy: 302, 338
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 2
-magmaSlime/enemy_attack_down
+player/idle_right
   rotate: false
-  xy: 206, 274
-  size: 64, 64
-  orig: 64, 64
+  xy: 402, 422
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 3
-magmaSlime/enemy_attack_down
+player/idle_right
   rotate: false
   xy: 2, 2
-  size: 64, 64
-  orig: 64, 64
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 4
-magmaSlime/enemy_attack_down
+player/idle_right
   rotate: false
-  xy: 206, 206
-  size: 64, 64
-  orig: 64, 64
+  xy: 102, 86
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 5
-magmaSlime/enemy_attack_down
+player/idle_right
   rotate: false
-  xy: 410, 410
-  size: 64, 64
-  orig: 64, 64
+  xy: 202, 170
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 6
-magmaSlime/enemy_attack_down
+player/idle_right
   rotate: false
-  xy: 206, 138
-  size: 64, 64
-  orig: 64, 64
+  xy: 302, 254
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 7
-magmaSlime/enemy_attack_down
+player/idle_up
   rotate: false
-  xy: 410, 342
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 8
-magmaSlime/enemy_attack_left
-  rotate: false
-  xy: 206, 2
-  size: 64, 64
-  orig: 64, 64
+  xy: 402, 338
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 0
-magmaSlime/enemy_attack_left
+player/idle_up
   rotate: false
-  xy: 410, 206
-  size: 64, 64
-  orig: 64, 64
+  xy: 102, 2
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 1
-magmaSlime/enemy_attack_left
+player/idle_up
   rotate: false
-  xy: 410, 138
-  size: 64, 64
-  orig: 64, 64
+  xy: 202, 86
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 2
-magmaSlime/enemy_attack_left
+player/idle_up
   rotate: false
-  xy: 410, 2
-  size: 64, 64
-  orig: 64, 64
+  xy: 302, 170
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 3
-undeadSlime/death_up
+player/idle_up
   rotate: false
-  xy: 2, 342
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 7
-undeadSlime/death_up
-  rotate: false
-  xy: 70, 342
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 8
-undeadSlime/death_up
-  rotate: false
-  xy: 70, 274
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 9
-undeadSlime/enemy_attack_down
-  rotate: false
-  xy: 2, 138
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 0
-undeadSlime/enemy_attack_down
-  rotate: false
-  xy: 206, 342
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 1
-undeadSlime/enemy_attack_down
-  rotate: false
-  xy: 70, 138
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 2
-undeadSlime/enemy_attack_down
-  rotate: false
-  xy: 274, 342
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 3
-undeadSlime/enemy_attack_down
-  rotate: false
-  xy: 70, 70
-  size: 64, 64
-  orig: 64, 64
+  xy: 402, 254
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 4
-undeadSlime/enemy_attack_down
+player/idle_up
   rotate: false
-  xy: 274, 274
-  size: 64, 64
-  orig: 64, 64
+  xy: 202, 2
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 5
-undeadSlime/enemy_attack_down
+player/idle_up
   rotate: false
-  xy: 70, 2
-  size: 64, 64
-  orig: 64, 64
+  xy: 302, 86
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 6
-undeadSlime/enemy_attack_down
+player/idle_up
   rotate: false
-  xy: 274, 206
-  size: 64, 64
-  orig: 64, 64
+  xy: 402, 170
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 7
-undeadSlime/enemy_attack_down
+player/walk_down
   rotate: false
-  xy: 138, 2
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 8
-undeadSlime/enemy_attack_down
-  rotate: false
-  xy: 274, 138
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 9
-undeadSlime/enemy_attack_down
-  rotate: false
-  xy: 342, 206
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 10
-undeadSlime/enemy_attack_left
-  rotate: false
-  xy: 274, 70
-  size: 64, 64
-  orig: 64, 64
+  xy: 302, 2
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 0
-undeadSlime/enemy_attack_left
+player/walk_down
   rotate: false
-  xy: 274, 2
-  size: 64, 64
-  orig: 64, 64
+  xy: 402, 86
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 1
-undeadSlime/enemy_attack_left
+player/walk_down
   rotate: false
-  xy: 342, 2
-  size: 64, 64
-  orig: 64, 64
+  xy: 402, 2
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 2
 
@@ -2758,2100 +2758,3747 @@ size: 512, 512
 format: RGBA8888
 filter: Nearest, Nearest
 repeat: none
-greenSlime/enemy_attack_left
+player/walk_down
   rotate: false
-  xy: 2, 342
-  size: 64, 64
-  orig: 64, 64
+  xy: 2, 422
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 3
+player/walk_down
+  rotate: false
+  xy: 2, 338
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 4
-greenSlime/enemy_attack_left
+player/walk_down
   rotate: false
-  xy: 70, 342
-  size: 64, 64
-  orig: 64, 64
+  xy: 102, 422
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 5
-greenSlime/enemy_attack_left
+player/walk_down
   rotate: false
-  xy: 70, 274
-  size: 64, 64
-  orig: 64, 64
+  xy: 2, 254
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 6
-greenSlime/enemy_attack_left
+player/walk_down
   rotate: false
-  xy: 2, 138
-  size: 64, 64
-  orig: 64, 64
+  xy: 102, 338
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 7
-greenSlime/enemy_attack_left
+player/walk_left
   rotate: false
-  xy: 206, 342
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 8
-greenSlime/enemy_attack_left
-  rotate: false
-  xy: 70, 138
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 9
-greenSlime/enemy_attack_right
-  rotate: false
-  xy: 274, 342
-  size: 64, 64
-  orig: 64, 64
+  xy: 202, 422
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 0
-greenSlime/enemy_attack_right
+player/walk_left
   rotate: false
-  xy: 70, 70
-  size: 64, 64
-  orig: 64, 64
+  xy: 2, 170
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 1
-greenSlime/enemy_attack_right
+player/walk_left
   rotate: false
-  xy: 274, 274
-  size: 64, 64
-  orig: 64, 64
+  xy: 102, 254
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 2
-greenSlime/enemy_attack_right
+player/walk_left
   rotate: false
-  xy: 70, 2
-  size: 64, 64
-  orig: 64, 64
+  xy: 202, 338
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 3
-greenSlime/enemy_attack_right
+player/walk_left
   rotate: false
-  xy: 274, 206
-  size: 64, 64
-  orig: 64, 64
+  xy: 302, 422
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 4
-greenSlime/enemy_attack_right
+player/walk_left
   rotate: false
-  xy: 138, 2
-  size: 64, 64
-  orig: 64, 64
+  xy: 2, 86
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 5
-greenSlime/enemy_attack_right
+player/walk_left
   rotate: false
-  xy: 342, 206
-  size: 64, 64
-  orig: 64, 64
+  xy: 102, 170
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 6
-greenSlime/enemy_attack_right
+player/walk_left
   rotate: false
-  xy: 274, 70
-  size: 64, 64
-  orig: 64, 64
+  xy: 202, 254
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 7
-greenSlime/enemy_attack_right
+player/walk_right
   rotate: false
-  xy: 274, 2
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 8
-greenSlime/enemy_attack_right
-  rotate: false
-  xy: 342, 2
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 9
-magmaSlime/enemy_attack_left
-  rotate: false
-  xy: 70, 410
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 4
-magmaSlime/enemy_attack_left
-  rotate: false
-  xy: 138, 410
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 5
-magmaSlime/enemy_attack_left
-  rotate: false
-  xy: 138, 342
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 6
-magmaSlime/enemy_attack_left
-  rotate: false
-  xy: 70, 206
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 7
-magmaSlime/enemy_attack_left
-  rotate: false
-  xy: 274, 410
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 8
-magmaSlime/enemy_attack_right
-  rotate: false
-  xy: 342, 410
-  size: 64, 64
-  orig: 64, 64
+  xy: 302, 338
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 0
-magmaSlime/enemy_attack_right
+player/walk_right
   rotate: false
-  xy: 138, 138
-  size: 64, 64
-  orig: 64, 64
+  xy: 402, 422
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 1
-magmaSlime/enemy_attack_right
-  rotate: false
-  xy: 342, 342
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 2
-magmaSlime/enemy_attack_right
-  rotate: false
-  xy: 138, 70
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 3
-magmaSlime/enemy_attack_right
-  rotate: false
-  xy: 342, 274
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 4
-magmaSlime/enemy_attack_right
-  rotate: false
-  xy: 206, 70
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 5
-magmaSlime/enemy_attack_right
-  rotate: false
-  xy: 410, 274
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 6
-magmaSlime/enemy_attack_right
-  rotate: false
-  xy: 342, 138
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 7
-magmaSlime/enemy_attack_right
-  rotate: false
-  xy: 342, 70
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 8
-undeadSlime/enemy_attack_left
-  rotate: false
-  xy: 2, 410
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 3
-undeadSlime/enemy_attack_left
-  rotate: false
-  xy: 2, 274
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 4
-undeadSlime/enemy_attack_left
-  rotate: false
-  xy: 2, 206
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 5
-undeadSlime/enemy_attack_left
-  rotate: false
-  xy: 206, 410
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 6
-undeadSlime/enemy_attack_left
-  rotate: false
-  xy: 138, 274
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 7
-undeadSlime/enemy_attack_left
-  rotate: false
-  xy: 2, 70
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 8
-undeadSlime/enemy_attack_left
-  rotate: false
-  xy: 138, 206
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 9
-undeadSlime/enemy_attack_left
-  rotate: false
-  xy: 206, 274
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 10
-undeadSlime/enemy_attack_right
+player/walk_right
   rotate: false
   xy: 2, 2
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 0
-undeadSlime/enemy_attack_right
-  rotate: false
-  xy: 206, 206
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 1
-undeadSlime/enemy_attack_right
-  rotate: false
-  xy: 410, 410
-  size: 64, 64
-  orig: 64, 64
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 2
-undeadSlime/enemy_attack_right
+player/walk_right
   rotate: false
-  xy: 206, 138
-  size: 64, 64
-  orig: 64, 64
+  xy: 102, 86
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 3
-undeadSlime/enemy_attack_right
+player/walk_right
   rotate: false
-  xy: 410, 342
-  size: 64, 64
-  orig: 64, 64
+  xy: 202, 170
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 4
-undeadSlime/enemy_attack_right
+player/walk_right
   rotate: false
-  xy: 274, 138
-  size: 64, 64
-  orig: 64, 64
+  xy: 302, 254
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 5
-undeadSlime/enemy_attack_right
+player/walk_right
   rotate: false
-  xy: 206, 2
-  size: 64, 64
-  orig: 64, 64
+  xy: 402, 338
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 6
-undeadSlime/enemy_attack_right
+player/walk_right
   rotate: false
-  xy: 410, 206
-  size: 64, 64
-  orig: 64, 64
+  xy: 102, 2
+  size: 96, 80
+  orig: 96, 80
   offset: 0, 0
   index: 7
-undeadSlime/enemy_attack_right
+player/walk_up
   rotate: false
-  xy: 410, 138
+  xy: 202, 86
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 0
+player/walk_up
+  rotate: false
+  xy: 302, 170
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 1
+player/walk_up
+  rotate: false
+  xy: 402, 254
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 2
+player/walk_up
+  rotate: false
+  xy: 202, 2
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 3
+player/walk_up
+  rotate: false
+  xy: 302, 86
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 4
+player/walk_up
+  rotate: false
+  xy: 402, 170
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 5
+player/walk_up
+  rotate: false
+  xy: 302, 2
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 6
+player/walk_up
+  rotate: false
+  xy: 402, 86
+  size: 96, 80
+  orig: 96, 80
+  offset: 0, 0
+  index: 7
+undeadLandAssets/Crystalshadow31
+  rotate: false
+  xy: 402, 18
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 8
-undeadSlime/enemy_attack_right
-  rotate: false
-  xy: 410, 70
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 9
-undeadSlime/enemy_attack_right
-  rotate: false
-  xy: 410, 2
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 10
+  index: -1
 
 objects13.png
 size: 512, 512
 format: RGBA8888
 filter: Nearest, Nearest
 repeat: none
-greenSlime/enemy_attack_up
+undeadLandAssets/Crystalshadow32
   rotate: false
   xy: 2, 410
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 0
-greenSlime/enemy_attack_up
-  rotate: false
-  xy: 2, 274
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 1
-greenSlime/enemy_attack_up
-  rotate: false
-  xy: 2, 206
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 2
-greenSlime/enemy_attack_up
-  rotate: false
-  xy: 206, 410
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 3
-greenSlime/enemy_attack_up
-  rotate: false
-  xy: 138, 274
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 4
-greenSlime/enemy_attack_up
-  rotate: false
-  xy: 2, 70
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 5
-greenSlime/enemy_attack_up
-  rotate: false
-  xy: 206, 274
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 6
-greenSlime/enemy_attack_up
-  rotate: false
-  xy: 2, 2
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 7
-greenSlime/enemy_attack_up
-  rotate: false
-  xy: 206, 206
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 8
-greenSlime/enemy_attack_up
-  rotate: false
-  xy: 410, 410
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 9
-greenSlime/hurt_down
-  rotate: false
-  xy: 206, 138
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 0
-greenSlime/hurt_down
-  rotate: false
-  xy: 410, 342
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 1
-greenSlime/hurt_down
-  rotate: false
-  xy: 274, 138
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 2
-greenSlime/hurt_down
-  rotate: false
-  xy: 206, 2
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 3
-greenSlime/hurt_down
-  rotate: false
-  xy: 410, 206
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 4
-greenSlime/hurt_left
-  rotate: false
-  xy: 410, 138
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 0
-greenSlime/hurt_left
-  rotate: false
-  xy: 410, 2
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 1
-magmaSlime/enemy_attack_up
+  index: -1
+undeadLandAssets/Deadarmshadow11
   rotate: false
   xy: 2, 342
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 0
-magmaSlime/enemy_attack_up
-  rotate: false
-  xy: 70, 342
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 1
-magmaSlime/enemy_attack_up
-  rotate: false
-  xy: 70, 274
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 2
-magmaSlime/enemy_attack_up
-  rotate: false
-  xy: 2, 138
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 3
-magmaSlime/enemy_attack_up
-  rotate: false
-  xy: 206, 342
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 4
-magmaSlime/enemy_attack_up
-  rotate: false
-  xy: 70, 138
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 5
-magmaSlime/enemy_attack_up
-  rotate: false
-  xy: 274, 342
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 6
-magmaSlime/enemy_attack_up
-  rotate: false
-  xy: 70, 70
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 7
-magmaSlime/enemy_attack_up
-  rotate: false
-  xy: 274, 274
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 8
-magmaSlime/hurt_down
-  rotate: false
-  xy: 274, 206
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 0
-magmaSlime/hurt_down
-  rotate: false
-  xy: 138, 2
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 1
-magmaSlime/hurt_down
-  rotate: false
-  xy: 342, 206
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 2
-magmaSlime/hurt_down
-  rotate: false
-  xy: 274, 70
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 3
-magmaSlime/hurt_down
-  rotate: false
-  xy: 274, 2
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 4
-magmaSlime/hurt_left
-  rotate: false
-  xy: 342, 2
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 0
-undeadSlime/enemy_attack_up
+  index: -1
+undeadLandAssets/Deadarmshadow12
   rotate: false
   xy: 70, 410
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 0
-undeadSlime/enemy_attack_up
+  index: -1
+undeadLandAssets/Deadarmshadow13
+  rotate: false
+  xy: 2, 274
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Deadarmshadow14
+  rotate: false
+  xy: 70, 342
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Deadarmshadow21
   rotate: false
   xy: 138, 410
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 1
-undeadSlime/enemy_attack_up
+  index: -1
+undeadLandAssets/Deadarmshadow22
+  rotate: false
+  xy: 2, 206
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Deadarmshadow23
+  rotate: false
+  xy: 70, 274
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Deadarmshadow24
   rotate: false
   xy: 138, 342
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 2
-undeadSlime/enemy_attack_up
+  index: -1
+undeadLandAssets/Deadarmshadow31
+  rotate: false
+  xy: 206, 410
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Deadarmshadow32
+  rotate: false
+  xy: 2, 138
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Deadarmshadow33
   rotate: false
   xy: 70, 206
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 3
-undeadSlime/enemy_attack_up
+  index: -1
+undeadLandAssets/Deadarmshadow34
+  rotate: false
+  xy: 138, 274
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Deadtreeshadow13
+  rotate: false
+  xy: 206, 342
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Deadtreeshadow33
   rotate: false
   xy: 274, 410
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 4
-undeadSlime/enemy_attack_up
+  index: -1
+undeadLandAssets/Plantshadow12
+  rotate: false
+  xy: 2, 70
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Plantshadow22
+  rotate: false
+  xy: 70, 138
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Plantshadow31
   rotate: false
   xy: 138, 206
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 5
-undeadSlime/enemy_attack_up
+  index: -1
+undeadLandAssets/Rockshadow11
+  rotate: false
+  xy: 206, 274
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Rockshadow12
+  rotate: false
+  xy: 274, 342
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Rockshadow13
   rotate: false
   xy: 342, 410
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 6
-undeadSlime/enemy_attack_up
+  index: -1
+undeadLandAssets/Rockshadow21
+  rotate: false
+  xy: 2, 2
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Rockshadow22
+  rotate: false
+  xy: 70, 70
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Rockshadow23
   rotate: false
   xy: 138, 138
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 7
-undeadSlime/enemy_attack_up
+  index: -1
+undeadLandAssets/Rockshadow31
+  rotate: false
+  xy: 206, 206
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Rockshadow32
+  rotate: false
+  xy: 274, 274
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Rockshadow33
   rotate: false
   xy: 342, 342
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 8
-undeadSlime/enemy_attack_up
+  index: -1
+undeadLandAssets/Rockshadow34
+  rotate: false
+  xy: 410, 410
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Ruinshadow13
   rotate: false
   xy: 70, 2
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 9
-undeadSlime/enemy_attack_up
+  index: -1
+undeadLandAssets/Ruinshadow14
   rotate: false
   xy: 138, 70
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 10
-undeadSlime/hurt_down
+  index: -1
+undeadLandAssets/Ruinshadow23
+  rotate: false
+  xy: 206, 138
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Ruinshadow24
+  rotate: false
+  xy: 274, 206
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Ruinshadow33
   rotate: false
   xy: 342, 274
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 0
-undeadSlime/hurt_down
+  index: -1
+undeadLandAssets/Ruinshadow34
+  rotate: false
+  xy: 410, 342
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Sculldoorshadow1
+  rotate: false
+  xy: 138, 2
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Sculldoorshadow2
   rotate: false
   xy: 206, 70
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 1
-undeadSlime/hurt_down
+  index: -1
+undeadLandAssets/Sculldoorshadow3
+  rotate: false
+  xy: 274, 138
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Thornpalntshadow24
+  rotate: false
+  xy: 342, 206
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Thornpalntshadow25
   rotate: false
   xy: 410, 274
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 2
-undeadSlime/hurt_down
+  index: -1
+undeadLandAssets/Thornplantshadow14
+  rotate: false
+  xy: 206, 2
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Thornplantshadow15
+  rotate: false
+  xy: 274, 70
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Thornplantshadow34
   rotate: false
   xy: 342, 138
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 3
-undeadSlime/hurt_down
+  index: -1
+undeadLandAssets/Thornplantshadow35
+  rotate: false
+  xy: 410, 206
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Treeshadow12
+  rotate: false
+  xy: 274, 2
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Treeshadow13
   rotate: false
   xy: 342, 70
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 4
-undeadSlime/hurt_left
+  index: -1
+undeadLandAssets/Treeshadow22
+  rotate: false
+  xy: 410, 138
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Treeshadow23
+  rotate: false
+  xy: 342, 2
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+undeadLandAssets/Treeshadow32
   rotate: false
   xy: 410, 70
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 0
+  index: -1
+undeadLandAssets/Treeshadow33
+  rotate: false
+  xy: 410, 2
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
 
 objects14.png
 size: 512, 512
 format: RGBA8888
 filter: Nearest, Nearest
 repeat: none
-greenSlime/hurt_left
-  rotate: false
-  xy: 70, 410
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 2
-greenSlime/hurt_left
-  rotate: false
-  xy: 138, 410
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 3
-greenSlime/hurt_left
-  rotate: false
-  xy: 138, 342
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 4
-greenSlime/hurt_right
-  rotate: false
-  xy: 70, 206
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 0
-greenSlime/hurt_right
-  rotate: false
-  xy: 274, 410
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 1
-greenSlime/hurt_right
-  rotate: false
-  xy: 138, 206
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 2
-greenSlime/hurt_right
-  rotate: false
-  xy: 342, 410
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 3
-greenSlime/hurt_right
-  rotate: false
-  xy: 138, 138
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 4
-greenSlime/hurt_up
-  rotate: false
-  xy: 342, 342
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 0
-greenSlime/hurt_up
-  rotate: false
-  xy: 138, 70
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 1
-greenSlime/hurt_up
-  rotate: false
-  xy: 342, 274
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 2
-greenSlime/hurt_up
-  rotate: false
-  xy: 206, 70
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 3
-greenSlime/hurt_up
-  rotate: false
-  xy: 410, 274
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 4
-greenSlime/idle_down
-  rotate: false
-  xy: 342, 138
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 0
-greenSlime/idle_down
-  rotate: false
-  xy: 342, 70
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 1
-greenSlime/idle_down
-  rotate: false
-  xy: 410, 70
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 2
-magmaSlime/hurt_left
+greenSlime/death_down
   rotate: false
   xy: 2, 410
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 1
-magmaSlime/hurt_left
+  index: 0
+greenSlime/death_down
   rotate: false
   xy: 2, 274
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 2
-magmaSlime/hurt_left
+  index: 1
+greenSlime/death_down
   rotate: false
   xy: 2, 206
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 3
-magmaSlime/hurt_left
+  index: 2
+greenSlime/death_down
   rotate: false
   xy: 206, 410
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 4
-magmaSlime/hurt_right
+  index: 3
+greenSlime/death_down
   rotate: false
   xy: 138, 274
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 0
-magmaSlime/hurt_right
+  index: 4
+greenSlime/death_down
   rotate: false
   xy: 2, 70
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 1
-magmaSlime/hurt_right
+  index: 5
+greenSlime/death_down
   rotate: false
   xy: 206, 274
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 2
-magmaSlime/hurt_right
+  index: 6
+greenSlime/death_down
   rotate: false
   xy: 2, 2
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 3
-magmaSlime/hurt_right
+  index: 7
+greenSlime/death_down
   rotate: false
   xy: 206, 206
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 4
-magmaSlime/hurt_up
+  index: 8
+greenSlime/death_down
   rotate: false
   xy: 410, 410
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 0
-magmaSlime/hurt_up
+  index: 9
+greenSlime/death_left
   rotate: false
   xy: 206, 138
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 1
-magmaSlime/hurt_up
+  index: 0
+greenSlime/death_left
   rotate: false
   xy: 410, 342
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 2
-magmaSlime/hurt_up
+  index: 1
+greenSlime/death_left
   rotate: false
   xy: 274, 138
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 3
-magmaSlime/hurt_up
+  index: 2
+greenSlime/death_left
   rotate: false
   xy: 206, 2
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 4
-magmaSlime/idle_down
+  index: 3
+greenSlime/death_left
   rotate: false
   xy: 410, 206
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 0
-magmaSlime/idle_down
+  index: 4
+greenSlime/death_left
   rotate: false
   xy: 410, 138
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 1
-magmaSlime/idle_down
+  index: 5
+greenSlime/death_left
   rotate: false
   xy: 410, 2
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 2
-undeadSlime/hurt_left
+  index: 6
+magmaSlime/death_down
   rotate: false
   xy: 2, 342
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 1
-undeadSlime/hurt_left
+  index: 0
+magmaSlime/death_down
   rotate: false
   xy: 70, 342
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 2
-undeadSlime/hurt_left
+  index: 1
+magmaSlime/death_down
   rotate: false
   xy: 70, 274
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 3
-undeadSlime/hurt_left
+  index: 2
+magmaSlime/death_down
   rotate: false
   xy: 2, 138
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 4
-undeadSlime/hurt_right
+  index: 3
+magmaSlime/death_down
   rotate: false
   xy: 206, 342
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 0
-undeadSlime/hurt_right
+  index: 4
+magmaSlime/death_down
   rotate: false
   xy: 70, 138
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 1
-undeadSlime/hurt_right
+  index: 5
+magmaSlime/death_down
   rotate: false
   xy: 274, 342
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 2
-undeadSlime/hurt_right
+  index: 6
+magmaSlime/death_down
   rotate: false
   xy: 70, 70
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 3
-undeadSlime/hurt_right
+  index: 7
+magmaSlime/death_down
   rotate: false
   xy: 274, 274
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 4
-undeadSlime/hurt_up
+  index: 8
+magmaSlime/death_down
   rotate: false
   xy: 70, 2
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 0
-undeadSlime/hurt_up
+  index: 9
+magmaSlime/death_left
   rotate: false
   xy: 274, 206
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 1
-undeadSlime/hurt_up
+  index: 0
+magmaSlime/death_left
   rotate: false
   xy: 138, 2
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 2
-undeadSlime/hurt_up
+  index: 1
+magmaSlime/death_left
   rotate: false
   xy: 342, 206
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 3
-undeadSlime/hurt_up
+  index: 2
+magmaSlime/death_left
   rotate: false
   xy: 274, 70
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 4
-undeadSlime/idle_down
+  index: 3
+magmaSlime/death_left
   rotate: false
   xy: 274, 2
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 0
-undeadSlime/idle_down
+  index: 4
+magmaSlime/death_left
   rotate: false
   xy: 342, 2
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
+  index: 5
+undeadSlime/death_down
+  rotate: false
+  xy: 70, 410
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 0
+undeadSlime/death_down
+  rotate: false
+  xy: 138, 410
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
   index: 1
+undeadSlime/death_down
+  rotate: false
+  xy: 138, 342
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 2
+undeadSlime/death_down
+  rotate: false
+  xy: 70, 206
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 3
+undeadSlime/death_down
+  rotate: false
+  xy: 274, 410
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 4
+undeadSlime/death_down
+  rotate: false
+  xy: 138, 206
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 5
+undeadSlime/death_down
+  rotate: false
+  xy: 342, 410
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 6
+undeadSlime/death_down
+  rotate: false
+  xy: 138, 138
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 7
+undeadSlime/death_down
+  rotate: false
+  xy: 342, 342
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 8
+undeadSlime/death_down
+  rotate: false
+  xy: 138, 70
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 9
+undeadSlime/death_left
+  rotate: false
+  xy: 342, 274
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 0
+undeadSlime/death_left
+  rotate: false
+  xy: 206, 70
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 1
+undeadSlime/death_left
+  rotate: false
+  xy: 410, 274
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 2
+undeadSlime/death_left
+  rotate: false
+  xy: 342, 138
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 3
+undeadSlime/death_left
+  rotate: false
+  xy: 342, 70
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 4
+undeadSlime/death_left
+  rotate: false
+  xy: 410, 70
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 5
 
 objects15.png
 size: 512, 512
 format: RGBA8888
 filter: Nearest, Nearest
 repeat: none
-greenSlime/idle_down
-  rotate: false
-  xy: 2, 342
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 3
-greenSlime/idle_down
-  rotate: false
-  xy: 70, 342
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 4
-greenSlime/idle_down
-  rotate: false
-  xy: 70, 274
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 5
-greenSlime/idle_left
-  rotate: false
-  xy: 2, 138
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 0
-greenSlime/idle_left
-  rotate: false
-  xy: 206, 342
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 1
-greenSlime/idle_left
-  rotate: false
-  xy: 70, 138
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 2
-greenSlime/idle_left
-  rotate: false
-  xy: 274, 342
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 3
-greenSlime/idle_left
-  rotate: false
-  xy: 70, 70
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 4
-greenSlime/idle_left
-  rotate: false
-  xy: 274, 274
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 5
-greenSlime/idle_right
-  rotate: false
-  xy: 70, 2
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 0
-greenSlime/idle_right
-  rotate: false
-  xy: 274, 206
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 1
-greenSlime/idle_right
-  rotate: false
-  xy: 138, 2
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 2
-greenSlime/idle_right
-  rotate: false
-  xy: 342, 206
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 3
-greenSlime/idle_right
-  rotate: false
-  xy: 274, 70
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 4
-greenSlime/idle_right
-  rotate: false
-  xy: 274, 2
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 5
-greenSlime/idle_up
-  rotate: false
-  xy: 342, 2
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 0
-magmaSlime/idle_down
+greenSlime/death_left
   rotate: false
   xy: 70, 410
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 3
-magmaSlime/idle_down
+  index: 7
+greenSlime/death_left
   rotate: false
   xy: 138, 410
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 4
-magmaSlime/idle_down
+  index: 8
+greenSlime/death_left
   rotate: false
   xy: 138, 342
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 5
-magmaSlime/idle_left
+  index: 9
+greenSlime/death_right
   rotate: false
   xy: 70, 206
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
   index: 0
-magmaSlime/idle_left
+greenSlime/death_right
   rotate: false
   xy: 274, 410
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
   index: 1
-magmaSlime/idle_left
+greenSlime/death_right
   rotate: false
   xy: 138, 206
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
   index: 2
-magmaSlime/idle_left
+greenSlime/death_right
   rotate: false
   xy: 342, 410
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
   index: 3
-magmaSlime/idle_left
+greenSlime/death_right
   rotate: false
   xy: 138, 138
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
   index: 4
-magmaSlime/idle_left
+greenSlime/death_right
   rotate: false
   xy: 342, 342
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
   index: 5
-magmaSlime/idle_right
+greenSlime/death_right
   rotate: false
   xy: 138, 70
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 0
-magmaSlime/idle_right
+  index: 6
+greenSlime/death_right
   rotate: false
   xy: 342, 274
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 1
-magmaSlime/idle_right
+  index: 7
+greenSlime/death_right
   rotate: false
   xy: 206, 70
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 2
-magmaSlime/idle_right
+  index: 8
+greenSlime/death_right
   rotate: false
   xy: 410, 274
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 3
-magmaSlime/idle_right
+  index: 9
+greenSlime/death_up
   rotate: false
   xy: 342, 138
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 4
-magmaSlime/idle_right
+  index: 0
+greenSlime/death_up
   rotate: false
   xy: 342, 70
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 5
-magmaSlime/idle_up
+  index: 1
+greenSlime/death_up
   rotate: false
   xy: 410, 70
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 0
-undeadSlime/idle_down
+  index: 2
+magmaSlime/death_left
   rotate: false
   xy: 2, 410
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 2
-undeadSlime/idle_down
+  index: 6
+magmaSlime/death_left
   rotate: false
   xy: 2, 274
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 3
-undeadSlime/idle_down
+  index: 7
+magmaSlime/death_left
   rotate: false
   xy: 2, 206
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 4
-undeadSlime/idle_down
+  index: 8
+magmaSlime/death_left
   rotate: false
   xy: 206, 410
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 5
-undeadSlime/idle_left
+  index: 9
+magmaSlime/death_right
   rotate: false
   xy: 138, 274
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
   index: 0
-undeadSlime/idle_left
+magmaSlime/death_right
   rotate: false
   xy: 2, 70
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
   index: 1
-undeadSlime/idle_left
+magmaSlime/death_right
   rotate: false
   xy: 206, 274
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
   index: 2
-undeadSlime/idle_left
+magmaSlime/death_right
   rotate: false
   xy: 2, 2
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
   index: 3
-undeadSlime/idle_left
+magmaSlime/death_right
   rotate: false
   xy: 206, 206
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
   index: 4
-undeadSlime/idle_left
+magmaSlime/death_right
   rotate: false
   xy: 410, 410
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
   index: 5
-undeadSlime/idle_right
+magmaSlime/death_right
   rotate: false
   xy: 206, 138
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 0
-undeadSlime/idle_right
+  index: 6
+magmaSlime/death_right
   rotate: false
   xy: 410, 342
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 1
-undeadSlime/idle_right
+  index: 7
+magmaSlime/death_right
   rotate: false
   xy: 274, 138
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 2
-undeadSlime/idle_right
+  index: 8
+magmaSlime/death_right
   rotate: false
   xy: 206, 2
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 3
-undeadSlime/idle_right
+  index: 9
+magmaSlime/death_up
   rotate: false
   xy: 410, 206
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 4
-undeadSlime/idle_right
+  index: 0
+magmaSlime/death_up
   rotate: false
   xy: 410, 138
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 5
-undeadSlime/idle_up
+  index: 1
+magmaSlime/death_up
   rotate: false
   xy: 410, 2
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
+  index: 2
+undeadSlime/death_left
+  rotate: false
+  xy: 2, 342
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 6
+undeadSlime/death_left
+  rotate: false
+  xy: 70, 342
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 7
+undeadSlime/death_left
+  rotate: false
+  xy: 70, 274
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 8
+undeadSlime/death_left
+  rotate: false
+  xy: 2, 138
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 9
+undeadSlime/death_right
+  rotate: false
+  xy: 206, 342
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
   index: 0
+undeadSlime/death_right
+  rotate: false
+  xy: 70, 138
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 1
+undeadSlime/death_right
+  rotate: false
+  xy: 274, 342
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 2
+undeadSlime/death_right
+  rotate: false
+  xy: 70, 70
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 3
+undeadSlime/death_right
+  rotate: false
+  xy: 274, 274
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 4
+undeadSlime/death_right
+  rotate: false
+  xy: 70, 2
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 5
+undeadSlime/death_right
+  rotate: false
+  xy: 274, 206
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 6
+undeadSlime/death_right
+  rotate: false
+  xy: 138, 2
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 7
+undeadSlime/death_right
+  rotate: false
+  xy: 342, 206
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 8
+undeadSlime/death_right
+  rotate: false
+  xy: 274, 70
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 9
+undeadSlime/death_up
+  rotate: false
+  xy: 274, 2
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 0
+undeadSlime/death_up
+  rotate: false
+  xy: 342, 2
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 1
 
 objects16.png
 size: 512, 512
 format: RGBA8888
 filter: Nearest, Nearest
 repeat: none
-greenSlime/idle_up
-  rotate: false
-  xy: 2, 410
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 1
-greenSlime/idle_up
-  rotate: false
-  xy: 2, 274
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 2
-greenSlime/idle_up
-  rotate: false
-  xy: 2, 206
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 3
-greenSlime/idle_up
-  rotate: false
-  xy: 206, 410
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 4
-greenSlime/idle_up
-  rotate: false
-  xy: 138, 274
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 5
-greenSlime/walk_down
-  rotate: false
-  xy: 2, 70
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 0
-greenSlime/walk_down
-  rotate: false
-  xy: 206, 274
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 1
-greenSlime/walk_down
-  rotate: false
-  xy: 2, 2
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 2
-greenSlime/walk_down
-  rotate: false
-  xy: 206, 206
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 3
-greenSlime/walk_down
-  rotate: false
-  xy: 410, 410
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 4
-greenSlime/walk_down
-  rotate: false
-  xy: 206, 138
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 5
-greenSlime/walk_down
-  rotate: false
-  xy: 410, 342
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 6
-greenSlime/walk_down
-  rotate: false
-  xy: 274, 138
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 7
-greenSlime/walk_left
-  rotate: false
-  xy: 206, 2
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 0
-greenSlime/walk_left
-  rotate: false
-  xy: 410, 206
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 1
-greenSlime/walk_left
-  rotate: false
-  xy: 410, 138
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 2
-greenSlime/walk_left
-  rotate: false
-  xy: 410, 2
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 3
-magmaSlime/idle_up
+greenSlime/death_up
   rotate: false
   xy: 2, 342
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 1
-magmaSlime/idle_up
+  index: 3
+greenSlime/death_up
   rotate: false
   xy: 70, 342
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 2
-magmaSlime/idle_up
+  index: 4
+greenSlime/death_up
   rotate: false
   xy: 70, 274
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 3
-magmaSlime/idle_up
+  index: 5
+greenSlime/death_up
   rotate: false
   xy: 2, 138
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 4
-magmaSlime/idle_up
+  index: 6
+greenSlime/death_up
   rotate: false
   xy: 206, 342
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 5
-magmaSlime/walk_down
+  index: 7
+greenSlime/death_up
   rotate: false
   xy: 70, 138
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 0
-magmaSlime/walk_down
+  index: 8
+greenSlime/death_up
   rotate: false
   xy: 274, 342
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 1
-magmaSlime/walk_down
+  index: 9
+greenSlime/enemy_attack_down
   rotate: false
   xy: 70, 70
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 2
-magmaSlime/walk_down
+  index: 0
+greenSlime/enemy_attack_down
   rotate: false
   xy: 274, 274
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 3
-magmaSlime/walk_down
+  index: 1
+greenSlime/enemy_attack_down
   rotate: false
   xy: 70, 2
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 4
-magmaSlime/walk_down
+  index: 2
+greenSlime/enemy_attack_down
   rotate: false
   xy: 274, 206
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 5
-magmaSlime/walk_down
+  index: 3
+greenSlime/enemy_attack_down
   rotate: false
   xy: 138, 2
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 6
-magmaSlime/walk_down
+  index: 4
+greenSlime/enemy_attack_down
   rotate: false
   xy: 342, 206
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 7
-magmaSlime/walk_left
+  index: 5
+greenSlime/enemy_attack_down
   rotate: false
   xy: 274, 70
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 0
-magmaSlime/walk_left
+  index: 6
+greenSlime/enemy_attack_down
   rotate: false
   xy: 274, 2
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 1
-magmaSlime/walk_left
+  index: 7
+greenSlime/enemy_attack_down
   rotate: false
   xy: 342, 2
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 2
-undeadSlime/idle_up
+  index: 8
+magmaSlime/death_up
   rotate: false
   xy: 70, 410
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 1
-undeadSlime/idle_up
+  index: 3
+magmaSlime/death_up
   rotate: false
   xy: 138, 410
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 2
-undeadSlime/idle_up
+  index: 4
+magmaSlime/death_up
   rotate: false
   xy: 138, 342
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 3
-undeadSlime/idle_up
+  index: 5
+magmaSlime/death_up
   rotate: false
   xy: 70, 206
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 4
-undeadSlime/idle_up
+  index: 6
+magmaSlime/death_up
   rotate: false
   xy: 274, 410
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 5
-undeadSlime/walk_down
+  index: 7
+magmaSlime/death_up
   rotate: false
   xy: 138, 206
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 0
-undeadSlime/walk_down
+  index: 8
+magmaSlime/death_up
   rotate: false
   xy: 342, 410
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 1
-undeadSlime/walk_down
+  index: 9
+magmaSlime/enemy_attack_down
   rotate: false
   xy: 138, 138
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 2
-undeadSlime/walk_down
+  index: 0
+magmaSlime/enemy_attack_down
   rotate: false
   xy: 342, 342
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 3
-undeadSlime/walk_down
+  index: 1
+magmaSlime/enemy_attack_down
   rotate: false
   xy: 138, 70
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 4
-undeadSlime/walk_down
+  index: 2
+magmaSlime/enemy_attack_down
   rotate: false
   xy: 342, 274
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 5
-undeadSlime/walk_down
+  index: 3
+magmaSlime/enemy_attack_down
   rotate: false
   xy: 206, 70
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 6
-undeadSlime/walk_down
+  index: 4
+magmaSlime/enemy_attack_down
   rotate: false
   xy: 410, 274
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 7
-undeadSlime/walk_left
+  index: 5
+magmaSlime/enemy_attack_down
   rotate: false
   xy: 342, 138
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 0
-undeadSlime/walk_left
+  index: 6
+magmaSlime/enemy_attack_down
   rotate: false
   xy: 342, 70
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 1
-undeadSlime/walk_left
+  index: 7
+magmaSlime/enemy_attack_down
   rotate: false
   xy: 410, 70
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
+  index: 8
+undeadSlime/death_up
+  rotate: false
+  xy: 2, 410
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
   index: 2
+undeadSlime/death_up
+  rotate: false
+  xy: 2, 274
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 3
+undeadSlime/death_up
+  rotate: false
+  xy: 2, 206
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 4
+undeadSlime/death_up
+  rotate: false
+  xy: 206, 410
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 5
+undeadSlime/death_up
+  rotate: false
+  xy: 138, 274
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 6
+undeadSlime/death_up
+  rotate: false
+  xy: 2, 70
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 7
+undeadSlime/death_up
+  rotate: false
+  xy: 206, 274
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 8
+undeadSlime/death_up
+  rotate: false
+  xy: 2, 2
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 9
+undeadSlime/enemy_attack_down
+  rotate: false
+  xy: 206, 206
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 0
+undeadSlime/enemy_attack_down
+  rotate: false
+  xy: 410, 410
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 1
+undeadSlime/enemy_attack_down
+  rotate: false
+  xy: 206, 138
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 2
+undeadSlime/enemy_attack_down
+  rotate: false
+  xy: 410, 342
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 3
+undeadSlime/enemy_attack_down
+  rotate: false
+  xy: 274, 138
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 4
+undeadSlime/enemy_attack_down
+  rotate: false
+  xy: 206, 2
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 5
+undeadSlime/enemy_attack_down
+  rotate: false
+  xy: 410, 206
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 6
+undeadSlime/enemy_attack_down
+  rotate: false
+  xy: 410, 138
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 7
+undeadSlime/enemy_attack_down
+  rotate: false
+  xy: 410, 2
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 8
 
 objects17.png
 size: 512, 512
 format: RGBA8888
 filter: Nearest, Nearest
 repeat: none
-greenSlime/walk_left
+greenSlime/enemy_attack_down
+  rotate: false
+  xy: 2, 410
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 9
+greenSlime/enemy_attack_left
+  rotate: false
+  xy: 2, 274
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 0
+greenSlime/enemy_attack_left
+  rotate: false
+  xy: 2, 206
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 1
+greenSlime/enemy_attack_left
+  rotate: false
+  xy: 206, 410
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 2
+greenSlime/enemy_attack_left
+  rotate: false
+  xy: 138, 274
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 3
+greenSlime/enemy_attack_left
+  rotate: false
+  xy: 2, 70
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 4
+greenSlime/enemy_attack_left
+  rotate: false
+  xy: 206, 274
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 5
+greenSlime/enemy_attack_left
+  rotate: false
+  xy: 2, 2
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 6
+greenSlime/enemy_attack_left
+  rotate: false
+  xy: 206, 206
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 7
+greenSlime/enemy_attack_left
+  rotate: false
+  xy: 410, 410
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 8
+greenSlime/enemy_attack_left
+  rotate: false
+  xy: 206, 138
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 9
+greenSlime/enemy_attack_right
+  rotate: false
+  xy: 410, 342
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 0
+greenSlime/enemy_attack_right
+  rotate: false
+  xy: 274, 138
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 1
+greenSlime/enemy_attack_right
+  rotate: false
+  xy: 206, 2
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 2
+greenSlime/enemy_attack_right
+  rotate: false
+  xy: 410, 206
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 3
+greenSlime/enemy_attack_right
+  rotate: false
+  xy: 410, 138
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 4
+greenSlime/enemy_attack_right
+  rotate: false
+  xy: 410, 2
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 5
+magmaSlime/enemy_attack_left
+  rotate: false
+  xy: 70, 342
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 0
+magmaSlime/enemy_attack_left
+  rotate: false
+  xy: 70, 274
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 1
+magmaSlime/enemy_attack_left
+  rotate: false
+  xy: 2, 138
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 2
+magmaSlime/enemy_attack_left
+  rotate: false
+  xy: 206, 342
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 3
+magmaSlime/enemy_attack_left
+  rotate: false
+  xy: 70, 138
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 4
+magmaSlime/enemy_attack_left
+  rotate: false
+  xy: 274, 342
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 5
+magmaSlime/enemy_attack_left
+  rotate: false
+  xy: 70, 70
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 6
+magmaSlime/enemy_attack_left
+  rotate: false
+  xy: 274, 274
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 7
+magmaSlime/enemy_attack_left
+  rotate: false
+  xy: 70, 2
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 8
+magmaSlime/enemy_attack_right
+  rotate: false
+  xy: 138, 2
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 0
+magmaSlime/enemy_attack_right
+  rotate: false
+  xy: 342, 206
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 1
+magmaSlime/enemy_attack_right
+  rotate: false
+  xy: 274, 70
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 2
+magmaSlime/enemy_attack_right
+  rotate: false
+  xy: 274, 2
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 3
+magmaSlime/enemy_attack_right
+  rotate: false
+  xy: 342, 2
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 4
+undeadSlime/enemy_attack_down
+  rotate: false
+  xy: 2, 342
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 9
+undeadSlime/enemy_attack_down
   rotate: false
   xy: 70, 410
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 4
-greenSlime/walk_left
+  index: 10
+undeadSlime/enemy_attack_left
   rotate: false
   xy: 138, 410
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 5
-greenSlime/walk_left
+  index: 0
+undeadSlime/enemy_attack_left
   rotate: false
   xy: 138, 342
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 6
-greenSlime/walk_left
+  index: 1
+undeadSlime/enemy_attack_left
   rotate: false
   xy: 70, 206
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
+  index: 2
+undeadSlime/enemy_attack_left
+  rotate: false
+  xy: 274, 410
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 3
+undeadSlime/enemy_attack_left
+  rotate: false
+  xy: 138, 206
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 4
+undeadSlime/enemy_attack_left
+  rotate: false
+  xy: 342, 410
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 5
+undeadSlime/enemy_attack_left
+  rotate: false
+  xy: 138, 138
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 6
+undeadSlime/enemy_attack_left
+  rotate: false
+  xy: 342, 342
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
   index: 7
-greenSlime/walk_right
+undeadSlime/enemy_attack_left
+  rotate: false
+  xy: 138, 70
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 8
+undeadSlime/enemy_attack_left
+  rotate: false
+  xy: 274, 206
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 9
+undeadSlime/enemy_attack_left
+  rotate: false
+  xy: 342, 274
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 10
+undeadSlime/enemy_attack_right
+  rotate: false
+  xy: 206, 70
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 0
+undeadSlime/enemy_attack_right
+  rotate: false
+  xy: 410, 274
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 1
+undeadSlime/enemy_attack_right
+  rotate: false
+  xy: 342, 138
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 2
+undeadSlime/enemy_attack_right
+  rotate: false
+  xy: 342, 70
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 3
+undeadSlime/enemy_attack_right
+  rotate: false
+  xy: 410, 70
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 4
+
+objects18.png
+size: 512, 512
+format: RGBA8888
+filter: Nearest, Nearest
+repeat: none
+greenSlime/enemy_attack_right
+  rotate: false
+  xy: 70, 410
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 6
+greenSlime/enemy_attack_right
+  rotate: false
+  xy: 138, 410
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 7
+greenSlime/enemy_attack_right
+  rotate: false
+  xy: 138, 342
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 8
+greenSlime/enemy_attack_right
+  rotate: false
+  xy: 70, 206
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 9
+greenSlime/enemy_attack_up
   rotate: false
   xy: 274, 410
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
   index: 0
-greenSlime/walk_right
+greenSlime/enemy_attack_up
   rotate: false
   xy: 138, 206
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
   index: 1
-greenSlime/walk_right
+greenSlime/enemy_attack_up
   rotate: false
   xy: 342, 410
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
   index: 2
-greenSlime/walk_right
+greenSlime/enemy_attack_up
   rotate: false
   xy: 138, 138
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
   index: 3
-greenSlime/walk_right
+greenSlime/enemy_attack_up
   rotate: false
   xy: 342, 342
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
   index: 4
-greenSlime/walk_right
+greenSlime/enemy_attack_up
   rotate: false
   xy: 138, 70
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
   index: 5
-greenSlime/walk_right
+greenSlime/enemy_attack_up
   rotate: false
   xy: 342, 274
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
   index: 6
-greenSlime/walk_right
+greenSlime/enemy_attack_up
   rotate: false
   xy: 206, 70
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
   index: 7
-greenSlime/walk_up
+greenSlime/enemy_attack_up
   rotate: false
   xy: 410, 274
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 0
-greenSlime/walk_up
+  index: 8
+greenSlime/enemy_attack_up
   rotate: false
   xy: 342, 138
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 1
-greenSlime/walk_up
+  index: 9
+greenSlime/hurt_down
   rotate: false
   xy: 342, 70
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 2
-greenSlime/walk_up
+  index: 0
+greenSlime/hurt_down
   rotate: false
   xy: 410, 70
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 3
-magmaSlime/walk_left
+  index: 1
+magmaSlime/enemy_attack_right
   rotate: false
   xy: 2, 410
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 3
-magmaSlime/walk_left
+  index: 5
+magmaSlime/enemy_attack_right
   rotate: false
   xy: 2, 274
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 4
-magmaSlime/walk_left
+  index: 6
+magmaSlime/enemy_attack_right
   rotate: false
   xy: 2, 206
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 5
-magmaSlime/walk_left
+  index: 7
+magmaSlime/enemy_attack_right
   rotate: false
   xy: 206, 410
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 6
-magmaSlime/walk_left
-  rotate: false
-  xy: 138, 274
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 7
-magmaSlime/walk_right
+  index: 8
+magmaSlime/enemy_attack_up
   rotate: false
   xy: 2, 70
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
   index: 0
-magmaSlime/walk_right
+magmaSlime/enemy_attack_up
   rotate: false
   xy: 206, 274
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
   index: 1
-magmaSlime/walk_right
+magmaSlime/enemy_attack_up
   rotate: false
   xy: 2, 2
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
   index: 2
-magmaSlime/walk_right
+magmaSlime/enemy_attack_up
   rotate: false
   xy: 206, 206
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
   index: 3
-magmaSlime/walk_right
+magmaSlime/enemy_attack_up
   rotate: false
   xy: 410, 410
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
   index: 4
-magmaSlime/walk_right
+magmaSlime/enemy_attack_up
   rotate: false
   xy: 206, 138
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
   index: 5
-magmaSlime/walk_right
+magmaSlime/enemy_attack_up
   rotate: false
   xy: 410, 342
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
   index: 6
-magmaSlime/walk_right
+magmaSlime/enemy_attack_up
   rotate: false
   xy: 274, 138
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
   index: 7
-magmaSlime/walk_up
+magmaSlime/enemy_attack_up
   rotate: false
   xy: 206, 2
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 0
-magmaSlime/walk_up
-  rotate: false
-  xy: 410, 206
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: 1
-magmaSlime/walk_up
+  index: 8
+magmaSlime/hurt_down
   rotate: false
   xy: 410, 138
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 2
-magmaSlime/walk_up
+  index: 0
+magmaSlime/hurt_down
   rotate: false
   xy: 410, 2
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 3
-undeadSlime/walk_left
+  index: 1
+undeadSlime/enemy_attack_right
   rotate: false
   xy: 2, 342
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 3
-undeadSlime/walk_left
+  index: 5
+undeadSlime/enemy_attack_right
   rotate: false
   xy: 70, 342
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 4
-undeadSlime/walk_left
+  index: 6
+undeadSlime/enemy_attack_right
   rotate: false
   xy: 70, 274
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 5
-undeadSlime/walk_left
+  index: 7
+undeadSlime/enemy_attack_right
   rotate: false
   xy: 2, 138
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 6
-undeadSlime/walk_left
+  index: 8
+undeadSlime/enemy_attack_right
+  rotate: false
+  xy: 138, 274
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 9
+undeadSlime/enemy_attack_right
   rotate: false
   xy: 206, 342
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
-  index: 7
-undeadSlime/walk_right
+  index: 10
+undeadSlime/enemy_attack_up
   rotate: false
   xy: 70, 138
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
   index: 0
-undeadSlime/walk_right
+undeadSlime/enemy_attack_up
   rotate: false
   xy: 274, 342
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
   index: 1
-undeadSlime/walk_right
+undeadSlime/enemy_attack_up
   rotate: false
   xy: 70, 70
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
   index: 2
-undeadSlime/walk_right
+undeadSlime/enemy_attack_up
   rotate: false
   xy: 274, 274
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
   index: 3
-undeadSlime/walk_right
+undeadSlime/enemy_attack_up
   rotate: false
   xy: 70, 2
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
   index: 4
-undeadSlime/walk_right
+undeadSlime/enemy_attack_up
   rotate: false
   xy: 274, 206
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
   index: 5
-undeadSlime/walk_right
+undeadSlime/enemy_attack_up
   rotate: false
   xy: 138, 2
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
   index: 6
-undeadSlime/walk_right
+undeadSlime/enemy_attack_up
   rotate: false
   xy: 342, 206
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
   index: 7
-undeadSlime/walk_up
+undeadSlime/enemy_attack_up
+  rotate: false
+  xy: 274, 70
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 8
+undeadSlime/enemy_attack_up
+  rotate: false
+  xy: 410, 206
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 9
+undeadSlime/enemy_attack_up
+  rotate: false
+  xy: 274, 2
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 10
+undeadSlime/hurt_down
+  rotate: false
+  xy: 342, 2
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 0
+
+objects19.png
+size: 512, 512
+format: RGBA8888
+filter: Nearest, Nearest
+repeat: none
+greenSlime/hurt_down
+  rotate: false
+  xy: 2, 342
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 2
+greenSlime/hurt_down
+  rotate: false
+  xy: 70, 342
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 3
+greenSlime/hurt_down
+  rotate: false
+  xy: 70, 274
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 4
+greenSlime/hurt_left
+  rotate: false
+  xy: 2, 138
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 0
+greenSlime/hurt_left
+  rotate: false
+  xy: 206, 342
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 1
+greenSlime/hurt_left
+  rotate: false
+  xy: 70, 138
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 2
+greenSlime/hurt_left
+  rotate: false
+  xy: 274, 342
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 3
+greenSlime/hurt_left
+  rotate: false
+  xy: 70, 70
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 4
+greenSlime/hurt_right
+  rotate: false
+  xy: 274, 274
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 0
+greenSlime/hurt_right
+  rotate: false
+  xy: 70, 2
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 1
+greenSlime/hurt_right
+  rotate: false
+  xy: 274, 206
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 2
+greenSlime/hurt_right
+  rotate: false
+  xy: 138, 2
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 3
+greenSlime/hurt_right
+  rotate: false
+  xy: 342, 206
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 4
+greenSlime/hurt_up
   rotate: false
   xy: 274, 70
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
   index: 0
-undeadSlime/walk_up
+greenSlime/hurt_up
   rotate: false
   xy: 274, 2
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
   index: 1
-undeadSlime/walk_up
+greenSlime/hurt_up
   rotate: false
   xy: 342, 2
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
   index: 2
+magmaSlime/hurt_down
+  rotate: false
+  xy: 70, 410
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 2
+magmaSlime/hurt_down
+  rotate: false
+  xy: 138, 410
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 3
+magmaSlime/hurt_down
+  rotate: false
+  xy: 138, 342
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 4
+magmaSlime/hurt_left
+  rotate: false
+  xy: 70, 206
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 0
+magmaSlime/hurt_left
+  rotate: false
+  xy: 274, 410
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 1
+magmaSlime/hurt_left
+  rotate: false
+  xy: 138, 206
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 2
+magmaSlime/hurt_left
+  rotate: false
+  xy: 342, 410
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 3
+magmaSlime/hurt_left
+  rotate: false
+  xy: 138, 138
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 4
+magmaSlime/hurt_right
+  rotate: false
+  xy: 342, 342
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 0
+magmaSlime/hurt_right
+  rotate: false
+  xy: 138, 70
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 1
+magmaSlime/hurt_right
+  rotate: false
+  xy: 342, 274
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 2
+magmaSlime/hurt_right
+  rotate: false
+  xy: 206, 70
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 3
+magmaSlime/hurt_right
+  rotate: false
+  xy: 410, 274
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 4
+magmaSlime/hurt_up
+  rotate: false
+  xy: 342, 138
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 0
+magmaSlime/hurt_up
+  rotate: false
+  xy: 342, 70
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 1
+magmaSlime/hurt_up
+  rotate: false
+  xy: 410, 70
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 2
+undeadSlime/hurt_down
+  rotate: false
+  xy: 2, 410
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 1
+undeadSlime/hurt_down
+  rotate: false
+  xy: 2, 274
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 2
+undeadSlime/hurt_down
+  rotate: false
+  xy: 2, 206
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 3
+undeadSlime/hurt_down
+  rotate: false
+  xy: 206, 410
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 4
+undeadSlime/hurt_left
+  rotate: false
+  xy: 138, 274
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 0
+undeadSlime/hurt_left
+  rotate: false
+  xy: 2, 70
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 1
+undeadSlime/hurt_left
+  rotate: false
+  xy: 206, 274
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 2
+undeadSlime/hurt_left
+  rotate: false
+  xy: 2, 2
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 3
+undeadSlime/hurt_left
+  rotate: false
+  xy: 206, 206
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 4
+undeadSlime/hurt_right
+  rotate: false
+  xy: 410, 410
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 0
+undeadSlime/hurt_right
+  rotate: false
+  xy: 206, 138
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 1
+undeadSlime/hurt_right
+  rotate: false
+  xy: 410, 342
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 2
+undeadSlime/hurt_right
+  rotate: false
+  xy: 274, 138
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 3
+undeadSlime/hurt_right
+  rotate: false
+  xy: 206, 2
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 4
+undeadSlime/hurt_up
+  rotate: false
+  xy: 410, 206
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 0
+undeadSlime/hurt_up
+  rotate: false
+  xy: 410, 138
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 1
+undeadSlime/hurt_up
+  rotate: false
+  xy: 410, 2
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 2
 
-objects18.png
-size: 512, 256
+objects20.png
+size: 512, 512
 format: RGBA8888
 filter: Nearest, Nearest
 repeat: none
+greenSlime/hurt_up
+  rotate: false
+  xy: 2, 410
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 3
+greenSlime/hurt_up
+  rotate: false
+  xy: 2, 274
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 4
+greenSlime/idle_down
+  rotate: false
+  xy: 2, 206
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 0
+greenSlime/idle_down
+  rotate: false
+  xy: 206, 410
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 1
+greenSlime/idle_down
+  rotate: false
+  xy: 138, 274
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 2
+greenSlime/idle_down
+  rotate: false
+  xy: 2, 70
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 3
+greenSlime/idle_down
+  rotate: false
+  xy: 206, 274
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 4
+greenSlime/idle_down
+  rotate: false
+  xy: 2, 2
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 5
+greenSlime/idle_left
+  rotate: false
+  xy: 206, 206
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 0
+greenSlime/idle_left
+  rotate: false
+  xy: 410, 410
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 1
+greenSlime/idle_left
+  rotate: false
+  xy: 206, 138
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 2
+greenSlime/idle_left
+  rotate: false
+  xy: 410, 342
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 3
+greenSlime/idle_left
+  rotate: false
+  xy: 274, 138
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 4
+greenSlime/idle_left
+  rotate: false
+  xy: 206, 2
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 5
+greenSlime/idle_right
+  rotate: false
+  xy: 410, 206
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 0
+greenSlime/idle_right
+  rotate: false
+  xy: 410, 138
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 1
+greenSlime/idle_right
+  rotate: false
+  xy: 410, 2
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 2
+magmaSlime/hurt_up
+  rotate: false
+  xy: 2, 342
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 3
+magmaSlime/hurt_up
+  rotate: false
+  xy: 70, 342
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 4
+magmaSlime/idle_down
+  rotate: false
+  xy: 70, 274
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 0
+magmaSlime/idle_down
+  rotate: false
+  xy: 2, 138
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 1
+magmaSlime/idle_down
+  rotate: false
+  xy: 206, 342
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 2
+magmaSlime/idle_down
+  rotate: false
+  xy: 70, 138
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 3
+magmaSlime/idle_down
+  rotate: false
+  xy: 274, 342
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 4
+magmaSlime/idle_down
+  rotate: false
+  xy: 70, 70
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 5
+magmaSlime/idle_left
+  rotate: false
+  xy: 274, 274
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 0
+magmaSlime/idle_left
+  rotate: false
+  xy: 70, 2
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 1
+magmaSlime/idle_left
+  rotate: false
+  xy: 274, 206
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 2
+magmaSlime/idle_left
+  rotate: false
+  xy: 138, 2
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 3
+magmaSlime/idle_left
+  rotate: false
+  xy: 342, 206
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 4
+magmaSlime/idle_left
+  rotate: false
+  xy: 274, 70
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 5
+magmaSlime/idle_right
+  rotate: false
+  xy: 274, 2
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 0
+magmaSlime/idle_right
+  rotate: false
+  xy: 342, 2
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 1
+undeadSlime/hurt_up
+  rotate: false
+  xy: 70, 410
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 3
+undeadSlime/hurt_up
+  rotate: false
+  xy: 138, 410
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 4
+undeadSlime/idle_down
+  rotate: false
+  xy: 138, 342
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 0
+undeadSlime/idle_down
+  rotate: false
+  xy: 70, 206
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 1
+undeadSlime/idle_down
+  rotate: false
+  xy: 274, 410
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 2
+undeadSlime/idle_down
+  rotate: false
+  xy: 138, 206
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 3
+undeadSlime/idle_down
+  rotate: false
+  xy: 342, 410
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 4
+undeadSlime/idle_down
+  rotate: false
+  xy: 138, 138
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 5
+undeadSlime/idle_left
+  rotate: false
+  xy: 342, 342
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 0
+undeadSlime/idle_left
+  rotate: false
+  xy: 138, 70
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 1
+undeadSlime/idle_left
+  rotate: false
+  xy: 342, 274
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 2
+undeadSlime/idle_left
+  rotate: false
+  xy: 206, 70
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 3
+undeadSlime/idle_left
+  rotate: false
+  xy: 410, 274
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 4
+undeadSlime/idle_left
+  rotate: false
+  xy: 342, 138
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 5
+undeadSlime/idle_right
+  rotate: false
+  xy: 342, 70
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 0
+undeadSlime/idle_right
+  rotate: false
+  xy: 410, 70
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 1
+
+objects21.png
+size: 512, 512
+format: RGBA8888
+filter: Nearest, Nearest
+repeat: none
+greenSlime/idle_right
+  rotate: false
+  xy: 70, 410
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 3
+greenSlime/idle_right
+  rotate: false
+  xy: 138, 410
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 4
+greenSlime/idle_right
+  rotate: false
+  xy: 138, 342
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 5
+greenSlime/idle_up
+  rotate: false
+  xy: 70, 206
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 0
+greenSlime/idle_up
+  rotate: false
+  xy: 274, 410
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 1
+greenSlime/idle_up
+  rotate: false
+  xy: 138, 206
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 2
+greenSlime/idle_up
+  rotate: false
+  xy: 342, 410
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 3
+greenSlime/idle_up
+  rotate: false
+  xy: 138, 138
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 4
+greenSlime/idle_up
+  rotate: false
+  xy: 342, 342
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 5
+greenSlime/walk_down
+  rotate: false
+  xy: 138, 70
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 0
+greenSlime/walk_down
+  rotate: false
+  xy: 342, 274
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 1
+greenSlime/walk_down
+  rotate: false
+  xy: 206, 70
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 2
+greenSlime/walk_down
+  rotate: false
+  xy: 410, 274
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 3
+greenSlime/walk_down
+  rotate: false
+  xy: 342, 138
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 4
+greenSlime/walk_down
+  rotate: false
+  xy: 342, 70
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 5
+greenSlime/walk_down
+  rotate: false
+  xy: 410, 70
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 6
+magmaSlime/idle_right
+  rotate: false
+  xy: 2, 410
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 2
+magmaSlime/idle_right
+  rotate: false
+  xy: 2, 274
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 3
+magmaSlime/idle_right
+  rotate: false
+  xy: 2, 206
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 4
+magmaSlime/idle_right
+  rotate: false
+  xy: 206, 410
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 5
+magmaSlime/idle_up
+  rotate: false
+  xy: 138, 274
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 0
+magmaSlime/idle_up
+  rotate: false
+  xy: 2, 70
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 1
+magmaSlime/idle_up
+  rotate: false
+  xy: 206, 274
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 2
+magmaSlime/idle_up
+  rotate: false
+  xy: 2, 2
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 3
+magmaSlime/idle_up
+  rotate: false
+  xy: 206, 206
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 4
+magmaSlime/idle_up
+  rotate: false
+  xy: 410, 410
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 5
+magmaSlime/walk_down
+  rotate: false
+  xy: 206, 138
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 0
+magmaSlime/walk_down
+  rotate: false
+  xy: 410, 342
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 1
+magmaSlime/walk_down
+  rotate: false
+  xy: 274, 138
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 2
+magmaSlime/walk_down
+  rotate: false
+  xy: 206, 2
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 3
+magmaSlime/walk_down
+  rotate: false
+  xy: 410, 206
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 4
+magmaSlime/walk_down
+  rotate: false
+  xy: 410, 138
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 5
+magmaSlime/walk_down
+  rotate: false
+  xy: 410, 2
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 6
+undeadSlime/idle_right
+  rotate: false
+  xy: 2, 342
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 2
+undeadSlime/idle_right
+  rotate: false
+  xy: 70, 342
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 3
+undeadSlime/idle_right
+  rotate: false
+  xy: 70, 274
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 4
+undeadSlime/idle_right
+  rotate: false
+  xy: 2, 138
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 5
+undeadSlime/idle_up
+  rotate: false
+  xy: 206, 342
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 0
+undeadSlime/idle_up
+  rotate: false
+  xy: 70, 138
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 1
+undeadSlime/idle_up
+  rotate: false
+  xy: 274, 342
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 2
+undeadSlime/idle_up
+  rotate: false
+  xy: 70, 70
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 3
+undeadSlime/idle_up
+  rotate: false
+  xy: 274, 274
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 4
+undeadSlime/idle_up
+  rotate: false
+  xy: 70, 2
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 5
+undeadSlime/walk_down
+  rotate: false
+  xy: 274, 206
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 0
+undeadSlime/walk_down
+  rotate: false
+  xy: 138, 2
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 1
+undeadSlime/walk_down
+  rotate: false
+  xy: 342, 206
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 2
+undeadSlime/walk_down
+  rotate: false
+  xy: 274, 70
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 3
+undeadSlime/walk_down
+  rotate: false
+  xy: 274, 2
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 4
+undeadSlime/walk_down
+  rotate: false
+  xy: 342, 2
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 5
+
+objects22.png
+size: 512, 512
+format: RGBA8888
+filter: Nearest, Nearest
+repeat: none
+greenSlime/walk_down
+  rotate: false
+  xy: 2, 342
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 7
+greenSlime/walk_left
+  rotate: false
+  xy: 70, 342
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 0
+greenSlime/walk_left
+  rotate: false
+  xy: 70, 274
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 1
+greenSlime/walk_left
+  rotate: false
+  xy: 2, 138
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 2
+greenSlime/walk_left
+  rotate: false
+  xy: 206, 342
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 3
+greenSlime/walk_left
+  rotate: false
+  xy: 70, 138
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 4
+greenSlime/walk_left
+  rotate: false
+  xy: 274, 342
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 5
+greenSlime/walk_left
+  rotate: false
+  xy: 70, 70
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 6
+greenSlime/walk_left
+  rotate: false
+  xy: 274, 274
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 7
+greenSlime/walk_right
+  rotate: false
+  xy: 70, 2
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 0
+greenSlime/walk_right
+  rotate: false
+  xy: 274, 206
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 1
+greenSlime/walk_right
+  rotate: false
+  xy: 138, 2
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 2
+greenSlime/walk_right
+  rotate: false
+  xy: 342, 206
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 3
+greenSlime/walk_right
+  rotate: false
+  xy: 274, 70
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 4
+greenSlime/walk_right
+  rotate: false
+  xy: 274, 2
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 5
+greenSlime/walk_right
+  rotate: false
+  xy: 342, 2
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 6
+magmaSlime/walk_down
+  rotate: false
+  xy: 70, 410
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 7
+magmaSlime/walk_left
+  rotate: false
+  xy: 138, 410
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 0
+magmaSlime/walk_left
+  rotate: false
+  xy: 138, 342
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 1
+magmaSlime/walk_left
+  rotate: false
+  xy: 70, 206
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 2
+magmaSlime/walk_left
+  rotate: false
+  xy: 274, 410
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 3
+magmaSlime/walk_left
+  rotate: false
+  xy: 138, 206
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 4
+magmaSlime/walk_left
+  rotate: false
+  xy: 342, 410
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 5
+magmaSlime/walk_left
+  rotate: false
+  xy: 138, 138
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 6
+magmaSlime/walk_left
+  rotate: false
+  xy: 342, 342
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 7
+magmaSlime/walk_right
+  rotate: false
+  xy: 138, 70
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 0
+magmaSlime/walk_right
+  rotate: false
+  xy: 342, 274
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 1
+magmaSlime/walk_right
+  rotate: false
+  xy: 206, 70
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 2
+magmaSlime/walk_right
+  rotate: false
+  xy: 410, 274
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 3
+magmaSlime/walk_right
+  rotate: false
+  xy: 342, 138
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 4
+magmaSlime/walk_right
+  rotate: false
+  xy: 342, 70
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 5
+magmaSlime/walk_right
+  rotate: false
+  xy: 410, 70
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 6
+undeadSlime/walk_down
+  rotate: false
+  xy: 2, 410
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 6
+undeadSlime/walk_down
+  rotate: false
+  xy: 2, 274
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 7
+undeadSlime/walk_left
+  rotate: false
+  xy: 2, 206
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 0
+undeadSlime/walk_left
+  rotate: false
+  xy: 206, 410
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 1
+undeadSlime/walk_left
+  rotate: false
+  xy: 138, 274
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 2
+undeadSlime/walk_left
+  rotate: false
+  xy: 2, 70
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 3
+undeadSlime/walk_left
+  rotate: false
+  xy: 206, 274
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 4
+undeadSlime/walk_left
+  rotate: false
+  xy: 2, 2
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 5
+undeadSlime/walk_left
+  rotate: false
+  xy: 206, 206
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 6
+undeadSlime/walk_left
+  rotate: false
+  xy: 410, 410
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 7
+undeadSlime/walk_right
+  rotate: false
+  xy: 206, 138
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 0
+undeadSlime/walk_right
+  rotate: false
+  xy: 410, 342
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 1
+undeadSlime/walk_right
+  rotate: false
+  xy: 274, 138
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 2
+undeadSlime/walk_right
+  rotate: false
+  xy: 206, 2
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 3
+undeadSlime/walk_right
+  rotate: false
+  xy: 410, 206
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 4
+undeadSlime/walk_right
+  rotate: false
+  xy: 410, 138
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 5
+undeadSlime/walk_right
+  rotate: false
+  xy: 410, 2
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 6
+
+objects23.png
+size: 512, 512
+format: RGBA8888
+filter: Nearest, Nearest
+repeat: none
+greenSlime/walk_right
+  rotate: false
+  xy: 2, 410
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 7
+greenSlime/walk_up
+  rotate: false
+  xy: 2, 274
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 0
+greenSlime/walk_up
+  rotate: false
+  xy: 2, 206
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 1
+greenSlime/walk_up
+  rotate: false
+  xy: 206, 410
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 2
+greenSlime/walk_up
+  rotate: false
+  xy: 138, 274
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 3
 greenSlime/walk_up
   rotate: false
   xy: 2, 70
@@ -4861,25 +6508,60 @@ greenSlime/walk_up
   index: 4
 greenSlime/walk_up
   rotate: false
-  xy: 70, 70
+  xy: 206, 274
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
   index: 5
 greenSlime/walk_up
   rotate: false
-  xy: 138, 70
+  xy: 2, 2
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
   index: 6
 greenSlime/walk_up
   rotate: false
-  xy: 206, 70
+  xy: 206, 206
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
   index: 7
+magmaSlime/walk_right
+  rotate: false
+  xy: 2, 342
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 7
+magmaSlime/walk_up
+  rotate: false
+  xy: 70, 342
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 0
+magmaSlime/walk_up
+  rotate: false
+  xy: 70, 274
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 1
+magmaSlime/walk_up
+  rotate: false
+  xy: 2, 138
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 2
+magmaSlime/walk_up
+  rotate: false
+  xy: 206, 342
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 3
 magmaSlime/walk_up
   rotate: false
   xy: 70, 138
@@ -4889,56 +6571,84 @@ magmaSlime/walk_up
   index: 4
 magmaSlime/walk_up
   rotate: false
-  xy: 138, 138
+  xy: 274, 342
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
   index: 5
 magmaSlime/walk_up
   rotate: false
-  xy: 206, 138
+  xy: 70, 70
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
   index: 6
 magmaSlime/walk_up
   rotate: false
-  xy: 274, 138
+  xy: 274, 274
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 7
+undeadSlime/walk_right
+  rotate: false
+  xy: 70, 410
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
   index: 7
 undeadSlime/walk_up
   rotate: false
-  xy: 2, 138
+  xy: 138, 410
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 0
+undeadSlime/walk_up
+  rotate: false
+  xy: 138, 342
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 1
+undeadSlime/walk_up
+  rotate: false
+  xy: 70, 206
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: 2
+undeadSlime/walk_up
+  rotate: false
+  xy: 274, 410
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
   index: 3
 undeadSlime/walk_up
   rotate: false
-  xy: 2, 2
+  xy: 138, 206
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
   index: 4
 undeadSlime/walk_up
   rotate: false
-  xy: 70, 2
+  xy: 342, 410
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
   index: 5
 undeadSlime/walk_up
   rotate: false
-  xy: 138, 2
+  xy: 138, 138
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
   index: 6
 undeadSlime/walk_up
   rotate: false
-  xy: 206, 2
+  xy: 342, 342
   size: 64, 64
   orig: 64, 64
   offset: 0, 0

@@ -3,7 +3,10 @@ package com.github.Jaecuber.Runeguard.screen;
 import java.util.function.Consumer;
 
 import com.badlogic.ashley.core.Engine;
+import com.badlogic.ashley.core.Entity;
 import com.badlogic.ashley.core.EntitySystem;
+import com.badlogic.ashley.core.Family;
+import com.badlogic.ashley.utils.ImmutableArray;
 import com.badlogic.gdx.ScreenAdapter;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.maps.tiled.TiledMap;
@@ -11,6 +14,7 @@ import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.World;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
+import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.Disposable;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
@@ -18,6 +22,7 @@ import com.github.Jaecuber.Runeguard.Launcher;
 import com.github.Jaecuber.Runeguard.asset.MapAsset;
 import com.github.Jaecuber.Runeguard.asset.SkinAsset;
 import com.github.Jaecuber.Runeguard.audio.AudioService;
+import com.github.Jaecuber.Runeguard.component.MapEntity;
 import com.github.Jaecuber.Runeguard.input.GameControllerState;
 import com.github.Jaecuber.Runeguard.input.KeyboardController;
 import com.github.Jaecuber.Runeguard.systems.AnimationSystem;
@@ -35,6 +40,7 @@ import com.github.Jaecuber.Runeguard.systems.PhysicsDebugRenderSystem;
 import com.github.Jaecuber.Runeguard.systems.PhysicsSystem;
 import com.github.Jaecuber.Runeguard.systems.RenderSystem;
 import com.github.Jaecuber.Runeguard.systems.StaminaSystem;
+import com.github.Jaecuber.Runeguard.tiled.EntitySpawner;
 import com.github.Jaecuber.Runeguard.tiled.TiledAshleyConfig;
 import com.github.Jaecuber.Runeguard.tiled.TiledService;
 import com.github.Jaecuber.ui.model.GameViewModel;
@@ -46,6 +52,7 @@ public class GameScreen extends ScreenAdapter {
     private final TiledService tiledService;
     private final TiledAshleyConfig tiledAshleyConfig;
     private final KeyboardController keyboardController;
+    private final EntitySpawner entitySpawner;
     private final Launcher game;
     private final World physicsWorld;
     private final AudioService audioService;
@@ -54,19 +61,23 @@ public class GameScreen extends ScreenAdapter {
     private final GameViewModel viewModel;
     private final Skin skin;
 
-    public GameScreen(Launcher game) {
+    private MapAsset mapAsset;
+
+    public GameScreen(Launcher game, MapAsset mapAsset) {
         this.game = game;
         this.physicsWorld = new World(Vector2.Zero, true);
         this.physicsWorld.setAutoClearForces(false);
-        this.tiledService = new TiledService(game.getAssetService(), this.physicsWorld);
         this.engine = new Engine();
+        this.tiledService = new TiledService(game.getAssetService(), this.physicsWorld);
         this.tiledAshleyConfig = new TiledAshleyConfig(this.engine, game.getAssetService(), physicsWorld);
         this.keyboardController = new KeyboardController(GameControllerState.class, engine);
+        this.entitySpawner = new EntitySpawner(this.tiledAshleyConfig);
         this.audioService = game.getAudioService();
         this.uiViewport = new FitViewport(1500f, 900f);//320 180
         this.stage = new Stage(uiViewport, game.getBatch());
-        this.viewModel = new GameViewModel(game, this.tiledService);
+        this.viewModel = new GameViewModel(game, this.tiledService, this.entitySpawner);
         this.skin = game.getAssetService().get(SkinAsset.DEFAULT);
+        this.mapAsset = mapAsset;
         
         this.engine.addSystem(new ControllerSystem());
         this.engine.addSystem(new PhysicsMoveSystem());
@@ -101,12 +112,25 @@ public class GameScreen extends ScreenAdapter {
         Consumer<TiledMap> renderConsumer = this.engine.getSystem(RenderSystem.class)::setMap;
         Consumer<TiledMap> cameraConsumer = this.engine.getSystem(CameraSystem.class)::setMap;
         Consumer<TiledMap> audioConsumer = audioService::setMap;
+        Consumer<TiledMap> spawnConsumer = map -> entitySpawner.setTileSets(map.getTileSets());
 
-        this.tiledService.setMapChangeConsumer(renderConsumer.andThen(cameraConsumer).andThen(audioConsumer));
+        this.tiledService.setMapChangeConsumer(renderConsumer.andThen(cameraConsumer).andThen(audioConsumer).andThen(spawnConsumer));
         this.tiledService.setLoadObjectConsumer(this.tiledAshleyConfig::onLoadObject);
         this.tiledService.setLoadTileConsumer(this.tiledAshleyConfig::onLoadTile);
 
-        TiledMap tiledMap = this.tiledService.loadMap(MapAsset.MAIN);
+        Family mapFamily = Family.all(MapEntity.class).get();
+            this.tiledService.setMapCleanupRunnable(() -> {
+                ImmutableArray<Entity> entities = engine.getEntitiesFor(mapFamily);
+
+                Array<Entity> toRemove = new Array<>(entities.toArray(Entity.class));
+                for(Entity entity : toRemove){  
+                    engine.removeEntity(entity);
+                }
+
+                engine.update(0f);
+            });
+            
+        TiledMap tiledMap = this.tiledService.loadMap(mapAsset);
         this.tiledService.setMap(tiledMap);
     }
 

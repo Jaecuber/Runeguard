@@ -1,18 +1,119 @@
 {
-    "activeFile": "Player.tsx",
+    "activeFile": "starterArea.tmx",
     "expandedProjectPaths": [
         "."
     ],
     "file.lastUsedOpenFilter": "All Files (*)",
     "fileStates": {
+        "": {
+            "scaleInDock": 1
+        },
         "Buildings.tsx": {
             "dynamicWrapping": false,
             "scaleInDock": 1,
             "scaleInEditor": 2
         },
+        "D:/Downloads/craftpix-net-169442-free-2d-top-down-pixel-dungeon-asset-pack/Tiled_files/Dungeon1.tmx": {
+            "scale": 1,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": -3,
+                "y": 249
+            }
+        },
+        "D:/Downloads/craftpix-net-169442-free-2d-top-down-pixel-dungeon-asset-pack/Tiled_files/Dungeon1.tmx#Objects": {
+            "scaleInDock": 1
+        },
+        "D:/Downloads/craftpix-net-169442-free-2d-top-down-pixel-dungeon-asset-pack/Tiled_files/Dungeon1.tmx#Water_coasts_animation": {
+            "scaleInDock": 1
+        },
+        "D:/Downloads/craftpix-net-169442-free-2d-top-down-pixel-dungeon-asset-pack/Tiled_files/Dungeon1.tmx#Water_coasts_animation_decorative_cracks": {
+            "scaleInDock": 1
+        },
+        "D:/Downloads/craftpix-net-169442-free-2d-top-down-pixel-dungeon-asset-pack/Tiled_files/Dungeon1.tmx#Water_detilazation": {
+            "scaleInDock": 1
+        },
+        "D:/Downloads/craftpix-net-169442-free-2d-top-down-pixel-dungeon-asset-pack/Tiled_files/Dungeon1.tmx#cracked_tiles": {
+            "scaleInDock": 1
+        },
+        "D:/Downloads/craftpix-net-169442-free-2d-top-down-pixel-dungeon-asset-pack/Tiled_files/Dungeon1.tmx#cracked_tiles_floor": {
+            "scaleInDock": 1
+        },
+        "D:/Downloads/craftpix-net-169442-free-2d-top-down-pixel-dungeon-asset-pack/Tiled_files/Dungeon1.tmx#doors_lever_chest_animation": {
+            "scaleInDock": 1
+        },
+        "D:/Downloads/craftpix-net-169442-free-2d-top-down-pixel-dungeon-asset-pack/Tiled_files/Dungeon1.tmx#fire_animation": {
+            "scaleInDock": 1
+        },
+        "D:/Downloads/craftpix-net-169442-free-2d-top-down-pixel-dungeon-asset-pack/Tiled_files/Dungeon1.tmx#fire_animation2": {
+            "scaleInDock": 1
+        },
+        "D:/Downloads/craftpix-net-169442-free-2d-top-down-pixel-dungeon-asset-pack/Tiled_files/Dungeon1.tmx#trap_animation": {
+            "scaleInDock": 1
+        },
+        "D:/Downloads/craftpix-net-169442-free-2d-top-down-pixel-dungeon-asset-pack/Tiled_files/Dungeon1.tmx#walls_floor": {
+            "scaleInDock": 1
+        },
+        "D:/Downloads/craftpix-net-218281-free-pixel-art-dungeon-objects-asset-pack/Tiled_files/Dungeon1_objects.tmx": {
+            "scale": 1.3656249999999999,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 128.14645308924486,
+                "y": 0
+            }
+        },
+        "D:/Downloads/craftpix-net-218281-free-pixel-art-dungeon-objects-asset-pack/Tiled_files/Dungeon1_objects.tmx#Other_objects": {
+            "scaleInDock": 1
+        },
+        "D:/Downloads/craftpix-net-218281-free-pixel-art-dungeon-objects-asset-pack/Tiled_files/Dungeon1_objects.tmx#Suply_objects": {
+            "scaleInDock": 1
+        },
+        "D:/Downloads/craftpix-net-218281-free-pixel-art-dungeon-objects-asset-pack/Tiled_files/Dungeon1_objects.tmx#fire_trap": {
+            "scaleInDock": 1
+        },
+        "D:/Downloads/craftpix-net-218281-free-pixel-art-dungeon-objects-asset-pack/Tiled_files/Dungeon1_objects.tmx#pedestals": {
+            "scaleInDock": 1
+        },
+        "D:/Downloads/craftpix-net-218281-free-pixel-art-dungeon-objects-asset-pack/Tiled_files/Dungeon1_objects.tmx#trap_plate": {
+            "scaleInDock": 1
+        },
+        "D:/Downloads/craftpix-net-218281-free-pixel-art-dungeon-objects-asset-pack/Tiled_files/Dungeon1_objects.tmx#trap_saw": {
+            "scaleInDock": 1
+        },
+        "D:/Downloads/craftpix-net-218281-free-pixel-art-dungeon-objects-asset-pack/Tiled_files/Water_coasts.tsx": {
+            "dynamicWrapping": false
+        },
+        "D:/Downloads/craftpix-net-218281-free-pixel-art-dungeon-objects-asset-pack/Tiled_files/undeadLand.tmx": {
+            "expandedObjectLayers": [
+                5,
+                3
+            ],
+            "scale": 1.5,
+            "selectedLayer": 4,
+            "viewCenter": {
+                "x": 322.33333333333337,
+                "y": 562.6666666666666
+            }
+        },
+        "D:/Projects/Projects/Runeguard/assets/map/Ground_rocks.tsx": {
+            "scaleInDock": 1
+        },
+        "D:/Projects/Projects/Runeguard/assets/map/Player.tsx": {
+            "scaleInDock": 1
+        },
+        "D:/Projects/Projects/Runeguard/assets/map/UndeadLandObjects.tsx": {
+            "scaleInDock": 1
+        },
+        "Dungeon Floor.tsx": {
+            "dynamicWrapping": false
+        },
+        "Dungeon Walls.tsx": {
+            "dynamicWrapping": false
+        },
         "Enemies.tsx": {
             "dynamicWrapping": true,
-            "scaleInDock": 1
+            "scaleInDock": 1,
+            "scaleInEditor": 1
         },
         "Farmset.tsx": {
             "dynamicWrapping": false,
@@ -23,6 +124,9 @@
             "dynamicWrapping": false,
             "scaleInDock": 1,
             "scaleInEditor": 2
+        },
+        "Ground_rocks.tsx": {
+            "dynamicWrapping": false
         },
         "Hitbox.tsx": {
             "dynamicWrapping": false,
@@ -58,46 +162,91 @@
             "scaleInDock": 1,
             "scaleInEditor": 2
         },
+        "Spawn.tsx": {
+            "dynamicWrapping": false,
+            "scaleInDock": 11,
+            "scaleInEditor": 45
+        },
         "Trees.tsx": {
             "dynamicWrapping": true,
             "scaleInDock": 1,
             "scaleInEditor": 1
+        },
+        "UndeadLandObjects.tsx": {
+            "dynamicWrapping": true,
+            "scaleInDock": 5.5,
+            "scaleInEditor": 4
         },
         "Vegetation.tsx": {
             "dynamicWrapping": false,
             "scaleInDock": 1,
             "scaleInEditor": 2
         },
+        "dungeon.tmx": {
+            "expandedObjectLayers": [
+                2
+            ],
+            "scale": 1.5,
+            "selectedLayer": 3,
+            "viewCenter": {
+                "x": 336.33333333333337,
+                "y": 315.33333333333326
+            }
+        },
         "starterArea.tmx": {
             "expandedObjectLayers": [
                 4
             ],
-            "scale": 3,
-            "selectedLayer": 0,
+            "scale": 1,
+            "selectedLayer": 13,
             "viewCenter": {
-                "x": 427.66666666666663,
-                "y": 1088.3333333333333
+                "x": 274.5,
+                "y": 1182
             }
+        },
+        "starterArea.tmx#Trees": {
+            "scaleInDock": 1
         },
         "testMap.tmx": {
             "expandedObjectLayers": [
                 2
             ],
-            "scale": 1.5,
-            "selectedLayer": 0,
+            "scale": 1,
+            "selectedLayer": 1,
             "viewCenter": {
-                "x": 262,
-                "y": 160.66666666666669
+                "x": 96.5,
+                "y": 10
             }
+        },
+        "undeadLand.tmx": {
+            "expandedObjectLayers": [
+                3
+            ],
+            "scale": 1,
+            "selectedLayer": 3,
+            "viewCenter": {
+                "x": 401.5,
+                "y": 429
+            }
+        },
+        "undeadLandObjects.tsx": {
+            "dynamicWrapping": true
+        },
+        "walls_floor.tsx": {
+            "dynamicWrapping": false
         }
     },
-    "last.imagePath": "D:/Projects/Runeguard/assets_raw/objects/magmaSlime",
+    "last.externalTilesetPath": "D:/Projects/Runeguard/assets/map",
+    "last.imagePath": "D:/Projects/Runeguard/assets_raw/objects/undeadLandAssets",
+    "map.height": 50,
     "map.lastUsedFormat": "tmx",
     "map.layerDataFormat": "3",
     "map.tileHeight": 16,
     "map.tileWidth": 16,
+    "map.width": 50,
     "openFiles": [
         "starterArea.tmx",
+        "testMap.tmx",
         "Farmset.tsx",
         "Buildings.tsx",
         "Furniture.tsx",
@@ -107,24 +256,25 @@
         "Shadows.tsx",
         "Trees.tsx",
         "Vegetation.tsx",
-        "Hitbox.tsx",
-        "Red Fire.tsx"
+        "Red Fire.tsx",
+        "Enemies.tsx",
+        "Spawn.tsx"
     ],
     "project": "tiled.tiled-project",
     "property.type": "string",
     "recentFiles": [
-        "starterArea.tmx",
-        "Farmset.tsx",
-        "Buildings.tsx",
-        "Furniture.tsx",
-        "MainTileset.tsx",
+        "UndeadLandObjects.tsx",
+        "testMap.tmx",
+        "undeadLand.tmx",
+        "D:/Downloads/craftpix-net-218281-free-pixel-art-dungeon-objects-asset-pack/Tiled_files/undeadLand.tmx",
+        "D:/Downloads/craftpix-net-218281-free-pixel-art-dungeon-objects-asset-pack/Tiled_files/Dungeon1_objects.tmx",
+        "D:/Downloads/craftpix-net-169442-free-2d-top-down-pixel-dungeon-asset-pack/Tiled_files/Dungeon1.tmx",
+        "Spawn.tsx",
         "Red Fire.tsx",
-        "Hitbox.tsx",
         "Vegetation.tsx",
         "Trees.tsx",
         "Shadows.tsx",
-        "Rocks.tsx",
-        "Player.tsx"
+        "Rocks.tsx"
     ],
     "tileset.lastUsedFormat": "tsx",
     "tileset.tileSize": {

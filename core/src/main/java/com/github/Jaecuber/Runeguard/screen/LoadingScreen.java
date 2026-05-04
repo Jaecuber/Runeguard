@@ -5,6 +5,7 @@ import com.badlogic.gdx.ScreenAdapter;
 import com.github.Jaecuber.Runeguard.Launcher;
 import com.github.Jaecuber.Runeguard.asset.AssetService;
 import com.github.Jaecuber.Runeguard.asset.AtlasAsset;
+import com.github.Jaecuber.Runeguard.asset.MapAsset;
 import com.github.Jaecuber.Runeguard.asset.SkinAsset;
 import com.github.Jaecuber.Runeguard.asset.SoundAsset;
 
@@ -41,6 +42,6 @@ public class LoadingScreen extends ScreenAdapter{
 
     private void createScreens(){
         this.game.addScreen(new MenuScreen(this.game));
-        this.game.addScreen(new GameScreen(this.game));
+        this.game.addScreen(new GameScreen(this.game, MapAsset.DUNGEON));
     }
 }

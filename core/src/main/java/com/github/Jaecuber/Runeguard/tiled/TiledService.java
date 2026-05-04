@@ -29,6 +29,8 @@ public class TiledService {
     private Consumer<TiledMapTileMapObject> loadObjectConsumer;
     private LoadTileConsumer loadTileConsumer;
 
+    private Runnable mapCleanupRunnable;
+
     public TiledService(AssetService assetService, World physicsWorld){
         this.assetService = assetService;
         this.mapChangeConsumer = null;
@@ -44,9 +46,21 @@ public class TiledService {
         return tiledMap;
     }
 
+    public void setMapCleanupRunnable(Runnable mapCleanupRunnable){
+        this.mapCleanupRunnable = mapCleanupRunnable;
+    }
+
     public void setMap(TiledMap map){
+        if(this.mapChangeConsumer != null){
+            this.mapChangeConsumer.accept(map);
+        }
+        
         if(this.currentMap != null){
             this.assetService.unload(this.currentMap.getProperties().get("mapAsset", MapAsset.class));
+        }
+
+        if(this.mapCleanupRunnable != null){
+            this.mapCleanupRunnable.run();
         }
 
         Array<Body> bodies = new Array<>();
@@ -59,9 +73,6 @@ public class TiledService {
 
         this.currentMap = map;
         loadMapObjects(map);
-        if(this.mapChangeConsumer != null){
-            this.mapChangeConsumer.accept(map);
-        }
     }
 
     private void loadMapObjects(TiledMap tiledMap){

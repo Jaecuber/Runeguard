@@ -2,6 +2,7 @@ package com.github.Jaecuber.ui.model;
 
 import com.badlogic.gdx.Gdx;
 import com.github.Jaecuber.Runeguard.Launcher;
+import com.github.Jaecuber.Runeguard.asset.MapAsset;
 import com.github.Jaecuber.Runeguard.asset.SoundAsset;
 import com.github.Jaecuber.Runeguard.audio.AudioService;
 import com.github.Jaecuber.Runeguard.screen.GameScreen;
@@ -30,7 +31,7 @@ public class MenuViewModel extends ViewModel{
         this.audioService.setSoundVolume(volume);
     }
     public void startGame(){
-        game.setScreen(GameScreen.class);
+        game.setScreen(new GameScreen(game, MapAsset.UNDEAD_LAND));
     }
 
     public void playSound(SoundAsset sound){

@@ -6,7 +6,9 @@ import com.badlogic.gdx.maps.tiled.TmxMapLoader;
 
 public enum MapAsset implements Asset<TiledMap>{
     MAIN("starterArea.tmx"),
-    TEST("testMap.tmx");
+    TEST("testMap.tmx"),
+    DUNGEON("dungeon.tmx"),
+    UNDEAD_LAND("undeadLand.tmx");
 
     private final AssetDescriptor<TiledMap> descriptor;
 

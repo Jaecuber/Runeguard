@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.12.0" orientation="orthogonal" renderorder="right-down" width="40" height="40" tilewidth="16" tileheight="16" infinite="0" nextlayerid="24" nextobjectid="17">
+ <properties>
+  <property name="music" value="TOWN"/>
+ </properties>
+ <tileset firstgid="1" source="RawCliffs.tsx"/>
+ <tileset firstgid="626" source="MainTileset.tsx"/>
+ <tileset firstgid="4676" source="walls_floor.tsx"/>
+ <tileset firstgid="4975" source="Dungeon Floor.tsx"/>
+ <tileset firstgid="5095" source="Player.tsx"/>
+ <tileset firstgid="5104" source="Enemies.tsx"/>
+ <tileset firstgid="5108" source="Dungeon Walls.tsx"/>
+ <layer id="21" name="ground" width="40" height="40">
+  <data encoding="base64" compression="zlib">
+   eJztwwEJAAAMA6BleP8+q7UeR8FeUlVVVVVV1UcHQylMjA==
+  </data>
+ </layer>
+ <layer id="22" name="Walls" width="40" height="40">
+  <data encoding="base64" compression="zlib">
+   eJzt08tqwkAUBuA8Q3Jw5aIP4wVrXXjB2660WuiiKr6yiuhWRbvqOUyGBmmmM8nMicoc+Mkohnz+M+mEQdDx8UlJHdNU5KVg0wAzxBwjcT1FYn2IP48Sv20wuZKmPQTBBNcXXH9H4nqOxHeUDfy6pdWFs55wvYfCQJYFrlWzjO1kXYH4TyPLRmnbgnjWE6hNKit1PA3tGaWNOvuvKxPnGvIbXdjklCF/jz3MDuzb5FCPZOxnsD3H3WU9a7pTzrjPLcyHo96upwRmHdK5Gzs4c2mzNDyHPcbu5HwanMNb970yvBfXQ+/Jm6avy9ydnLb3eZ/3PbzvC1NjNlbweXNNXxEd6nZ3Lz7OPTbdW+4OTbvj7DBrdxzGvDaXRls2F0bbtqRxlsNZie93YfvLWdWwShOHK81aVaQIk4+PrfwAYXh9Vg==
+  </data>
+ </layer>
+ <layer id="23" name="Detail" width="40" height="40">
+  <data encoding="base64" compression="zlib">
+   eJztlusNgyAUhdmBBbpU+7M19Wc7hKM4ChtYH4m1dpgek5IQCorl4SN8CTERhOPl3AuERCLb5kwJudDpdyER17/heZe0iO+W0KrS5GJsSApoeqxQF6eFtudC+o6KdU8riFVPSV6jmY5Pv5pV/+ODN7Q1kj6uoaTk0KHpvr0uHN8K2l4j+nwBjzN4nc39TudH1z5FjWCFoG+YX96rdAW54YJU8W8u5jRhLEeR86QJFGOuY6rWiHHC2CH3f/rgnQT+TtyrVNeaucDXSetJnw45P33X5lB1Yq/IucfzGWdZXhr6T9xjOe62tVPOPQ7OsrzS6DNZE3Oy/o9zyRbTfMCesNqBvqn1xvrlvUS8M3gis9Wkw/ZsgieyzqM+G0LcUV3VvBC1U+WlNdVsUy/t5W4YihivSCSyBT6Qu1b/
+  </data>
+ </layer>
+ <objectgroup id="2" name="objects">
+  <object id="1" name="Player" gid="5103" x="272" y="356" width="96" height="80">
+   <properties>
+    <property name="camFollow" type="bool" value="true"/>
+    <property name="controller" type="bool" value="true"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

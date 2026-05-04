@@ -2,6 +2,7 @@ package com.github.Jaecuber.ui.model;
 
 import java.util.Map;
 
+import com.badlogic.ashley.core.Entity;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.maps.tiled.TiledMap;
 import com.badlogic.gdx.math.MathUtils;
@@ -10,6 +11,8 @@ import com.github.Jaecuber.Runeguard.Launcher;
 import com.github.Jaecuber.Runeguard.asset.MapAsset;
 import com.github.Jaecuber.Runeguard.asset.SoundAsset;
 import com.github.Jaecuber.Runeguard.screen.GameScreen;
+import com.github.Jaecuber.Runeguard.tiled.EntitySpawner;
+import com.github.Jaecuber.Runeguard.tiled.TiledAshleyConfig;
 import com.github.Jaecuber.Runeguard.tiled.TiledService;
 
 public class GameViewModel extends ViewModel{
@@ -27,11 +30,13 @@ public class GameViewModel extends ViewModel{
     private int maxStamina;
     private final Vector2 tempVec2;
     private TiledService tiledService;
+    private EntitySpawner entitySpawner;
 
-    public GameViewModel(Launcher game, TiledService tiledService){
+    public GameViewModel(Launcher game, TiledService tiledService, EntitySpawner entitySpawner){
         super(game);
         this.tempVec2 = new Vector2();
         this.tiledService = tiledService;
+        this.entitySpawner = entitySpawner;
     }
 
     public void updateHealthInfo(float maxHealth, float health){
@@ -46,8 +51,12 @@ public class GameViewModel extends ViewModel{
         this.propertyChangeSupport.firePropertyChange(GAME_OVER, false, true);
     }
 
+    public void spawnEnemy(){
+        entitySpawner.spawnEntity("green_slime", new Vector2(301.75f, 501.75f));
+    }
+
     public void continueGame(){
-        game.setScreen(new GameScreen(game));
+        game.setScreen(new GameScreen(game, MapAsset.MAIN));
         updateHealthInfo(maxHealth, health);
         updateStaminaInfo(maxStamina, maxStamina);
     }

@@ -65,11 +65,8 @@ public class CameraSystem extends IteratingSystem{
         this.mapW = width * tileW * Launcher.UNIT_SCALE;
         this.mapH = height * tileH * Launcher.UNIT_SCALE;
 
-        Entity camEntity = getEntities().first();
-        if(camEntity == null){
-            return;
+        if(getEntities().size() > 0){
+            processEntity(getEntities().first(), 0f);
         }
-
-        processEntity(camEntity, 0f);
     }
 }

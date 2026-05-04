@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.12.0" orientation="orthogonal" renderorder="right-down" width="50" height="50" tilewidth="16" tileheight="16" infinite="0" nextlayerid="6" nextobjectid="251">
+ <properties>
+  <property name="music" value="TOWN"/>
+ </properties>
+ <tileset firstgid="1" source="Ground_rocks.tsx"/>
+ <tileset firstgid="1148" source="Player.tsx"/>
+ <layer id="2" name="Lowground1" width="50" height="50">
+  <data encoding="base64" compression="zlib">
+   eJztwwEJAAAMBKGr9v1LLcdAwVVTVVVVVVVVVVXV5w+3k3rj
+  </data>
+ </layer>
+ <layer id="4" name="Lowground2" width="50" height="50">
+  <data encoding="base64" compression="zlib">
+   eJztziEBAAAIA7ATkf5lkHgMZkuwBAAAAAAAAG66vgcAAABrADPTAFM=
+  </data>
+ </layer>
+ <layer id="1" name="Ground" width="50" height="50">
+  <data encoding="base64" compression="zlib">
+   eJzdmcuTFEUQh3PngBBcERExAg6Adx7KIwIWUDjJTW/Kolc9iZ6E8qCCwkngpMgBAZETSvjgsUQg8rrLQ8W/AnmIhl/OdDoVHZU9PTM1s7NUxBcxtTvTlb/8VXdndosMZ3wKe4vPn0TzfdF3XmmIvNoYfCzl9T+G3bCn+F95LsX3v4YT8A2cTMz1eO8Q/w54F94boJbdTjzH4Hjx+Whpbt+/AlfhGlxPzPV4nxH7fjgABxtt73KMMWhE8abi+QUuF58vlebKeE1OsdC38B2cbrS06bo59tlCWBTFWzemHPxcrJtjn62D9UOOv4zts358GQUd6svpPs//UdBhbICNvcloXmuGfV7k1uF4EZ6AGTA5JuE8nIOZzMdbjNx54ulYAovhDvH/Ab/DhPyvZWTOE73/co8LXL/D1dKxzIst8A/xP4K/ITBf2oMOtAt+Cr4K/sqM1hpZ9peeE9zjwrVEXOrFTngfFjQkPAPz4UvmG7rUoRrwUfBT8FXwVxa31uhbR6fr04vE+gV8DmuIfzWsgvM96MA/CYCfgq+Cv4LPHT3JoeNNln4DqAfDR/AhUC+GjT3o0HjwUfBT8FXwV/BZdnbwJIcOCOy7QD0YvoIjYOfSeA868FHwU/BV8FfwWfBbfXd/V6eOrKODcz9QDwauH+EiROdS1zo0r1r/46vgb7Pux2/13f1dXEd6Q8/x8jVqkFj9j6+Cv826/0SXeejBi+xY/Y+vzfvDpS7yOEo6+uFx0eHVKdNNh1enTDcd3v56XHQM+5o7CB1T4cX3YyI/wI/wE5yBs2PTS4dq+BVuwE24Bbfhtxrayvon+Nv2PnV0m1Ot1WdJS8Nd+AvuwX14AA8dbdafXEjoDxzvg4SOurFV5dSrvbVWf05aGuZwrXwS5sJTMA+ebqS1WX/yZ0K/1syHCx2vweuwTfzY4r7N8uLl1OuHXoLN0tKwDJbDClgJz8MLjjbrT/5N6NeaebLQYXX/LvFji/s2y4uX002Srr3tnFxW0V+ntFl/8myFfh1W9x8SP7a4b7O8eMf0am+9B/fyPM36k7UdfncGzsI58WOL+zbLSzz03cXLsLVV9wR9dp4613M85+xnaN9W9f5F3128BW832s/OUzqsDzJf9Le5nquzTZrvByyfqWMSeyi//7Dv73BirsJ80d/ac/UcGhZJO5/xHt4b9eDl9x/2fXK8rVsd5ov5Zrr2JGK0vrdqLCw0pHJl8aeeZQ0CzZO9yzI9+h7M+l7TktrbqXu55Woqn1GbHn0PZn1v3MPb3ja9dg+cPYUxd4P18La3jxc67B5Y9mS6YPdWuweqJ73WzqOgw+6B6onVUqolV38wLB0SeWK1lGqpWy8OQ5+XU51PSLv/kMITq6VUS916sdwj2Bq5/JysyKnOg7T7DxtWS6mWuvViuUewNby1vV7Gy/edipzqPO4/Ulq8Ua4Xyz2CreGt7fUyXr71mF5OdR73H92M+Dn/2kSPMK+Dn14v4+V7QUV/kHvE2mwNb22vl/HyvWaK6vs6I9XLDCPfuUd5b+YY/wF54Ral
+  </data>
+ </layer>
+ <objectgroup id="3" name="objectDetails"/>
+ <objectgroup id="5" name="objects">
+  <object id="134" name="Player" gid="1156" x="322.667" y="640" width="96" height="80">
+   <properties>
+    <property name="camFollow" type="bool" value="true"/>
+    <property name="controller" type="bool" value="true"/>
+    <property name="damage" type="float" value="3"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

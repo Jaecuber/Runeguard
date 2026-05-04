@@ -51,6 +51,11 @@
                     "value": 0
                 },
                 {
+                    "name": "name",
+                    "type": "string",
+                    "value": ""
+                },
+                {
                     "name": "regen",
                     "type": "float",
                     "value": 0

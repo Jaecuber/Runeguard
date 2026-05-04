@@ -1,23 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="0" nextlayerid="4" nextobjectid="9">
+<map version="1.10" tiledversion="1.12.0" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="0" nextlayerid="4" nextobjectid="11">
  <properties>
   <property name="music" value="TOWN"/>
  </properties>
  <tileset firstgid="1" source="MainTileset.tsx"/>
  <tileset firstgid="4051" source="Player.tsx"/>
  <tileset firstgid="4060" source="Enemies.tsx"/>
+ <tileset firstgid="4064" source="Spawn.tsx"/>
  <layer id="3" name="Tile Layer 1" width="30" height="20">
   <data encoding="base64" compression="zlib">
-   eJztwTEBAAAAwqD1T20JT6AAAHgaCWAAAQ==
+   eJwL52ZgCB/Fo3gUj+JRPIpH8SgexVTDAKMi5bE=
   </data>
  </layer>
  <objectgroup id="2" name="objects">
-  <object id="1" gid="4059" x="167.561" y="203.844" width="96" height="80">
-   <properties>
-    <property name="camFollow" type="bool" value="true"/>
-    <property name="controller" type="bool" value="true"/>
-   </properties>
-  </object>
   <object id="2" gid="4063" x="257.046" y="88.3631" width="64" height="64"/>
   <object id="3" gid="4063" x="401.867" y="197.675" width="64" height="64"/>
   <object id="4" gid="4060" x="26.5812" y="262.664" width="64" height="64">
@@ -26,7 +21,8 @@
    </properties>
   </object>
   <object id="5" gid="4060" x="184.476" y="323.076" width="64" height="64"/>
-  <object id="6" gid="4061" x="99.3501" y="167.469" width="64" height="64"/>
+  <object id="6" gid="4061" x="99.6834" y="173.802" width="64" height="64"/>
   <object id="7" gid="4061" x="335.963" y="297.446" width="64" height="64"/>
+  <object id="10" name="spawn" gid="4064" x="232.667" y="171.667" width="16" height="16.6667"/>
  </objectgroup>
 </map>

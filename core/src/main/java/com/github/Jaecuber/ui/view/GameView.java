@@ -68,6 +68,27 @@ public class GameView extends View<GameViewModel>{
         staminaBar = new ProgressBar(0.0f, 100.0f, 1.0f, false, skin, "staminaBar");
         progressTable.add(staminaBar).growX();
 
+        progressTable.row();
+        TextButton continueButton = new TextButton(" Continue ", skin, "mainTextButton");
+        progressTable.addActor(continueButton);
+        continueButton.addListener(new ClickListener(){
+            @Override
+            public void clicked(InputEvent event, float x, float y){
+                viewModel.spawnEnemy();
+            }
+        });
+        continueButton.addListener(new InputListener(){
+            long lastEnterTime = 0;
+            @Override
+            public void enter(InputEvent event, float x, float y, int pointer, Actor fromActor){
+                long currentTime = System.currentTimeMillis();
+                if(currentTime - lastEnterTime > 50){
+                    viewModel.playSound(SoundAsset.HOVER);
+                    lastEnterTime = currentTime;
+                }
+            }
+        });
+
         table1.add(progressTable).align(Align.top).prefWidth(400.0f);
         table.add(table1).align(Align.topLeft);
         stage.addActor(table);

@@ -2,6 +2,8 @@ package com.github.Jaecuber.Runeguard.tiled;
 
 import com.badlogic.ashley.core.Engine;
 import com.badlogic.ashley.core.Entity;
+import com.badlogic.ashley.core.Family;
+import com.badlogic.ashley.utils.ImmutableArray;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
@@ -33,6 +35,7 @@ import com.github.Jaecuber.Runeguard.component.Facing;
 import com.github.Jaecuber.Runeguard.component.Fsm;
 import com.github.Jaecuber.Runeguard.component.Graphic;
 import com.github.Jaecuber.Runeguard.component.Health;
+import com.github.Jaecuber.Runeguard.component.MapEntity;
 import com.github.Jaecuber.Runeguard.component.Move;
 import com.github.Jaecuber.Runeguard.component.Physics;
 import com.github.Jaecuber.Runeguard.component.Player;
@@ -40,6 +43,7 @@ import com.github.Jaecuber.Runeguard.component.Stamina;
 import com.github.Jaecuber.Runeguard.component.Transform;
 import com.github.Jaecuber.Runeguard.component.Animation2D.AnimationType;
 import com.github.Jaecuber.Runeguard.component.Enemy.EnemyAIState;
+import com.github.Jaecuber.Runeguard.component.Facing.FacingDirection;
 import com.github.Jaecuber.Runeguard.component.Attack;
 
 public class TiledAshleyConfig {
@@ -106,6 +110,7 @@ public class TiledAshleyConfig {
         addEntityDodge(tile, entity);
         addEntityPlayer(tileMapObject, entity);
         addEntityAttack(tile, entity);
+        addEntityMapEntity(tileMapObject, entity);
         entity.add(new Facing(Facing.FacingDirection.DOWN));
 
         Fsm fsm = new Fsm(entity);
@@ -115,6 +120,36 @@ public class TiledAshleyConfig {
         this.engine.addEntity(entity);
     }
 
+    public void spawnFromTile(TiledMapTile tile, float x, float y){
+        Entity entity = this.engine.createEntity();
+        TextureRegion textureRegion = getTextureRegion(tile);
+        int z = tile.getProperties().get("z", 1, Integer.class);
+
+        entity.add(new Graphic(textureRegion, Color.WHITE.cpy()));
+        addEntityTransform(x, y, z, 
+            textureRegion.getRegionWidth(), textureRegion.getRegionHeight(),
+            1f, 1f, entity);
+        addEntityMove(tile, entity);
+        addEntityAnimation(tile, entity);
+        BodyDef.BodyType bodyType = getObjectBodyType(tile);
+        addEntityPhysics(tile.getObjects(), bodyType, Vector2.Zero, entity);
+        addEntityHealth(tile, entity);
+        addEntityAttack(tile, entity);
+        entity.add(new Facing(FacingDirection.DOWN));
+        entity.add(new MapEntity());
+
+        Fsm fsm = new Fsm(entity);
+        entity.add(fsm);
+        addEntityEnemy(tile, entity, fsm);
+
+        this.engine.addEntity(entity);
+    }
+
+    private void addEntityMapEntity(TiledMapTileMapObject tileMapObject, Entity entity) {
+        if (!"Player".equals(tileMapObject.getName())) {
+            entity.add(new MapEntity());
+        }
+    }
     private void addEntityDodge(TiledMapTile tile, Entity entity) {
         float dodgePower = tile.getProperties().get("dodgePower", 0.0f, Float.class);
         if(dodgePower == 0.0f) return;
@@ -180,7 +215,20 @@ public class TiledAshleyConfig {
     private void addEntityPlayer(TiledMapTileMapObject tileMapObject, Entity entity) {
         if ("Player".equals(tileMapObject.getName())) {
             entity.add(new Player());
-        }
+        }else if ("spawn".equals(tileMapObject.getName())) {
+        ImmutableArray<Entity> players = engine.getEntitiesFor(Family.all(Player.class).get());
+        if (players.size() == 0) return;
+        
+        Entity player = players.first();
+        Transform transform = Transform.MAPPER.get(player);
+        Physics physics = Physics.MAPPER.get(player);
+        
+        transform.getPosition().set(tileMapObject.getX() * Launcher.UNIT_SCALE, tileMapObject.getY() * Launcher.UNIT_SCALE);
+        physics.getBody().setTransform(transform.getPosition(), 0f);
+        physics.getBody().setLinearVelocity(Vector2.Zero);
+        
+        engine.removeEntity(entity);
+    }
     }
 
     private void addEntityCameraFollow(TiledMapTileMapObject mapObject, Entity entity) {

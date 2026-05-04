@@ -25,8 +25,8 @@ import com.github.Jaecuber.Runeguard.screen.LoadingScreen;
 
 /** {@link com.badlogic.gdx.ApplicationListener} implementation shared by all platforms. */
 public class Launcher extends Game {
-    public static final float WORLD_WIDTH = 20f;
-    public static final float WORLD_HEIGHT = 12f;
+    public static final float WORLD_WIDTH = 20f;//20
+    public static final float WORLD_HEIGHT = 12f;//12
     public static final float UNIT_SCALE = 1f/16f;
 
     private Batch batch;
@@ -91,7 +91,7 @@ public class Launcher extends Game {
         super.render();
 
         //Gdx.graphics.setTitle("Runeguard - Draw Calls:" + glProfiler.getDrawCalls());
-        fpsLogger.log();
+        //fpsLogger.log();
     }
 
     @Override
