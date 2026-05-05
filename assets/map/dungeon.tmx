@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.12.0" orientation="orthogonal" renderorder="right-down" width="40" height="40" tilewidth="16" tileheight="16" infinite="0" nextlayerid="24" nextobjectid="17">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="40" height="40" tilewidth="16" tileheight="16" infinite="0" nextlayerid="24" nextobjectid="39">
  <properties>
   <property name="music" value="TOWN"/>
  </properties>
@@ -10,6 +10,7 @@
  <tileset firstgid="5095" source="Player.tsx"/>
  <tileset firstgid="5104" source="Enemies.tsx"/>
  <tileset firstgid="5108" source="Dungeon Walls.tsx"/>
+ <tileset firstgid="5364" source="undeadLandObjects.tsx"/>
  <layer id="21" name="ground" width="40" height="40">
   <data encoding="base64" compression="zlib">
    eJztwwEJAAAMA6BleP8+q7UeR8FeUlVVVVVV1UcHQylMjA==
@@ -32,5 +33,14 @@
     <property name="controller" type="bool" value="true"/>
    </properties>
   </object>
+  <object id="30" gid="5636" x="445.5" y="493" width="16" height="16"/>
+  <object id="31" gid="2147489284" x="273" y="124.5" width="16" height="16"/>
+  <object id="32" gid="5636" x="519" y="287" width="16" height="16"/>
+  <object id="33" gid="2147489284" x="110" y="363.5" width="16" height="16"/>
+  <object id="34" gid="5646" x="425" y="175.5" width="32" height="32"/>
+  <object id="35" gid="2147489294" x="227.5" y="540" width="32" height="32"/>
+  <object id="36" gid="5834" x="393.909" y="275.318" width="32" height="32"/>
+  <object id="37" gid="2147489482" x="281" y="398" width="32" height="32"/>
+  <object id="38" gid="5834" x="203" y="228" width="32" height="32"/>
  </objectgroup>
 </map>

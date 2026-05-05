@@ -52,7 +52,13 @@ public class GameViewModel extends ViewModel{
     }
 
     public void spawnEnemy(){
-        entitySpawner.spawnEntity("green_slime", new Vector2(301.75f, 501.75f));
+        int rand = (int) (Math.random() * 3) + 1;
+        switch (rand) {
+            case 1 -> entitySpawner.spawnEntity("green_slime", new Vector2(301.75f, 301.75f));
+            case 2 -> entitySpawner.spawnEntity("undead_slime", new Vector2(301.75f, 301.75f));
+            case 3 -> entitySpawner.spawnEntity("magma_slime", new Vector2(301.75f, 301.75f));
+        }
+        
     }
 
     public void continueGame(){
