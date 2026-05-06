@@ -194,11 +194,11 @@
             }
         },
         "starterArea.tmx": {
-            "scale": 1,
+            "scale": 2,
             "selectedLayer": 13,
             "viewCenter": {
-                "x": 272,
-                "y": 1179
+                "x": 408.5,
+                "y": 1000
             }
         },
         "starterArea.tmx#Trees": {
@@ -211,8 +211,8 @@
             "scale": 1,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 88,
-                "y": 1
+                "x": 87,
+                "y": 0
             }
         },
         "undeadLand.tmx": {
@@ -222,8 +222,8 @@
             "scale": 2,
             "selectedLayer": 4,
             "viewCenter": {
-                "x": 221,
-                "y": 575
+                "x": 452,
+                "y": 629.5
             }
         },
         "undeadLandObjects.tsx": {
@@ -262,18 +262,18 @@
     "project": "tiled.tiled-project",
     "property.type": "string",
     "recentFiles": [
-        "undeadLandObjects.tsx",
-        "UndeadLandObjects.tsx",
         "testMap.tmx",
-        "undeadLand.tmx",
-        "D:/Downloads/craftpix-net-218281-free-pixel-art-dungeon-objects-asset-pack/Tiled_files/undeadLand.tmx",
-        "D:/Downloads/craftpix-net-218281-free-pixel-art-dungeon-objects-asset-pack/Tiled_files/Dungeon1_objects.tmx",
-        "D:/Downloads/craftpix-net-169442-free-2d-top-down-pixel-dungeon-asset-pack/Tiled_files/Dungeon1.tmx",
-        "Spawn.tsx",
-        "Red Fire.tsx",
-        "Vegetation.tsx",
+        "Farmset.tsx",
+        "Buildings.tsx",
+        "Furniture.tsx",
+        "Rocks.tsx",
+        "Shadows.tsx",
         "Trees.tsx",
-        "Shadows.tsx"
+        "Vegetation.tsx",
+        "Red Fire.tsx",
+        "Spawn.tsx",
+        "undeadLandObjects.tsx",
+        "UndeadLandObjects.tsx"
     ],
     "tileset.lastUsedFormat": "tsx",
     "tileset.tileSize": {

@@ -31,7 +31,7 @@ public class MenuViewModel extends ViewModel{
         this.audioService.setSoundVolume(volume);
     }
     public void startGame(){
-        game.setScreen(new GameScreen(game, MapAsset.DUNGEON));
+        game.setScreen(new GameScreen(game, MapAsset.UNDEAD_LAND));
     }
 
     public void playSound(SoundAsset sound){
