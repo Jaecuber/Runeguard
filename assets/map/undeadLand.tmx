@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="50" height="50" tilewidth="16" tileheight="16" infinite="0" nextlayerid="8" nextobjectid="303">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="50" height="50" tilewidth="16" tileheight="16" infinite="0" nextlayerid="8" nextobjectid="308">
  <properties>
   <property name="music" value="TOWN"/>
  </properties>
@@ -26,7 +26,12 @@
    eJztwQENAAAAwqD3T20ON6AAAAAAAAAAAADg3wAnEAAB
   </data>
  </layer>
- <objectgroup id="3" name="objectDetails"/>
+ <objectgroup id="3" name="objectDetails">
+  <object id="304" gid="1536" x="57.75" y="623.25" width="32" height="32"/>
+  <object id="305" gid="2147485225" x="102.5" y="635.75" width="32" height="32"/>
+  <object id="306" gid="1584" x="68" y="657" width="32" height="32"/>
+  <object id="307" gid="2147485234" x="32" y="602.75" width="32" height="32"/>
+ </objectgroup>
  <objectgroup id="5" name="objects">
   <object id="134" name="Player" gid="1156" x="322.667" y="640" width="96" height="80">
    <properties>

@@ -197,8 +197,8 @@
             "scale": 2,
             "selectedLayer": 13,
             "viewCenter": {
-                "x": 408.5,
-                "y": 1000
+                "x": 408,
+                "y": 999.5
             }
         },
         "starterArea.tmx#Trees": {
@@ -211,19 +211,19 @@
             "scale": 1,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 87,
-                "y": 0
+                "x": 86,
+                "y": -1
             }
         },
         "undeadLand.tmx": {
             "expandedObjectLayers": [
                 3
             ],
-            "scale": 2,
-            "selectedLayer": 4,
+            "scale": 4,
+            "selectedLayer": 3,
             "viewCenter": {
-                "x": 452,
-                "y": 629.5
+                "x": 414.5,
+                "y": 555.75
             }
         },
         "undeadLandObjects.tsx": {
