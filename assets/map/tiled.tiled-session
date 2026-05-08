@@ -126,7 +126,8 @@
             "scaleInEditor": 2
         },
         "Ground_rocks.tsx": {
-            "dynamicWrapping": false
+            "dynamicWrapping": false,
+            "scaleInDock": 2
         },
         "Hitbox.tsx": {
             "dynamicWrapping": false,
@@ -197,8 +198,8 @@
             "scale": 2,
             "selectedLayer": 13,
             "viewCenter": {
-                "x": 408,
-                "y": 999.5
+                "x": 407.5,
+                "y": 999
             }
         },
         "starterArea.tmx#Trees": {
@@ -257,23 +258,24 @@
         "Vegetation.tsx",
         "Red Fire.tsx",
         "Enemies.tsx",
-        "Spawn.tsx"
+        "Spawn.tsx",
+        "undeadLand.tmx"
     ],
     "project": "tiled.tiled-project",
     "property.type": "string",
     "recentFiles": [
-        "testMap.tmx",
-        "Farmset.tsx",
-        "Buildings.tsx",
-        "Furniture.tsx",
-        "Rocks.tsx",
-        "Shadows.tsx",
-        "Trees.tsx",
-        "Vegetation.tsx",
-        "Red Fire.tsx",
+        "undeadLand.tmx",
         "Spawn.tsx",
-        "undeadLandObjects.tsx",
-        "UndeadLandObjects.tsx"
+        "Enemies.tsx",
+        "Red Fire.tsx",
+        "Vegetation.tsx",
+        "Trees.tsx",
+        "Shadows.tsx",
+        "Rocks.tsx",
+        "Player.tsx",
+        "MainTileset.tsx",
+        "Furniture.tsx",
+        "Buildings.tsx"
     ],
     "tileset.lastUsedFormat": "tsx",
     "tileset.tileSize": {
