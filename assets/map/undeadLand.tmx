@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="50" height="50" tilewidth="16" tileheight="16" infinite="0" nextlayerid="8" nextobjectid="308">
+<map version="1.10" tiledversion="1.12.0" orientation="orthogonal" renderorder="right-down" width="50" height="50" tilewidth="16" tileheight="16" infinite="0" nextlayerid="8" nextobjectid="308">
  <properties>
   <property name="music" value="TOWN"/>
  </properties>
@@ -23,7 +23,7 @@
  </layer>
  <layer id="7" name="GroundDetail" width="50" height="50">
   <data encoding="base64" compression="zlib">
-   eJztwQENAAAAwqD3T20ON6AAAAAAAAAAAADg3wAnEAAB
+   eJztWIFxgzAMNEzCKIzCBG1HYBQP0HYGRkjCAtkgNhNUwhLn8yVXhJtgevo7Dk7B9r8lGSnGKBQKhaI0+NoMY23aW22avbnk4AI64Gr8gXWoL8qB+qIcqC/KgfqiLJxr0zm49uaRi/fKdF/V8XU8yx+YdzB37zfODZwsjLdr35foQG6neh5jJnhGG9ztJXCebcwfbMilhzMEfd6jDS84T1p4p/1tLYgRC+NW65DEFZ0JeLcjcR+DDuTMdtwX9IMhncipRxvpusJ7LTwPYB9cmLNL/fZX/sB95r0HrfMd+fp64TZzd2Rbu7YPuvG9AebFvUAdqK9hPT7YBkm8wzyNS85cH/bsyvvMnJnvI0hjIVoP462P9OA3rfuu1s/hyM8+XDN/jpVJmKOO4o1zR4pIj/h7BpqXmGX+txV7/4AHx4yVj84Hr7+Vf4ytsVUSojPY7s0lB47iMtene4J9cfSYorOqO7IvEP8hvxHSOqJU8Nm9tb4tCf/FJ0fLEeoxljqYY6kkfzziSL9dqX6f+xCsg8fQgwxc149RrY9jp3AeZ9WPErzBuqeE4yXkbsea4p4p6ZMW2xT1VDiWx7DeZ+v4rEKdm3KM+w9JHcljHdX/0pjjHuJD0IO8AmvPAI5d9qOkl3oFUn+kecj/UeT2QM/GOeTKwv1eHpbMnzFRrt/r96cD8FcoFIot+AGnDWjq
   </data>
  </layer>
  <objectgroup id="3" name="objectDetails">
@@ -33,7 +33,7 @@
   <object id="307" gid="2147485234" x="32" y="602.75" width="32" height="32"/>
  </objectgroup>
  <objectgroup id="5" name="objects">
-  <object id="134" name="Player" gid="1156" x="322.667" y="640" width="96" height="80">
+  <object id="134" name="Player" gid="1156" x="307.212" y="589.091" width="96" height="80">
    <properties>
     <property name="camFollow" type="bool" value="true"/>
     <property name="controller" type="bool" value="true"/>

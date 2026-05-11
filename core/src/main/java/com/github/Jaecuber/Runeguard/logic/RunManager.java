@@ -1,11 +1,17 @@
 package com.github.Jaecuber.Runeguard.logic;
 
+import com.github.Jaecuber.Runeguard.tiled.EntitySpawner;
+import com.github.Jaecuber.Runeguard.tiled.TiledService;
+
 public class RunManager{
 
     private RunState runState;
+    private TiledService tiledService;
+    private EntitySpawner entitySpawner;
     private float difficulty;
+    private int level;
 
-    public RunManager(){
+    public RunManager(TiledService tiledService, EntitySpawner entitySpawner){
 
     }
 

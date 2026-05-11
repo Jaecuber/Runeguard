@@ -1,5 +1,5 @@
 {
-    "activeFile": "starterArea.tmx",
+    "activeFile": "undeadLand.tmx",
     "expandedProjectPaths": [
         "."
     ],
@@ -81,7 +81,9 @@
             "scaleInDock": 1
         },
         "D:/Downloads/craftpix-net-218281-free-pixel-art-dungeon-objects-asset-pack/Tiled_files/Water_coasts.tsx": {
-            "dynamicWrapping": false
+            "dynamicWrapping": false,
+            "scaleInDock": 0.75,
+            "scaleInEditor": 1
         },
         "D:/Downloads/craftpix-net-218281-free-pixel-art-dungeon-objects-asset-pack/Tiled_files/undeadLand.tmx": {
             "expandedObjectLayers": [
@@ -105,10 +107,14 @@
             "scaleInDock": 1
         },
         "Dungeon Floor.tsx": {
-            "dynamicWrapping": false
+            "dynamicWrapping": false,
+            "scaleInDock": 2,
+            "scaleInEditor": 1
         },
         "Dungeon Walls.tsx": {
-            "dynamicWrapping": false
+            "dynamicWrapping": false,
+            "scaleInDock": 2,
+            "scaleInEditor": 4
         },
         "Enemies.tsx": {
             "dynamicWrapping": true,
@@ -127,7 +133,8 @@
         },
         "Ground_rocks.tsx": {
             "dynamicWrapping": false,
-            "scaleInDock": 2
+            "scaleInDock": 4,
+            "scaleInEditor": 1
         },
         "Hitbox.tsx": {
             "dynamicWrapping": false,
@@ -146,7 +153,7 @@
         },
         "RawCliffs.tsx": {
             "dynamicWrapping": false,
-            "scaleInDock": 1
+            "scaleInDock": 2
         },
         "Red Fire.tsx": {
             "dynamicWrapping": false,
@@ -184,22 +191,22 @@
             "scaleInEditor": 2
         },
         "dungeon.tmx": {
-            "expandedObjectLayers": [
-                2
-            ],
-            "scale": 0.75,
+            "scale": 1.5,
             "selectedLayer": 3,
             "viewCenter": {
-                "x": 102.66666666666663,
-                "y": 310.6666666666667
+                "x": 336.33333333333337,
+                "y": 315.33333333333326
             }
         },
         "starterArea.tmx": {
-            "scale": 2,
+            "expandedObjectLayers": [
+                4
+            ],
+            "scale": 1,
             "selectedLayer": 13,
             "viewCenter": {
-                "x": 407.5,
-                "y": 999
+                "x": 274.5,
+                "y": 1182
             }
         },
         "starterArea.tmx#Trees": {
@@ -212,28 +219,30 @@
             "scale": 1,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 86,
-                "y": -1
+                "x": 96.5,
+                "y": 10
             }
         },
         "undeadLand.tmx": {
             "expandedObjectLayers": [
                 3
             ],
-            "scale": 4,
+            "scale": 0.5,
             "selectedLayer": 3,
             "viewCenter": {
-                "x": 414.5,
-                "y": 555.75
+                "x": 113,
+                "y": 494
             }
         },
         "undeadLandObjects.tsx": {
             "dynamicWrapping": true,
             "scaleInDock": 0.25,
-            "scaleInEditor": 1
+            "scaleInEditor": 0.25
         },
         "walls_floor.tsx": {
-            "dynamicWrapping": false
+            "dynamicWrapping": false,
+            "scaleInDock": 3,
+            "scaleInEditor": 3
         }
     },
     "last.externalTilesetPath": "D:/Projects/Runeguard/assets/map",
@@ -246,36 +255,34 @@
     "map.width": 50,
     "openFiles": [
         "starterArea.tmx",
-        "testMap.tmx",
-        "Farmset.tsx",
-        "Buildings.tsx",
-        "Furniture.tsx",
+        "dungeon.tmx",
+        "undeadLand.tmx",
         "MainTileset.tsx",
-        "Player.tsx",
-        "Rocks.tsx",
-        "Shadows.tsx",
-        "Trees.tsx",
-        "Vegetation.tsx",
-        "Red Fire.tsx",
+        "Dungeon Floor.tsx",
+        "Dungeon Walls.tsx",
         "Enemies.tsx",
-        "Spawn.tsx",
-        "undeadLand.tmx"
+        "Player.tsx",
+        "walls_floor.tsx",
+        "Ground_rocks.tsx",
+        "D:/Downloads/craftpix-net-218281-free-pixel-art-dungeon-objects-asset-pack/Tiled_files/Water_coasts.tsx",
+        "Trees.tsx",
+        "undeadLandObjects.tsx"
     ],
     "project": "tiled.tiled-project",
     "property.type": "string",
     "recentFiles": [
-        "undeadLand.tmx",
-        "Spawn.tsx",
-        "Enemies.tsx",
-        "Red Fire.tsx",
-        "Vegetation.tsx",
+        "starterArea.tmx",
+        "dungeon.tmx",
+        "undeadLandObjects.tsx",
         "Trees.tsx",
-        "Shadows.tsx",
-        "Rocks.tsx",
+        "D:/Downloads/craftpix-net-218281-free-pixel-art-dungeon-objects-asset-pack/Tiled_files/Water_coasts.tsx",
+        "Ground_rocks.tsx",
+        "walls_floor.tsx",
         "Player.tsx",
-        "MainTileset.tsx",
-        "Furniture.tsx",
-        "Buildings.tsx"
+        "Enemies.tsx",
+        "Dungeon Walls.tsx",
+        "Dungeon Floor.tsx",
+        "MainTileset.tsx"
     ],
     "tileset.lastUsedFormat": "tsx",
     "tileset.tileSize": {
