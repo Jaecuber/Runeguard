@@ -194,19 +194,19 @@
             "scale": 1.5,
             "selectedLayer": 3,
             "viewCenter": {
-                "x": 336.33333333333337,
-                "y": 315.33333333333326
+                "x": 320,
+                "y": 319.66666666666663
             }
         },
         "starterArea.tmx": {
             "expandedObjectLayers": [
                 4
             ],
-            "scale": 1,
+            "scale": 4,
             "selectedLayer": 13,
             "viewCenter": {
-                "x": 274.5,
-                "y": 1182
+                "x": 802.5,
+                "y": 947.5
             }
         },
         "starterArea.tmx#Trees": {
@@ -219,8 +219,8 @@
             "scale": 1,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 96.5,
-                "y": 10
+                "x": 96,
+                "y": 9
             }
         },
         "undeadLand.tmx": {
@@ -230,8 +230,8 @@
             "scale": 0.5,
             "selectedLayer": 3,
             "viewCenter": {
-                "x": 113,
-                "y": 494
+                "x": 112,
+                "y": 492
             }
         },
         "undeadLandObjects.tsx": {
@@ -271,8 +271,8 @@
     "project": "tiled.tiled-project",
     "property.type": "string",
     "recentFiles": [
-        "starterArea.tmx",
         "dungeon.tmx",
+        "starterArea.tmx",
         "undeadLandObjects.tsx",
         "Trees.tsx",
         "D:/Downloads/craftpix-net-218281-free-pixel-art-dungeon-objects-asset-pack/Tiled_files/Water_coasts.tsx",
