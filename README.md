@@ -1,19 +1,19 @@
 # Runeguard
 
-**Developers:** [Your Name] and [Partner's Name]
-**Date:** [Month, Year]
+**Developers:** Jaecuber
+**Date:** [April, 2026]
 **Course:** AP Computer Science A 
 
 ---
 
 ## 🎮 Game Description
-[Write a 2-3 sentence pitch for your game. What is the goal? What is the core mechanic? E.g., "Space Defender is a 2D top-down shooter where the player must protect their home planet from endless waves of incoming asteroids. Survive as long as you can to get the high score!"]
+Rouguelite
 
 ## 🕹️ Controls
-* **[W, A, S, D]** or **[Arrow Keys]**: Move the player.
-* **[Spacebar]** or **[Left Mouse Click]**: Shoot / Jump / Interact.
-* **[P]**: Pause the game.
-* **[Escape]**: Quit.
+* **[W, A, S, D]** Move the player.
+* **[Spacebar]** : Dash
+* **[No Keybind]**: Pause the game.
+* **[No Keybind]**: Quit.
 
 ---
 

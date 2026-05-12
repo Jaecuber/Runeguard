@@ -1,5 +1,5 @@
 {
-    "activeFile": "undeadLand.tmx",
+    "activeFile": "starterArea.tmx",
     "expandedProjectPaths": [
         "."
     ],
@@ -191,11 +191,14 @@
             "scaleInEditor": 2
         },
         "dungeon.tmx": {
+            "expandedObjectLayers": [
+                2
+            ],
             "scale": 1.5,
             "selectedLayer": 3,
             "viewCenter": {
-                "x": 320,
-                "y": 319.66666666666663
+                "x": 372.66666666666663,
+                "y": 335.33333333333326
             }
         },
         "starterArea.tmx": {
@@ -264,25 +267,25 @@
         "Player.tsx",
         "walls_floor.tsx",
         "Ground_rocks.tsx",
-        "D:/Downloads/craftpix-net-218281-free-pixel-art-dungeon-objects-asset-pack/Tiled_files/Water_coasts.tsx",
         "Trees.tsx",
-        "undeadLandObjects.tsx"
+        "undeadLandObjects.tsx",
+        "testMap.tmx"
     ],
     "project": "tiled.tiled-project",
     "property.type": "string",
     "recentFiles": [
-        "dungeon.tmx",
-        "starterArea.tmx",
+        "testMap.tmx",
         "undeadLandObjects.tsx",
         "Trees.tsx",
-        "D:/Downloads/craftpix-net-218281-free-pixel-art-dungeon-objects-asset-pack/Tiled_files/Water_coasts.tsx",
         "Ground_rocks.tsx",
         "walls_floor.tsx",
         "Player.tsx",
         "Enemies.tsx",
         "Dungeon Walls.tsx",
         "Dungeon Floor.tsx",
-        "MainTileset.tsx"
+        "MainTileset.tsx",
+        "undeadLand.tmx",
+        "dungeon.tmx"
     ],
     "tileset.lastUsedFormat": "tsx",
     "tileset.tileSize": {

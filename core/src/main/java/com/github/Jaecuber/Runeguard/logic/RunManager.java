@@ -7,16 +7,18 @@ public class RunManager{
 
     private RunState runState;
     private TiledService tiledService;
+    private LevelRunner levelRunner;
     private EntitySpawner entitySpawner;
     private float difficulty;
-    private int level;
+    private float level;
 
     public RunManager(TiledService tiledService, EntitySpawner entitySpawner){
         this.runState = RunState.PLAYING;
         this.tiledService = tiledService;
         this.entitySpawner = entitySpawner;
-        this.difficulty = 1;
-        this.level = 1;
+        this.difficulty = 1.0f;
+        this.level = 1.0f;
+        this.levelRunner = new LevelRunner(this.tiledService, this.entitySpawner, this.difficulty);
     }
 
     public void onStateChange(RunState stateChange){
@@ -39,7 +41,7 @@ public class RunManager{
     }
 
     private void nextLevel() {
-        this.level++;
+        
     }
 
     private void upgrading() {
@@ -51,7 +53,11 @@ public class RunManager{
     }
 
     private void playing(){
+        
+    }
 
+    private float calcDifficulty(){
+        return 0.0f;
     }
 
     public RunState getRunState(){
