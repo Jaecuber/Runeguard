@@ -14,7 +14,5 @@ public class LevelRunner {
         this.entitySpawner = entitySpawner;
         this.difficulty = difficulty;
     }
-
-    
     
 }
