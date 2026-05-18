@@ -21,8 +21,9 @@ public class RunManager{
         this.levelRunner = new LevelRunner(this.tiledService, this.entitySpawner, this.difficulty);
     }
 
-    public void onStateChange(RunState stateChange){
-        switch (stateChange) {
+    public void update(float deltaTime){
+        levelRunner.update(deltaTime);
+        switch (getState()) {
             case PLAYING -> playing();
             case LEVEL_CLEAR -> levelClear();
             case UPGRADING -> upgrading();
@@ -33,7 +34,7 @@ public class RunManager{
     }
 
     private void playCutscene() {
-       
+        
     }
 
     private void restartGame() {
@@ -41,7 +42,10 @@ public class RunManager{
     }
 
     private void nextLevel() {
-        
+        if(this.level != 1){
+            level++;
+        }
+        levelRunner.runLevel();
     }
 
     private void upgrading() {
@@ -53,7 +57,7 @@ public class RunManager{
     }
 
     private void playing(){
-        
+        //state management
     }
 
     private float calcDifficulty(){

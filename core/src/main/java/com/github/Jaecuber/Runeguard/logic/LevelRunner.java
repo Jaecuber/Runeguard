@@ -8,11 +8,20 @@ public class LevelRunner {
     private TiledService tiledService;
     private EntitySpawner entitySpawner;
     private float difficulty;
+    private float waveTimer;
+    private int wave = 1;
     
     public LevelRunner(TiledService tiledService, EntitySpawner entitySpawner, float difficulty){
         this.tiledService = tiledService;
         this.entitySpawner = entitySpawner;
         this.difficulty = difficulty;
     }
-    
+    //make tick wave timer method
+    public void update(float deltaTime){
+
+    }
+
+    public void runLevel(){
+        
+    }
 }
