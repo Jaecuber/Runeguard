@@ -9,7 +9,7 @@ public enum Gamestate implements State<RunManager>{
     PLAYING{
         @Override
         public void enter(RunManager entity) {
-            entity.onStateChange(RunState.PLAYING);
+            entity.changeState(RunState.PLAYING);
         }
         @Override
         public void update(RunManager entity) {
@@ -28,7 +28,7 @@ public enum Gamestate implements State<RunManager>{
     LEVEL_CLEAR{
         @Override
         public void enter(RunManager entity) {
-            entity.onStateChange(RunState.LEVEL_CLEAR);
+            entity.changeState(RunState.LEVEL_CLEAR);
         }
         @Override
         public void update(RunManager entity) {
@@ -46,7 +46,7 @@ public enum Gamestate implements State<RunManager>{
     UPGRADING{
         @Override
         public void enter(RunManager entity) {
-            entity.onStateChange(RunState.UPGRADING);
+            entity.changeState(RunState.UPGRADING);
         }
         @Override
         public void update(RunManager entity) {
@@ -64,7 +64,7 @@ public enum Gamestate implements State<RunManager>{
     NEXT_LEVEL{
         @Override
         public void enter(RunManager entity) {
-            entity.onStateChange(RunState.NEXT_LEVEL);
+            entity.changeState(RunState.NEXT_LEVEL);
         }
         @Override
         public void update(RunManager entity) {
@@ -82,7 +82,7 @@ public enum Gamestate implements State<RunManager>{
     RESTARTING_GAME{
         @Override
         public void enter(RunManager entity) {
-            entity.onStateChange(RunState.RESTARTING_GAME);
+            entity.changeState(RunState.RESTARTING_GAME);
         }
         @Override
         public void update(RunManager entity) {
@@ -100,7 +100,7 @@ public enum Gamestate implements State<RunManager>{
     CUTSCENE{
         @Override
         public void enter(RunManager entity) {
-            entity.onStateChange(RunState.CUTSCENE);
+            entity.changeState(RunState.CUTSCENE);
         }
         @Override
         public void update(RunManager entity) {
