@@ -25,6 +25,7 @@ import com.github.Jaecuber.Runeguard.audio.AudioService;
 import com.github.Jaecuber.Runeguard.component.MapEntity;
 import com.github.Jaecuber.Runeguard.input.GameControllerState;
 import com.github.Jaecuber.Runeguard.input.KeyboardController;
+import com.github.Jaecuber.Runeguard.logic.RunManager;
 import com.github.Jaecuber.Runeguard.systems.AnimationSystem;
 import com.github.Jaecuber.Runeguard.systems.AttackSystem;
 import com.github.Jaecuber.Runeguard.systems.CameraSystem;
@@ -58,6 +59,7 @@ public class GameScreen extends ScreenAdapter {
     private final AudioService audioService;
     private final Stage stage;
     private final Viewport uiViewport;
+    private final RunManager runManager;
     private final GameViewModel viewModel;
     private final Skin skin;
 
@@ -74,6 +76,7 @@ public class GameScreen extends ScreenAdapter {
         this.entitySpawner = new EntitySpawner(this.tiledAshleyConfig);
         this.audioService = game.getAudioService();
         this.uiViewport = new FitViewport(1500f, 900f);//320 180
+        this.runManager = new RunManager(this.tiledService, this.entitySpawner);
         this.stage = new Stage(uiViewport, game.getBatch());
         this.viewModel = new GameViewModel(game, this.tiledService, this.entitySpawner);
         this.skin = game.getAssetService().get(SkinAsset.DEFAULT);
@@ -144,6 +147,7 @@ public class GameScreen extends ScreenAdapter {
     public void render(float delta){
         delta = Math.min(delta, 1 / 30f);
         this.engine.update(delta);
+        this.runManager.update(delta);
 
         uiViewport.apply();
         stage.getBatch().setColor(Color.WHITE);

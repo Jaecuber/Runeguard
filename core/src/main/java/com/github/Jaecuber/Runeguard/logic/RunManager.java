@@ -9,16 +9,12 @@ public class RunManager{
     private TiledService tiledService;
     private LevelRunner levelRunner;
     private EntitySpawner entitySpawner;
-    private float difficulty;
-    private float level;
 
     public RunManager(TiledService tiledService, EntitySpawner entitySpawner){
         this.runState = RunState.PLAYING;
         this.tiledService = tiledService;
         this.entitySpawner = entitySpawner;
-        this.difficulty = 1.0f;
-        this.level = 1.0f;
-        this.levelRunner = new LevelRunner(this.tiledService, this.entitySpawner, this.difficulty);
+        this.levelRunner = new LevelRunner(this.tiledService, this.entitySpawner);
     }
 
     public void update(float deltaTime){
@@ -42,9 +38,6 @@ public class RunManager{
     }
 
     private void nextLevel() {
-        if(this.level != 1){
-            level++;
-        }
         levelRunner.runLevel();
     }
 
