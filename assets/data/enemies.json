@@ -1,0 +1,7 @@
+{
+    "enemies" : [
+        {"name" : "green_slime", "minDiff" : 0.0},
+        {"name" : "undead_slime", "minDiff" : 35.0},
+        {"name" : "magma_slime", "minDiff" : 100.0}
+    ]
+}

@@ -59,14 +59,27 @@ public class TiledAshleyConfig {
         this.physicsWorld = physicsWorld;
     }
     public void onLoadTile(TiledMapTile tileMapTile, float x, float y){
-        createBody(
-            tileMapTile.getObjects(),
-            new Vector2(x, y),
-            DEFAULT_PHYSICS_SCALING,
-            BodyDef.BodyType.StaticBody,
-            Vector2.Zero,
-            "environment"
-        );
+        boolean spawn = tileMapTile.getProperties().get("spawn", false, Boolean.class);
+        if(spawn){
+            createBody(
+                tileMapTile.getObjects(),
+                new Vector2(x, y),
+                DEFAULT_PHYSICS_SCALING,
+                BodyDef.BodyType.StaticBody,
+                Vector2.Zero,
+                "spawn"
+            );
+        }else{
+            createBody(
+                tileMapTile.getObjects(),
+                new Vector2(x, y),
+                DEFAULT_PHYSICS_SCALING,
+                BodyDef.BodyType.StaticBody,
+                Vector2.Zero,
+                "environment"
+            );
+        }
+        
     }
 
     private Body createBody(MapObjects mapObjects, Vector2 position, Vector2 scaling, 

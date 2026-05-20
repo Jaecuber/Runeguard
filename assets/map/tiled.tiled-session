@@ -197,19 +197,19 @@
             "scale": 1.5,
             "selectedLayer": 3,
             "viewCenter": {
-                "x": 320,
-                "y": 319.66666666666663
+                "x": 366.66666666666663,
+                "y": 356.66666666666663
             }
         },
         "starterArea.tmx": {
             "expandedObjectLayers": [
                 4
             ],
-            "scale": 1,
+            "scale": 0.75,
             "selectedLayer": 13,
             "viewCenter": {
-                "x": 290.5,
-                "y": 1227
+                "x": 733.3333333333333,
+                "y": 1314.6666666666665
             }
         },
         "starterArea.tmx#Trees": {
@@ -222,19 +222,19 @@
             "scale": 1,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 95.5,
-                "y": 7
+                "x": 240,
+                "y": 159.5
             }
         },
         "undeadLand.tmx": {
             "expandedObjectLayers": [
                 3
             ],
-            "scale": 0.5,
+            "scale": 1,
             "selectedLayer": 3,
             "viewCenter": {
-                "x": 400,
-                "y": 401
+                "x": 407,
+                "y": 480
             }
         },
         "undeadLandObjects.tsx": {

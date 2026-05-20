@@ -16,6 +16,7 @@ public class AssetService implements Disposable{
         this.assetManager = new AssetManager(fileHandleResolver);
         this.assetManager.setLoader(TiledMap.class, new TmxMapLoader());
         this.assetManager.setLoader(Skin.class, new FreeTypistSkinLoader(fileHandleResolver));
+        this.assetManager.setLoader(String.class, new JsonLoader(fileHandleResolver));
     }
 
     public <T> T load(Asset<T> asset){

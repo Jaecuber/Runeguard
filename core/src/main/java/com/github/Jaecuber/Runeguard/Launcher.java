@@ -34,7 +34,6 @@ public class Launcher extends Game {
     private Viewport viewport;
     private AssetService assetService;
     private GLProfiler glProfiler;
-    private FPSLogger fpsLogger;
     private InputMultiplexer inputMultiplexer;
     private AudioService audioService;
 
@@ -52,7 +51,6 @@ public class Launcher extends Game {
         this.assetService = new AssetService(new InternalFileHandleResolver());
         this.glProfiler = new GLProfiler(Gdx.graphics);
         this.glProfiler.enable();
-        this.fpsLogger = new FPSLogger();
         this.audioService = new AudioService(this.assetService);
 
         addScreen(new LoadingScreen(this, assetService));

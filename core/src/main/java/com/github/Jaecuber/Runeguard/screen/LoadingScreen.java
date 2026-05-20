@@ -5,6 +5,7 @@ import com.badlogic.gdx.ScreenAdapter;
 import com.github.Jaecuber.Runeguard.Launcher;
 import com.github.Jaecuber.Runeguard.asset.AssetService;
 import com.github.Jaecuber.Runeguard.asset.AtlasAsset;
+import com.github.Jaecuber.Runeguard.asset.JsonAsset;
 import com.github.Jaecuber.Runeguard.asset.MapAsset;
 import com.github.Jaecuber.Runeguard.asset.SkinAsset;
 import com.github.Jaecuber.Runeguard.asset.SoundAsset;
@@ -25,6 +26,9 @@ public class LoadingScreen extends ScreenAdapter{
         }
         for(SoundAsset sound : SoundAsset.values()){
             assetService.queue(sound);
+        }
+        for(JsonAsset json : JsonAsset.values()){
+            assetService.queue(json);
         }
         assetService.queue(SkinAsset.DEFAULT);
     }

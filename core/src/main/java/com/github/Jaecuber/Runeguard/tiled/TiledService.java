@@ -75,6 +75,20 @@ public class TiledService {
         loadMapObjects(map);
     }
 
+    public Array<Vector2> getSpawns(){
+        Array<Vector2> spawns = new Array<>();
+        
+        Array<Body> bodies = new Array<>();
+        physicsWorld.getBodies(bodies);
+
+        for(Body body : bodies){
+            if("spawn".equals(body.getUserData())){
+                spawns.add(body.getPosition());
+            }
+        }
+        return spawns;
+    }
+
     private void loadMapObjects(TiledMap tiledMap){
         for(MapLayer layer : tiledMap.getLayers()){
             if("objects".equals(layer.getName())){

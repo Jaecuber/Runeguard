@@ -1,5 +1,7 @@
 package com.github.Jaecuber.Runeguard.logic;
 
+import com.badlogic.ashley.core.Engine;
+import com.github.Jaecuber.Runeguard.asset.AssetService;
 import com.github.Jaecuber.Runeguard.tiled.EntitySpawner;
 import com.github.Jaecuber.Runeguard.tiled.TiledService;
 
@@ -9,16 +11,21 @@ public class RunManager{
     private TiledService tiledService;
     private LevelRunner levelRunner;
     private EntitySpawner entitySpawner;
+    private AssetService assetService;
+    private Engine engine;
 
-    public RunManager(TiledService tiledService, EntitySpawner entitySpawner){
+    public RunManager(TiledService tiledService, EntitySpawner entitySpawner, Engine engine, AssetService assetService){
         this.runState = RunState.PLAYING;
         this.tiledService = tiledService;
         this.entitySpawner = entitySpawner;
-        this.levelRunner = new LevelRunner(this.tiledService, this.entitySpawner);
+        this.assetService = assetService;
+        this.engine = engine;
+
+        this.levelRunner = new LevelRunner(this.tiledService, this.entitySpawner, this.engine, this.assetService);
     }
 
     public void update(float deltaTime){
-        levelRunner.update(deltaTime);
+        levelRunner.update(deltaTime, this.runState);
         switch (getState()) {
             case PLAYING -> playing();
             case LEVEL_CLEAR -> levelClear();
@@ -50,11 +57,9 @@ public class RunManager{
     }
 
     private void playing(){
-        //state management
-    }
-
-    private float calcDifficulty(){
-        return 0.0f;
+        if(levelRunner.levelComplete()){
+            changeState(RunState.LEVEL_CLEAR);
+        }
     }
 
     public RunState getRunState(){

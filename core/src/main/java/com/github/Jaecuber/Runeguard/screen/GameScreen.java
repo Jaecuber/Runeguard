@@ -76,7 +76,7 @@ public class GameScreen extends ScreenAdapter {
         this.entitySpawner = new EntitySpawner(this.tiledAshleyConfig);
         this.audioService = game.getAudioService();
         this.uiViewport = new FitViewport(1500f, 900f);//320 180
-        this.runManager = new RunManager(this.tiledService, this.entitySpawner);
+        this.runManager = new RunManager(this.tiledService, this.entitySpawner, this.engine, game.getAssetService());
         this.stage = new Stage(uiViewport, game.getBatch());
         this.viewModel = new GameViewModel(game, this.tiledService, this.entitySpawner);
         this.skin = game.getAssetService().get(SkinAsset.DEFAULT);
