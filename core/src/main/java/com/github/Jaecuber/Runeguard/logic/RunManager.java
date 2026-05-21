@@ -1,6 +1,8 @@
 package com.github.Jaecuber.Runeguard.logic;
 
 import com.badlogic.ashley.core.Engine;
+import com.badlogic.gdx.ai.fsm.DefaultStateMachine;
+import com.github.Jaecuber.Runeguard.ai.GameState;
 import com.github.Jaecuber.Runeguard.asset.AssetService;
 import com.github.Jaecuber.Runeguard.tiled.EntitySpawner;
 import com.github.Jaecuber.Runeguard.tiled.TiledService;
@@ -13,13 +15,15 @@ public class RunManager{
     private EntitySpawner entitySpawner;
     private AssetService assetService;
     private Engine engine;
+    private DefaultStateMachine<RunManager, GameState> gameFsm;
 
     public RunManager(TiledService tiledService, EntitySpawner entitySpawner, Engine engine, AssetService assetService){
-        this.runState = RunState.PLAYING;
+        this.runState = RunState.INTERMISSION;
         this.tiledService = tiledService;
         this.entitySpawner = entitySpawner;
         this.assetService = assetService;
         this.engine = engine;
+        this.gameFsm = new DefaultStateMachine<RunManager, GameState>(this, GameState.CUTSCENE);
 
         this.levelRunner = new LevelRunner(this.tiledService, this.entitySpawner, this.engine, this.assetService);
     }
@@ -27,6 +31,7 @@ public class RunManager{
     public void update(float deltaTime){
         levelRunner.update(deltaTime, this.runState);
         switch (getState()) {
+            case INTERMISSION -> intermission(deltaTime);
             case PLAYING -> playing();
             case LEVEL_CLEAR -> levelClear(deltaTime);
             case UPGRADING -> upgrading();
@@ -34,6 +39,10 @@ public class RunManager{
             case RESTARTING_GAME -> restartGame();
             case CUTSCENE -> playCutscene();
         }
+    }
+
+    private void intermission(float deltaTime) {
+        
     }
 
     private void playCutscene() {
@@ -57,9 +66,11 @@ public class RunManager{
     }
 
     private void playing(){
-        if(levelRunner.levelComplete()){
-            changeState(RunState.LEVEL_CLEAR);
-        }
+
+    }
+
+    public boolean levelComplete(){
+        return levelRunner.levelComplete();
     }
 
     public RunState getRunState(){
@@ -67,7 +78,7 @@ public class RunManager{
     }
 
 
-    public void changeState(RunState runState){
+    public void setState(RunState runState){
         this.runState = runState;
     }
 
@@ -75,7 +86,11 @@ public class RunManager{
         return this.runState;
     }
 
+    public DefaultStateMachine<RunManager, GameState> getGameFsm(){
+        return this.gameFsm;
+    }
+
     public enum RunState{
-        PLAYING, LEVEL_CLEAR, UPGRADING, NEXT_LEVEL, RESTARTING_GAME, CUTSCENE
+        INTERMISSION, PLAYING, LEVEL_CLEAR, UPGRADING, NEXT_LEVEL, RESTARTING_GAME, CUTSCENE
     }
 }

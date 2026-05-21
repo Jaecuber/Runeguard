@@ -5,11 +5,11 @@ import com.badlogic.gdx.ai.msg.Telegram;
 import com.github.Jaecuber.Runeguard.logic.RunManager;
 import com.github.Jaecuber.Runeguard.logic.RunManager.RunState;
 
-public enum Gamestate implements State<RunManager>{
-    PLAYING{
+public enum GameState implements State<RunManager>{
+    INTERMISSION{
         @Override
         public void enter(RunManager entity) {
-            entity.changeState(RunState.PLAYING);
+            entity.setState(RunState.INTERMISSION);
         }
         @Override
         public void update(RunManager entity) {
@@ -23,12 +23,31 @@ public enum Gamestate implements State<RunManager>{
         public boolean onMessage(RunManager entity, Telegram telegram) {
             return false;
         }
-
+    },
+    PLAYING{
+        @Override
+        public void enter(RunManager entity) {
+            entity.setState(RunState.PLAYING);
+        }
+        @Override
+        public void update(RunManager entity) {
+            if(entity.levelComplete()){
+                entity.getGameFsm().changeState(LEVEL_CLEAR);
+            }
+        }
+        @Override
+        public void exit(RunManager entity) {
+            
+        }
+        @Override
+        public boolean onMessage(RunManager entity, Telegram telegram) {
+            return false;
+        }
     },
     LEVEL_CLEAR{
         @Override
         public void enter(RunManager entity) {
-            entity.changeState(RunState.LEVEL_CLEAR);
+            entity.setState(RunState.LEVEL_CLEAR);
         }
         @Override
         public void update(RunManager entity) {
@@ -46,7 +65,7 @@ public enum Gamestate implements State<RunManager>{
     UPGRADING{
         @Override
         public void enter(RunManager entity) {
-            entity.changeState(RunState.UPGRADING);
+            entity.setState(RunState.UPGRADING);
         }
         @Override
         public void update(RunManager entity) {
@@ -64,7 +83,7 @@ public enum Gamestate implements State<RunManager>{
     NEXT_LEVEL{
         @Override
         public void enter(RunManager entity) {
-            entity.changeState(RunState.NEXT_LEVEL);
+            entity.setState(RunState.NEXT_LEVEL);
         }
         @Override
         public void update(RunManager entity) {
@@ -82,7 +101,7 @@ public enum Gamestate implements State<RunManager>{
     RESTARTING_GAME{
         @Override
         public void enter(RunManager entity) {
-            entity.changeState(RunState.RESTARTING_GAME);
+            entity.setState(RunState.RESTARTING_GAME);
         }
         @Override
         public void update(RunManager entity) {
@@ -100,7 +119,7 @@ public enum Gamestate implements State<RunManager>{
     CUTSCENE{
         @Override
         public void enter(RunManager entity) {
-            entity.changeState(RunState.CUTSCENE);
+            entity.setState(RunState.CUTSCENE);
         }
         @Override
         public void update(RunManager entity) {
