@@ -10,6 +10,7 @@ import com.badlogic.gdx.math.Vector2;
 import com.github.Jaecuber.Runeguard.Launcher;
 import com.github.Jaecuber.Runeguard.asset.MapAsset;
 import com.github.Jaecuber.Runeguard.asset.SoundAsset;
+import com.github.Jaecuber.Runeguard.logic.RunManager;
 import com.github.Jaecuber.Runeguard.screen.GameScreen;
 import com.github.Jaecuber.Runeguard.tiled.EntitySpawner;
 import com.github.Jaecuber.Runeguard.tiled.TiledAshleyConfig;
@@ -31,12 +32,14 @@ public class GameViewModel extends ViewModel{
     private final Vector2 tempVec2;
     private TiledService tiledService;
     private EntitySpawner entitySpawner;
+    private RunManager runManager;
 
-    public GameViewModel(Launcher game, TiledService tiledService, EntitySpawner entitySpawner){
+    public GameViewModel(Launcher game, TiledService tiledService, EntitySpawner entitySpawner, RunManager runManager){
         super(game);
         this.tempVec2 = new Vector2();
         this.tiledService = tiledService;
         this.entitySpawner = entitySpawner;
+        this.runManager = runManager;
     }
 
     public void updateHealthInfo(float maxHealth, float health){

@@ -78,7 +78,7 @@ public class GameScreen extends ScreenAdapter {
         this.uiViewport = new FitViewport(1500f, 900f);//320 180
         this.runManager = new RunManager(this.tiledService, this.entitySpawner, this.engine, game.getAssetService());
         this.stage = new Stage(uiViewport, game.getBatch());
-        this.viewModel = new GameViewModel(game, this.tiledService, this.entitySpawner);
+        this.viewModel = new GameViewModel(game, this.tiledService, this.entitySpawner, this.runManager);
         this.skin = game.getAssetService().get(SkinAsset.DEFAULT);
         this.mapAsset = mapAsset;
         

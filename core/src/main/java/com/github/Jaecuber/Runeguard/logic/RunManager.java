@@ -28,7 +28,7 @@ public class RunManager{
         levelRunner.update(deltaTime, this.runState);
         switch (getState()) {
             case PLAYING -> playing();
-            case LEVEL_CLEAR -> levelClear();
+            case LEVEL_CLEAR -> levelClear(deltaTime);
             case UPGRADING -> upgrading();
             case NEXT_LEVEL -> nextLevel();
             case RESTARTING_GAME -> restartGame();
@@ -52,7 +52,7 @@ public class RunManager{
         
     }
 
-    private void levelClear() {
+    private void levelClear(float deltaTime) {
         
     }
 
