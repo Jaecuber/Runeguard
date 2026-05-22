@@ -6,32 +6,42 @@ import com.github.Jaecuber.Runeguard.ai.GameState;
 import com.github.Jaecuber.Runeguard.asset.AssetService;
 import com.github.Jaecuber.Runeguard.tiled.EntitySpawner;
 import com.github.Jaecuber.Runeguard.tiled.TiledService;
+import com.github.Jaecuber.ui.model.GameViewModel;
 
 public class RunManager{
-
     private RunState runState;
     private TiledService tiledService;
     private LevelRunner levelRunner;
     private EntitySpawner entitySpawner;
     private AssetService assetService;
+    private GameViewModel viewModel;
     private Engine engine;
     private DefaultStateMachine<RunManager, GameState> gameFsm;
 
-    public RunManager(TiledService tiledService, EntitySpawner entitySpawner, Engine engine, AssetService assetService){
-        this.runState = RunState.INTERMISSION;
+    //handlers
+    private boolean playingState = false;
+
+    //timers
+    private float startLevelTimer = 5.0f; //5 seconds
+    private float endTimer = 5.0f; // 5 seconds
+
+    public RunManager(TiledService tiledService, EntitySpawner entitySpawner, Engine engine, AssetService assetService, GameViewModel viewModel){
+        this.runState = RunState.STARTING_LEVEL;
         this.tiledService = tiledService;
         this.entitySpawner = entitySpawner;
         this.assetService = assetService;
         this.engine = engine;
-        this.gameFsm = new DefaultStateMachine<RunManager, GameState>(this, GameState.CUTSCENE);
+        this.viewModel = viewModel;
+        this.gameFsm = new DefaultStateMachine<RunManager, GameState>(this, GameState.STARTING_LEVEL);
 
-        this.levelRunner = new LevelRunner(this.tiledService, this.entitySpawner, this.engine, this.assetService);
+        this.levelRunner = new LevelRunner(this.tiledService, this.entitySpawner, this.engine, this.assetService, this.viewModel);
     }
 
     public void update(float deltaTime){
         levelRunner.update(deltaTime, this.runState);
+        gameFsm.update();
         switch (getState()) {
-            case INTERMISSION -> intermission(deltaTime);
+            case STARTING_LEVEL -> startingLevel(deltaTime);
             case PLAYING -> playing();
             case LEVEL_CLEAR -> levelClear(deltaTime);
             case UPGRADING -> upgrading();
@@ -41,8 +51,8 @@ public class RunManager{
         }
     }
 
-    private void intermission(float deltaTime) {
-        
+    private void startingLevel(float deltaTime) {
+        tickStartTime(deltaTime);
     }
 
     private void playCutscene() {
@@ -55,30 +65,60 @@ public class RunManager{
 
     private void nextLevel() {
         levelRunner.runLevel();
+        playingState = true;
     }
 
     private void upgrading() {
-        
+        viewModel.promptUpgrade();
     }
 
     private void levelClear(float deltaTime) {
-        
+        tickEndTime(deltaTime);
     }
 
     private void playing(){
-
+        playingState = false;
     }
 
     public boolean levelComplete(){
         return levelRunner.levelComplete();
     }
 
+    private void tickEndTime(float deltaTime) {
+       endTimer -= deltaTime;
+    }
+
+    private void tickStartTime(float deltaTime) {
+        startLevelTimer -= deltaTime;
+    }
+
+    public boolean startTimeOver(){
+        return startLevelTimer <= 0;
+    } 
+
+    public boolean endTimerOver(){
+        return endTimer <= 0;
+    } 
+
+    public boolean getPlayingState(){
+        return playingState;
+    }
+
     public RunState getRunState(){
         return this.runState;
     }
 
-
     public void setState(RunState runState){
+        switch (runState) {
+            case STARTING_LEVEL -> {this.startLevelTimer = 5.0f;}
+            case CUTSCENE -> {}
+            case LEVEL_CLEAR -> {this.endTimer = 5.0f;}
+            case NEXT_LEVEL -> {}
+            case PLAYING -> {}
+            case RESTARTING_GAME -> {} 
+            case UPGRADING -> {}
+            default -> {}
+        }
         this.runState = runState;
     }
 
@@ -91,6 +131,6 @@ public class RunManager{
     }
 
     public enum RunState{
-        INTERMISSION, PLAYING, LEVEL_CLEAR, UPGRADING, NEXT_LEVEL, RESTARTING_GAME, CUTSCENE
+        STARTING_LEVEL, PLAYING, LEVEL_CLEAR, UPGRADING, NEXT_LEVEL, RESTARTING_GAME, CUTSCENE
     }
 }

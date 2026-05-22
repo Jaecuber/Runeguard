@@ -194,11 +194,11 @@
             "expandedObjectLayers": [
                 2
             ],
-            "scale": 1.5,
+            "scale": 2,
             "selectedLayer": 3,
             "viewCenter": {
-                "x": 366.66666666666663,
-                "y": 356.66666666666663
+                "x": 345,
+                "y": 320.5
             }
         },
         "starterArea.tmx": {
@@ -208,8 +208,8 @@
             "scale": 0.75,
             "selectedLayer": 13,
             "viewCenter": {
-                "x": 733.3333333333333,
-                "y": 1314.6666666666665
+                "x": 1374.6666666666665,
+                "y": 1320
             }
         },
         "starterArea.tmx#Trees": {
@@ -223,7 +223,7 @@
             "selectedLayer": 1,
             "viewCenter": {
                 "x": 240,
-                "y": 159.5
+                "y": 159
             }
         },
         "undeadLand.tmx": {
@@ -272,7 +272,7 @@
         "testMap.tmx"
     ],
     "project": "tiled.tiled-project",
-    "property.type": "string",
+    "property.type": "bool",
     "recentFiles": [
         "testMap.tmx",
         "undeadLandObjects.tsx",

@@ -5,6 +5,7 @@ import com.badlogic.gdx.maps.tiled.TiledMapTileSet;
 import com.badlogic.gdx.maps.tiled.TiledMapTileSets;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.utils.GdxRuntimeException;
+import com.github.Jaecuber.Runeguard.Launcher;
 
 public class EntitySpawner {
     private final TiledAshleyConfig tiledAshleyConfig;
@@ -23,7 +24,6 @@ public class EntitySpawner {
 
         TiledMapTile tile = findTileByName(name);
         if(tile == null) throw new GdxRuntimeException("Unknown enemy: " + name);
-
         tiledAshleyConfig.spawnFromTile(tile, position.x, position.y);
     }
 

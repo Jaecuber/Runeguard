@@ -6,14 +6,16 @@ import com.github.Jaecuber.Runeguard.logic.RunManager;
 import com.github.Jaecuber.Runeguard.logic.RunManager.RunState;
 
 public enum GameState implements State<RunManager>{
-    INTERMISSION{
+    STARTING_LEVEL{
         @Override
         public void enter(RunManager entity) {
-            entity.setState(RunState.INTERMISSION);
+            entity.setState(RunState.STARTING_LEVEL);
         }
         @Override
         public void update(RunManager entity) {
-            
+            if(entity.startTimeOver()){
+                entity.getGameFsm().changeState(NEXT_LEVEL);
+            }
         }
         @Override
         public void exit(RunManager entity) {
@@ -51,7 +53,9 @@ public enum GameState implements State<RunManager>{
         }
         @Override
         public void update(RunManager entity) {
-            
+            if(entity.endTimerOver()){
+                entity.getGameFsm().changeState(UPGRADING);
+            }
         }
         @Override
         public void exit(RunManager entity) {
@@ -69,7 +73,7 @@ public enum GameState implements State<RunManager>{
         }
         @Override
         public void update(RunManager entity) {
-            
+            //do something then move to NEXT_LEVEL state
         }
         @Override
         public void exit(RunManager entity) {
@@ -87,7 +91,9 @@ public enum GameState implements State<RunManager>{
         }
         @Override
         public void update(RunManager entity) {
-            
+            if(entity.getPlayingState()){
+                entity.getGameFsm().changeState(PLAYING);
+            }
         }
         @Override
         public void exit(RunManager entity) {

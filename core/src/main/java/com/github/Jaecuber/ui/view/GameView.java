@@ -33,6 +33,9 @@ public class GameView extends View<GameViewModel>{
     private ProgressBar staminaBar;
     private Table gameOverTable;
     private Label gameOverLabel;
+    private Label levelLabel;
+    private Label waveLabel;
+    private Label timerLabel;
 
     public GameView(Stage stage, Skin skin, GameViewModel viewModel){
         super(stage, skin, viewModel);
@@ -71,6 +74,27 @@ public class GameView extends View<GameViewModel>{
         table1.add(progressTable).align(Align.top).prefWidth(400.0f);
         table.add(table1).align(Align.topLeft);
         stage.addActor(table);
+
+        Table statsTable = new Table();
+        statsTable.padRight(20.0f);
+        statsTable.padTop(20.0f);
+        statsTable.align(Align.topRight);
+        statsTable.setFillParent(true);
+
+        levelLabel = new Label("Level : 1", skin, "mediumLabel");
+        levelLabel.setColor(skin.getColor("White"));
+        statsTable.add(levelLabel).spaceTop(10.0f).spaceBottom(10.0f).align(Align.left);;
+
+        statsTable.row();
+        waveLabel = new Label("Wave : 1", skin, "mediumLabel");
+        waveLabel.setColor(skin.getColor("White"));
+        statsTable.add(waveLabel).spaceTop(10.0f).spaceBottom(10.0f).align(Align.left);;
+
+        statsTable.row();
+        timerLabel = new Label("00:00", skin, "mediumLabel");
+        timerLabel.setColor(skin.getColor("White"));
+        statsTable.add(timerLabel).spaceTop(10.0f).spaceBottom(10.0f).align(Align.left);;
+        stage.addActor(statsTable);
         setupGameOver();
     }
 
@@ -82,7 +106,11 @@ public class GameView extends View<GameViewModel>{
         viewModel.onPropertyChange(GameViewModel.STAMINA, Integer.class, this::updateStamina);
         viewModel.onPropertyChange(GameViewModel.MAX_STAMINA, Integer.class, this::updateMaxStamina);
         viewModel.onPropertyChange(GameViewModel.GAME_OVER, Boolean.class, this::gameOverScreen);
-    }
+        viewModel.onPropertyChange(GameViewModel.UPGRADE, Boolean.class, this::upgradeScreen);
+        viewModel.onPropertyChange(GameViewModel.LEVEL, Integer.class, this::updateLevel);
+        viewModel.onPropertyChange(GameViewModel.WAVE, Integer.class, this::updateWave);
+        viewModel.onPropertyChange(GameViewModel.TIMER, Integer.class, this::updateTimer);
+    };
 
     private void showDamage(Map.Entry<Vector2, Integer> damAndPos){
         final Vector2 position = damAndPos.getKey();
@@ -174,6 +202,22 @@ public class GameView extends View<GameViewModel>{
             Actions.delay(1.5f),
             Actions.fadeIn(0.25f)
         ));
+
+    }
+
+    private void upgradeScreen(boolean bool){
+
+    }
+
+    private void updateLevel(int level){
+        levelLabel.setText("Level : " + level);
+    }
+
+    private void updateWave(int wave){
+        waveLabel.setText("Wave : " + wave);
+    }
+
+    private void updateTimer(int time){
 
     }
 

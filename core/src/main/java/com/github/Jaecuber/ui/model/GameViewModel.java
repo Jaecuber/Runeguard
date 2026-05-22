@@ -23,23 +23,28 @@ public class GameViewModel extends ViewModel{
     public static final String STAMINA = "stamina";
     public static final String MAX_STAMINA = "maxStamina";
     public static final String GAME_OVER = "gameOver";
+    public static final String UPGRADE = "upgrade";
+    public static final String LEVEL = "level";
+    public static final String WAVE = "wave";
+    public static final String TIMER = "timer";
 
     private Map.Entry<Vector2, Integer> playerDamage;
     private int health;
     private int maxHealth;
     private int stamina;
     private int maxStamina;
+    private int level;
+    private int wave;
+    private int time;
     private final Vector2 tempVec2;
     private TiledService tiledService;
     private EntitySpawner entitySpawner;
-    private RunManager runManager;
 
-    public GameViewModel(Launcher game, TiledService tiledService, EntitySpawner entitySpawner, RunManager runManager){
+    public GameViewModel(Launcher game, TiledService tiledService, EntitySpawner entitySpawner){
         super(game);
         this.tempVec2 = new Vector2();
         this.tiledService = tiledService;
         this.entitySpawner = entitySpawner;
-        this.runManager = runManager;
     }
 
     public void updateHealthInfo(float maxHealth, float health){
@@ -111,6 +116,26 @@ public class GameViewModel extends ViewModel{
         this.stamina = stamina;
     }
 
+    public void updateLevel(int level){
+        if(this.level != level){
+            this.propertyChangeSupport.firePropertyChange(LEVEL, this.level, level);
+        }
+        this.level = level;
+    }
+
+    public void updateWave(int wave){
+        if(this.wave != wave){
+            this.propertyChangeSupport.firePropertyChange(WAVE, this.wave, wave);
+        }
+        this.wave = wave;
+    }
+    public void updateTimer(int time){
+        if(this.time != time){
+            this.propertyChangeSupport.firePropertyChange(TIMER, this.time, time);
+        }
+        this.time = time;
+    }
+
     public void playerDamage(int amount, float x, float y){
         float randomNumX = MathUtils.random(0.0f, 2.0f);
         float randomNumY = MathUtils.random(0.0f, 2.0f);
@@ -131,5 +156,9 @@ public class GameViewModel extends ViewModel{
         tempVec2.set(position);
         game.getViewport().project(tempVec2);
         return tempVec2;
+    }
+
+    public void promptUpgrade() {
+        this.propertyChangeSupport.firePropertyChange(UPGRADE, false, true);
     }
 }
