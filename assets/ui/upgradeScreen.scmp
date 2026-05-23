@@ -3,7 +3,7 @@ atlasData: {
 	atlasCurrent: true
 	drawables: [
 		{
-			file: D:/Projects/Runeguard/assets_raw/ui/buttonUp.9.png
+			file: D:/Projects/Runeguard/assets/ui/upgradeScreen_data/buttonUp.9.png
 			bgColor: {
 				r: 1
 				g: 1
@@ -23,7 +23,7 @@ atlasData: {
 			hidden: false
 		}
 		{
-			file: D:/Projects/Runeguard/assets_raw/ui/buttonDown.9.png
+			file: D:/Projects/Runeguard/assets/ui/upgradeScreen_data/buttonDown.9.png
 			bgColor: {
 				r: 1
 				g: 1
@@ -43,7 +43,7 @@ atlasData: {
 			hidden: false
 		}
 		{
-			file: D:/Projects/Runeguard/assets_raw/ui/banner.9.png
+			file: D:/Projects/Runeguard/assets/ui/upgradeScreen_data/banner.9.png
 			bgColor: {
 				r: 1
 				g: 1
@@ -63,7 +63,7 @@ atlasData: {
 			hidden: false
 		}
 		{
-			file: D:/Projects/Runeguard/assets_raw/ui/leftPage.9.png
+			file: D:/Projects/Runeguard/assets/ui/upgradeScreen_data/leftPage.9.png
 			bgColor: {
 				r: 1
 				g: 1
@@ -83,7 +83,7 @@ atlasData: {
 			hidden: false
 		}
 		{
-			file: D:/Projects/Runeguard/assets_raw/ui/rightPage.9.png
+			file: D:/Projects/Runeguard/assets/ui/upgradeScreen_data/rightPage.9.png
 			bgColor: {
 				r: 1
 				g: 1
@@ -103,7 +103,7 @@ atlasData: {
 			hidden: false
 		}
 		{
-			file: D:/Projects/Runeguard/assets_raw/ui/bar.9.png
+			file: D:/Projects/Runeguard/assets/ui/upgradeScreen_data/bar.9.png
 			bgColor: {
 				r: 1
 				g: 1
@@ -123,7 +123,7 @@ atlasData: {
 			hidden: false
 		}
 		{
-			file: D:/Projects/Runeguard/assets_raw/ui/fill.9.png
+			file: D:/Projects/Runeguard/assets/ui/upgradeScreen_data/fill.9.png
 			bgColor: {
 				r: 1
 				g: 1
@@ -143,7 +143,7 @@ atlasData: {
 			hidden: false
 		}
 		{
-			file: D:/Projects/Runeguard/assets_raw/ui/tempBkg.png
+			file: D:/Projects/Runeguard/assets/ui/upgradeScreen_data/tempBkg.png
 			bgColor: {
 				r: 1
 				g: 1
@@ -163,7 +163,7 @@ atlasData: {
 			hidden: false
 		}
 		{
-			file: D:/Projects/Runeguard/assets_raw/ui/RuneguardLogo.png
+			file: D:/Projects/Runeguard/assets/ui/upgradeScreen_data/RuneguardLogo.png
 			bgColor: {
 				r: 1
 				g: 1
@@ -183,7 +183,7 @@ atlasData: {
 			hidden: false
 		}
 		{
-			file: D:/Projects/Runeguard/assets_raw/ui/buttonOver.9.png
+			file: D:/Projects/Runeguard/assets/ui/upgradeScreen_data/buttonOver.9.png
 			bgColor: {
 				r: 1
 				g: 1
@@ -203,7 +203,7 @@ atlasData: {
 			hidden: false
 		}
 		{
-			file: D:/Projects/Runeguard/assets_raw/ui/XIcon.png
+			file: D:/Projects/Runeguard/assets/ui/upgradeScreen_data/XIcon.png
 			bgColor: {
 				r: 1
 				g: 1
@@ -223,7 +223,7 @@ atlasData: {
 			hidden: false
 		}
 		{
-			file: D:/Projects/Runeguard/assets_raw/ui/playerIcon.png
+			file: D:/Projects/Runeguard/assets/ui/upgradeScreen_data/playerIcon.png
 			bgColor: {
 				r: 1
 				g: 1
@@ -243,7 +243,7 @@ atlasData: {
 			hidden: false
 		}
 		{
-			file: D:/Projects/Runeguard/assets_raw/ui/healthFill.9.png
+			file: D:/Projects/Runeguard/assets/ui/upgradeScreen_data/healthFill.9.png
 			bgColor: {
 				r: 1
 				g: 1
@@ -263,7 +263,7 @@ atlasData: {
 			hidden: false
 		}
 		{
-			file: D:/Projects/Runeguard/assets_raw/ui/staminaFill.9.png
+			file: D:/Projects/Runeguard/assets/ui/upgradeScreen_data/staminaFill.9.png
 			bgColor: {
 				r: 1
 				g: 1
@@ -283,7 +283,7 @@ atlasData: {
 			hidden: false
 		}
 		{
-			file: D:/Projects/Runeguard/assets_raw/ui/window.9.png
+			file: D:/Projects/Runeguard/assets/ui/upgradeScreen_data/window.9.png
 			bgColor: {
 				r: 1
 				g: 1
@@ -303,7 +303,7 @@ atlasData: {
 			hidden: false
 		}
 		{
-			file: D:/Projects/Runeguard/assets_raw/ui/smallWindow.9.png
+			file: D:/Projects/Runeguard/assets/ui/upgradeScreen_data/smallWindow.9.png
 			bgColor: {
 				r: 1
 				g: 1
@@ -323,7 +323,7 @@ atlasData: {
 			hidden: false
 		}
 		{
-			file: D:/Projects/Runeguard/assets_raw/ui/progressBar.9.png
+			file: D:/Projects/Runeguard/assets/ui/upgradeScreen_data/progressBar.9.png
 			bgColor: {
 				r: 1
 				g: 1
@@ -343,7 +343,7 @@ atlasData: {
 			hidden: false
 		}
 		{
-			file: D:/Projects/Runeguard/assets_raw/ui/smallBar.9.png
+			file: D:/Projects/Runeguard/assets/ui/upgradeScreen_data/smallBar.9.png
 			bgColor: {
 				r: 1
 				g: 1
@@ -363,7 +363,7 @@ atlasData: {
 			hidden: false
 		}
 		{
-			file: D:/Projects/Runeguard/assets_raw/ui/largeBar.9.png
+			file: D:/Projects/Runeguard/assets/ui/upgradeScreen_data/largeBar.9.png
 			bgColor: {
 				r: 1
 				g: 1
@@ -383,7 +383,7 @@ atlasData: {
 			hidden: false
 		}
 		{
-			file: D:/Projects/Runeguard/assets_raw/ui/gameOverBkg.png
+			file: D:/Projects/Runeguard/assets/ui/upgradeScreen_data/gameOverBkg.png
 			bgColor: {
 				r: 1
 				g: 1
@@ -405,7 +405,7 @@ atlasData: {
 	]
 	fontDrawables: [
 		{
-			file: D:/Projects/Runeguard/assets/ui/alagard.png
+			file: D:/Projects/Runeguard/assets/ui/upgradeScreen_data/alagard.png
 			bgColor: {
 				r: 1
 				g: 1
@@ -425,7 +425,7 @@ atlasData: {
 			hidden: false
 		}
 		{
-			file: D:/Projects/Runeguard/assets/ui/alagard(1).png
+			file: D:/Projects/Runeguard/assets/ui/upgradeScreen_data/alagard(1).png
 			bgColor: {
 				r: 1
 				g: 1
@@ -445,7 +445,7 @@ atlasData: {
 			hidden: false
 		}
 		{
-			file: D:/Projects/Runeguard/assets/ui/alagard(2).png
+			file: D:/Projects/Runeguard/assets/ui/upgradeScreen_data/alagard(2).png
 			bgColor: {
 				r: 1
 				g: 1
@@ -465,7 +465,7 @@ atlasData: {
 			hidden: false
 		}
 		{
-			file: D:/Projects/Runeguard/assets/ui/alagard(3).png
+			file: D:/Projects/Runeguard/assets/ui/upgradeScreen_data/alagard(3).png
 			bgColor: {
 				r: 1
 				g: 1
@@ -485,7 +485,7 @@ atlasData: {
 			hidden: false
 		}
 		{
-			file: D:/Projects/Runeguard/assets/ui/alagard(4).png
+			file: D:/Projects/Runeguard/assets/ui/upgradeScreen_data/alagard(4).png
 			bgColor: {
 				r: 1
 				g: 1
@@ -505,7 +505,7 @@ atlasData: {
 			hidden: false
 		}
 		{
-			file: D:/Projects/Runeguard/assets/ui/alagard(5)_0.png
+			file: D:/Projects/Runeguard/assets/ui/upgradeScreen_data/alagard(5)_0.png
 			bgColor: {
 				r: 1
 				g: 1
@@ -525,7 +525,7 @@ atlasData: {
 			hidden: false
 		}
 		{
-			file: D:/Projects/Runeguard/assets/ui/alagard(5)_1.png
+			file: D:/Projects/Runeguard/assets/ui/upgradeScreen_data/alagard(5)_1.png
 			bgColor: {
 				r: 1
 				g: 1
@@ -545,7 +545,7 @@ atlasData: {
 			hidden: false
 		}
 		{
-			file: D:/Projects/Runeguard/assets/ui/alagard(5)_2.png
+			file: D:/Projects/Runeguard/assets/ui/upgradeScreen_data/alagard(5)_2.png
 			bgColor: {
 				r: 1
 				g: 1
@@ -596,7 +596,7 @@ jsonData: {
 			flip: false
 			markupEnabled: false
 			scaling: -1
-			file: D:/Projects/Runeguard/assets/ui/alagard.fnt
+			file: D:/Projects/Runeguard/assets/ui/upgradeScreen_data/alagard.fnt
 		}
 		{
 			class: com.ray3k.skincomposer.data.FontData
@@ -604,7 +604,7 @@ jsonData: {
 			flip: false
 			markupEnabled: false
 			scaling: -1
-			file: D:/Projects/Runeguard/assets/ui/alagard(3).fnt
+			file: D:/Projects/Runeguard/assets/ui/upgradeScreen_data/alagard(3).fnt
 		}
 		{
 			class: com.ray3k.skincomposer.data.FontData
@@ -612,7 +612,7 @@ jsonData: {
 			flip: false
 			markupEnabled: false
 			scaling: -1
-			file: D:/Projects/Runeguard/assets/ui/alagard(1).fnt
+			file: D:/Projects/Runeguard/assets/ui/upgradeScreen_data/alagard(1).fnt
 		}
 		{
 			class: com.ray3k.skincomposer.data.FontData
@@ -620,7 +620,7 @@ jsonData: {
 			flip: false
 			markupEnabled: false
 			scaling: -1
-			file: D:/Projects/Runeguard/assets/ui/alagard(4).fnt
+			file: D:/Projects/Runeguard/assets/ui/upgradeScreen_data/alagard(4).fnt
 		}
 		{
 			class: com.ray3k.skincomposer.data.FontData
@@ -628,7 +628,7 @@ jsonData: {
 			flip: false
 			markupEnabled: false
 			scaling: -1
-			file: D:/Projects/Runeguard/assets/ui/alagard(5).fnt
+			file: D:/Projects/Runeguard/assets/ui/upgradeScreen_data/alagard(5).fnt
 		}
 		{
 			class: com.ray3k.skincomposer.data.FontData
@@ -636,7 +636,7 @@ jsonData: {
 			flip: false
 			markupEnabled: false
 			scaling: -1
-			file: D:/Projects/Runeguard/assets/ui/alagard(2).fnt
+			file: D:/Projects/Runeguard/assets/ui/upgradeScreen_data/alagard(2).fnt
 		}
 	]
 	freeTypeFonts: []
@@ -2948,7 +2948,7 @@ preferences: {
 	}
 	resources-relative: {
 		class: java.lang.Boolean
-		value: false
+		value: true
 	}
 	maxUndos: {
 		class: java.lang.Integer

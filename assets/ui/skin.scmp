@@ -3,7 +3,7 @@ atlasData: {
 	atlasCurrent: true
 	drawables: [
 		{
-			file: D:/Projects/Runeguard/assets_raw/ui/buttonUp.9.png
+			file: D:/Projects/Runeguard/assets/ui/skin_data/buttonUp.9.png
 			bgColor: {
 				r: 1
 				g: 1
@@ -23,7 +23,7 @@ atlasData: {
 			hidden: false
 		}
 		{
-			file: D:/Projects/Runeguard/assets_raw/ui/buttonDown.9.png
+			file: D:/Projects/Runeguard/assets/ui/skin_data/buttonDown.9.png
 			bgColor: {
 				r: 1
 				g: 1
@@ -43,7 +43,7 @@ atlasData: {
 			hidden: false
 		}
 		{
-			file: D:/Projects/Runeguard/assets_raw/ui/window.9.png
+			file: D:/Projects/Runeguard/assets/ui/skin_data/window.9.png
 			bgColor: {
 				r: 1
 				g: 1
@@ -63,7 +63,7 @@ atlasData: {
 			hidden: false
 		}
 		{
-			file: D:/Projects/Runeguard/assets_raw/ui/banner.9.png
+			file: D:/Projects/Runeguard/assets/ui/skin_data/banner.9.png
 			bgColor: {
 				r: 1
 				g: 1
@@ -83,7 +83,7 @@ atlasData: {
 			hidden: false
 		}
 		{
-			file: D:/Projects/Runeguard/assets_raw/ui/leftPage.9.png
+			file: D:/Projects/Runeguard/assets/ui/skin_data/leftPage.9.png
 			bgColor: {
 				r: 1
 				g: 1
@@ -103,7 +103,7 @@ atlasData: {
 			hidden: false
 		}
 		{
-			file: D:/Projects/Runeguard/assets_raw/ui/rightPage.9.png
+			file: D:/Projects/Runeguard/assets/ui/skin_data/rightPage.9.png
 			bgColor: {
 				r: 1
 				g: 1
@@ -123,7 +123,7 @@ atlasData: {
 			hidden: false
 		}
 		{
-			file: D:/Projects/Runeguard/assets_raw/ui/bar.9.png
+			file: D:/Projects/Runeguard/assets/ui/skin_data/bar.9.png
 			bgColor: {
 				r: 1
 				g: 1
@@ -143,7 +143,7 @@ atlasData: {
 			hidden: false
 		}
 		{
-			file: D:/Projects/Runeguard/assets_raw/ui/fill.9.png
+			file: D:/Projects/Runeguard/assets/ui/skin_data/fill.9.png
 			bgColor: {
 				r: 1
 				g: 1
@@ -163,7 +163,7 @@ atlasData: {
 			hidden: false
 		}
 		{
-			file: D:/Projects/Runeguard/assets_raw/ui/tempBkg.png
+			file: D:/Projects/Runeguard/assets/ui/skin_data/tempBkg.png
 			bgColor: {
 				r: 1
 				g: 1
@@ -183,7 +183,7 @@ atlasData: {
 			hidden: false
 		}
 		{
-			file: D:/Projects/Runeguard/assets_raw/ui/RuneguardLogo.png
+			file: D:/Projects/Runeguard/assets/ui/skin_data/RuneguardLogo.png
 			bgColor: {
 				r: 1
 				g: 1
@@ -203,7 +203,7 @@ atlasData: {
 			hidden: false
 		}
 		{
-			file: D:/Projects/Runeguard/assets_raw/ui/buttonOver.9.png
+			file: D:/Projects/Runeguard/assets/ui/skin_data/buttonOver.9.png
 			bgColor: {
 				r: 1
 				g: 1
@@ -223,7 +223,7 @@ atlasData: {
 			hidden: false
 		}
 		{
-			file: D:/Projects/Runeguard/assets_raw/ui/XIcon.png
+			file: D:/Projects/Runeguard/assets/ui/skin_data/XIcon.png
 			bgColor: {
 				r: 1
 				g: 1
@@ -245,7 +245,7 @@ atlasData: {
 	]
 	fontDrawables: [
 		{
-			file: D:/Projects/Runeguard/assets/ui/alagard.png
+			file: D:/Projects/Runeguard/assets/ui/skin_data/alagard.png
 			bgColor: {
 				r: 1
 				g: 1
@@ -265,7 +265,7 @@ atlasData: {
 			hidden: false
 		}
 		{
-			file: D:/Projects/Runeguard/assets/ui/alagard(1).png
+			file: D:/Projects/Runeguard/assets/ui/skin_data/alagard(1).png
 			bgColor: {
 				r: 1
 				g: 1
@@ -285,7 +285,7 @@ atlasData: {
 			hidden: false
 		}
 		{
-			file: D:/Projects/Runeguard/assets/ui/alagard(2).png
+			file: D:/Projects/Runeguard/assets/ui/skin_data/alagard(2).png
 			bgColor: {
 				r: 1
 				g: 1
@@ -305,7 +305,7 @@ atlasData: {
 			hidden: false
 		}
 		{
-			file: D:/Projects/Runeguard/assets/ui/alagard(3).png
+			file: D:/Projects/Runeguard/assets/ui/skin_data/alagard(3).png
 			bgColor: {
 				r: 1
 				g: 1
@@ -325,7 +325,7 @@ atlasData: {
 			hidden: false
 		}
 		{
-			file: D:/Projects/Runeguard/assets/ui/alagard(4).png
+			file: D:/Projects/Runeguard/assets/ui/skin_data/alagard(4).png
 			bgColor: {
 				r: 1
 				g: 1
@@ -376,7 +376,7 @@ jsonData: {
 			flip: false
 			markupEnabled: false
 			scaling: -1
-			file: D:/Projects/Runeguard/assets/ui/alagard.fnt
+			file: D:/Projects/Runeguard/assets/ui/skin_data/alagard.fnt
 		}
 		{
 			class: com.ray3k.skincomposer.data.FontData
@@ -384,7 +384,7 @@ jsonData: {
 			flip: false
 			markupEnabled: false
 			scaling: -1
-			file: D:/Projects/Runeguard/assets/ui/alagard(3).fnt
+			file: D:/Projects/Runeguard/assets/ui/skin_data/alagard(3).fnt
 		}
 		{
 			class: com.ray3k.skincomposer.data.FontData
@@ -392,7 +392,7 @@ jsonData: {
 			flip: false
 			markupEnabled: false
 			scaling: -1
-			file: D:/Projects/Runeguard/assets/ui/alagard(1).fnt
+			file: D:/Projects/Runeguard/assets/ui/skin_data/alagard(1).fnt
 		}
 		{
 			class: com.ray3k.skincomposer.data.FontData
@@ -400,7 +400,7 @@ jsonData: {
 			flip: false
 			markupEnabled: false
 			scaling: -1
-			file: D:/Projects/Runeguard/assets/ui/alagard(4).fnt
+			file: D:/Projects/Runeguard/assets/ui/skin_data/alagard(4).fnt
 		}
 		{
 			class: com.ray3k.skincomposer.data.FontData
@@ -408,7 +408,7 @@ jsonData: {
 			flip: false
 			markupEnabled: false
 			scaling: -1
-			file: D:/Projects/Runeguard/assets/ui/alagard(2).fnt
+			file: D:/Projects/Runeguard/assets/ui/skin_data/alagard(2).fnt
 		}
 	]
 	freeTypeFonts: []
@@ -2579,7 +2579,7 @@ preferences: {
 	}
 	resources-relative: {
 		class: java.lang.Boolean
-		value: false
+		value: true
 	}
 	maxUndos: {
 		class: java.lang.Integer
