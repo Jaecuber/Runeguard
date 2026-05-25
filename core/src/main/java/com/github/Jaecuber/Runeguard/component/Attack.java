@@ -9,6 +9,8 @@ public class Attack implements Component{
     public static final ComponentMapper<Attack> MAPPER = ComponentMapper.getFor(Attack.class);
     private final float DEFAULT_ANIM_SPEED = 8/12f;
 
+    private float defaultDamage;
+    private float defaultDelay;
     private float damage;
     private float damageDelay;
     private float attackTimer;
@@ -17,6 +19,8 @@ public class Attack implements Component{
 
     public Attack(float damage, float damageDelay, SoundAsset sfx) {
         this.damage = damage;
+        this.defaultDamage = damage;
+        this.defaultDelay = damageDelay;
         this.damageDelay = damageDelay;
         this.sfx = sfx;
         this.attackTimer = 0f;
@@ -55,12 +59,28 @@ public class Attack implements Component{
         attackTimer = Math.max(0f, attackTimer - deltaTime);
     }
 
+    public void setAttackDelay(float delay){
+        this.damageDelay = delay;
+    }
+
+    public void setDamage(float damage){
+        this.damage = damage;
+    }
+
     public float getDamage(){
         return damage;
     }
 
     public float getDamageDelay(){
         return damageDelay;
+    }
+
+    public float getDefaultDamage(){
+        return this.defaultDamage;
+    }
+
+    public float getDefaultDelay(){
+        return this.defaultDelay;
     }
 
     public float getDefaultAnimSpeed(){

@@ -8,14 +8,12 @@ public class Dodge implements Component{
 
     private float dodgePower;
     private float dodgeCooldown;
-    private float staminaToDodge;
     private float cooldownTimer;
     private float immuneTimer;
 
-    public Dodge(float dodgePower, float dodgeCooldown, float staminaToDodge){
+    public Dodge(float dodgePower, float dodgeCooldown){
         this.dodgePower = dodgePower;
         this.dodgeCooldown = dodgeCooldown;
-        this.staminaToDodge = staminaToDodge;
     }
 
     public void startDodge(){
@@ -49,14 +47,6 @@ public class Dodge implements Component{
 
     public boolean canDodge() {
         return cooldownTimer <= 0.0f;
-    }
-
-    public float getStaminaToDodge() {
-        return staminaToDodge;
-    }
-
-    public void setStaminaToDodge(float staminaToDodge) {
-        this.staminaToDodge = staminaToDodge;
     }
 
     public boolean immune(){

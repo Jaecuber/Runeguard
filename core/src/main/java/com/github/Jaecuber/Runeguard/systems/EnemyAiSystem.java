@@ -9,15 +9,18 @@ import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.GdxRuntimeException;
+import com.badlogic.gdx.utils.ObjectMap;
 import com.github.Jaecuber.Runeguard.component.Animation2D;
 import com.github.Jaecuber.Runeguard.component.DamageListener;
 import com.github.Jaecuber.Runeguard.component.Dodge;
 import com.github.Jaecuber.Runeguard.component.Enemy;
 import com.github.Jaecuber.Runeguard.component.Fsm;
+import com.github.Jaecuber.Runeguard.component.Health;
 import com.github.Jaecuber.Runeguard.component.Move;
 import com.github.Jaecuber.Runeguard.component.Physics;
 import com.github.Jaecuber.Runeguard.component.Player;
 import com.github.Jaecuber.Runeguard.component.Transform;
+import com.github.Jaecuber.Runeguard.component.UpgradeTags;
 
 public class EnemyAiSystem extends IteratingSystem{
     private Entity playerEntity;
@@ -69,6 +72,16 @@ public class EnemyAiSystem extends IteratingSystem{
                 }
             }
         }
+
+        if(playerEntity != null){
+            UpgradeTags upgradeTags = UpgradeTags.MAPPER.get(playerEntity);
+            ObjectMap<String, Integer> ownedUpgrades = upgradeTags.getTags();
+
+            if(ownedUpgrades.containsKey("Timewalker")){
+                float slowFactor = (float) Math.pow(0.75, ownedUpgrades.get("Timewalker"));
+                move.setMaxSpeed(move.getDefaultMaxSpeed() * slowFactor);
+            }
+        }
         
         if(enemy.isStaggered() && body != null){
             body.setLinearDamping(10f);
@@ -107,6 +120,15 @@ public class EnemyAiSystem extends IteratingSystem{
         Enemy enemy = Enemy.MAPPER.get(entity);
         if(enemy.isDead()){
             deadEntityCache.add(entity);
+        }
+        if(playerEntity != null){
+            Health health = Health.MAPPER.get(playerEntity);
+            UpgradeTags upgradeTags = UpgradeTags.MAPPER.get(playerEntity);
+            if(upgradeTags == null || health == null) return;
+            ObjectMap<String, Integer> upgradesOwned = upgradeTags.getTags();
+            if(upgradesOwned.containsKey("Lifesteal")){
+                health.addHealth(15.0f);
+            }
         }
     }
 

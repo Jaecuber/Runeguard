@@ -37,72 +37,120 @@ size: 2048, 2048
 format: RGBA8888
 filter: Linear, Linear
 repeat: none
+BasicUpgradeBkg
+  rotate: false
+  xy: 1, 1
+  size: 1000, 240
+  orig: 1000, 240
+  offset: 0, 0
+  index: -1
+CursedUpgradeBkg
+  rotate: false
+  xy: 1003, 1
+  size: 1000, 240
+  orig: 1000, 240
+  offset: 0, 0
+  index: -1
+transition
+  rotate: false
+  xy: 1, 243
+  size: 1500, 900
+  orig: 1500, 900
+  offset: 0, 0
+  index: -1
+upgradeScreenBkg
+  rotate: false
+  xy: 1, 1145
+  size: 1500, 900
+  orig: 1500, 900
+  offset: 0, 0
+  index: -1
+
+skin4.png
+size: 2048, 2048
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+LegendaryUpgradeBkg
+  rotate: false
+  xy: 1, 1791
+  size: 1000, 240
+  orig: 1000, 240
+  offset: 0, 0
+  index: -1
+RareUpgradeBkg
+  rotate: false
+  xy: 1, 1549
+  size: 1000, 240
+  orig: 1000, 240
+  offset: 0, 0
+  index: -1
+XIcon
+  rotate: false
+  xy: 773, 951
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
 alagard
   rotate: false
-  xy: 515, 1259
+  xy: 515, 1083
   size: 504, 30
   orig: 504, 30
   offset: 0, 0
   index: -1
 alagard(1)
   rotate: false
-  xy: 1, 686
+  xy: 1003, 1849
   size: 506, 182
   orig: 506, 182
   offset: 0, 0
   index: -1
 alagard(2)
   rotate: false
-  xy: 515, 1291
+  xy: 1003, 1756
   size: 506, 91
   orig: 506, 91
   offset: 0, 0
   index: -1
 alagard(3)
   rotate: false
-  xy: 1029, 1464
+  xy: 515, 1115
   size: 505, 432
   orig: 505, 432
   offset: 0, 0
   index: -1
 alagard(4)
   rotate: false
-  xy: 1, 427
+  xy: 1511, 1774
   size: 505, 257
   orig: 505, 257
   offset: 0, 0
   index: -1
 alagard(5)_0
   rotate: false
-  xy: 1, 1384
+  xy: 1, 1035
   size: 512, 512
   orig: 512, 512
   offset: 0, 0
   index: -1
 alagard(5)_1
   rotate: false
-  xy: 1, 870
+  xy: 1, 521
   size: 512, 512
   orig: 512, 512
   offset: 0, 0
   index: -1
 alagard(5)_2
   rotate: false
-  xy: 515, 1384
+  xy: 1, 7
   size: 512, 512
   orig: 512, 512
   offset: 0, 0
   index: -1
-XIcon
-  rotate: false
-  xy: 1, 215
-  size: 48, 48
-  orig: 48, 48
-  offset: 0, 0
-  index: -1
 banner
   rotate: false
-  xy: 1029, 1430
+  xy: 1003, 1722
   size: 224, 32
   split: 12, 12, 12, 3
   orig: 224, 32
@@ -110,7 +158,7 @@ banner
   index: -1
 bar
   rotate: false
-  xy: 1029, 1424
+  xy: 1, 1
   size: 62, 4
   split: 3, 2, 1, 1
   orig: 62, 4
@@ -118,7 +166,7 @@ bar
   index: -1
 largeBar
   rotate: false
-  xy: 1029, 1424
+  xy: 1, 1
   size: 62, 4
   split: 3, 2, 1, 1
   orig: 62, 4
@@ -126,7 +174,7 @@ largeBar
   index: -1
 progressBar
   rotate: false
-  xy: 1029, 1424
+  xy: 1, 1
   size: 62, 4
   split: 3, 2, 1, 1
   orig: 62, 4
@@ -134,7 +182,7 @@ progressBar
   index: -1
 buttonDown
   rotate: false
-  xy: 227, 394
+  xy: 741, 792
   size: 30, 31
   split: 2, 2, 6, 1
   orig: 30, 31
@@ -142,7 +190,7 @@ buttonDown
   index: -1
 buttonOver
   rotate: false
-  xy: 629, 1226
+  xy: 887, 1050
   size: 30, 31
   split: 2, 2, 2, 5
   orig: 30, 31
@@ -150,7 +198,7 @@ buttonOver
   index: -1
 buttonUp
   rotate: false
-  xy: 1255, 1431
+  xy: 1229, 1723
   size: 30, 31
   split: 2, 2, 4, 3
   orig: 30, 31
@@ -158,7 +206,7 @@ buttonUp
   index: -1
 fill
   rotate: false
-  xy: 515, 1173
+  xy: 1511, 1770
   size: 30, 2
   split: 0, 0, 0, 0
   orig: 30, 2
@@ -166,7 +214,7 @@ fill
   index: -1
 healthFill
   rotate: false
-  xy: 1536, 1487
+  xy: 1003, 1569
   size: 30, 2
   split: 0, 0, 0, 0
   orig: 30, 2
@@ -174,7 +222,7 @@ healthFill
   index: -1
 leftPage
   rotate: false
-  xy: 1536, 1491
+  xy: 1003, 1573
   size: 104, 147
   split: 50, 51, 4, 7
   orig: 104, 147
@@ -182,14 +230,14 @@ leftPage
   index: -1
 playerIcon
   rotate: false
-  xy: 1536, 1640
+  xy: 515, 825
   size: 256, 256
   orig: 256, 256
   offset: 0, 0
   index: -1
 rightPage
   rotate: false
-  xy: 1794, 1749
+  xy: 515, 514
   size: 104, 147
   split: 50, 44, 69, 53
   orig: 104, 147
@@ -197,7 +245,7 @@ rightPage
   index: -1
 smallBar
   rotate: false
-  xy: 509, 866
+  xy: 2018, 2029
   size: 2, 2
   split: 0, 0, 0, 0
   orig: 2, 2
@@ -205,7 +253,7 @@ smallBar
   index: -1
 smallWindow
   rotate: false
-  xy: 515, 1177
+  xy: 773, 1001
   size: 112, 80
   split: 6, 6, 5, 6
   pad: 6, 6, 23, 26
@@ -214,7 +262,7 @@ smallWindow
   index: -1
 staminaFill
   rotate: false
-  xy: 1642, 1636
+  xy: 1109, 1718
   size: 30, 2
   split: 0, 0, 0, 0
   orig: 30, 2
@@ -222,7 +270,7 @@ staminaFill
   index: -1
 window
   rotate: false
-  xy: 1, 265
+  xy: 515, 663
   size: 224, 160
   split: 12, 12, 46, 52
   orig: 224, 160

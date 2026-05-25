@@ -41,6 +41,7 @@ import com.github.Jaecuber.Runeguard.component.Physics;
 import com.github.Jaecuber.Runeguard.component.Player;
 import com.github.Jaecuber.Runeguard.component.Stamina;
 import com.github.Jaecuber.Runeguard.component.Transform;
+import com.github.Jaecuber.Runeguard.component.UpgradeTags;
 import com.github.Jaecuber.Runeguard.component.Animation2D.AnimationType;
 import com.github.Jaecuber.Runeguard.component.Enemy.EnemyAIState;
 import com.github.Jaecuber.Runeguard.component.Facing.FacingDirection;
@@ -124,6 +125,7 @@ public class TiledAshleyConfig {
         addEntityPlayer(tileMapObject, entity);
         addEntityAttack(tile, entity);
         addEntityMapEntity(tileMapObject, entity);
+        addEntityUpgrade(tileMapObject, entity);
         entity.add(new Facing(Facing.FacingDirection.DOWN));
 
         Fsm fsm = new Fsm(entity);
@@ -168,8 +170,7 @@ public class TiledAshleyConfig {
         if(dodgePower == 0.0f) return;
 
         float dodgeCooldown = tile.getProperties().get("dodgeCooldown", 0.0f, Float.class);
-        float staminaToDodge = tile.getProperties().get("staminaToDodge", 0.0f, Float.class);
-        entity.add(new Dodge(dodgePower, dodgeCooldown, staminaToDodge));
+        entity.add(new Dodge(dodgePower, dodgeCooldown));
     }
 
     private void addEntityStamina(TiledMapTile tile, Entity entity) {
@@ -178,7 +179,8 @@ public class TiledAshleyConfig {
 
         float staminaRegen = tile.getProperties().get("staminaRegen", 0.0f, Float.class);
         float stamToAttack = tile.getProperties().get("staminaToAttack", 0.0f, Float.class);
-        entity.add(new Stamina(stamina, staminaRegen, stamToAttack));
+        float stamToDodge = tile.getProperties().get("staminaToDodge", 0.0f, Float.class);
+        entity.add(new Stamina(stamina, staminaRegen, stamToAttack, stamToDodge));
     }
 
     private void addEntityHealth(TiledMapTile tile, Entity entity) {
@@ -228,20 +230,26 @@ public class TiledAshleyConfig {
     private void addEntityPlayer(TiledMapTileMapObject tileMapObject, Entity entity) {
         if ("Player".equals(tileMapObject.getName())) {
             entity.add(new Player());
-        }else if ("spawn".equals(tileMapObject.getName())) {
-        ImmutableArray<Entity> players = engine.getEntitiesFor(Family.all(Player.class).get());
-        if (players.size() == 0) return;
-        
-        Entity player = players.first();
-        Transform transform = Transform.MAPPER.get(player);
-        Physics physics = Physics.MAPPER.get(player);
-        
-        transform.getPosition().set(tileMapObject.getX() * Launcher.UNIT_SCALE, tileMapObject.getY() * Launcher.UNIT_SCALE);
-        physics.getBody().setTransform(transform.getPosition(), 0f);
-        physics.getBody().setLinearVelocity(Vector2.Zero);
-        
-        engine.removeEntity(entity);
+        }else if ("playerSpawn".equals(tileMapObject.getName())) {
+            ImmutableArray<Entity> players = engine.getEntitiesFor(Family.all(Player.class).get());
+            if (players.size() == 0) return;
+            
+            Entity player = players.first();
+            Transform transform = Transform.MAPPER.get(player);
+            Physics physics = Physics.MAPPER.get(player);
+            
+            transform.getPosition().set(tileMapObject.getX() * Launcher.UNIT_SCALE, tileMapObject.getY() * Launcher.UNIT_SCALE);
+            physics.getBody().setTransform(transform.getPosition(), 0f);
+            physics.getBody().setLinearVelocity(Vector2.Zero);
+            
+            engine.removeEntity(entity);
+        }
     }
+
+    private void addEntityUpgrade(TiledMapTileMapObject tileMapObject, Entity entity) {
+        if("Player".equals(tileMapObject.getName())){
+            entity.add(new UpgradeTags());
+        }
     }
 
     private void addEntityCameraFollow(TiledMapTileMapObject mapObject, Entity entity) {

@@ -10,7 +10,6 @@ import com.badlogic.gdx.InputMultiplexer;
 import com.badlogic.gdx.InputProcessor;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.assets.loaders.resolvers.InternalFileHandleResolver;
-import com.badlogic.gdx.graphics.FPSLogger;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.Batch;
@@ -89,7 +88,6 @@ public class Launcher extends Game {
         super.render();
 
         //Gdx.graphics.setTitle("Runeguard - Draw Calls:" + glProfiler.getDrawCalls());
-        //fpsLogger.log();
     }
 
     @Override

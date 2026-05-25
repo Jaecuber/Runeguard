@@ -2,18 +2,27 @@ package com.github.Jaecuber.ui.model;
 
 import java.util.Map;
 
+import com.badlogic.ashley.core.Engine;
 import com.badlogic.ashley.core.Entity;
+import com.badlogic.ashley.core.Family;
+import com.badlogic.ashley.utils.ImmutableArray;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.maps.tiled.TiledMap;
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Vector2;
+import com.badlogic.gdx.utils.GdxRuntimeException;
+import com.badlogic.gdx.utils.Json;
 import com.github.Jaecuber.Runeguard.Launcher;
+import com.github.Jaecuber.Runeguard.asset.JsonAsset;
 import com.github.Jaecuber.Runeguard.asset.MapAsset;
 import com.github.Jaecuber.Runeguard.asset.SoundAsset;
-import com.github.Jaecuber.Runeguard.logic.RunManager;
+import com.github.Jaecuber.Runeguard.component.Health;
+import com.github.Jaecuber.Runeguard.component.Player;
+import com.github.Jaecuber.Runeguard.component.UpgradeTags;
+import com.github.Jaecuber.Runeguard.data.UpgradeBag;
+import com.github.Jaecuber.Runeguard.data.UpgradeClass;
 import com.github.Jaecuber.Runeguard.screen.GameScreen;
 import com.github.Jaecuber.Runeguard.tiled.EntitySpawner;
-import com.github.Jaecuber.Runeguard.tiled.TiledAshleyConfig;
 import com.github.Jaecuber.Runeguard.tiled.TiledService;
 
 public class GameViewModel extends ViewModel{
@@ -27,6 +36,7 @@ public class GameViewModel extends ViewModel{
     public static final String LEVEL = "level";
     public static final String WAVE = "wave";
     public static final String TIMER = "timer";
+    public static final String TRANSITION = "transition";
 
     private Map.Entry<Vector2, Integer> playerDamage;
     private int health;
@@ -39,12 +49,16 @@ public class GameViewModel extends ViewModel{
     private final Vector2 tempVec2;
     private TiledService tiledService;
     private EntitySpawner entitySpawner;
+    private Engine engine;
 
-    public GameViewModel(Launcher game, TiledService tiledService, EntitySpawner entitySpawner){
+    private boolean playerUpgraded = false;
+
+    public GameViewModel(Launcher game, TiledService tiledService, EntitySpawner entitySpawner, Engine engine){
         super(game);
         this.tempVec2 = new Vector2();
         this.tiledService = tiledService;
         this.entitySpawner = entitySpawner;
+        this.engine = engine;
     }
 
     public void updateHealthInfo(float maxHealth, float health){
@@ -55,6 +69,7 @@ public class GameViewModel extends ViewModel{
         setMaxStamina((int) maxStamina);
         setStamina((int) stamina);
     }
+    
     public void showGameOver(){
         this.propertyChangeSupport.firePropertyChange(GAME_OVER, false, true);
     }
@@ -65,8 +80,7 @@ public class GameViewModel extends ViewModel{
             case 1 -> entitySpawner.spawnEntity("green_slime", new Vector2(301.75f, 301.75f));
             case 2 -> entitySpawner.spawnEntity("undead_slime", new Vector2(301.75f, 301.75f));
             case 3 -> entitySpawner.spawnEntity("magma_slime", new Vector2(301.75f, 301.75f));
-        }
-        
+        }   
     }
 
     public void continueGame(){
@@ -127,6 +141,7 @@ public class GameViewModel extends ViewModel{
         if(this.wave != wave){
             this.propertyChangeSupport.firePropertyChange(WAVE, this.wave, wave);
         }
+        this.playerUpgraded = false;
         this.wave = wave;
     }
     public void updateTimer(int time){
@@ -152,10 +167,57 @@ public class GameViewModel extends ViewModel{
         this.game.getAudioService().playSound(sound);
     }
 
+    public UpgradeClass loadUpgradeClasses(){
+        String raw = this.game.getAssetService().get(JsonAsset.UPGRADE_BAG);
+        Json json = new Json();
+        UpgradeBag upgradeBag = json.fromJson(UpgradeBag.class, raw);
+        return upgradeBag.getUpgradeTypes();
+    }
+
+    public Entity getPlayerEntity(){
+        ImmutableArray<Entity> entities = engine.getEntitiesFor(Family.all(UpgradeTags.class, Player.class).get());
+        if(entities.size() > 0){
+            return entities.first();
+        }
+        throw new GdxRuntimeException("No player/upgrade entity");
+    }
+
+    public void addUpgradeTag(String tag, int amt){
+        Entity playerEntity = getPlayerEntity();
+        UpgradeTags upgradeTags = UpgradeTags.MAPPER.get(playerEntity);
+        if(upgradeTags == null) throw new GdxRuntimeException("No upgrade tags for player entity");
+
+        immediateUpgradeEffects(playerEntity, tag);
+
+        upgradeTags.addTag(tag, amt);
+        this.playerUpgraded = true;
+        this.propertyChangeSupport.firePropertyChange(TRANSITION, false, true);
+    }
+
+    private void immediateUpgradeEffects(Entity playerEntity, String tag) {
+        Health health = Health.MAPPER.get(playerEntity);
+        switch (tag) {
+            case "Soul Gamble" -> {
+                if(MathUtils.randomBoolean()){
+                    health.setMaxHealth(health.getMaxHealth()/2);
+                    health.setHealth(Math.min(health.getHealth(), health.getMaxHealth()));
+                }else{
+                    health.setMaxHealth(health.getMaxHealth()*2);
+                    health.setHealth(health.getHealth() * 2);
+                }
+            }
+        }
+        updateHealthInfo(health.getMaxHealth(), health.getHealth());
+    }
+
     public Vector2 toScreenCoords(Vector2 position) {
         tempVec2.set(position);
         game.getViewport().project(tempVec2);
         return tempVec2;
+    }
+
+    public boolean hadUpgraded(){
+        return this.playerUpgraded;
     }
 
     public void promptUpgrade() {

@@ -1,5 +1,7 @@
 package com.github.Jaecuber.Runeguard.systems;
 
+import java.lang.management.PlatformLoggingMXBean;
+
 import com.badlogic.ashley.core.Entity;
 import com.badlogic.ashley.core.Family;
 import com.badlogic.ashley.systems.IteratingSystem;
@@ -8,6 +10,8 @@ import com.badlogic.gdx.physics.box2d.Body;
 import com.github.Jaecuber.Runeguard.component.Enemy;
 import com.github.Jaecuber.Runeguard.component.Move;
 import com.github.Jaecuber.Runeguard.component.Physics;
+import com.github.Jaecuber.Runeguard.component.Player;
+import com.github.Jaecuber.Runeguard.component.UpgradeTags;
 
 public class PhysicsMoveSystem extends IteratingSystem{
     private final Vector2 normalizedDirection = new Vector2();

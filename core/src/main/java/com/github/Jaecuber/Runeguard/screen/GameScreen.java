@@ -41,6 +41,7 @@ import com.github.Jaecuber.Runeguard.systems.PhysicsDebugRenderSystem;
 import com.github.Jaecuber.Runeguard.systems.PhysicsSystem;
 import com.github.Jaecuber.Runeguard.systems.RenderSystem;
 import com.github.Jaecuber.Runeguard.systems.StaminaSystem;
+import com.github.Jaecuber.Runeguard.systems.UpgradeSystem;
 import com.github.Jaecuber.Runeguard.tiled.EntitySpawner;
 import com.github.Jaecuber.Runeguard.tiled.TiledAshleyConfig;
 import com.github.Jaecuber.Runeguard.tiled.TiledService;
@@ -77,11 +78,12 @@ public class GameScreen extends ScreenAdapter {
         this.audioService = game.getAudioService();
         this.uiViewport = new FitViewport(1500f, 900f);//320 180
         this.stage = new Stage(uiViewport, game.getBatch());
-        this.viewModel = new GameViewModel(game, this.tiledService, this.entitySpawner);
+        this.viewModel = new GameViewModel(game, this.tiledService, this.entitySpawner, this.engine);
         this.runManager = new RunManager(this.tiledService, this.entitySpawner, this.engine, game.getAssetService(), this.viewModel);
         this.skin = game.getAssetService().get(SkinAsset.DEFAULT);
         this.mapAsset = mapAsset;
         
+        this.engine.addSystem(new UpgradeSystem());
         this.engine.addSystem(new ControllerSystem());
         this.engine.addSystem(new PhysicsMoveSystem());
         this.engine.addSystem(new AnimationSystem(game.getAssetService()));

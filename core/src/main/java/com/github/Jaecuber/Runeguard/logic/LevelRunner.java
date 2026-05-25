@@ -7,7 +7,6 @@ import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.Json;
 import com.badlogic.gdx.utils.Queue;
-import com.github.Jaecuber.Runeguard.Launcher;
 import com.github.Jaecuber.Runeguard.asset.AssetService;
 import com.github.Jaecuber.Runeguard.asset.JsonAsset;
 import com.github.Jaecuber.Runeguard.component.Enemy;
@@ -20,6 +19,8 @@ import com.github.Jaecuber.ui.model.GameViewModel;
 
 public class LevelRunner {
     private final float REGULAR_WAVE_TIME = 20.0f; //20 Seconds
+    private final int WAVES_PER_LEVEL = 10;
+    private final int MID_UPGRADE_WAVE = 5;
 
     private TiledService tiledService;
     private EntitySpawner entitySpawner;
@@ -32,6 +33,7 @@ public class LevelRunner {
     private float waveTimer;
     private int level;
     private int wave;
+    private boolean actingMidUpgrade = false;
     
     public LevelRunner(TiledService tiledService, EntitySpawner entitySpawner, Engine engine, AssetService assetService, GameViewModel viewModel){
         this.tiledService = tiledService;
@@ -71,6 +73,24 @@ public class LevelRunner {
         difficulty = calcDifficulty(level, wave);
         viewModel.updateLevel(level);
         viewModel.updateWave(wave);
+        
+
+        if(wave == MID_UPGRADE_WAVE){
+            this.actingMidUpgrade = true;
+        }else{
+            spawnWave(difficulty);
+        }
+    }
+
+    public void clearMidUpgradeActor(){
+        this.actingMidUpgrade = false;
+    }
+
+    public boolean isMidUpgrading(){
+        return this.actingMidUpgrade;
+    }
+
+    public void spawnQueuedWave(){
         spawnWave(difficulty);
     }
 
@@ -112,13 +132,14 @@ public class LevelRunner {
     }
 
     public boolean levelComplete(){
-        return wave >= 10 && waveTimer <= 0 && engine.getEntitiesFor(Family.all(Enemy.class).get()).size() == 0;
+        return wave >= WAVES_PER_LEVEL && waveTimer <= 0 && engine.getEntitiesFor(Family.all(Enemy.class).get()).size() == 0;
     }
 
     public void tickWaveTimer(float deltaTime){
         waveTimer -= deltaTime;
+        viewModel.updateTimer(MathUtils.round(waveTimer));
         if(waveTimer <= 0){
-            if(wave < 10){
+            if(wave < WAVES_PER_LEVEL){
                 nextWave();
             }
         }

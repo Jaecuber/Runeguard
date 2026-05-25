@@ -11,14 +11,28 @@ public class Move implements Component{
     private final Vector2 direction;
     private boolean isRooted;
     private boolean doingAction;
+    private float defaultMaxSpeed;
 
     public Move(float maxSpeed){
-        this.maxSpeed = maxSpeed;;
+        this.maxSpeed = maxSpeed;
+        this.defaultMaxSpeed = maxSpeed;
         this.direction = new Vector2();
     }
 
     public float getMaxSpeed(){
         return maxSpeed;
+    }
+
+    public void setMaxSpeed(float speed){
+        this.maxSpeed = speed;
+    }
+
+    public float getDefaultMaxSpeed() {
+        return defaultMaxSpeed;
+    }
+
+    public void setDefaultMaxSpeed(float defaultMaxSpeed) {
+        this.defaultMaxSpeed = defaultMaxSpeed;
     }
 
     public Vector2 getDirection(){

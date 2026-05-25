@@ -2,8 +2,9 @@ package com.github.Jaecuber.ui.view;
 
 import java.util.Map;
 
+import com.badlogic.ashley.core.Entity;
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.math.Interpolation;
+import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.scenes.scene2d.Action;
 import com.badlogic.gdx.scenes.scene2d.Actor;
@@ -22,9 +23,14 @@ import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 import com.badlogic.gdx.scenes.scene2d.ui.VerticalGroup;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.utils.Align;
+import com.badlogic.gdx.utils.Array;
+import com.badlogic.gdx.utils.GdxRuntimeException;
 import com.badlogic.gdx.utils.Scaling;
-import com.github.Jaecuber.Runeguard.asset.MapAsset;
+import com.badlogic.gdx.utils.viewport.ScreenViewport;
 import com.github.Jaecuber.Runeguard.asset.SoundAsset;
+import com.github.Jaecuber.Runeguard.component.UpgradeTags;
+import com.github.Jaecuber.Runeguard.data.UpgradeClass;
+import com.github.Jaecuber.Runeguard.data.UpgradeEntry;
 import com.github.Jaecuber.ui.model.GameViewModel;
 import com.github.tommyettinger.textra.TypingLabel;
 
@@ -36,6 +42,19 @@ public class GameView extends View<GameViewModel>{
     private Label levelLabel;
     private Label waveLabel;
     private Label timerLabel;
+    private Table transitionTable;
+
+    //Upgrade Screen
+    private Table upgradeTable;
+    private Table upg1Table;
+    private Table upg2Table;
+    private Table upg3Table;
+    private Label upg1Title;
+    private Label upg2Title;
+    private Label upg3Title;
+    private Label upg1Desc;
+    private Label upg2Desc;
+    private Label upg3Desc;
 
     public GameView(Stage stage, Skin skin, GameViewModel viewModel){
         super(stage, skin, viewModel);
@@ -96,6 +115,8 @@ public class GameView extends View<GameViewModel>{
         statsTable.add(timerLabel).spaceTop(10.0f).spaceBottom(10.0f).align(Align.left);;
         stage.addActor(statsTable);
         setupGameOver();
+        setupUpgradeScreen();
+        setupTransition();
     }
 
     @Override
@@ -110,6 +131,7 @@ public class GameView extends View<GameViewModel>{
         viewModel.onPropertyChange(GameViewModel.LEVEL, Integer.class, this::updateLevel);
         viewModel.onPropertyChange(GameViewModel.WAVE, Integer.class, this::updateWave);
         viewModel.onPropertyChange(GameViewModel.TIMER, Integer.class, this::updateTimer);
+        viewModel.onPropertyChange(GameViewModel.TRANSITION, Boolean.class, this::transition);
     };
 
     private void showDamage(Map.Entry<Vector2, Integer> damAndPos){
@@ -131,7 +153,19 @@ public class GameView extends View<GameViewModel>{
         );
     }
 
-    public void setupGameOver(){
+    private void setupTransition(){
+        transitionTable = new Table();
+        transitionTable.setTouchable(Touchable.disabled);
+        transitionTable.setVisible(false);
+        transitionTable.setBackground(skin.getDrawable("transition"));
+        transitionTable.setFillParent(true);
+        transitionTable.getColor().a = 0f;
+
+        transitionTable.add();
+        stage.addActor(transitionTable);
+    }
+
+    private void setupGameOver(){
         gameOverTable = new Table();
         gameOverTable.setTouchable(Touchable.disabled);
         gameOverTable.setBackground(skin.getDrawable("gameOverBkg"));
@@ -191,6 +225,65 @@ public class GameView extends View<GameViewModel>{
         stage.addActor(gameOverTable);
     }
 
+    private void setupUpgradeScreen(){
+        upgradeTable = new Table();
+        upgradeTable.setBackground(skin.getDrawable("upgradeScreenBkg"));
+        upgradeTable.setFillParent(true);
+        upgradeTable.setTouchable(Touchable.disabled);
+
+        Label label = new Label("Choose One", skin, "titleLabel");
+        upgradeTable.add(label);
+
+        upgradeTable.row();
+        upg1Table = new Table();
+        upg1Table.setBackground(skin.getDrawable("BasicUpgradeBkg"));
+        upg1Table.padLeft(230.0f);
+        upg1Table.align(Align.left);
+
+        upg1Title = new Label("PLACEHOLDER", skin, "titleLabel");
+        upg1Table.add(upg1Title).padBottom(15.0f).align(Align.left);
+
+        upg1Table.row();
+        upg1Desc = new Label("PLACEHOLDER", skin, "mediumLabel");
+        upg1Desc.setWrap(true);
+        upg1Table.add(upg1Desc).padRight(20.0f).growX().align(Align.left);
+        upgradeTable.add(upg1Table);
+
+        upgradeTable.row();
+        upg2Table = new Table();
+        upg2Table.setBackground(skin.getDrawable("BasicUpgradeBkg"));
+        upg2Table.padLeft(230.0f);
+        upg2Table.align(Align.left);
+
+        upg2Title = new Label("PLACEHOLDER", skin, "titleLabel");
+        upg2Table.add(upg2Title).padBottom(15.0f).align(Align.left);
+
+        upg2Table.row();
+        upg2Desc = new Label("PLACEHOLDER", skin, "mediumLabel");
+        upg2Desc.setWrap(true);
+        upg2Table.add(upg2Desc).padRight(20.0f).growX().align(Align.left);
+        upgradeTable.add(upg2Table);
+
+        upgradeTable.row();
+        upg3Table = new Table();
+        upg3Table.setBackground(skin.getDrawable("BasicUpgradeBkg"));
+        upg3Table.padLeft(230.0f);
+        upg3Table.align(Align.left);
+
+        upg3Title = new Label("PLACEHOLDER", skin, "titleLabel");
+        upg3Table.add(upg3Title).padBottom(15.0f).align(Align.left);
+
+        upg3Table.row();
+        upg3Desc = new Label("PLACEHOLDER", skin, "mediumLabel");
+        upg3Desc.setWrap(true);
+        upg3Table.add(upg3Desc).padRight(20.0f).growX().align(Align.left);
+        upgradeTable.add(upg3Table);
+        upgradeTable.setVisible(false);
+        upgradeTable.getColor().a = 0.0f;
+        stage.addActor(upgradeTable);
+
+    }
+
     private void gameOverScreen(boolean bool){
         gameOverTable.setVisible(bool);
         gameOverTable.setTouchable(Touchable.enabled);
@@ -202,11 +295,175 @@ public class GameView extends View<GameViewModel>{
             Actions.delay(1.5f),
             Actions.fadeIn(0.25f)
         ));
+    }
 
+    private void transition(boolean bool){
+        transitionTable.setVisible(bool);
+        viewModel.playSound(SoundAsset.BOOM);
+        transitionTable.addAction(Actions.fadeIn(0.5f));
+        upgradeTable.addAction(Actions.sequence(
+            Actions.delay(1.5f),
+            Actions.fadeOut(0.01f)
+        ));
+        transitionTable.addAction(Actions.sequence(
+            Actions.delay(4.0f),
+            Actions.fadeOut(2.0f)
+        ));
+        upgradeTable.setTouchable(Touchable.disabled);
     }
 
     private void upgradeScreen(boolean bool){
+        UpgradeClass upgradeClasses = viewModel.loadUpgradeClasses();
+        UpgradeEntry upgrade1 = getUpgrade1(upgradeClasses);
+        UpgradeEntry upgrade2 = getUpgrade2(upgradeClasses);
+        UpgradeEntry upgrade3 = getUpgrade3(upgradeClasses);
+        upgradeTable.setTouchable(Touchable.disabled);
 
+        Entity playerEntity = viewModel.getPlayerEntity();
+        UpgradeTags upgradeTags = UpgradeTags.MAPPER.get(playerEntity);
+        if(upgradeTags == null) throw new GdxRuntimeException("No upgrade tags for player entity");
+
+        //Setting table backgrounds
+        switch (upgrade1.getRarity()) {
+            case "Basic" -> {upg1Table.setBackground(skin.getDrawable("BasicUpgradeBkg"));}
+            case "Rare" -> {upg1Table.setBackground(skin.getDrawable("RareUpgradeBkg"));}
+            case "Legendary" -> {upg1Table.setBackground(skin.getDrawable("LegendaryUpgradeBkg"));}
+            case "Cursed" -> {upg1Table.setBackground(skin.getDrawable("CursedUpgradeBkg"));}
+        }
+        switch (upgrade2.getRarity()) {
+            case "Basic" -> {upg2Table.setBackground(skin.getDrawable("BasicUpgradeBkg"));}
+            case "Rare" -> {upg2Table.setBackground(skin.getDrawable("RareUpgradeBkg"));}
+            case "Legendary" -> {upg2Table.setBackground(skin.getDrawable("LegendaryUpgradeBkg"));}
+            case "Cursed" -> {upg2Table.setBackground(skin.getDrawable("CursedUpgradeBkg"));}
+        }
+        switch (upgrade3.getRarity()) {
+            case "Basic" -> {upg3Table.setBackground(skin.getDrawable("BasicUpgradeBkg"));}
+            case "Rare" -> {upg3Table.setBackground(skin.getDrawable("RareUpgradeBkg"));}
+            case "Legendary" -> {upg3Table.setBackground(skin.getDrawable("LegendaryUpgradeBkg"));}
+            case "Cursed" -> {upg3Table.setBackground(skin.getDrawable("CursedUpgradeBkg"));}
+        }
+
+        //Setting table titles
+        upg1Title.setText(upgrade1.getName() + " [" + upgrade1.getRarity() + "]");
+        upg2Title.setText(upgrade2.getName() + " [" + upgrade2.getRarity() + "]");
+        upg3Title.setText(upgrade3.getName() + " [" + upgrade3.getRarity() + "]");
+
+        //Setting table descriptions
+        upg1Desc.setText(upgrade1.getDescription());
+        upg2Desc.setText(upgrade2.getDescription());
+        upg3Desc.setText(upgrade3.getDescription());
+
+        //Setting Listeners
+        upg1Table.clearListeners();
+        upg2Table.clearListeners();
+        upg3Table.clearListeners();
+
+        upg1Table.addListener(new ClickListener(){
+            @Override
+            public void clicked(InputEvent event, float x, float y){
+                viewModel.addUpgradeTag(upgrade1.getName(), 1);
+            }
+        });
+        upg1Table.addListener(new InputListener(){
+            long lastEnterTime = 0;
+            @Override
+            public void enter(InputEvent event, float x, float y, int pointer, Actor fromActor){
+                long currentTime = System.currentTimeMillis();
+                if(currentTime - lastEnterTime > 50){
+                    viewModel.playSound(SoundAsset.HOVER);
+                    lastEnterTime = currentTime;
+                }
+            }
+        });
+
+        upg2Table.addListener(new ClickListener(){
+            @Override
+            public void clicked(InputEvent event, float x, float y){
+                viewModel.addUpgradeTag(upgrade2.getName(), 1);
+            }
+        });
+        upg2Table.addListener(new InputListener(){
+            long lastEnterTime = 0;
+            @Override
+            public void enter(InputEvent event, float x, float y, int pointer, Actor fromActor){
+                long currentTime = System.currentTimeMillis();
+                if(currentTime - lastEnterTime > 50){
+                    viewModel.playSound(SoundAsset.HOVER);
+                    lastEnterTime = currentTime;
+                }
+            }
+        });
+
+        upg3Table.addListener(new ClickListener(){
+            @Override
+            public void clicked(InputEvent event, float x, float y){
+                viewModel.addUpgradeTag(upgrade3.getName(), 1);
+            }
+        });
+        upg3Table.addListener(new InputListener(){
+            long lastEnterTime = 0;
+            @Override
+            public void enter(InputEvent event, float x, float y, int pointer, Actor fromActor){
+                long currentTime = System.currentTimeMillis();
+                if(currentTime - lastEnterTime > 50){
+                    viewModel.playSound(SoundAsset.HOVER);
+                    lastEnterTime = currentTime;
+                }
+            }
+        });
+
+        upgradeTable.setVisible(bool);
+        upgradeTable.setTouchable(Touchable.enabled);
+        upgradeTable.addAction(Actions.sequence(
+            Actions.delay(1.0f),
+            Actions.fadeIn(1.0f)
+        ));
+    }
+
+    private UpgradeEntry getUpgrade1(UpgradeClass upgradeClasses) {
+        int classDec = MathUtils.random(0, 100);
+        Array<UpgradeEntry> entryBag;
+        if(classDec < 30){
+            entryBag = upgradeClasses.getRareUpgrades();
+        }else{
+            entryBag = upgradeClasses.getBasicUpgrades();
+        }
+
+        int upgDec = MathUtils.random(0, entryBag.size - 1);
+
+        return entryBag.get(upgDec);
+    }
+
+    private UpgradeEntry getUpgrade2(UpgradeClass upgradeClasses) {
+        int classDec = MathUtils.random(0, 100);
+        Array<UpgradeEntry> entryBag;
+        if(classDec < 5){
+            entryBag = upgradeClasses.getLegendaryUpgrades();
+        }else if(classDec < 30){
+            entryBag = upgradeClasses.getRareUpgrades();
+        }else{
+            entryBag = upgradeClasses.getBasicUpgrades();
+        }
+
+        int upgDec = MathUtils.random(0, entryBag.size - 1);
+
+        return entryBag.get(upgDec);
+    }
+
+    private UpgradeEntry getUpgrade3(UpgradeClass upgradeClasses) {
+        int classDec = MathUtils.random(0, 100);
+        Array<UpgradeEntry> entryBag;
+        if(classDec < 10){
+            entryBag = upgradeClasses.getLegendaryUpgrades();
+        }else if(classDec < 70){
+            entryBag = upgradeClasses.getBasicUpgrades();
+        }else{
+            entryBag = upgradeClasses.getCursedUpgrades();
+        }
+
+        int upgDec = MathUtils.random(0, entryBag.size - 1);
+
+        return entryBag.get(upgDec);
     }
 
     private void updateLevel(int level){
@@ -218,7 +475,20 @@ public class GameView extends View<GameViewModel>{
     }
 
     private void updateTimer(int time){
-
+        if(time < 0) return;
+        if(time > 60){
+            if(time/60 < 10){
+                if(time % 60 < 10){
+                    timerLabel.setText("0" + time/60 + ":0" + time % 60);
+                }
+                timerLabel.setText("0" + time/60 + ":" + time % 60);
+            }
+            timerLabel.setText(time/60 + ":" + time % 60);
+        }else if(time < 60 && time >= 10){
+            timerLabel.setText("00:" + time);
+        }else{
+            timerLabel.setText("00:" + "0" + time);
+        }
     }
 
     private void updateHealth(int health){

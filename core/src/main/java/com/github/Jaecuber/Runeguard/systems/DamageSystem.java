@@ -3,10 +3,12 @@ package com.github.Jaecuber.Runeguard.systems;
 import com.badlogic.ashley.core.Entity;
 import com.badlogic.ashley.core.Family;
 import com.badlogic.ashley.systems.IteratingSystem;
+import com.badlogic.gdx.utils.ObjectMap;
 import com.github.Jaecuber.Runeguard.component.DamageListener;
 import com.github.Jaecuber.Runeguard.component.Health;
 import com.github.Jaecuber.Runeguard.component.Player;
 import com.github.Jaecuber.Runeguard.component.Transform;
+import com.github.Jaecuber.Runeguard.component.UpgradeTags;
 import com.github.Jaecuber.ui.model.GameViewModel;
 
 public class DamageSystem extends IteratingSystem{
@@ -24,7 +26,19 @@ public class DamageSystem extends IteratingSystem{
 
         Health health = Health.MAPPER.get(entity);
         if(health != null){
-            health.addHealth(-damage.getDamage());
+            Player player = Player.MAPPER.get(entity);
+            UpgradeTags upgradeTags = UpgradeTags.MAPPER.get(entity);
+            if(player != null && upgradeTags != null){
+                ObjectMap<String, Integer> ownedUpgrades = upgradeTags.getTags();
+                float damageToAdd = damage.getDamage();
+                if(ownedUpgrades.containsKey("Thick Armor")){
+                    damageToAdd *= Math.pow(0.9, ownedUpgrades.get("Thick Armor"));
+                }
+                health.addHealth(-damageToAdd);
+            }else{
+                health.addHealth(-damage.getDamage());
+            }
+           
         }
 
         Transform transform = Transform.MAPPER.get(entity);

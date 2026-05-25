@@ -1,5 +1,7 @@
 package com.github.Jaecuber.Runeguard.systems;
 
+import java.lang.runtime.ObjectMethods;
+
 import com.badlogic.ashley.core.Entity;
 import com.badlogic.ashley.core.Family;
 import com.badlogic.ashley.systems.IteratingSystem;
@@ -12,6 +14,7 @@ import com.badlogic.gdx.physics.box2d.Shape;
 import com.badlogic.gdx.physics.box2d.World;
 import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.GdxRuntimeException;
+import com.badlogic.gdx.utils.ObjectMap;
 import com.github.Jaecuber.Runeguard.audio.AudioService;
 import com.github.Jaecuber.Runeguard.component.Animation2D;
 import com.github.Jaecuber.Runeguard.component.Attack;
@@ -23,6 +26,7 @@ import com.github.Jaecuber.Runeguard.component.Health;
 import com.github.Jaecuber.Runeguard.component.Move;
 import com.github.Jaecuber.Runeguard.component.Physics;
 import com.github.Jaecuber.Runeguard.component.Stamina;
+import com.github.Jaecuber.Runeguard.component.UpgradeTags;
 import com.github.Jaecuber.Runeguard.component.Facing.FacingDirection;
 
 public class AttackSystem extends IteratingSystem{
@@ -32,15 +36,17 @@ public class AttackSystem extends IteratingSystem{
     private final World world;
     private final Vector2 tempVertex;
     private Body attackerBody;
-    private float attackDamage;
+    private float damage;
+    private boolean canStun;
 
     public AttackSystem(World world, AudioService audioService){
         super(Family.all(Attack.class, Facing.class, Physics.class).get());
         this.audioService = audioService;
         this.world = world;
         this.tempVertex = new Vector2();
+        this.damage = 0.0f;
+        this.canStun = false;
         this.attackerBody = null;
-        this.attackDamage = 0f;
     }
 
     @Override
@@ -50,6 +56,14 @@ public class AttackSystem extends IteratingSystem{
         Stamina stamina = Stamina.MAPPER.get(entity);
         Dodge dodge = Dodge.MAPPER.get(entity);
         float animSpeed = (attack.getDefaultAnimSpeed()/attack.getDamageDelay()) + 0.025f;
+        UpgradeTags upgradeTags = UpgradeTags.MAPPER.get(entity);
+
+        if(upgradeTags != null){
+            ObjectMap<String, Integer> upgradesOwned = upgradeTags.getTags();
+            if(upgradesOwned.containsKey("Stunning Strikes")){
+                canStun = true;
+            }
+        }
 
         if(attack.canAttack()) return;
 
@@ -74,7 +88,9 @@ public class AttackSystem extends IteratingSystem{
             attackerBody = Physics.MAPPER.get(entity).getBody();
             PolygonShape attackShape = getAttackFixture(attackerBody, facingDirection);
             updateAttackAABB(attackerBody.getPosition(), attackShape);
-            this.attackDamage = attack.getDamage();
+
+            this.damage = attack.getDamage();
+            
             //stamina
             if(stamina != null){
                 stamina.addStamina(-stamina.getStamToAttack());
@@ -113,7 +129,12 @@ public class AttackSystem extends IteratingSystem{
         Enemy enemy = Enemy.MAPPER.get(entity);
         Health health = Health.MAPPER.get(entity);
         if(!enemy.isDead() && !health.died()){
-            enemy.applyKnockback(0.3f);
+            if(canStun){
+                enemy.applyKnockback(1.5f);
+            }else{
+                enemy.applyKnockback(0.3f);
+            }
+            
 
             Vector2 knockbackDirection = new Vector2(
                 body.getPosition().x - attackerBody.getPosition().x,
@@ -128,9 +149,9 @@ public class AttackSystem extends IteratingSystem{
         //damage 
         DamageListener damage = DamageListener.MAPPER.get(entity);
         if (damage == null) {
-            entity.add(new DamageListener(this.attackDamage));
+            entity.add(new DamageListener(this.damage));
         } else {
-            damage.addDamage(this.attackDamage);
+            damage.addDamage(this.damage);
         }
         return true;
     }

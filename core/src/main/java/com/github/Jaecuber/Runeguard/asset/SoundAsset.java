@@ -6,7 +6,8 @@ import com.badlogic.gdx.audio.Sound;
 public enum SoundAsset implements Asset<Sound>{
     SWING("swordSlash.mp3"),
     HOVER("hover.mp3"),
-    POPUP("popup.mp3");
+    POPUP("popup.mp3"),
+    BOOM("boomTransition.mp3");
 
     private final AssetDescriptor<Sound> descriptor;
 

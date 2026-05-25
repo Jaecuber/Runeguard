@@ -2,6 +2,7 @@ package com.github.Jaecuber.Runeguard.logic;
 
 import com.badlogic.ashley.core.Engine;
 import com.badlogic.gdx.ai.fsm.DefaultStateMachine;
+import com.badlogic.gdx.math.MathUtils;
 import com.github.Jaecuber.Runeguard.ai.GameState;
 import com.github.Jaecuber.Runeguard.asset.AssetService;
 import com.github.Jaecuber.Runeguard.tiled.EntitySpawner;
@@ -20,10 +21,12 @@ public class RunManager{
 
     //handlers
     private boolean playingState = false;
+    private boolean prompted = false;
 
     //timers
     private float startLevelTimer = 5.0f; //5 seconds
     private float endTimer = 5.0f; // 5 seconds
+    private float intermissionTimer = 5.0f; //5 seconds;
 
     public RunManager(TiledService tiledService, EntitySpawner entitySpawner, Engine engine, AssetService assetService, GameViewModel viewModel){
         this.runState = RunState.STARTING_LEVEL;
@@ -45,10 +48,16 @@ public class RunManager{
             case PLAYING -> playing();
             case LEVEL_CLEAR -> levelClear(deltaTime);
             case UPGRADING -> upgrading();
+            case MID_UPGRADE -> upgrading();
+            case INTERMISSION -> intermission(deltaTime);
             case NEXT_LEVEL -> nextLevel();
             case RESTARTING_GAME -> restartGame();
             case CUTSCENE -> playCutscene();
         }
+    }
+
+    private void intermission(float deltaTime) {
+        tickIntermissionTime(deltaTime);
     }
 
     private void startingLevel(float deltaTime) {
@@ -69,7 +78,10 @@ public class RunManager{
     }
 
     private void upgrading() {
-        viewModel.promptUpgrade();
+        if(!prompted){
+            prompted = true;
+            viewModel.promptUpgrade();//add param to differentiate between mid upgrade and end upgrade
+        }    
     }
 
     private void levelClear(float deltaTime) {
@@ -77,6 +89,7 @@ public class RunManager{
     }
 
     private void playing(){
+        prompted = false;
         playingState = false;
     }
 
@@ -84,12 +97,28 @@ public class RunManager{
         return levelRunner.levelComplete();
     }
 
+    public void continueLevel(){
+        this.levelRunner.clearMidUpgradeActor();
+        this.levelRunner.spawnQueuedWave();
+    }
+
+    public boolean isMidUpgrading(){
+        return this.levelRunner.isMidUpgrading();
+    }
+
     private void tickEndTime(float deltaTime) {
-       endTimer -= deltaTime;
+        endTimer -= deltaTime;
+        viewModel.updateTimer(MathUtils.round(endTimer));
+    }
+
+    private void tickIntermissionTime(float deltaTime) {
+        intermissionTimer -= deltaTime;
+        viewModel.updateTimer(MathUtils.round(endTimer));
     }
 
     private void tickStartTime(float deltaTime) {
         startLevelTimer -= deltaTime;
+        viewModel.updateTimer(MathUtils.round(startLevelTimer));
     }
 
     public boolean startTimeOver(){
@@ -100,8 +129,16 @@ public class RunManager{
         return endTimer <= 0;
     } 
 
+    public boolean intermissionTimerOver(){
+        return intermissionTimer <= 0;
+    }
+
     public boolean getPlayingState(){
         return playingState;
+    }
+
+    public boolean upgraded(){
+        return viewModel.hadUpgraded();
     }
 
     public RunState getRunState(){
@@ -115,6 +152,7 @@ public class RunManager{
             case LEVEL_CLEAR -> {this.endTimer = 5.0f;}
             case NEXT_LEVEL -> {}
             case PLAYING -> {}
+            case INTERMISSION -> {this.intermissionTimer = 5.0f;}
             case RESTARTING_GAME -> {} 
             case UPGRADING -> {}
             default -> {}
@@ -131,6 +169,6 @@ public class RunManager{
     }
 
     public enum RunState{
-        STARTING_LEVEL, PLAYING, LEVEL_CLEAR, UPGRADING, NEXT_LEVEL, RESTARTING_GAME, CUTSCENE
+        STARTING_LEVEL, PLAYING, LEVEL_CLEAR, UPGRADING, MID_UPGRADE, INTERMISSION, NEXT_LEVEL, RESTARTING_GAME, CUTSCENE
     }
 }

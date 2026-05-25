@@ -1,5 +1,5 @@
 {
-    "activeFile": "starterArea.tmx",
+    "activeFile": "testMap.tmx",
     "expandedProjectPaths": [
         "."
     ],
@@ -109,17 +109,17 @@
         "Dungeon Floor.tsx": {
             "dynamicWrapping": false,
             "scaleInDock": 2,
-            "scaleInEditor": 1
+            "scaleInEditor": 2
         },
         "Dungeon Walls.tsx": {
             "dynamicWrapping": false,
             "scaleInDock": 2,
-            "scaleInEditor": 4
+            "scaleInEditor": 2
         },
         "Enemies.tsx": {
             "dynamicWrapping": true,
             "scaleInDock": 1,
-            "scaleInEditor": 1
+            "scaleInEditor": 2
         },
         "Farmset.tsx": {
             "dynamicWrapping": false,
@@ -134,7 +134,7 @@
         "Ground_rocks.tsx": {
             "dynamicWrapping": false,
             "scaleInDock": 4,
-            "scaleInEditor": 1
+            "scaleInEditor": 2
         },
         "Hitbox.tsx": {
             "dynamicWrapping": false,
@@ -178,7 +178,7 @@
         "Trees.tsx": {
             "dynamicWrapping": true,
             "scaleInDock": 1,
-            "scaleInEditor": 1
+            "scaleInEditor": 2
         },
         "UndeadLandObjects.tsx": {
             "dynamicWrapping": true,
@@ -197,19 +197,19 @@
             "scale": 2,
             "selectedLayer": 3,
             "viewCenter": {
-                "x": 345,
-                "y": 320.5
+                "x": 320,
+                "y": 320.25
             }
         },
         "starterArea.tmx": {
             "expandedObjectLayers": [
                 4
             ],
-            "scale": 0.75,
+            "scale": 1.5,
             "selectedLayer": 13,
             "viewCenter": {
-                "x": 1374.6666666666665,
-                "y": 1320
+                "x": 795.3333333333333,
+                "y": 1035.6666666666665
             }
         },
         "starterArea.tmx#Trees": {
@@ -223,7 +223,7 @@
             "selectedLayer": 1,
             "viewCenter": {
                 "x": 240,
-                "y": 159
+                "y": 159.5
             }
         },
         "undeadLand.tmx": {
@@ -233,19 +233,19 @@
             "scale": 1,
             "selectedLayer": 3,
             "viewCenter": {
-                "x": 407,
-                "y": 480
+                "x": 400,
+                "y": 400.5
             }
         },
         "undeadLandObjects.tsx": {
             "dynamicWrapping": true,
             "scaleInDock": 0.25,
-            "scaleInEditor": 0.25
+            "scaleInEditor": 2
         },
         "walls_floor.tsx": {
             "dynamicWrapping": false,
             "scaleInDock": 3,
-            "scaleInEditor": 3
+            "scaleInEditor": 2
         }
     },
     "last.externalTilesetPath": "D:/Projects/Runeguard/assets/map",
@@ -274,18 +274,18 @@
     "project": "tiled.tiled-project",
     "property.type": "bool",
     "recentFiles": [
-        "testMap.tmx",
-        "undeadLandObjects.tsx",
-        "Trees.tsx",
-        "Ground_rocks.tsx",
-        "walls_floor.tsx",
-        "Player.tsx",
-        "Enemies.tsx",
-        "Dungeon Walls.tsx",
-        "Dungeon Floor.tsx",
-        "MainTileset.tsx",
+        "starterArea.tmx",
+        "dungeon.tmx",
         "undeadLand.tmx",
-        "dungeon.tmx"
+        "MainTileset.tsx",
+        "Dungeon Floor.tsx",
+        "Dungeon Walls.tsx",
+        "Enemies.tsx",
+        "Player.tsx",
+        "walls_floor.tsx",
+        "Ground_rocks.tsx",
+        "Trees.tsx",
+        "undeadLandObjects.tsx"
     ],
     "tileset.lastUsedFormat": "tsx",
     "tileset.tileSize": {

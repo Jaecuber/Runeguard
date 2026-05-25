@@ -79,7 +79,7 @@ public class ControllerSystem extends IteratingSystem{
 
         if(dodge.canDodge() && stamina.getStamina() > stamina.getStamToAttack() && dodge != null){
             dodge.startDodge();
-            stamina.addStamina(-dodge.getStaminaToDodge());
+            stamina.addStamina(-stamina.getStaminaToDodge());
             if(directionX == 0 && directionY == 0){
                 facingDir = facing.getDirection();
                 switch (facingDir) {

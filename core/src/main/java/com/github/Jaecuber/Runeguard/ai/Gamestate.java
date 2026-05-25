@@ -35,6 +35,8 @@ public enum GameState implements State<RunManager>{
         public void update(RunManager entity) {
             if(entity.levelComplete()){
                 entity.getGameFsm().changeState(LEVEL_CLEAR);
+            }else if(entity.isMidUpgrading()){
+                entity.getGameFsm().changeState(MID_UPGRADE);
             }
         }
         @Override
@@ -73,7 +75,50 @@ public enum GameState implements State<RunManager>{
         }
         @Override
         public void update(RunManager entity) {
-            //do something then move to NEXT_LEVEL state
+            if(entity.upgraded()){
+                entity.getGameFsm().changeState(STARTING_LEVEL);
+            }
+        }
+        @Override
+        public void exit(RunManager entity) {
+            
+        }
+        @Override
+        public boolean onMessage(RunManager entity, Telegram telegram) {
+            return false;
+        }
+    },
+    MID_UPGRADE{
+         @Override
+        public void enter(RunManager entity) {
+            entity.setState(RunState.MID_UPGRADE);
+        }
+        @Override
+        public void update(RunManager entity) {
+            if(entity.upgraded()){
+                entity.continueLevel();
+                entity.getGameFsm().changeState(INTERMISSION);
+            }
+        }
+        @Override
+        public void exit(RunManager entity) {
+            
+        }
+        @Override
+        public boolean onMessage(RunManager entity, Telegram telegram) {
+            return false;
+        }
+    },
+    INTERMISSION{
+        @Override
+        public void enter(RunManager entity) {
+            entity.setState(RunState.INTERMISSION);
+        }
+        @Override
+        public void update(RunManager entity) {
+            if(entity.intermissionTimerOver()){
+                entity.getGameFsm().changeState(PLAYING);
+            }
         }
         @Override
         public void exit(RunManager entity) {
