@@ -1,4 +1,9 @@
-# Runeguard
+![Logo](assets_raw/ui/RuneguardLogo.png)
+A simple roguelite that may grow in the future.
+
+**Important Info:**
+
+_[Trello Board](https://trello.com/b/b2MbZ2z8/runeguard-development-roadmap)_ : the most up-to-date progress on the game's development.
 
 **Developers:** Jaecuber
 **Date:** [April, 2026]
@@ -7,13 +12,11 @@
 ---
 
 ## 🎮 Game Description
-Rouguelite
+A roguelite game. Battle through waves of enemies and gain upgrades as you progress. How long can you survive?
 
 ## 🕹️ Controls
 * **[W, A, S, D]** Move the player.
 * **[Spacebar]** : Dash
-* **[No Keybind]**: Pause the game.
-* **[No Keybind]**: Quit.
 
 ---
 
@@ -30,7 +33,12 @@ Rouguelite
 
 ## 🛠️ How to Run Locally
 
-If you want to pull this repository and play the game yourself, follow these steps:
+If you want yo play the game for yourself, follow these steps:
+1. **Look through the recent releases on the github**
+2. **Download the most recent release**
+3. **Run the .exe file to play**
+
+If you want to pull this repository, follow these steps:
 
 1. **Clone the repository:** `git clone [Insert your GitHub Repo URL here]`
 2. **Open the project** in your IDE (VS Code, IntelliJ IDEA, or Eclipse).
