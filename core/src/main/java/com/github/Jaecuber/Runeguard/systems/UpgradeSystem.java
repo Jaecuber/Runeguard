@@ -90,7 +90,7 @@ public class UpgradeSystem extends IteratingSystem{
 
         health.setMaxHealth(finalMaxHealth);
         if(upgradesOwned.containsKey("Blood Pact")){
-            health.setHealth(finalMaxHealth/2);
+            health.setHealth(finalMaxHealth/4);
         }else{
             health.setHealth(finalMaxHealth);
         }
@@ -161,19 +161,19 @@ public class UpgradeSystem extends IteratingSystem{
                 finalDamage += 5 * upgradesOwned.get("Sharpened Blade");
             }
             if(upgradesOwned.containsKey("Berserker's Might")){
-                finalDamage += 20 * upgradesOwned.get("Berserker's Might");
+                finalDamage += 15 * upgradesOwned.get("Berserker's Might");
             }
             if(upgradesOwned.containsKey("Wrath of the Gods")){
-                finalDamage += 50 * upgradesOwned.get("Wrath of the Gods");
+                finalDamage += 35 * upgradesOwned.get("Wrath of the Gods");
             }
             if(upgradesOwned.containsKey("Cursed Greatsword")){
-                finalDamage += 75 * upgradesOwned.get("Cursed Greatsword");
+                finalDamage += 50 * upgradesOwned.get("Cursed Greatsword");
             }
             if(upgradesOwned.containsKey("Shackles of Despair")){
-                finalDamage += 80 * upgradesOwned.get("Shackles of Despair");
+                finalDamage += 60 * upgradesOwned.get("Shackles of Despair");
             }
             if(upgradesOwned.containsKey("Glass Cannon")){
-                finalDamage *= Math.pow(1.5f, upgradesOwned.get("Glass Cannon"));
+                finalDamage *= Math.pow(2.0f, upgradesOwned.get("Glass Cannon"));
             }
         }
         attack.setDamage(finalDamage);

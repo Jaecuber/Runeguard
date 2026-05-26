@@ -5,6 +5,8 @@ import com.badlogic.gdx.ai.fsm.DefaultStateMachine;
 import com.badlogic.gdx.math.MathUtils;
 import com.github.Jaecuber.Runeguard.ai.GameState;
 import com.github.Jaecuber.Runeguard.asset.AssetService;
+import com.github.Jaecuber.Runeguard.asset.MusicAsset;
+import com.github.Jaecuber.Runeguard.audio.AudioService;
 import com.github.Jaecuber.Runeguard.tiled.EntitySpawner;
 import com.github.Jaecuber.Runeguard.tiled.TiledService;
 import com.github.Jaecuber.ui.model.GameViewModel;
@@ -16,6 +18,7 @@ public class RunManager{
     private EntitySpawner entitySpawner;
     private AssetService assetService;
     private GameViewModel viewModel;
+    private AudioService audioService;
     private Engine engine;
     private DefaultStateMachine<RunManager, GameState> gameFsm;
 
@@ -28,16 +31,17 @@ public class RunManager{
     private float endTimer = 5.0f; // 5 seconds
     private float intermissionTimer = 5.0f; //5 seconds;
 
-    public RunManager(TiledService tiledService, EntitySpawner entitySpawner, Engine engine, AssetService assetService, GameViewModel viewModel){
+    public RunManager(TiledService tiledService, EntitySpawner entitySpawner, Engine engine, AssetService assetService, GameViewModel viewModel, AudioService audioService){
         this.runState = RunState.STARTING_LEVEL;
         this.tiledService = tiledService;
         this.entitySpawner = entitySpawner;
         this.assetService = assetService;
+        this.audioService = audioService;
         this.engine = engine;
         this.viewModel = viewModel;
         this.gameFsm = new DefaultStateMachine<RunManager, GameState>(this, GameState.STARTING_LEVEL);
 
-        this.levelRunner = new LevelRunner(this.tiledService, this.entitySpawner, this.engine, this.assetService, this.viewModel);
+        this.levelRunner = new LevelRunner(this.tiledService, this.entitySpawner, this.engine, this.assetService, this.viewModel, this.audioService);
     }
 
     public void update(float deltaTime){
@@ -78,7 +82,8 @@ public class RunManager{
     }
 
     private void upgrading() {
-        if(!prompted){
+        if(!prompted && enemiesCleared()){
+            audioService.playMusic(MusicAsset.UPGRADE);
             prompted = true;
             viewModel.promptUpgrade();//add param to differentiate between mid upgrade and end upgrade
         }    
@@ -104,6 +109,10 @@ public class RunManager{
 
     public boolean isMidUpgrading(){
         return this.levelRunner.isMidUpgrading();
+    }
+
+    public boolean enemiesCleared(){
+        return this.levelRunner.enemiesCleared();
     }
 
     private void tickEndTime(float deltaTime) {

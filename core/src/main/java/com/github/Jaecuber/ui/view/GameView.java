@@ -156,13 +156,17 @@ public class GameView extends View<GameViewModel>{
     private void setupTransition(){
         transitionTable = new Table();
         transitionTable.setTouchable(Touchable.disabled);
-        transitionTable.setVisible(false);
+        transitionTable.setVisible(true);
         transitionTable.setBackground(skin.getDrawable("transition"));
         transitionTable.setFillParent(true);
-        transitionTable.getColor().a = 0f;
+        transitionTable.getColor().a = 1f;
 
         transitionTable.add();
         stage.addActor(transitionTable);
+        transitionTable.addAction(Actions.sequence(
+            Actions.delay(2.0f),
+            Actions.fadeOut(2.0f)
+        ));
     }
 
     private void setupGameOver(){
@@ -306,7 +310,7 @@ public class GameView extends View<GameViewModel>{
             Actions.fadeOut(0.01f)
         ));
         transitionTable.addAction(Actions.sequence(
-            Actions.delay(4.0f),
+            Actions.delay(3.0f),
             Actions.fadeOut(2.0f)
         ));
         upgradeTable.setTouchable(Touchable.disabled);

@@ -56,6 +56,11 @@ public class AudioService {
         this.currentMusicAsset = musicAsset;
     }
 
+    public void stopCurrentMusic(){
+        if(this.currentMusic == null) return;
+        this.currentMusic.stop();
+    }
+
     public void playSound(SoundAsset soundAsset){
         this.assetService.get(soundAsset).play(soundVolume);
     }
@@ -64,7 +69,7 @@ public class AudioService {
         String musicAssetStr = tiledMap.getProperties().get("music", "", String.class);
         if(musicAssetStr.isBlank()) return;
 
-        MusicAsset musicAsset = MusicAsset.valueOf(musicAssetStr);
-        playMusic(musicAsset);
+        //MusicAsset musicAsset = MusicAsset.valueOf(musicAssetStr);
+        //playMusic(musicAsset);
     }
 }

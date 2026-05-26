@@ -11,26 +11,26 @@
             {"name" : "Quick Feet", "rarity" : "Basic", "description" : "15% faster movement speed"}
         ],
         "rareUpgrades" : [
-            {"name" : "Lifesteal", "rarity" : "Rare", "description" : "Heal 15hp everytime you kill an enemy"},
+            {"name" : "Lifesteal", "rarity" : "Rare", "description" : "Heal 5hp everytime you kill an enemy"},
             {"name" : "Stunning Strikes", "rarity" : "Rare", "description" : "Stun enemies for a brief period of time everytime you hit them"},
             {"name" : "Resolute Steel", "rarity" : "Rare", "description" : "+50 max stamina"},
             {"name" : "Accelerated Strikes", "rarity" : "Rare", "description" : "Attack 25% faster"},
             {"name" : "Vital Surge", "rarity" : "Rare", "description" : "+5 Health regenerated every second"},
-            {"name" : "Berserker's Might", "rarity" : "Rare", "description" : "Gain the power of a Berserker granting you +20 damage"}
+            {"name" : "Berserker's Might", "rarity" : "Rare", "description" : "Gain the power of a Berserker granting you +15 damage"}
         ],
         "legendaryUpgrades" : [
             {"name" : "Titan's Resolve", "rarity" : "Legendary", "description" : "Gain the resolve of a Titan and achieve 50% less stamina drain"},
             {"name" : "Eternal Renewal", "rarity" : "Legendary", "description" : "Your heart is born anew giving you +15 Health regenerated every second"},
-            {"name" : "Wrath of the Gods", "rarity" : "Legendary", "description" : "Channel the Wrath of the Gods and gain +50 damage"},
+            {"name" : "Wrath of the Gods", "rarity" : "Legendary", "description" : "Channel the Wrath of the Gods and gain +35 damage"},
             {"name" : "Timewalker", "rarity" : "Legendary", "description" : "Become a controller of time, slowing down enemies 25% and increasing your movement speed by 40%"},
             {"name" : "Relentless Fury", "rarity" : "Legendary", "description" : "Enter a state of fury and increase your attack speed by 50%"}
         ],
         "cursedUpgrades" : [
-            {"name" : "Blood Pact", "rarity" : "Cursed", "description" : "Begin every level at 50% health but immensely boost your max health by 100"},
-            {"name" : "Glass Cannon", "rarity" : "Cursed", "description" : "Your max health is permanently set to 50% but you gain a 150% damage buff"},                
-            {"name" : "Cursed Greatsword", "rarity" : "Cursed", "description" : "Wield a cursed greatsword, decreasing your movement speed by 50%, but gain a +75 damage buff"},
+            {"name" : "Blood Pact", "rarity" : "Cursed", "description" : "Begin every level at 25% health but immensely boost your max health by 100"},
+            {"name" : "Glass Cannon", "rarity" : "Cursed", "description" : "Your max health is permanently set to 50% but you gain a 200% damage buff"},                
+            {"name" : "Cursed Greatsword", "rarity" : "Cursed", "description" : "Wield a cursed greatsword, decreasing your movement speed by 50%, but gain a +50 damage buff"},
             {"name" : "Soul Gamble", "rarity" : "Cursed", "description" : "Gamble your soul and either gain a 100% health boost or lose 50% of your health"},
-            {"name" : "Shackles of Despair", "rarity" : "Cursed", "description" : "Lose the ability to regenerate health but gain a massive +80 damage buff"}
+            {"name" : "Shackles of Despair", "rarity" : "Cursed", "description" : "Lose the ability to regenerate health but gain a massive +60 damage buff"}
         ]
     }  
 }

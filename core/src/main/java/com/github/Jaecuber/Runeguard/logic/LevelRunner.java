@@ -2,6 +2,7 @@ package com.github.Jaecuber.Runeguard.logic;
 
 import com.badlogic.ashley.core.Engine;
 import com.badlogic.ashley.core.Family;
+import com.badlogic.gdx.Audio;
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.utils.Array;
@@ -9,6 +10,9 @@ import com.badlogic.gdx.utils.Json;
 import com.badlogic.gdx.utils.Queue;
 import com.github.Jaecuber.Runeguard.asset.AssetService;
 import com.github.Jaecuber.Runeguard.asset.JsonAsset;
+import com.github.Jaecuber.Runeguard.asset.MusicAsset;
+import com.github.Jaecuber.Runeguard.asset.SoundAsset;
+import com.github.Jaecuber.Runeguard.audio.AudioService;
 import com.github.Jaecuber.Runeguard.component.Enemy;
 import com.github.Jaecuber.Runeguard.data.EnemyBag;
 import com.github.Jaecuber.Runeguard.data.EnemyEntry;
@@ -18,7 +22,7 @@ import com.github.Jaecuber.Runeguard.tiled.TiledService;
 import com.github.Jaecuber.ui.model.GameViewModel;
 
 public class LevelRunner {
-    private final float REGULAR_WAVE_TIME = 20.0f; //20 Seconds
+    private final float REGULAR_WAVE_TIME = 10.0f; //10 Seconds
     private final int WAVES_PER_LEVEL = 10;
     private final int MID_UPGRADE_WAVE = 5;
 
@@ -26,6 +30,9 @@ public class LevelRunner {
     private EntitySpawner entitySpawner;
     private GameViewModel viewModel;
     private Engine engine;
+    private AudioService audioService;
+
+    private MusicAsset currentMusic;
 
     private Array<EnemyEntry> enemyBag;
 
@@ -35,10 +42,11 @@ public class LevelRunner {
     private int wave;
     private boolean actingMidUpgrade = false;
     
-    public LevelRunner(TiledService tiledService, EntitySpawner entitySpawner, Engine engine, AssetService assetService, GameViewModel viewModel){
+    public LevelRunner(TiledService tiledService, EntitySpawner entitySpawner, Engine engine, AssetService assetService, GameViewModel viewModel, AudioService audioService){
         this.tiledService = tiledService;
         this.entitySpawner = entitySpawner;
         this.viewModel = viewModel;
+        this.audioService = audioService;
         this.engine = engine;
         this.waveTimer = REGULAR_WAVE_TIME;
         this.level = 0;
@@ -65,6 +73,15 @@ public class LevelRunner {
         viewModel.updateLevel(level);
         viewModel.updateWave(wave);
         spawnWave(difficulty);
+        
+        switch (this.level) {
+            case 1 -> {this.currentMusic = MusicAsset.LEVEL1;}
+            case 2 -> {this.currentMusic = MusicAsset.LEVEL2;}
+            case 3 -> {this.currentMusic = MusicAsset.LEVEL3TO4;}
+            case 5 -> {this.currentMusic = MusicAsset.LEVEL5TO7;}
+            case 8 -> {this.currentMusic = MusicAsset.LEVEL8INF;}
+        }
+        audioService.playMusic(currentMusic);
     }
 
     private void nextWave(){
@@ -74,7 +91,6 @@ public class LevelRunner {
         viewModel.updateLevel(level);
         viewModel.updateWave(wave);
         
-
         if(wave == MID_UPGRADE_WAVE){
             this.actingMidUpgrade = true;
         }else{
@@ -91,6 +107,7 @@ public class LevelRunner {
     }
 
     public void spawnQueuedWave(){
+        audioService.playMusic(currentMusic);
         spawnWave(difficulty);
     }
 
@@ -112,7 +129,7 @@ public class LevelRunner {
     private Queue<String> createQueue(float difficulty){
         Queue<String> queue = new Queue<>();
         Array<String> validEnemies = getValidEnemies(difficulty);
-        int numEnemies = MathUtils.round((float) (5 + 0.50 * Math.pow(difficulty, 0.65)));
+        int numEnemies = MathUtils.round((float) (2 + 0.50 * Math.pow(difficulty, 0.65)));
         for(int i = 0; i < numEnemies; i++){
             queue.addFirst(validEnemies.get((Integer) MathUtils.random(0, validEnemies.size - 1)));
         }
@@ -133,6 +150,10 @@ public class LevelRunner {
 
     public boolean levelComplete(){
         return wave >= WAVES_PER_LEVEL && waveTimer <= 0 && engine.getEntitiesFor(Family.all(Enemy.class).get()).size() == 0;
+    }
+
+    public boolean enemiesCleared(){
+        return engine.getEntitiesFor(Family.all(Enemy.class).get()).size() == 0;
     }
 
     public void tickWaveTimer(float deltaTime){

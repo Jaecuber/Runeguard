@@ -15,6 +15,7 @@ import com.badlogic.gdx.utils.Json;
 import com.github.Jaecuber.Runeguard.Launcher;
 import com.github.Jaecuber.Runeguard.asset.JsonAsset;
 import com.github.Jaecuber.Runeguard.asset.MapAsset;
+import com.github.Jaecuber.Runeguard.asset.MusicAsset;
 import com.github.Jaecuber.Runeguard.asset.SoundAsset;
 import com.github.Jaecuber.Runeguard.component.Health;
 import com.github.Jaecuber.Runeguard.component.Player;
@@ -71,6 +72,7 @@ public class GameViewModel extends ViewModel{
     }
     
     public void showGameOver(){
+        this.game.getAudioService().playMusic(MusicAsset.GAME_OVER);
         this.propertyChangeSupport.firePropertyChange(GAME_OVER, false, true);
     }
 
@@ -84,7 +86,7 @@ public class GameViewModel extends ViewModel{
     }
 
     public void continueGame(){
-        game.setScreen(new GameScreen(game, MapAsset.MAIN));
+        game.setScreen(new GameScreen(game, MapAsset.DUNGEON));
         updateHealthInfo(maxHealth, health);
         updateStaminaInfo(maxStamina, maxStamina);
     }
@@ -141,6 +143,7 @@ public class GameViewModel extends ViewModel{
         if(this.wave != wave){
             this.propertyChangeSupport.firePropertyChange(WAVE, this.wave, wave);
         }
+        playSound(SoundAsset.WAVE_HIT);
         this.playerUpgraded = false;
         this.wave = wave;
     }

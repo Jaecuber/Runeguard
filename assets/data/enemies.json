@@ -1,7 +1,13 @@
 {
     "enemies" : [
         {"name" : "green_slime", "minDiff" : 0.0},
-        {"name" : "undead_slime", "minDiff" : 35.0},
-        {"name" : "magma_slime", "minDiff" : 100.0}
+        {"name" : "undead_slime", "minDiff" : 25.0},
+        {"name" : "magma_slime", "minDiff" : 100.0},
+        {"name" : "orc", "minDiff" : 9.0},
+        {"name" : "elite_orc", "minDiff" : 50.0},
+        {"name" : "orc_warchief", "minDiff" : 150.0},
+        {"name" : "blood_servant", "minDiff" : 35.0},
+        {"name" : "veilwalker", "minDiff" : 75.0},
+        {"name" : "crimson_lord", "minDiff" : 200.0}
     ]
 }

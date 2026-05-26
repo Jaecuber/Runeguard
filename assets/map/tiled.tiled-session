@@ -1,5 +1,5 @@
 {
-    "activeFile": "testMap.tmx",
+    "activeFile": "starterArea.tmx",
     "expandedProjectPaths": [
         "."
     ],
@@ -209,7 +209,7 @@
             "selectedLayer": 13,
             "viewCenter": {
                 "x": 795.3333333333333,
-                "y": 1035.6666666666665
+                "y": 1035.3333333333333
             }
         },
         "starterArea.tmx#Trees": {
@@ -223,7 +223,7 @@
             "selectedLayer": 1,
             "viewCenter": {
                 "x": 240,
-                "y": 159.5
+                "y": 288
             }
         },
         "undeadLand.tmx": {
@@ -234,7 +234,7 @@
             "selectedLayer": 3,
             "viewCenter": {
                 "x": 400,
-                "y": 400.5
+                "y": 399.5
             }
         },
         "undeadLandObjects.tsx": {
@@ -249,7 +249,7 @@
         }
     },
     "last.externalTilesetPath": "D:/Projects/Runeguard/assets/map",
-    "last.imagePath": "C:/Users/1918458/Desktop/WorkspaceCSA/Runeguard/assets/map/Objects/undeadLandAssets",
+    "last.imagePath": "D:/Projects/Runeguard/assets/map/Objects",
     "map.height": 50,
     "map.lastUsedFormat": "tmx",
     "map.layerDataFormat": "3",
@@ -274,18 +274,18 @@
     "project": "tiled.tiled-project",
     "property.type": "bool",
     "recentFiles": [
-        "starterArea.tmx",
-        "dungeon.tmx",
-        "undeadLand.tmx",
-        "MainTileset.tsx",
-        "Dungeon Floor.tsx",
-        "Dungeon Walls.tsx",
-        "Enemies.tsx",
-        "Player.tsx",
-        "walls_floor.tsx",
-        "Ground_rocks.tsx",
+        "testMap.tmx",
+        "undeadLandObjects.tsx",
         "Trees.tsx",
-        "undeadLandObjects.tsx"
+        "Ground_rocks.tsx",
+        "walls_floor.tsx",
+        "Player.tsx",
+        "Enemies.tsx",
+        "Dungeon Walls.tsx",
+        "Dungeon Floor.tsx",
+        "MainTileset.tsx",
+        "undeadLand.tmx",
+        "dungeon.tmx"
     ],
     "tileset.lastUsedFormat": "tsx",
     "tileset.tileSize": {

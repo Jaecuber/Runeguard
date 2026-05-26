@@ -32,6 +32,7 @@ public class MenuViewModel extends ViewModel{
     }
     public void startGame(){
         game.setScreen(new GameScreen(game, MapAsset.DUNGEON));
+        this.audioService.stopCurrentMusic();
     }
 
     public void playSound(SoundAsset sound){

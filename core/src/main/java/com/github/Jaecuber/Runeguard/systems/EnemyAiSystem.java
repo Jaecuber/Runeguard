@@ -127,7 +127,7 @@ public class EnemyAiSystem extends IteratingSystem{
             if(upgradeTags == null || health == null) return;
             ObjectMap<String, Integer> upgradesOwned = upgradeTags.getTags();
             if(upgradesOwned.containsKey("Lifesteal")){
-                health.addHealth(15.0f);
+                health.addHealth(5.0f);
             }
         }
     }
