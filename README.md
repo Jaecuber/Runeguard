@@ -33,7 +33,7 @@ A roguelite game. Battle through waves of enemies and gain upgrades as you progr
 
 ## 🛠️ How to Run Locally
 
-If you want yo play the game for yourself, follow these steps:
+If you want to play the game for yourself, follow these steps:
 1. **Look through the recent releases on the github**
 2. **Download the most recent release**
 3. **Run the .exe file to play**
