@@ -114,7 +114,10 @@ public class UpgradeSystem extends IteratingSystem{
             totalMultiplier *= Math.pow(0.50f, upgradesOwned.get("Titan's Resolve"));
         }
         if(upgradesOwned.containsKey("Energy Flow")){
-            finalStamRegen += 4 * upgradesOwned.get("Energy Flow");
+            finalStamRegen += 5 * upgradesOwned.get("Energy Flow");
+        }
+        if(upgradesOwned.containsKey("Unyielding Spirit")){
+            finalStamRegen += 15 * upgradesOwned.get("Unyielding Spirit");
         }
         if(upgradesOwned.containsKey("Resolute Steel")){
             finalMaxStam += 50 * upgradesOwned.get("Resolute Steel");
@@ -158,19 +161,19 @@ public class UpgradeSystem extends IteratingSystem{
         if(upgradeTags != null){
             ObjectMap<String, Integer> upgradesOwned = upgradeTags.getTags();
             if(upgradesOwned.containsKey("Sharpened Blade")){
-                finalDamage += 5 * upgradesOwned.get("Sharpened Blade");
+                finalDamage += 3 * upgradesOwned.get("Sharpened Blade");
             }
             if(upgradesOwned.containsKey("Berserker's Might")){
-                finalDamage += 15 * upgradesOwned.get("Berserker's Might");
+                finalDamage += 10 * upgradesOwned.get("Berserker's Might");
             }
             if(upgradesOwned.containsKey("Wrath of the Gods")){
-                finalDamage += 35 * upgradesOwned.get("Wrath of the Gods");
+                finalDamage += 25 * upgradesOwned.get("Wrath of the Gods");
             }
             if(upgradesOwned.containsKey("Cursed Greatsword")){
-                finalDamage += 50 * upgradesOwned.get("Cursed Greatsword");
+                finalDamage += 40 * upgradesOwned.get("Cursed Greatsword");
             }
             if(upgradesOwned.containsKey("Shackles of Despair")){
-                finalDamage += 60 * upgradesOwned.get("Shackles of Despair");
+                finalDamage += 45 * upgradesOwned.get("Shackles of Despair");
             }
             if(upgradesOwned.containsKey("Glass Cannon")){
                 finalDamage *= Math.pow(2.0f, upgradesOwned.get("Glass Cannon"));

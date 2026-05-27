@@ -21,6 +21,7 @@ public class Enemy implements Component{
     private boolean canAttack;
     private boolean hasDamaged;
     private boolean animated;
+    private boolean lifesteal;
     private float speed;
     private float stateTimer;
     private float wanderTimer;
@@ -37,6 +38,7 @@ public class Enemy implements Component{
         this.isAggro = false;
         this.isIdle = true;
         this.dead = false;
+        this.lifesteal = false;
     }
 
     public void applyKnockback(float duration){
@@ -201,6 +203,14 @@ public class Enemy implements Component{
 
     public void setPlayerEntity(Entity playerEntity) {
         this.playerEntity = playerEntity;
+    }
+
+    public boolean lifestealApplied() {
+        return lifesteal;
+    }
+
+    public void applyLifesteal(boolean lifesteal) {
+        this.lifesteal = lifesteal;
     }
 
     public enum EnemyAIState{

@@ -121,13 +121,14 @@ public class EnemyAiSystem extends IteratingSystem{
         if(enemy.isDead()){
             deadEntityCache.add(entity);
         }
-        if(playerEntity != null){
+        if(playerEntity != null && !enemy.lifestealApplied()){
             Health health = Health.MAPPER.get(playerEntity);
             UpgradeTags upgradeTags = UpgradeTags.MAPPER.get(playerEntity);
             if(upgradeTags == null || health == null) return;
             ObjectMap<String, Integer> upgradesOwned = upgradeTags.getTags();
             if(upgradesOwned.containsKey("Lifesteal")){
                 health.addHealth(5.0f);
+                enemy.applyLifesteal(true);
             }
         }
     }

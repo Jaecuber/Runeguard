@@ -96,7 +96,6 @@ public enum GameState implements State<RunManager>{
         @Override
         public void update(RunManager entity) {
             if(entity.upgraded()){
-                entity.continueLevel();
                 entity.getGameFsm().changeState(INTERMISSION);
             }
         }
@@ -117,6 +116,7 @@ public enum GameState implements State<RunManager>{
         @Override
         public void update(RunManager entity) {
             if(entity.intermissionTimerOver()){
+                entity.continueLevel();
                 entity.getGameFsm().changeState(PLAYING);
             }
         }

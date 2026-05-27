@@ -7,6 +7,9 @@ import com.github.Jaecuber.Runeguard.ai.GameState;
 import com.github.Jaecuber.Runeguard.asset.AssetService;
 import com.github.Jaecuber.Runeguard.asset.MusicAsset;
 import com.github.Jaecuber.Runeguard.audio.AudioService;
+import com.github.Jaecuber.Runeguard.input.GameControllerState;
+import com.github.Jaecuber.Runeguard.input.IdleControllerState;
+import com.github.Jaecuber.Runeguard.input.KeyboardController;
 import com.github.Jaecuber.Runeguard.tiled.EntitySpawner;
 import com.github.Jaecuber.Runeguard.tiled.TiledService;
 import com.github.Jaecuber.ui.model.GameViewModel;
@@ -19,24 +22,27 @@ public class RunManager{
     private AssetService assetService;
     private GameViewModel viewModel;
     private AudioService audioService;
+    private KeyboardController keyboardController;
     private Engine engine;
     private DefaultStateMachine<RunManager, GameState> gameFsm;
 
     //handlers
     private boolean playingState = false;
     private boolean prompted = false;
+    private boolean controllerStateSet = false;
 
     //timers
     private float startLevelTimer = 5.0f; //5 seconds
     private float endTimer = 5.0f; // 5 seconds
-    private float intermissionTimer = 5.0f; //5 seconds;
+    private float intermissionTimer = 10.0f; //10 seconds;
 
-    public RunManager(TiledService tiledService, EntitySpawner entitySpawner, Engine engine, AssetService assetService, GameViewModel viewModel, AudioService audioService){
+    public RunManager(TiledService tiledService, EntitySpawner entitySpawner, Engine engine, AssetService assetService, GameViewModel viewModel, AudioService audioService, KeyboardController keyboardController){
         this.runState = RunState.STARTING_LEVEL;
         this.tiledService = tiledService;
         this.entitySpawner = entitySpawner;
         this.assetService = assetService;
         this.audioService = audioService;
+        this.keyboardController = keyboardController;
         this.engine = engine;
         this.viewModel = viewModel;
         this.gameFsm = new DefaultStateMachine<RunManager, GameState>(this, GameState.STARTING_LEVEL);
@@ -61,10 +67,18 @@ public class RunManager{
     }
 
     private void intermission(float deltaTime) {
+        if(!controllerStateSet){
+            this.controllerStateSet = true;
+            this.keyboardController.setActiveState(GameControllerState.class);
+        }   
         tickIntermissionTime(deltaTime);
     }
 
     private void startingLevel(float deltaTime) {
+        if(!controllerStateSet){
+            this.controllerStateSet = true;
+            this.keyboardController.setActiveState(GameControllerState.class);
+        }  
         tickStartTime(deltaTime);
     }
 
@@ -83,6 +97,8 @@ public class RunManager{
 
     private void upgrading() {
         if(!prompted && enemiesCleared()){
+            this.controllerStateSet = false;
+            this.keyboardController.setActiveState(IdleControllerState.class);
             audioService.playMusic(MusicAsset.UPGRADE);
             prompted = true;
             viewModel.promptUpgrade();//add param to differentiate between mid upgrade and end upgrade
@@ -122,7 +138,7 @@ public class RunManager{
 
     private void tickIntermissionTime(float deltaTime) {
         intermissionTimer -= deltaTime;
-        viewModel.updateTimer(MathUtils.round(endTimer));
+        viewModel.updateTimer(MathUtils.round(intermissionTimer));
     }
 
     private void tickStartTime(float deltaTime) {
@@ -161,7 +177,7 @@ public class RunManager{
             case LEVEL_CLEAR -> {this.endTimer = 5.0f;}
             case NEXT_LEVEL -> {}
             case PLAYING -> {}
-            case INTERMISSION -> {this.intermissionTimer = 5.0f;}
+            case INTERMISSION -> {this.intermissionTimer = 10.0f;}
             case RESTARTING_GAME -> {} 
             case UPGRADING -> {}
             default -> {}

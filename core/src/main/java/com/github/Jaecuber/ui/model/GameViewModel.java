@@ -87,6 +87,7 @@ public class GameViewModel extends ViewModel{
 
     public void continueGame(){
         game.setScreen(new GameScreen(game, MapAsset.DUNGEON));
+        game.getAudioService().playSound(SoundAsset.BOOM);
         updateHealthInfo(maxHealth, health);
         updateStaminaInfo(maxStamina, maxStamina);
     }
@@ -168,6 +169,10 @@ public class GameViewModel extends ViewModel{
 
     public void playSound(SoundAsset sound){
         this.game.getAudioService().playSound(sound);
+    }
+
+    public void playMusic(MusicAsset music){
+        this.game.getAudioService().playMusic(music);
     }
 
     public UpgradeClass loadUpgradeClasses(){

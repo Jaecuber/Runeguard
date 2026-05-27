@@ -12,7 +12,8 @@ public enum MusicAsset implements Asset<Music>{
     LEVEL5TO7("level5-7.mp3"),
     LEVEL8INF("level8-inf.mp3"),
     UPGRADE("upgrade.mp3"),
-    GAME_OVER("gameOver.mp3");
+    GAME_OVER("gameOver.mp3"),
+    BEGINNING_AMBIENCE("beginningAmbience.mp3");
 
     private final AssetDescriptor<Music> descriptor;
 

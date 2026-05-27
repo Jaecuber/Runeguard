@@ -27,6 +27,7 @@ import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.GdxRuntimeException;
 import com.badlogic.gdx.utils.Scaling;
 import com.badlogic.gdx.utils.viewport.ScreenViewport;
+import com.github.Jaecuber.Runeguard.asset.MusicAsset;
 import com.github.Jaecuber.Runeguard.asset.SoundAsset;
 import com.github.Jaecuber.Runeguard.component.UpgradeTags;
 import com.github.Jaecuber.Runeguard.data.UpgradeClass;
@@ -163,6 +164,7 @@ public class GameView extends View<GameViewModel>{
 
         transitionTable.add();
         stage.addActor(transitionTable);
+        viewModel.playMusic(MusicAsset.BEGINNING_AMBIENCE);
         transitionTable.addAction(Actions.sequence(
             Actions.delay(2.0f),
             Actions.fadeOut(2.0f)
