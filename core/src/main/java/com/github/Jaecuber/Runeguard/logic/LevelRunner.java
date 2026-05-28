@@ -40,6 +40,7 @@ public class LevelRunner {
     private float waveTimer;
     private int level;
     private int wave;
+    private int prevEnemyAmt;
     private boolean actingMidUpgrade = false;
     
     public LevelRunner(TiledService tiledService, EntitySpawner entitySpawner, Engine engine, AssetService assetService, GameViewModel viewModel, AudioService audioService){
@@ -51,6 +52,7 @@ public class LevelRunner {
         this.waveTimer = REGULAR_WAVE_TIME;
         this.level = 0;
         this.wave = 1;
+        this.prevEnemyAmt = engine.getEntitiesFor(Family.all(Enemy.class).get()).size();
 
         //loading enemy bag
         String raw = assetService.get(JsonAsset.ENEMY_BAG);
@@ -62,6 +64,10 @@ public class LevelRunner {
     public void update(float deltaTime, RunState runState){
         if(runState.equals(RunState.PLAYING)){
             tickWaveTimer(deltaTime);
+        }
+        if(prevEnemyAmt != engine.getEntitiesFor(Family.all(Enemy.class).get()).size()){
+            prevEnemyAmt = engine.getEntitiesFor(Family.all(Enemy.class).get()).size();
+            viewModel.updateEnemyCount(prevEnemyAmt);
         }
     }
 

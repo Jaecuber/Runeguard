@@ -9,6 +9,7 @@ import com.badlogic.ashley.core.Family;
 import com.badlogic.ashley.utils.ImmutableArray;
 import com.badlogic.gdx.ScreenAdapter;
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.Pixmap;
 import com.badlogic.gdx.maps.tiled.TiledMap;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.World;
@@ -18,6 +19,10 @@ import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.Disposable;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
+import com.crashinvaders.vfx.VfxManager;
+import com.crashinvaders.vfx.effects.BloomEffect;
+import com.crashinvaders.vfx.effects.MotionBlurEffect;
+import com.crashinvaders.vfx.effects.VignettingEffect;
 import com.github.Jaecuber.Runeguard.Launcher;
 import com.github.Jaecuber.Runeguard.asset.MapAsset;
 import com.github.Jaecuber.Runeguard.asset.SkinAsset;
@@ -63,6 +68,9 @@ public class GameScreen extends ScreenAdapter {
     private final RunManager runManager;
     private final GameViewModel viewModel;
     private final Skin skin;
+    private final VfxManager vfxManager;
+    private final BloomEffect bloomEffect;
+    private final VignettingEffect vignettingEffect;
 
     private MapAsset mapAsset;
 
@@ -82,6 +90,20 @@ public class GameScreen extends ScreenAdapter {
         this.runManager = new RunManager(this.tiledService, this.entitySpawner, this.engine, game.getAssetService(), this.viewModel, this.audioService, this.keyboardController);
         this.skin = game.getAssetService().get(SkinAsset.DEFAULT);
         this.mapAsset = mapAsset;
+
+        //post-processing
+        this.vfxManager = new VfxManager(Pixmap.Format.RGBA8888);
+        this.bloomEffect = new BloomEffect();
+        this.bloomEffect.setBloomIntensity(0.8f);
+        this.bloomEffect.setThreshold(0.5f);
+        bloomEffect.setBlurPasses(3);
+        bloomEffect.setBlurAmount(10.0f);
+        this.vignettingEffect = new VignettingEffect(false);
+        vignettingEffect.setIntensity(0.8f);
+        vignettingEffect.setSaturation(0.8f);
+        vignettingEffect.setSaturationMul(0.5f);
+        this.vfxManager.addEffect(bloomEffect);
+        this.vfxManager.addEffect(vignettingEffect);
         
         this.engine.addSystem(new UpgradeSystem());
         this.engine.addSystem(new ControllerSystem());
@@ -105,6 +127,7 @@ public class GameScreen extends ScreenAdapter {
     public void resize(int width, int height){
         super.resize(width, height);
         this.uiViewport.update(width, height, true);
+        this.vfxManager.resize(width, height);
     }
 
     @Override
@@ -148,7 +171,14 @@ public class GameScreen extends ScreenAdapter {
     @Override
     public void render(float delta){
         delta = Math.min(delta, 1 / 30f);
+
+        vfxManager.cleanUpBuffers();
+        vfxManager.beginInputCapture();
         this.engine.update(delta);
+        vfxManager.endInputCapture();
+        vfxManager.applyEffects();
+        vfxManager.renderToScreen();
+
         this.runManager.update(delta);
 
         uiViewport.apply();
@@ -164,6 +194,8 @@ public class GameScreen extends ScreenAdapter {
                 disposableSystem.dispose();
             }
         }
+        this.vfxManager.dispose();
+        this.bloomEffect.dispose();
         this.physicsWorld.dispose();
         this.stage.dispose();
     }

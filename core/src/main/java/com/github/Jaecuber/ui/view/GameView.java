@@ -25,6 +25,7 @@ import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.utils.Align;
 import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.GdxRuntimeException;
+import com.badlogic.gdx.utils.ObjectSet;
 import com.badlogic.gdx.utils.Scaling;
 import com.badlogic.gdx.utils.viewport.ScreenViewport;
 import com.github.Jaecuber.Runeguard.asset.MusicAsset;
@@ -43,6 +44,7 @@ public class GameView extends View<GameViewModel>{
     private Label levelLabel;
     private Label waveLabel;
     private Label timerLabel;
+    private Label enemyLabel;
     private Table transitionTable;
 
     //Upgrade Screen
@@ -114,6 +116,11 @@ public class GameView extends View<GameViewModel>{
         timerLabel = new Label("00:00", skin, "mediumLabel");
         timerLabel.setColor(skin.getColor("White"));
         statsTable.add(timerLabel).spaceTop(10.0f).spaceBottom(10.0f).align(Align.left);;
+
+        statsTable.row();
+        enemyLabel = new Label("Enemies : 0", skin, "mediumLabel");
+        enemyLabel.setColor(skin.getColor("White"));
+        statsTable.add(enemyLabel).spaceTop(10.0f).spaceBottom(10.0f).align(Align.left);;
         stage.addActor(statsTable);
         setupGameOver();
         setupUpgradeScreen();
@@ -131,6 +138,7 @@ public class GameView extends View<GameViewModel>{
         viewModel.onPropertyChange(GameViewModel.UPGRADE, Boolean.class, this::upgradeScreen);
         viewModel.onPropertyChange(GameViewModel.LEVEL, Integer.class, this::updateLevel);
         viewModel.onPropertyChange(GameViewModel.WAVE, Integer.class, this::updateWave);
+        viewModel.onPropertyChange(GameViewModel.ENEMY_COUNT, Integer.class, this::upgradeEnemyCount);
         viewModel.onPropertyChange(GameViewModel.TIMER, Integer.class, this::updateTimer);
         viewModel.onPropertyChange(GameViewModel.TRANSITION, Boolean.class, this::transition);
     };
@@ -320,9 +328,16 @@ public class GameView extends View<GameViewModel>{
 
     private void upgradeScreen(boolean bool){
         UpgradeClass upgradeClasses = viewModel.loadUpgradeClasses();
-        UpgradeEntry upgrade1 = getUpgrade1(upgradeClasses);
-        UpgradeEntry upgrade2 = getUpgrade2(upgradeClasses);
-        UpgradeEntry upgrade3 = getUpgrade3(upgradeClasses);
+
+        //Getting the upgrades
+        ObjectSet<String> usedUpgrades = new ObjectSet<>();
+
+        UpgradeEntry upgrade1 = getUpgrade1(upgradeClasses, usedUpgrades);
+        usedUpgrades.add(upgrade1.getName());
+        UpgradeEntry upgrade2 = getUpgrade2(upgradeClasses, usedUpgrades);
+        usedUpgrades.add(upgrade2.getName());
+        UpgradeEntry upgrade3 = getUpgrade3(upgradeClasses, usedUpgrades);
+
         upgradeTable.setTouchable(Touchable.disabled);
 
         Entity playerEntity = viewModel.getPlayerEntity();
@@ -426,50 +441,72 @@ public class GameView extends View<GameViewModel>{
         ));
     }
 
-    private UpgradeEntry getUpgrade1(UpgradeClass upgradeClasses) {
+    private UpgradeEntry getUpgrade1(UpgradeClass upgradeClasses, ObjectSet<String> usedUpgrades) {
         int classDec = MathUtils.random(0, 100);
+        UpgradeEntry entry;
+        int maxAtt = 20;
         Array<UpgradeEntry> entryBag;
-        if(classDec < 30){
+        
+        do{
+            if(classDec < 30){
             entryBag = upgradeClasses.getRareUpgrades();
-        }else{
+                }else{
             entryBag = upgradeClasses.getBasicUpgrades();
-        }
+            }
 
-        int upgDec = MathUtils.random(0, entryBag.size - 1);
+            int upgDec = MathUtils.random(0, entryBag.size - 1);
+            entry = entryBag.get(upgDec);
+            maxAtt--;
 
-        return entryBag.get(upgDec);
+        }while(usedUpgrades.contains(entry.getName()) && maxAtt > 0);
+    
+        return entry;
     }
 
-    private UpgradeEntry getUpgrade2(UpgradeClass upgradeClasses) {
+    private UpgradeEntry getUpgrade2(UpgradeClass upgradeClasses, ObjectSet<String> usedUpgrades) {
         int classDec = MathUtils.random(0, 100);
+        UpgradeEntry entry;
+        int maxAtt = 20;
         Array<UpgradeEntry> entryBag;
-        if(classDec < 5){
-            entryBag = upgradeClasses.getLegendaryUpgrades();
-        }else if(classDec < 30){
-            entryBag = upgradeClasses.getRareUpgrades();
-        }else{
-            entryBag = upgradeClasses.getBasicUpgrades();
-        }
 
-        int upgDec = MathUtils.random(0, entryBag.size - 1);
+        do{
+            if(classDec < 5){
+                entryBag = upgradeClasses.getLegendaryUpgrades();
+            }else if(classDec < 30){
+                entryBag = upgradeClasses.getRareUpgrades();
+            }else{
+                entryBag = upgradeClasses.getBasicUpgrades();
+            }
 
-        return entryBag.get(upgDec);
+            int upgDec = MathUtils.random(0, entryBag.size - 1);
+            entry = entryBag.get(upgDec);
+            maxAtt--;
+        }while(usedUpgrades.contains(entry.getName()) && maxAtt > 0);
+        
+        return entry;
     }
 
-    private UpgradeEntry getUpgrade3(UpgradeClass upgradeClasses) {
+    private UpgradeEntry getUpgrade3(UpgradeClass upgradeClasses, ObjectSet<String> usedUpgrades) {
         int classDec = MathUtils.random(0, 100);
+        UpgradeEntry entry;
+        int maxAtt = 20;
         Array<UpgradeEntry> entryBag;
-        if(classDec < 10){
-            entryBag = upgradeClasses.getLegendaryUpgrades();
-        }else if(classDec < 70){
-            entryBag = upgradeClasses.getBasicUpgrades();
-        }else{
-            entryBag = upgradeClasses.getCursedUpgrades();
-        }
 
-        int upgDec = MathUtils.random(0, entryBag.size - 1);
+        do{
+            if(classDec < 10){
+                entryBag = upgradeClasses.getLegendaryUpgrades();
+            }else if(classDec < 70){
+                entryBag = upgradeClasses.getBasicUpgrades();
+            }else{
+                entryBag = upgradeClasses.getCursedUpgrades();
+            }
 
-        return entryBag.get(upgDec);
+            int upgDec = MathUtils.random(0, entryBag.size - 1);
+            entry = entryBag.get(upgDec);
+            maxAtt--;
+        }while(usedUpgrades.contains(entry.getName()) && maxAtt > 0);
+
+        return entry;
     }
 
     private void updateLevel(int level){
@@ -478,6 +515,10 @@ public class GameView extends View<GameViewModel>{
 
     private void updateWave(int wave){
         waveLabel.setText("Wave : " + wave);
+    }
+
+    private void upgradeEnemyCount(int count){
+        enemyLabel.setText("Enemies : " + count);
     }
 
     private void updateTimer(int time){

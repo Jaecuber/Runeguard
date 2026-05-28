@@ -29,7 +29,7 @@
         "cursedUpgrades" : [
             {"name" : "Blood Pact", "rarity" : "Cursed", "description" : "Begin every level at 25% health but immensely boost your max health by 100"},
             {"name" : "Glass Cannon", "rarity" : "Cursed", "description" : "Your max health is permanently set to 50% but you gain a 200% damage buff"},                
-            {"name" : "Cursed Greatsword", "rarity" : "Cursed", "description" : "Wield a cursed greatsword, decreasing your movement speed by 50%, but gain a +40 damage buff"},
+            {"name" : "Cursed Greatsword", "rarity" : "Cursed", "description" : "Decrease your movement speed by 50% and lose the ability to dash, but gain a +40 damage buff"},
             {"name" : "Soul Gamble", "rarity" : "Cursed", "description" : "Gamble your soul and either gain a 100% health boost or lose 50% of your health"},
             {"name" : "Shackles of Despair", "rarity" : "Cursed", "description" : "Lose the ability to regenerate health but gain a massive +45 damage buff"}
         ]

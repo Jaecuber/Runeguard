@@ -36,6 +36,7 @@ public class GameViewModel extends ViewModel{
     public static final String UPGRADE = "upgrade";
     public static final String LEVEL = "level";
     public static final String WAVE = "wave";
+    public static final String ENEMY_COUNT = "enemyCount";
     public static final String TIMER = "timer";
     public static final String TRANSITION = "transition";
 
@@ -46,6 +47,7 @@ public class GameViewModel extends ViewModel{
     private int maxStamina;
     private int level;
     private int wave;
+    private int enemyCount;
     private int time;
     private final Vector2 tempVec2;
     private TiledService tiledService;
@@ -138,6 +140,13 @@ public class GameViewModel extends ViewModel{
             this.propertyChangeSupport.firePropertyChange(LEVEL, this.level, level);
         }
         this.level = level;
+    }
+
+    public void updateEnemyCount(int count){
+        if(this.enemyCount != count){
+            this.propertyChangeSupport.firePropertyChange(ENEMY_COUNT, this.enemyCount, count);
+        }
+        this.enemyCount = count;
     }
 
     public void updateWave(int wave){

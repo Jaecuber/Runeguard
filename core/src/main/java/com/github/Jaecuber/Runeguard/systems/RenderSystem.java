@@ -48,14 +48,14 @@ public class RenderSystem extends SortedIteratingSystem implements Disposable{
         this.viewport.apply();
 
         batch.begin();
-        this.batch.setColor(Color.WHITE);
+        this.batch.setColor(0.7f, 0.7f, 0.8f, 1f); 
         this.mapRenderer.setView(this.camera);
         bkgLayers.forEach(mapRenderer::renderMapLayer);
 
         forceSort();  
         super.update(deltaTime);
-
         this.batch.setColor(Color.WHITE);
+        
         fgdLayers.forEach(mapRenderer::renderMapLayer);
         batch.end();
     }

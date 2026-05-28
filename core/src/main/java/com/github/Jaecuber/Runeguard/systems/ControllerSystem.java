@@ -13,6 +13,7 @@ import com.github.Jaecuber.Runeguard.component.Facing;
 import com.github.Jaecuber.Runeguard.component.Move;
 import com.github.Jaecuber.Runeguard.component.Physics;
 import com.github.Jaecuber.Runeguard.component.Stamina;
+import com.github.Jaecuber.Runeguard.component.UpgradeTags;
 import com.github.Jaecuber.Runeguard.component.Facing.FacingDirection;
 import com.github.Jaecuber.Runeguard.input.Command;
 
@@ -76,8 +77,11 @@ public class ControllerSystem extends IteratingSystem{
         Move move = Move.MAPPER.get(entity);
         move.setDoingAction(true);
         Dodge dodge = Dodge.MAPPER.get(entity);
+        UpgradeTags upgradeTags = UpgradeTags.MAPPER.get(entity);
 
-        if(dodge.canDodge() && stamina.getStamina() > stamina.getStamToAttack() && dodge != null){
+        if(upgradeTags == null) return;
+
+        if(dodge.canDodge() && stamina.getStamina() > stamina.getStamToAttack() && dodge != null && !upgradeTags.getTags().containsKey("Cursed Greatsword")){
             dodge.startDodge();
             stamina.addStamina(-stamina.getStaminaToDodge());
             if(directionX == 0 && directionY == 0){

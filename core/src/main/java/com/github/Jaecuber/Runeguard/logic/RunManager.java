@@ -34,7 +34,7 @@ public class RunManager{
     //timers
     private float startLevelTimer = 5.0f; //5 seconds
     private float endTimer = 5.0f; // 5 seconds
-    private float intermissionTimer = 10.0f; //10 seconds;
+    private float intermissionTimer = 5.0f; //5 seconds;
 
     public RunManager(TiledService tiledService, EntitySpawner entitySpawner, Engine engine, AssetService assetService, GameViewModel viewModel, AudioService audioService, KeyboardController keyboardController){
         this.runState = RunState.STARTING_LEVEL;
@@ -101,7 +101,7 @@ public class RunManager{
             this.keyboardController.setActiveState(IdleControllerState.class);
             audioService.playMusic(MusicAsset.UPGRADE);
             prompted = true;
-            viewModel.promptUpgrade();//add param to differentiate between mid upgrade and end upgrade
+            viewModel.promptUpgrade();
         }    
     }
 
@@ -177,7 +177,7 @@ public class RunManager{
             case LEVEL_CLEAR -> {this.endTimer = 5.0f;}
             case NEXT_LEVEL -> {}
             case PLAYING -> {}
-            case INTERMISSION -> {this.intermissionTimer = 10.0f;}
+            case INTERMISSION -> {this.intermissionTimer = 5.0f;}
             case RESTARTING_GAME -> {} 
             case UPGRADING -> {}
             default -> {}
