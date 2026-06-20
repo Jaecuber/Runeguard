@@ -140,6 +140,7 @@ public class AttackSystem extends IteratingSystem{
                 body.getPosition().x - attackerBody.getPosition().x,
                 body.getPosition().y - attackerBody.getPosition().y
             ).nor().scl(20f);
+            body.setLinearVelocity(new Vector2(0,0));
             body.applyLinearImpulse(knockbackDirection, body.getWorldCenter(), true);
         }
         //hurt animation

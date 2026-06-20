@@ -111,11 +111,11 @@ public class GameScreen extends ScreenAdapter {
         this.engine.addSystem(new AnimationSystem(game.getAssetService()));
         this.engine.addSystem(new FsmSystem());
         this.engine.addSystem(new FacingSystem());
+        this.engine.addSystem(new AttackSystem(physicsWorld, game.getAudioService()));
         this.engine.addSystem(new PhysicsSystem(physicsWorld, 1/60f));
         this.engine.addSystem(new DamageSystem(viewModel));
         this.engine.addSystem(new HealthSystem(viewModel, keyboardController));
         this.engine.addSystem(new StaminaSystem(viewModel));
-        this.engine.addSystem(new AttackSystem(physicsWorld, game.getAudioService()));
         this.engine.addSystem(new DodgeSystem());
         this.engine.addSystem(new EnemyAiSystem());
         this.engine.addSystem(new CameraSystem(game.getCamera()));
